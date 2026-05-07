@@ -4,7 +4,7 @@ aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizat
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity]
 confidence: 0.95
 last_confirmed: "2026-05-07"
-source_count: 19
+source_count: 21
 relationships:
   - type: uses
     target: automation-vs-augmentation
@@ -79,9 +79,18 @@ Multiple complementary lenses are used by sources in this wiki:
 - **Empirical anchors:** enterprise GenAI app spending **$1.7B (2023) → $37B (2025)** (~22× in 2 years; SaaS took ~10 years for comparable penetration); **40% of code AI-generated**; **>1/3 of companies** have replaced ≥1 SaaS tool with a custom GenAI alternative; public SaaS valuations **30–60% below 2021 peaks**.
 - **Strategic implication:** "the boundary of the firm becomes a variable rather than a given." Reinforces the [[micro-productivity-trap]] thesis from [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt, Chatterji et al.]] — **data architecture and process redesign are load-bearing**, not afterthoughts. Caveat from the article: "moving quickly is not the same as moving effectively."
 
+**Organizational-learning lens — Augmented Learners** ([[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]] + [[2026-05-07-kiron-schrage-compound-benefits|Kiron & Schrage 2026]]): an MIT SMR × BCG 2×2 distinguishing organizations by how they combine **organizational learning** (test-and-learn, postmortem culture, learning codification, knowledge sharing) with **AI-specific learning** (using AI for new learning + performance + human feedback loops + employee learning from AI).
+- **Distribution** (3,467-respondent global survey, spring 2024): **Limited Learners 59%**, Organizational Learners 14%, AI-specific Learners 12%, **Augmented Learners 15%**.
+- **Headline outcomes**: Augmented Learners are **1.6×** more likely to feel prepared for industry uncertainty than Limited Learners; **2.2×** for talent disruptions, **1.8×** for technology disruptions, **1.6×** for legal/regulatory disruptions. **99%** of Augmented Learners report annualized revenue benefits from AI vs **71%** of Limited Learners (1.4× multiplier).
+- **Project-selection signature**: Augmented Learners are **1.9×** more likely to invest in long-term (>5-year) AI projects and **2.4×** more likely to invest in high-risk projects — they treat AI as a *learning substrate*, not just an efficiency tool.
+- **The operational mechanism** ([[2026-05-07-kiron-schrage-compound-benefits|Kiron-Schrage 2026]]) — extending the empirical finding 17 months later, the column specifies a **three-step flywheel** that turns the 15% advantage into compounding returns: **Verification** (does this output meet the standard? — binary check against existing criteria) → **Evaluation** (what does this output reveal? — generates new standards; requires domain expertise) → **Learning capture** (how do we ensure this insight persists? — version control for organizational judgment, e.g. CLAUDE.md-style files). When any step is missing, organizations *consume* AI outputs rather than *compound* benefits from them.
+- **Why this lens is distinct** from Anand-Wu's task lens or MIT CISR's stage lens: the Augmented Learner construct is **about how the organization metabolizes AI interactions**, not where it deploys AI or what stage of maturity it has reached. A Stage 2 firm with a learning culture can be on the Augmented Learner trajectory; a Stage 4 firm without one cannot. The combinatorial 2×2 cuts across maturity stages.
+- **Empirical claim about strategy**: orgs reporting an AI strategy are **2× more likely** to generate additional business value; orgs with AI core to strategy are **2.6× more likely**. *But*: only **39%** report having an AI strategy in 2024 — back to 2017 levels (down from 59% in 2020), as GenAI's emergence forced strategy reformulation.
+- **Operational claim** (Kiron-Schrage): orgs that build systematic feedback loops between humans and AI are **6× more likely** to derive substantial financial benefits; orgs investing in learning with AI are **73% more likely** to achieve significant financial impact.
+
 **Human-reaction lens — resistance as data** ([[2026-05-07-carucci-resistance-as-data|Carucci 2026]]): a practitioner framework for interpreting how *people* respond to deployments. All resistance is meaningful data; the leader's job isn't to determine whether pushback is valid but to diagnose what it's signalling. Three traps when leaders misread resistance (personalize / moralize / rush to resolution) and four signal categories (Loss / Anxiety / Lack of control / Flaws in change). Operationalizes the *human-side* mechanics of MIT CISR's "Synchronization" pillar and Werner-Le-Brun's Octopus principles ("make changes WITH people, not TO them"). Distinct decision layer from the deployment frameworks above — the question shifts from "what should we deploy?" to "what is the team's reaction telling us about whether what we deployed is working?" See [[micro-productivity-trap]] for how Carucci's category #4 (Flaws in change) aligns with the operators-see-problems-leaders-dismiss pattern.
 
-All seven lenses agree qualitatively: **most organizations are using AI in some form, but very few are actually mature/ready/adapted.** The AI Index pegs "mature" at 1%; MIT CISR pegs Stage 4 at 7%; Cisco pegs "ready" at 13%; Werner-Le-Brun's 12% transformation-success baseline gives the broader org-change context. See [[ai-maturity-measurement-comparison]] for methodological cross-walk and [[syntheses/organizational-frameworks-for-ai-adoption|organizational-frameworks-for-ai-adoption]] for the framework comparison (the Nishar-Nohria firm-boundary lens and the Carucci human-reaction lens are the **7th and 8th** named frameworks and operate at layers the original 6-framework synthesis didn't surface — see the synthesis for the running cluster).
+All nine lenses agree qualitatively: **most organizations are using AI in some form, but very few are actually mature/ready/adapted.** The AI Index pegs "mature" at 1%; MIT CISR pegs Stage 4 at 7%; Cisco pegs "ready" at 13%; Ransbotham et al. peg Augmented Learners at 15%; Werner-Le-Brun's 12% transformation-success baseline gives the broader org-change context. The convergence of *seven independent measurements all clustering around 7-15% upper-tail* is the wiki's strongest evidence that the high-value-from-AI cohort is structurally narrow, not measurement-artefactual. See [[ai-maturity-measurement-comparison]] for methodological cross-walk and [[syntheses/organizational-frameworks-for-ai-adoption|organizational-frameworks-for-ai-adoption]] for the framework comparison (the Nishar-Nohria firm-boundary lens, the Carucci human-reaction lens, and now the Ransbotham/Kiron organizational-learning lens are the **7th, 8th, and 9th** named frameworks; see the synthesis for the running cluster).
 
 The shape of adoption can be measured along several dimensions:
 
@@ -246,6 +255,40 @@ This is the wiki's first **measurable empirical evidence** for AI labor displace
 ### Integration depth correlates with productivity payoff
 
 Necula et al. 2024 (Romanian survey, n=233): organizations with high AI integration showed a **72% probability of significant productivity improvements** vs. **3.4%** for those with minimal integration.
+
+### The Augmented Learner advantage and its operational machinery ([[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]] + [[2026-05-07-kiron-schrage-compound-benefits|Kiron & Schrage 2026]])
+
+The **eighth annual** MIT SMR × BCG global survey (3,467 respondents) finds that Augmented Learners — orgs combining high organizational learning capability with high AI-specific learning capability — represent only **15%** of the sample but realize 1.4–2.2× advantages on uncertainty management and revenue capture. The follow-up Kiron-Schrage 2026 column then specifies the operational mechanism (**verification → evaluation → learning capture**) that turns the 15% finding into a deployable playbook.
+
+**Three areas where AI augments organizational learning** (Ransbotham et al. operational core):
+
+| Area | Mechanism | Worked examples |
+|---|---|---|
+| **Knowledge capture** | AI extracts tacit knowledge resistant to legacy codification | NASA Mars 2020 (rover learns "interesting" terrain without explicit definition); LG Nova AR glasses (real-time tacit-knowledge extraction from factory workers); Capital One (Prem Natarajan, test-and-learn approach) |
+| **Knowledge synthesis** | AI systematizes data overwhelming legacy analytics | Stitch Fix (years of customer Fixes summarized for stylists); Expedia Group (1.26 quadrillion combinations across 3M properties + 500 airlines) |
+| **Knowledge dissemination** | AI delivers personalized, inclusive knowledge access | Slack (native daily channel recaps; >700M messages/day); cloud services provider (TikTok-style micro-adaptive learning during COVID pivot) |
+
+**The flywheel** ([[2026-05-07-kiron-schrage-compound-benefits|Kiron-Schrage]]):
+
+1. **Verification** — *Does this output meet the standard?* Binary check against existing criteria. Unverified AI output is "noise with a confident tone." Verification used alone catches errors without generating learning.
+2. **Evaluation** — *What does this output reveal?* May generate standards that did not exist before. Requires domain expertise. The expert as evaluator is *discovering what quality means in this new context*.
+3. **Learning capture** — *How do we ensure this insight persists?* Version control for organizational judgment. Without it, evaluation is a one-time event; with it, every subsequent interaction starts smarter.
+
+**The trap** (load-bearing claim): most organizations practice **verification masquerading as evaluation** — treating AI outputs as verdicts to confirm rather than starting points to interrogate. *Consumption dressed up as adoption.* The remedy: **deploy AI first in domains where your people already have deep expertise**, because evaluation requires someone capable of recognizing what "not perfect" actually means.
+
+**Five concrete moves** (Kiron-Schrage):
+
+1. **Preserve evaluation expertise** — domain expertise repositioned, the expert as *evaluator* rather than the expert as *producer*.
+2. **Build verification mechanisms** — minimally viable verification (multijudge systems, consistency checks across formulations); start the cycle even when full verification is expensive.
+3. **Institute evaluation practices** — after every significant AI interaction, ask: What worked? What failed? **What was *interestingly* wrong?** (The third question is where hidden value lives.)
+4. **Create capture systems** — both inferential (patterns in accumulated traces) and explicit (decision journals, prompt repositories, evaluation logs). Discipline, not cost or creativity, is the true constraint.
+5. **Measure the cycle, not just the output** — count verifications, evaluations, learning captures, and how quickly captured learning changes subsequent practice. Tools-adopted / hours-saved / tasks-completed are *consumption metrics*.
+
+**Convergence with prior wiki claims**:
+
+- The Augmented Learner traits map onto [[2026-04-28-mit-sloan-ai-maturity|MIT CISR Stage 3 attributes]] (test-and-learn, architected for reuse, human-feedback-loop AI).
+- The verification → evaluation → learning capture cycle is the operational answer to [[micro-productivity-trap|the micro-productivity trap]] — Bain/OpenAI's "process lock-in" failure mode is what happens when verification masquerades as evaluation.
+- "Return on iteration" (Kiron-Schrage's coining) is a candidate replacement metric for "ROI" in AI deployments, distinct from but adjacent to the **6-capability "Adoption and scaling" capability** in [[2026-05-03-rewired-second-edition-sample|Rewired 2nd ed]].
 
 ### The deployment-surface migration: coding moved to API ([[2026-05-07-anthropic-economic-index-5-learning-curves|Anthropic Economic Index, 5th report]])
 

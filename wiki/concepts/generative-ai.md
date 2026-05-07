@@ -4,7 +4,7 @@ aliases: ["GenAI", "generative AI", "generative artificial intelligence"]
 tags: [generative-ai, foundation-models, ai-adoption]
 confidence: 0.95
 last_confirmed: "2026-05-07"
-source_count: 15
+source_count: 17
 relationships:
   - type: uses
     target: foundation-models
@@ -46,6 +46,22 @@ In the [[AI Index]] taxonomy, "Generative AI" is a sub-class of AI distinguished
 - **U.S. AI-job postings citing GenAI skills tripled YoY** in 2024 (Lightcast data).
 - Top use cases (% of orgs deploying GenAI for this function): marketing strategy content (27%), knowledge management (19%), personalization (19%), design (14%), code creation (13%).
 - **Only 1% of C-suite executives describe their GenAI rollouts as "mature."** Most are still capturing value at small scale. See [[enterprise-ai-adoption]].
+
+### Return on iteration: the compounding-benefits reframing ([[2026-05-07-kiron-schrage-compound-benefits|Kiron & Schrage 2026]])
+
+A reframing of the AI-ROI question, distinct from but adjacent to the productivity studies above. The premise: in a GenAI era, the marginal cost of a *first attempt* (drafts, code, prototypes, analyses) has dropped sharply — what remains expensive is *evaluating what AI produces and capturing what was learned.* Productivity is therefore measured not just per unit of input but **per unit of learning per unit of interaction**.
+
+The economic framing: AI deployments are either **consumption economics** (asset depreciation: task in, output out, loop closes; knowledge evaporates after each interaction) or **compounding economics** (asset appreciation: each cycle improves the next). Two structural dynamics make compounding the imperative:
+
+1. **The Polanyi tacit-dimension breach** — for decades, tacit knowledge ("humans know more than they can articulate") protected knowledge workers from automation. LLMs now breach that moat *not by codifying tacit knowledge but by inferring it from behavioral traces at scale.* Legal reasoning in briefs, financial judgment in analyst reports, strategic thinking in board presentations — as these become legible to AI models, the tacit expertise embedded in them becomes machine-readable.
+2. **Jevons paradox amplification** — efficiency gains stimulate demand. As tacit expertise becomes machine-readable, sophisticated capability gets cheaper, and projects previously too expensive to prototype proliferate. Iteration cycles compress from months to hours.
+
+**Empirical anchors**:
+- Orgs that build **systematic feedback loops** between humans and AI are **6× more likely** to derive substantial financial benefits from AI ([[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]]).
+- Orgs investing in **learning with AI are 73% more likely** to achieve significant financial impact.
+- Orgs combining strong organizational learning with AI-specific learning are **up to 80% more effective at managing uncertainty**.
+
+**Operational mechanism** — the verification → evaluation → learning capture flywheel; see [[micro-productivity-trap]] and [[enterprise-ai-adoption]] for the full treatment. The wiki's coining of "**return on iteration**" captures the shift: ROI in a GenAI era is the rate at which captured learning changes subsequent practice, not the static ratio of value-generated to cost.
 
 ### Learning curves: model selection becomes a skill ([[2026-05-07-anthropic-economic-index-5-learning-curves|Anthropic Economic Index, 5th report]])
 

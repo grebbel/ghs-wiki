@@ -4,7 +4,7 @@ aliases: ["automation vs augmentation", "automation-vs-augmentation", "automate 
 tags: [automation, augmentation, generative-ai, ai-deployment, ai-task-design]
 confidence: 0.95
 last_confirmed: "2026-05-07"
-source_count: 12
+source_count: 14
 relationships:
   - type: supports
     target: ai-employment-effects
@@ -155,6 +155,8 @@ Four wiki sources, with distinct vocabularies and methodologies, all draw essent
 | [[2026-04-28-brynjolfsson-canaries-coal-mine\|Brynjolfsson et al. 2025]] | Automative vs. augmentative use (Anthropic Economic Index) | "Substitute vs. complement for labor" |
 | [[2026-04-28-anthropic-economic-index-q4-2025\|Anthropic Economic Index, 4th report]] | Longitudinal Claude.ai split (52% augmentation / 45% automation in Nov 2025) | "Directive / Feedback Loop / Task Iteration / Learning / Validation" |
 | [[2026-05-07-anthropic-economic-index-5-learning-curves\|Anthropic Economic Index, 5th report]] | Stable Claude.ai split through Feb 2026 (53/45); emergent API automation clusters (sales, trading, coding harnesses) where automation rose sharply at the surface where it matters for enterprise spend | "Surface- and cluster-specific automation"; "skill-biased technological change" |
+| [[2026-05-07-ransbotham-augmented-learners\|Ransbotham et al. 2024]] (MIT SMR × BCG, 8th annual) | Augmentation reframed as *learning-augmentation*: 15% Augmented Learners combine high org-learning + high AI-specific-learning capability; 1.6× uncertainty management; 1.4× revenue benefits; 1.9× long-term-project investment; 2.4× high-risk investment | "Augmented Learners" (organizational-level construct, not task-level) |
+| [[2026-05-07-kiron-schrage-compound-benefits\|Kiron & Schrage 2026]] | The expert-as-evaluator argument: AI compresses *implementation* but cannot compress *formation of expertise*. Augmentation is operationalized as **verification → evaluation → learning capture**; without all three, orgs *consume* (deplete) rather than *compound* AI value | "Compound benefits"; "return on iteration"; "verification masquerading as evaluation" |
 | [[2026-04-28-dellacqua-jagged-technological-frontier\|Dell'Acqua et al. 2026 (Jagged Frontier)]] | Per-task AI fit determines whether AI augments or harms; introduces "jagged frontier" | "Inside the frontier" (augmentation works) vs. "outside the frontier" (AI degrades performance) |
 | [[2026-04-29-boussioux-crowdless-future\|Boussioux et al. 2024 (Crowdless Future)]] | Augmentation pattern is fine-grained: *independent* search (multi-instance) vs *differentiated* search (single-instance with iterative diversification prompts); per-dimension trade-off (HC higher novelty; HAI higher value/quality) | "Independent search" vs. "differentiated search"; "AI-in-the-loop" |
 | [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation\|Dutt et al. 2026 (Bain/OpenAI HBR)]] | Two failure modes when augmentation is shallow: *offering lock-in* (AI optimizes existing offerings) and *process lock-in* (AI automates current processes without redesigning them). Successful firms "reinvent the business" instead, with 10–25% EBITDA gains | "Offering lock-in" vs. "process lock-in"; "improve the task" vs. "reinvent the business"; [[micro-productivity-trap]] |

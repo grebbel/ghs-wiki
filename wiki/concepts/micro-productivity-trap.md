@@ -2,9 +2,9 @@
 type: concept
 aliases: ["micro-productivity trap", "micro-productivity-trap", "offering lock-in", "process lock-in"]
 tags: [micro-productivity-trap, AI-transformation, EBITDA, process-redesign, workflow-redesign, enterprise-ai]
-confidence: 0.80
+confidence: 0.85
 last_confirmed: "2026-05-07"
-source_count: 3
+source_count: 5
 relationships:
   - type: instance-of
     target: enterprise-ai-adoption
@@ -79,6 +79,38 @@ Carucci's prescription matches the Bain/OpenAI and Nishar-Nohria diagnoses in sp
 
 Three independent sources, three vantages (consulting practice, investor + academic, executive coaching), three vocabularies — all converging on the same point: **the trap is fundamentally a listening failure, not a technology failure**. Confidence lifts from 0.75 (two-source) to 0.80 (three-source agreement across distinct vantages).
 
+### Fourth- and fifth-source corroboration: the operational mechanism ([[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]] + [[2026-05-07-kiron-schrage-compound-benefits|Kiron & Schrage 2026]])
+
+Two MIT SMR sources from a fourth vantage (academic / journalistic) supply both the **empirical scale** and the **operational mechanism** of the trap.
+
+**Empirical scale**: 3,467-respondent MIT SMR × BCG survey finds **59% of organizations are "Limited Learners"** — low on both organizational learning capability and AI-specific learning capability. Only **15% are Augmented Learners** combining both. The 59% Limited-Learner majority is the empirical correlate of being stuck in the trap; the 15% Augmented-Learner cohort is what escape looks like at population scale.
+
+**Operational mechanism**: [[2026-05-07-kiron-schrage-compound-benefits|Kiron & Schrage 2026]] specify *what process lock-in looks like* in operational detail:
+
+> "Most organizations treat AI outputs as verdicts to be confirmed rather than starting points to be interrogated. The result is **consumption dressed up as adoption — verification mistaken for the whole job.**"
+
+The flywheel that escapes the trap:
+
+| Step | Question | Distinction |
+|---|---|---|
+| **Verification** | Does this output meet the standard? | Binary, against existing criteria. *Necessary but insufficient.* |
+| **Evaluation** | What does this output reveal? | May generate **new** standards. Requires domain expertise. *Where most orgs fail.* |
+| **Learning capture** | How do we ensure this insight persists? | Version control for organizational judgment (e.g. CLAUDE.md-style files). |
+
+**Why this matches the Bain/OpenAI diagnosis**: Bain/OpenAI's *process lock-in* (AI automates current processes without redesign) and Nishar-Nohria's *data-architecture-as-afterthought* both name the same trap — applying AI to the *output stage* of a workflow without changing how the organization metabolizes AI's outputs. Kiron-Schrage make the metabolism mechanism explicit: orgs that don't *evaluate* (only verify), don't *capture* (let insights evaporate after each session), or both, never compound.
+
+**Statistical anchor for the operational claim**: orgs that build **systematic feedback loops between humans and AI are 6× more likely** to derive substantial financial benefits; orgs investing in **learning with AI are 73% more likely** to achieve significant financial impact (Ransbotham et al. 2024 cited in Kiron-Schrage 2026).
+
+**Five concrete moves** (from Kiron-Schrage), each correcting a specific failure mode of the trap:
+
+1. **Preserve evaluation expertise** — domain experts repositioned as *evaluators*, not removed because "AI can do that now."
+2. **Build minimally viable verification** — start the cycle even when full verification is expensive (multijudge systems, consistency checks).
+3. **Institute evaluation practices** — "What worked? What failed? **What was *interestingly* wrong?**" The third question converts AI-output anomalies into surfaced tacit expertise.
+4. **Create capture systems** — decision journals, prompt repositories, evaluation logs. *Discipline, not cost or creativity, is the true constraint.*
+5. **Measure the cycle, not just the output** — count verifications, evaluations, learning captures, and how quickly captured learning changes practice.
+
+Five independent sources now (Bain/OpenAI, Nishar-Nohria, Carucci, Ransbotham et al., Kiron & Schrage), four vantages (consulting practice, investor/academic, executive coaching, academic survey + practitioner column), all converging. Confidence lifts to **0.85** (five-source agreement; the new sources add the operational mechanism missing from the prior three). The trap is robustly named; what remains is *measurement* — how would an external auditor distinguish a verification-only org from a verify-evaluate-capture org without insider access?
+
 ## Cross-source positioning (descriptive only, per cross-source neutrality)
 
 The micro-productivity-trap framing sits among several wiki vocabularies addressing the same broad territory of "AI adoption breadth ≠ transformation depth":
@@ -93,6 +125,7 @@ The micro-productivity-trap framing sits among several wiki vocabularies address
 - [[2026-04-30-ai-index-report-2026|AI Index 2026]] — empirical context: 88% organizational AI adoption but **AI agent deployment in single digits per business function**.
 - [[2026-05-05-nishar-nohria-end-of-one-size-fits-all|Nishar & Nohria 2026]] — *firm-boundary 4-model lens* (Build / Compose / Collaborate / Buy Outcomes); the trap manifests when a firm rushes to "Build" or rushes to automate any layer without first treating **data architecture, governance, and ownership** as the foundation.
 - [[2026-05-07-carucci-resistance-as-data|Carucci 2026]] — *human-reaction lens* on the trap; the Flaws-in-change resistance signal is operators surfacing exactly what process lock-in misses; leaders' three traps (personalize / moralize / rush) systematically suppress it.
+- [[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]] + [[2026-05-07-kiron-schrage-compound-benefits|Kiron & Schrage 2026]] — *organizational-learning lens* on the trap; 59% of orgs are "Limited Learners" stuck in the trap; the verification → evaluation → learning capture flywheel is the operational machinery to escape it. ROI reframed as **return on iteration**.
 
 Each names the same broad gap with a different vocabulary; the wiki's [[syntheses/organizational-frameworks-for-ai-adoption|organizational-frameworks-for-ai-adoption]] synthesis maps the cluster (the synthesis was filed when 6 frameworks were ingested; Nishar-Nohria is the 7th and Carucci is the 8th, at layers the synthesis didn't surface).
 

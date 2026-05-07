@@ -4,7 +4,7 @@ aliases: ["RAI", "responsible AI", "AI ethics", "AI governance", "AI safety"]
 tags: [responsible-ai, ai-ethics, ai-governance, ai-safety, ai-policy]
 confidence: 0.95
 last_confirmed: "2026-05-07"
-source_count: 7
+source_count: 8
 relationships:
   - type: part-of
     target: enterprise-ai-adoption
@@ -125,6 +125,17 @@ A specific tension that surfaces across organizations: **how to permit AI experi
 - **Innovation moves only as fast as your slowest approval queue.**
 
 This is operationally concrete and worth pairing with the MIT CISR Stewardship pillar — which solves the same problem from the architecture-review-board angle.
+
+### "Learn responsibly" as a fifth RAI dimension ([[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]])
+
+The MIT SMR × BCG 8th annual report identifies a set of RAI concerns specific to *organizational learning* with AI — distinct from the standard taxonomy (incidents, bias, factuality, governance, transparency, security). Each is illustrated with executive-interview anchors:
+
+- **Invasive monitoring as agency threat**: workers may perceive AI-enabled knowledge capture as a threat to their agency, reducing engagement. The report cites [[Mark Surman]] (Mozilla Foundation) on this as the equity question — *"Will vulnerable workers become even more economically insecure when AI eliminates the tasks they are most qualified to do?"*
+- **Knowledge ownership in ecosystem partnerships**: knowledge dissemination across firms (federated learning, ecosystem partnerships) carries risk of losing control of knowledge capital. Surman: *"the core piece is, there's just so many questions about copyright and what it means to own knowledge. Maybe the copyright law we have just needs to be reinterpreted for the AI era."*
+- **Data trust as load-bearing**: knowledge dissemination without trust in the underlying data is "a well-known hurdle to data-driven decision-making." The Expedia Group case study illustrates a *nudge approach* to dissemination — recommendations rather than consequences/incentives that "directly manipulate behaviors."
+- **Worker disposition and learning styles**: "Will learning capabilities be equally accessible to humans with a range of learning styles and needs?" — an inclusion concern adjacent to but distinct from the bias-in-output concern of standard RAI.
+
+The report's prescription: **deliberately apply responsible AI practices to ensure knowledge capture and dissemination represent established learning principles and values.** This positions "learn responsibly" as a *fifth* dimension alongside the standard four (fairness/transparency/safety/governance) — explicitly tied to organizational learning rather than to model behavior.
 
 ### Labor-market disruption as an under-attended RAI concern
 

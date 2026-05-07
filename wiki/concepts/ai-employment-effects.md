@@ -4,7 +4,7 @@ aliases: ["AI employment effects", "AI labor effects", "AI job displacement", "A
 tags: [employment, labor-market, ai-displacement, automation, labor-economics, age-effects]
 confidence: 0.95
 last_confirmed: "2026-05-07"
-source_count: 12
+source_count: 14
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -139,6 +139,35 @@ Reconciling with [[2026-04-28-brynjolfsson-li-raymond-generative-ai-at-work|Bryn
 | Open-ended Claude usage (AEI 5, 2026) | **Skill-biased** — high-tenure +3–4pp success | Self-selected users across all tasks/models |
 
 The reconciliation: **constrained, single-tool augmentation equalizes**; **open-ended, multi-tool deployment rewards expertise**. As enterprise deployments mature from single-purpose copilots to general-purpose Claude (or multi-model) access, the 5th-report pattern likely dominates over the customer-support pattern. This matters for [[ai-deskilling]] and for [[durable-skills]] in two ways: AI-literacy is becoming a learnable skill with measurable returns, and access to premium models becomes a productivity differentiator alongside underlying competence.
+
+### Hopes outpacing fears: the worker-attitude reversal ([[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]])
+
+A counterweight finding to the displacement narrative — and the wiki's strongest signal that *current* workers' subjective expectations have *improved*, not worsened, since 2017. From the MIT SMR × BCG 8th-annual survey appendix:
+
+| Attitude (% agree/strongly agree) | 2017 | **2024** |
+|---|---:|---:|
+| Hope AI will assist with some of my tasks in 5 years | 70% | **84%** |
+| Fear AI will assume some of my tasks in 5 years | 31% | **20%** |
+
+Hope rose by 14 pp; fear declined by 11 pp. The report's interpretation: *experience with generative AI may be showing people what these models can — and cannot — do well.* The displacement panic that surged with ChatGPT's release in late 2022 has not been borne out at the worker-attitude level — at least not within the MIT SMR × BCG sample (3,467 respondents, 21+ industries, 136 countries).
+
+**Reconciliation with the [[2026-04-28-brynjolfsson-canaries-coal-mine|Canaries paper]]'s 13% relative decline finding**: the two are about *different populations*. Brynjolfsson measures *future hiring* of 22–25-year-olds in AI-exposed occupations; Ransbotham measures *current incumbents'* expectations about themselves. Both can be true: incumbents feel safer than ever, while new entrants find the door narrower than ever. The compositional shift is generational, not subjective.
+
+### The expert-as-evaluator: the durable role under augmentation ([[2026-05-07-kiron-schrage-compound-benefits|Kiron & Schrage 2026]])
+
+A specific claim about *which* roles retain durable value under sustained AI augmentation: **"The expert as evaluator is not a transitional role."** The mechanism:
+
+- AI compressed *implementation* time dramatically; it did *not* compress the *formation of expertise*.
+- Without prior expertise, only two moves exist for an AI output: accept or reject.
+- With expertise, a third move opens up: *stay in the encounter and learn.*
+
+Operational implication for hiring and reskilling:
+
+- **Don't deploy AI first in domains where expertise is shallow** — the org loses the evaluator capability that makes compounding possible.
+- **Preserve evaluation expertise** as a deliberate capability. Domain experts repositioned as evaluators rather than producers.
+- The Polanyi tacit-dimension breach makes *codified* knowledge work more substitutable, but the *evaluation* role becomes more valuable, not less.
+
+This adds a **second** durable-role argument to the wiki, alongside the [[durable-skills]] supply-side measurement of collaboration / creativity / critical thinking. Where Globerson et al. measure individual durable skills *without reference to AI deployment*, Kiron-Schrage make the explicit deployment-context claim: the durable role is **the expert as evaluator of AI outputs**, in domains where the human has prior deep expertise.
 
 ### Software developers ages 22–25: -20% from 2024 ([[2026-04-30-ai-index-report-2026|AI Index 2026]])
 

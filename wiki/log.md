@@ -981,3 +981,94 @@ Ingested **Massenkoff, Lyubich, McCrory, Appel, Heller — *The Anthropic Econom
 **Source-quality flag:** vendor-of-deployment publication (Anthropic measuring its own platform's usage). Methodology is privacy-preserving and large-N (~2M conversations sampled). Confidence boost: +0.05 per "additional supporting source"; +0.05 for large-N empirical bonus where applicable. Per CLAUDE.md, vendor-sponsored work caps at 0.75 unless multiple independent sources agree — the Brynjolfsson Canaries paper independently uses AEI's automation/augmentation classification at occupation level, so the cross-validation supports the higher confidence on related claims.
 
 **Total file touch: 10** (1 source + 2 entity enrichments [1 new content here + 1 already counted under Managed Agents] + 5 concept enrichments + index + log + raw PDF; **ingested concurrently with the Managed Agents post in a single commit** per user request "Find and ingest them. please" — both are Anthropic-sourced and mutually reinforcing).
+
+## [2026-05-07] ingest | Ransbotham, Kiron et al. — *Learning to Manage Uncertainty, With AI* (MIT SMR × BCG, Nov 2024)
+
+Ingested **Sam Ransbotham, David Kiron, Shervin Khodabandeh, Michael Chu, Leonid Zhukov — *Learning to Manage Uncertainty, With AI*** (MIT SMR Big Ideas Research Report in collaboration with BCG, November 2024, ~21 pages of body content from a 29-page PDF; full ingest of body + appendix + acknowledgments + references). The **eighth annual** MIT SMR × BCG global research study on AI in business strategy. Spring 2024 survey: 3,467 respondents in 21+ industries and 136 countries, plus 9 executive interviews.
+
+**Central construct**: **Augmented Learners** — the 15% of organizations that combine high *organizational learning* capability with high *AI-specific learning* capability. The empirical 2×2 distribution: Limited Learners 59%, Organizational Learners 14%, AI-specific Learners 12%, Augmented Learners 15%.
+
+**Headline outcomes (Augmented Learners vs Limited Learners)**:
+
+- 1.6× more likely to feel prepared to manage industry uncertainty with AI (82% vs 53%).
+- 2.2× for talent disruptions (83% vs 39%).
+- 1.8× for technology disruptions (86% vs 49%).
+- 1.6× for legal/regulatory disruptions (79% vs 48%).
+- 1.4× for revenue benefits from AI (99% vs 71%).
+- 1.9× for long-term (>5-year) AI project investment.
+- 2.4× for high-risk AI project investment.
+
+**Three areas where AI augments organizational learning**: knowledge capture (NASA Mars 2020 / LG Nova / Capital One), knowledge synthesis (Stitch Fix / Expedia 1.26 quadrillion combos), knowledge dissemination (Slack daily recaps / cloud services TikTok-style learning).
+
+**Five practical steps**: simultaneously improve both learning types; learn to *explore* with AI (not just exploit); choose projects that promote learning (long-term, high-risk); learn responsibly; accelerate learning with AI.
+
+**Appendix — State of AI in Business 2024**:
+
+- AI adoption: 50% (2023) → **70% (2024)** — a +20pp jump in a single year.
+- 54% piloting/deploying GenAI; 91% expect GenAI core to strategy in next 3 years.
+- **Hopes outpacing fears**: 84% hopeful (vs 70% in 2017) / 20% fearful (vs 31% in 2017).
+- AI strategy: **39% (2024)** down from 59% (2020) — back to 2017 levels as GenAI's emergence forced strategy reformulation. Orgs reporting an AI strategy are 2× more likely to generate additional business value.
+
+**Wiki impact (12 files touched, ingested concurrently with Kiron-Schrage 2026 below)**:
+
+- **1 new source page**: [[2026-05-07-ransbotham-augmented-learners]].
+- **3 new entity pages**: [[David Kiron]] (recurring co-author across two new sources), [[Sam Ransbotham]] (8th-annual report lead author), [[MIT Sloan Management Review]] (publisher; distinct from MIT Tech Review Insights).
+- **2 concept enrichments** (heavy):
+  - [[enterprise-ai-adoption]] — added the **Augmented Learners (9th) lens** with full 2×2 distribution + outcome multipliers; new "The Augmented Learner advantage and its operational machinery" subsection covering knowledge capture/synthesis/dissemination + the verification → evaluation → learning capture flywheel; updated the running 7-lenses → 9-lenses cluster phrasing. `source_count: 19 → 21`.
+  - [[micro-productivity-trap]] — added 4th and 5th source corroboration ("the operational mechanism" subsection); confidence lifted from 0.80 → 0.85 (five-source agreement across four vantages: consulting / investor + academic / executive coaching / academic survey + practitioner column). `source_count: 3 → 5`.
+- **3 concept enrichments** (light):
+  - [[ai-employment-effects]] — added "Hopes outpacing fears" subsection with the 84/20 attitude reversal + reconciliation with Brynjolfsson Canaries (different populations, both true). `source_count: 12 → 14`.
+  - [[automation-vs-augmentation]] — added two rows to the convergence table (Ransbotham et al. 2024 + Kiron-Schrage 2026 representing organizational-learning and operational-flywheel vantages). `source_count: 12 → 14`.
+  - [[responsible-ai]] — added '"Learn responsibly" as a fifth RAI dimension' subsection with Surman / Mozilla quotes on equity, knowledge ownership, learning-style inclusion. `source_count: 7 → 8`.
+
+**Source-quality flag**: BCG-sponsored research (vendor-of-deployment bias non-zero), but mitigated by 8-year longitudinal panel of comparable methodology + 3,467-respondent large-N + cross-validation of adoption numbers against AI Index 2025/2026. Confidence 0.85 (baseline 0.7 + 0.05 large-N empirical + 0.10 multi-year longitudinal panel).
+
+**Dangling references** (single-source mention, deferred): Shervin Khodabandeh, Michael Chu, Leonid Zhukov (co-authors); Sowmya Gottipati (Estée Lauder); Shilpa Prasad (LG Nova); Jackie Rocca (Slack); Tonia Sideri (Novo Nordisk); Mark Surman (Mozilla); Diya Wynn (AWS); Vandi Verma (NASA JPL); Jeff Cooper (Stitch Fix); Rajesh Naidu (Expedia); Prem Natarajan (Capital One); Shelia Anderson (Aflac); BCG Henderson Institute; BCG X. The recurring case studies (Estée Lauder, LG Nova, Aflac, Expedia, Mozilla, Slack, Novo Nordisk, Capital One, Stitch Fix) are kept as broken-link stub-gap signals — promote on 2nd-source coverage.
+
+## [2026-05-07] ingest | Kiron & Schrage — *How to Reap Compound Benefits From Generative AI* (MIT SMR Column, Apr 2026)
+
+Ingested **David Kiron, Michael Schrage — *How to Reap Compound Benefits From Generative AI*** (MIT Sloan Management Review Column, 6 April 2026, ~12 pages of body content / 13-page PDF / 12-min reading time). Op-ed-style argument extending Ransbotham et al. 2024's empirical foundation with the operational mechanism for compounding AI value.
+
+**Central thesis**: Reorient AI deployment from **consumption economics** (asset depreciation: task in, output out, loop closes; knowledge evaporates) to **compounding economics** (asset appreciation: each cycle improves the next).
+
+**Two structural dynamics** make compounding management imperative:
+
+1. **Polanyi's tacit-dimension breach** — "Humans know more than they can articulate" was a moat for knowledge workers (1966 *The Tacit Dimension*). LLMs now breach that moat *not by codifying tacit knowledge but by inferring it from behavioral traces at scale*. Tacit expertise was a moat; it is no longer.
+2. **Jevons paradox amplification** — efficiency gains stimulate demand. As tacit expertise becomes machine-readable, sophisticated capability gets cheaper, and projects previously too expensive to prototype proliferate.
+
+**The three-step flywheel**:
+
+| Step | Question | Distinction |
+|---|---|---|
+| **Verification** | Does this output meet the standard? | Binary check against existing criteria. *Necessary but insufficient.* |
+| **Evaluation** | What does this output reveal? | May generate **new** standards. Requires domain expertise. *Where most orgs fail.* |
+| **Learning capture** | How do we ensure this insight persists? | Version control for organizational judgment (e.g. CLAUDE.md-style files). |
+
+**The trap**: most organizations practice **verification masquerading as evaluation** — "consumption dressed up as adoption."
+
+**Anchor anecdotes**:
+
+- **Boris Cherny** (Anthropic, led Claude Code development) — 10–15 concurrent Claude instances as smart subagents; CLAUDE.md captures mistakes/corrections/design principles *inside the workflow*; "It was mind-blowing" when AI began exploring his file system unprompted.
+- **Jaana Dogan** (Google, Gemini API) — pointed Claude Code (rival tool) at a months-long problem; "*It's not perfect and I'm iterating on it.*" Eight words that embody the verification-vs-evaluation distinction.
+
+**Five concrete moves**: preserve evaluation expertise; build minimally viable verification; institute evaluation practices ("What was *interestingly* wrong?"); create capture systems (decision journals, prompt repositories, evaluation logs); measure the cycle, not just the output.
+
+**Strongest claim worth flagging**: *"The expert as evaluator is not a transitional role."* — direct, named claim about durable expertise under AI. Anchor for [[durable-skills]] and [[ai-employment-effects]].
+
+**Wiki impact (counted as part of the joint 12-file touch with Ransbotham et al. above)**:
+
+- **1 new source page**: [[2026-05-07-kiron-schrage-compound-benefits]].
+- **0 new entity pages** (Kiron already created via Ransbotham above; Michael Schrage is single-source, deferred; Boris Cherny is single-source explicit, deferred — referenced via [[Anthropic]] entity).
+- **3 concept enrichments** (already counted above; the Kiron-Schrage flywheel is the *operational* portion of the joint enrichments to [[enterprise-ai-adoption]], [[micro-productivity-trap]], [[durable-skills]], plus light enrichments to [[generative-ai]] (Return on iteration subsection), [[automation-vs-augmentation]] (convergence-table row), [[ai-employment-effects]] (expert-as-evaluator subsection)).
+  - [[durable-skills]] — added two rows to the cross-source-positioning section (Ransbotham + Kiron-Schrage); confidence lifted from 0.80 → 0.85. `source_count: 2 → 4`.
+  - [[generative-ai]] — added "Return on iteration" subsection capturing the consumption-vs-compounding economic reframing + Polanyi/Jevons dynamics + 6×/73%/80% empirical anchors. `source_count: 15 → 17`.
+
+**Cross-source positioning**: The Kiron-Schrage column is *operational extension* of [[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]] — same lead author David Kiron, 17 months later, with the verification-evaluation-learning-capture flywheel as the *mechanism* that turns the Augmented Learner advantage into compounding returns. Read the two sources together: empirical foundation (2024) → operational machinery (2026).
+
+**Contradictions checked**: none. Reinforces the [[micro-productivity-trap]] thesis from [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Bain/OpenAI 2026]] and the brain/hands/session pattern from [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic Managed Agents]] (Boris Cherny works at Anthropic; the CLAUDE.md pattern is consistent with the engineering architecture from a different team at the same company).
+
+**Source-quality flag**: Op-ed format, not empirical research. Statistics restated from MIT SMR / BCG research base; not independently validated by this column. Cherny / Dogan anecdotes are vivid but n=2. Confidence 0.80 (baseline 0.7 + 0.05 additional supporting source + 0.05 for being co-authored by an author with prior empirically-grounded work in the wiki). Not raised to 0.85 because the column itself is opinion-format.
+
+**Dangling references** (single-source mention, deferred): Michael Schrage; Boris Cherny (Anthropic); Jaana Dogan (Google); Michael Polanyi (1966 *Tacit Dimension*); William Stanley Jevons (1865 paradox).
+
+**Joint commit**: ingested concurrently with Ransbotham et al. 2024 above in a single commit per user request — both MIT SMR sources, mutually reinforcing, share co-author David Kiron. Together they form the wiki's "MIT SMR organizational-learning lens" on enterprise AI — the 9th adoption framework.
