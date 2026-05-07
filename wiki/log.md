@@ -1140,3 +1140,34 @@ Ingested **Abhishek Chatterjee — *The Anatomy of an Agent Harness*** (Medium, 
 **Dangling references** (single-source mention, deferred): Abhishek Chatterjee (author); praxiomai.xyz; getpolaris.xyz; the *Claude Code leak* (referenced in both new sources — first-party ingest would be valuable); LangChain / Microsoft Agent Framework / Google ADK / LlamaIndex / CrewAI / Haystack / DSPy (single-source named; promote on 2nd source coverage).
 
 **Joint commit**: ingested concurrently with Kokane 2026 above in a single commit per user request — both new sources are practitioner essays on the same topic from opposite rhetorical stances, mutually reinforcing the [[agent-harness]] construct's promotion to a wiki concept page.
+
+## [2026-05-08] refactor | Refresh synthesis: organizational-frameworks-for-ai-adoption (6 → 10 frameworks)
+
+Refreshed [[syntheses/organizational-frameworks-for-ai-adoption]] (originally filed 2026-05-05 with 6 frameworks). Six new source pages have been ingested in the intervening three days, contributing **four new framework-vantages**:
+
+- **Firm-boundary lens** ([[2026-05-05-nishar-nohria-end-of-one-size-fits-all|Nishar & Nohria 2026]])
+- **Human-reaction lens** ([[2026-05-07-carucci-resistance-as-data|Carucci 2026]]) — orthogonal cross-cutting
+- **Organizational-learning lens** ([[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]] + [[2026-05-07-kiron-schrage-compound-benefits|Kiron & Schrage 2026]]) — empirical foundation + operational mechanism
+- **Runtime-engineering lens** ([[2026-05-07-kokane-agent-harness-vs-systems-design|Kokane 2026]] + [[2026-05-07-chatterjee-anatomy-of-agent-harness|Chatterjee 2026]]) — sceptical + taxonomical vantages
+
+**Synthesis-page changes (8 sections updated in place):**
+
+- **Frontmatter**: `last_refreshed: "2026-05-08"` field added (new convention for refreshed syntheses; complements the existing `closed:` date which preserves the original closure moment); `last_confirmed: 2026-05-05 → 2026-05-08`; `source_count: 6 → 12`. Confidence held at 0.90 (the cluster is broader but also surfaces new methodological open questions).
+- **Intro**: rewritten to make the 6 → 10 expansion visible upfront; flags that the core thesis is unchanged but the evidence is substantially stronger.
+- **Layered framework table**: 7 rows → **11 rows** (new layers: Organizational learning, Firm-boundary, Runtime engineering; new orthogonal cross-cutting row: Human reaction).
+- **Decision tree**: 7 questions → **10 numbered questions + 1 cross-cutting question**. Sequenced top-of-house (Werner-Le-Brun org-design) to engineering-floor (agent harness runtime).
+- **Where they genuinely disagree**: 4 splits → **7 splits**. New: firm-boundary fluidity vs. org structural property; "process redesign is the value" vs. "harness is the moat" (resolution: different stack layers); Kokane sceptical vantage on the entire cluster; Augmented Learners as upstream of MIT CISR Stage transition.
+- **Cross-framework agreement**: 5 claims → **6 claims** with stronger evidence. The cluster's most consequential new finding: the **"compounding cycle" is the same operational mechanism at two stack layers** (Kiron-Schrage organizational + Chatterjee runtime). Worker-attitude data (84% hopeful / 20% fearful) corroborates the augmentation-not-automation finding from a new vantage. Also added: "models commoditize; what's owned compounds" — three independent vantages reach the same conclusion.
+- **Empirical-validation table**: 6 rows → **10 rows**. Critical update: **MIT CISR is no longer alone with N>500 representative-sample data.** Ransbotham/Kiron's 3,467-respondent 2024 cross-industry global survey is now the largest dataset in the cluster, and it is post-GenAI where MIT CISR is pre-GenAI.
+- **Sources consulted**: 6 → 12 entries (split into "Original 6 (filed 2026-05-05)" and "Added in 2026-05-08 refresh").
+- **Lessons**: 4 → 7 lessons. New: organizational learning capability is the upstream variable for MIT CISR Stage 2 → 3 transition; the compounding cycle requires both organizational and runtime loops running; the human-reaction lens is cross-cutting not stack-layered; models commoditize while what's owned compounds.
+- **Open questions**: marked 2 prior questions as **partially resolved** by the refresh; added 4 new open questions (cross-walk between Stages and Augmented Learners; firm-boundary × maturity-stage interaction; quantitative measurement of compounding-cycle slope; Kokane-Chatterjee hiring-data tension).
+- **Related pages**: added [[agent-harness]] concept (created in the prior ingest); updated framework-count from 6 to 10.
+
+**Why a refactor not a synthesize op**: per CLAUDE.md §Synthesis, the `synthesize` operation is for *initial* close of a thread into a synthesis page. The thread closed 2026-05-05; this refresh updates the existing synthesis with new source material rather than reopening or reclosing. `refactor` is the closest fit in the schema's permitted ops (`ingest | query | lint | synthesize | refactor | bulk-refactor`).
+
+**No new convention written into CLAUDE.md** for synthesis refreshes — the addition of a `last_refreshed:` frontmatter field is consistent with the v0.2 lifecycle spirit (`last_confirmed:` already exists for concepts and entities). If synthesis refreshes become routine, the convention should be promoted into the schema; for now it is precedential rather than canonical.
+
+**Files touched (3)**: [[syntheses/organizational-frameworks-for-ai-adoption]] (substantial expansion, ~150 line additions across 9 sections); `wiki/log.md` (this entry); the touched-source [[enterprise-ai-adoption]] is *not* updated by this refresh — the synthesis adds content, the concept page already reflects the 10 lenses.
+
+**Cross-source convergence worth flagging at synthesis level**: the **"compounding cycle"** is now the wiki's strongest concept-level cross-source agreement. Kiron-Schrage 2026 (organizational level: verification → evaluation → learning capture) and Chatterjee 2026 (runtime level: Compounding telemetry → harness adjustments → workspace overrides) describe operationally identical machinery from different practitioner communities. Both anchor onto the same architectural commitment ([[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic Managed Agents]]) and the same empirical foundation ([[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]]). When 4 sources from 3 vantages converge on the same operational mechanism, the construct is robust enough to be load-bearing for the synthesis.
