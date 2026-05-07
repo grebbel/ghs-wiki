@@ -4,7 +4,7 @@ aliases: ["AI employment effects", "AI labor effects", "AI job displacement", "A
 tags: [employment, labor-market, ai-displacement, automation, labor-economics, age-effects]
 confidence: 0.95
 last_confirmed: "2026-05-07"
-source_count: 11
+source_count: 12
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -122,6 +122,23 @@ The wiki's primary source for the customer-support productivity finding is now [
 **Reconciling productivity gains with [[2026-04-28-brynjolfsson-canaries-coal-mine|the Canaries paper]] employment declines:** AI raises individual productivity (especially for low-skill workers in a role) while reducing the number of workers needed in that role. Whether net employment goes up or down depends on **demand elasticity** — how much demand expands when costs fall. The customer-support equalizing effect at task level does not imply pro-employment outcomes at occupation level.
 
 The two-paper Brynjolfsson arc is the wiki's clearest illustration of the **task-level vs. occupation-level paradox**: same author, same lab, same methodological rigor, two complementary findings that together are more informative than either alone.
+
+### Skill-biased technological change: high-tenure users gain more ([[2026-05-07-anthropic-economic-index-5-learning-curves|Anthropic Economic Index, 5th report]])
+
+The fifth Anthropic Economic Index report (Feb 2026 sample) introduces an explicit **skill-biased technological change** framing — a counterpart to the customer-support equalizing effect, but pointing the other way at the *frontier* of usage:
+
+- **High-tenure Claude users** (those with longer histories of Claude.ai use) report **~3–4 percentage points higher task-success** than lower-tenure users, **after controlling** for task type, model selection, and conversation complexity. The gap survives controls — it is not just about high-tenure users picking easier tasks.
+- The mechanism is identified as **learning by doing**: skilled users learn what Claude is good at, structure prompts to reach the model's strengths, choose the right model tier (Haiku/Sonnet/Opus) per task, and recover from failure faster.
+- **Model selection itself becomes a skill**. The 5th report shows users select Opus differentially for higher-value tasks: **+1.48 percentage-points higher Opus share per +$10/hour task value** on Claude.ai; **+2.79 pp per +$10** on the 1P API (about twice as steep). High-value-task selection of premium models is a learned behavior visible in usage logs.
+
+Reconciling with [[2026-04-28-brynjolfsson-li-raymond-generative-ai-at-work|Brynjolfsson, Li & Raymond (2025)]]'s within-role equalizing effect: the two findings are not contradictory but operate on different populations:
+
+| Setting | Effect direction | Population |
+|---|---|---|
+| Customer support augmentation (BLR 2025) | **Equalizing** — low-skill +30%, high-skill ~0% | Within-role workers given a fixed AI tool |
+| Open-ended Claude usage (AEI 5, 2026) | **Skill-biased** — high-tenure +3–4pp success | Self-selected users across all tasks/models |
+
+The reconciliation: **constrained, single-tool augmentation equalizes**; **open-ended, multi-tool deployment rewards expertise**. As enterprise deployments mature from single-purpose copilots to general-purpose Claude (or multi-model) access, the 5th-report pattern likely dominates over the customer-support pattern. This matters for [[ai-deskilling]] and for [[durable-skills]] in two ways: AI-literacy is becoming a learnable skill with measurable returns, and access to premium models becomes a productivity differentiator alongside underlying competence.
 
 ### Software developers ages 22–25: -20% from 2024 ([[2026-04-30-ai-index-report-2026|AI Index 2026]])
 

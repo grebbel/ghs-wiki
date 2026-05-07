@@ -900,3 +900,84 @@ This paper anchors a **new wiki concept** ([[durable-skills]]) at the labor-skil
 **Limitations the paper acknowledges:** cultural situatedness (current results are US, English-speaking, ages 18-25); construct validity established but not criterion validity (whether scores predict downstream career outcomes); CT and creativity validation is partial (CT relies on simulated-subject recovery; full human-rated validation is "ongoing").
 
 **Total file touch: 10** (1 new source + 1 new entity + 1 new concept + 4 concept enrichments + index + log; raw PDF on disk under `raw/papers/`).
+
+## [2026-05-07] ingest | Anthropic Engineering — Scaling Managed Agents (Decoupling brain / hands)
+
+Ingested **Lance Martin, Gabe Cemaj, Michael Cohen — *Scaling Managed Agents: Decoupling the brain from the hands*** (Engineering at Anthropic blog, 8 April 2026, ~6 pages of body content). Engineering blog post describing Anthropic's production architecture for long-horizon agent work.
+
+**Architectural thesis** — production agents need to **decouple three concerns** that the chatbot stack collapsed into one:
+
+1. **Brain** — model + tool-use/reasoning loop. Stateless and bursty; scale on its own clock.
+2. **Hands** — tool execution surface (code interpreter, browser, MCP servers, file system). Each tool has its own latency, blast-radius, and security profile; isolation per-tool is mandatory.
+3. **Session** — long-running orchestration state (memory, conversation history, intermediate artefacts). **A session is not the same as the model's context window** — sessions can run for hours and span context resets.
+
+**Key insights worth flagging:**
+
+- **Security via structural unreachability.** The hands tier runs in a sandbox the brain cannot directly drive — the model emits tool-call requests, and a separate executor decides whether and how to run them. This is the engineering version of the [[responsible-ai|"agent risk"]] story: rather than relying on the model to *refuse* dangerous actions, the architecture makes most dangerous actions structurally unreachable.
+- **"Context anxiety" is model-specific.** The post documents that [[Claude Sonnet 4.5]] sometimes wraps up tasks prematurely when its context window fills — a failure mode *not* present on **Claude Opus 4.5** under the same harness. **First wiki evidence** that long-horizon agent reliability varies by model **within a family**, not just across families.
+- **Long-horizon weakness is partly architectural, not just capability.** Reframes the RE-Bench 32-hour finding ([[2026-04-28-ai-index-report-2025|AI Index 2025]]) — context-window saturation can be addressed via brain/hands/session decomposition independently of model improvement.
+
+**Wiki impact (8 files touched):**
+
+- **1 new source page:** [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands]].
+- **No new entity pages.** [[Anthropic]] already existed; the post's authors (Lance Martin, Gabe Cemaj, Michael Cohen) are deferred as dangling wikilinks until 2nd-source coverage.
+- **2 entity enrichments:**
+  - [[Anthropic]] — added "Platform / product engineering" section (Claude Platform, Claude Managed Agents, Claude Code); added Claude Opus 4.5 / 4.6 to the model roster with the context-anxiety note. `confidence: 0.75 → 0.85`, `source_count: 2 → 4`, `last_confirmed → 2026-05-07`.
+- **3 concept enrichments:**
+  - [[ai-agents]] — heavy: added "Engineering pattern: brain / hands / session decoupling" subsection; added Claude Code to the deployment list (with the AEI-5-supplied empirical signature); reframed the Hype-vs-capability-gap debate item with the architectural-vs-capability cut. `confidence: 0.85 → 0.95`, `source_count: 4 → 6`, `last_confirmed → 2026-05-07`.
+  - [[responsible-ai]] — added "Security as structural unreachability" subsection. `source_count: 6 → 7`, `last_confirmed → 2026-05-07`.
+  - [[foundation-models]] — added Claude Sonnet 4.5 / Opus 4.5 / Opus 4.6 references with the in-family reliability variation note. `confidence: 0.80 → 0.85`, `source_count: 2 → 4`, `last_confirmed → 2026-05-07`.
+- **index.md:** new source entry; refreshed [[Anthropic Economic Index]] one-liner.
+
+**Contradictions checked:** none. The post complements rather than contradicts existing agent claims.
+
+**Dangling references** (single-source mention, deferred): Lance Martin, Gabe Cemaj, Michael Cohen (post authors); [[Claude]], [[Claude Code]], [[Claude Sonnet 4.5]], [[Claude Opus 4.5]], [[Claude Opus 4.6]] (referenced across multiple wiki sources but not yet promoted to standalone pages — kept as broken-link stub-gap signals per the v1 convention).
+
+**Source-quality flag:** Anthropic's own engineering blog (vendor-of-deployment). Confidence boost: +0.05 per "additional supporting source" rule applied where it compounded with prior sources on a page; capped at 0.95 by the v0.2 confidence rules. Treat the post as authoritative on Anthropic's own engineering choices but not as independent validation of the architectural claims.
+
+**Total file touch: 8** (1 source + 1 entity enrichment + 3 concept enrichments + index + log + raw PDF; ingested concurrently with AEI 5 below in a single commit per user request).
+
+## [2026-05-07] ingest | Anthropic Economic Index 5 — *Learning curves*
+
+Ingested **Massenkoff, Lyubich, McCrory, Appel, Heller — *The Anthropic Economic Index report: Learning curves*** (Anthropic Economic Index, 5th report, 24 March 2026, ~20 pages, full ingest). Sample period: Feb 5–12, 2026. Direct continuation of the 4th report ([[2026-04-28-anthropic-economic-index-q4-2025]]) — **enrichment, not supersession**.
+
+**Headline findings:**
+
+1. **Stable Claude.ai augmentation/automation split** through Feb 2026 (53/45) — augmentation has now led in **four of five samples**; the longitudinal trajectory is *not* drifting toward automation despite headline narratives about agentic deployment.
+2. **Skill-biased technological change** at the user level: high-tenure Claude users achieve **~3-4 percentage points higher task success** than lower-tenure users *after controlling* for task type, model selection, and conversation complexity. The mechanism is identified as **learning by doing** — picking the right tool, prompt structure, and recovery strategies improves with practice.
+3. **Model-selection slopes are steep and asymmetric.** Users select Opus differentially for higher-value tasks: **+1.48 pp Opus per +$10/hr task value** on Claude.ai; **+2.79 pp per +$10** on the 1P API (about twice as steep). Choosing the right model tier per task is itself a learnable, measurable skill visible in usage logs.
+4. **Surface-specific automation patterns.** Claude.ai split is stable; on the 1P API automation share rose sharply between Aug 2025 and Feb 2026 in three task clusters: **first-line sales**, **programmatic trading and brokerage**, and **coding agent harnesses** ([[Claude Code]] etc.). The aggregate "AI is automating work" framing dissolves once you separate consumer chat surface from agent-mediated API surface.
+5. **Coding migration off Claude.ai onto API.** "Computer & Mathematical" task-share on the 1P API jumped from **36% (Aug 2025) → 47% (Feb 2026)**, while the corresponding share on Claude.ai dropped — driven by agentic coding harnesses splitting work into many short directive task-labelled API calls.
+
+**Methodology continuity & caveats:**
+
+- Same privacy-preserving conversation-classification approach as 4th report (~1M Claude.ai conversations + ~1M API transcripts).
+- **O*NET vintage shifted** between 4th (2010) and 5th (2019) reports — year-over-year occupation-share comparisons need this caveat.
+- Models change between reports: 4th used Claude Sonnet 4.5 predominantly; 5th uses Claude Opus 4.5 / 4.6 in addition. Affects comparability across editions.
+
+**Reconciles with prior wiki claims:**
+
+- **The customer-support equalizing effect** ([[2026-04-28-brynjolfsson-li-raymond-generative-ai-at-work|Brynjolfsson, Li & Raymond 2025]]) and the AEI 5 skill-biased-change finding are not contradictory but operate on different populations. *Within-role workers given a fixed tool* equalize; *self-selected users across tasks/models/tiers* exhibit skill-biased returns. As enterprise deployments mature from single-purpose copilots to general-purpose access, the AEI 5 pattern likely dominates.
+- **Reinforces the [[micro-productivity-trap]] thesis** ([[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt, Chatterji et al. 2026]]) — firms capturing real value are operating through agentic harnesses on the API, not individual seats.
+
+**Wiki impact (10 files touched):**
+
+- **1 new source page:** [[2026-05-07-anthropic-economic-index-5-learning-curves]].
+- **2 entity enrichments:**
+  - [[Anthropic Economic Index]] — added 5th-report row to the reports table; methodology notes (O*NET vintage shift, model mix); description bumped to "five reports through March 2026". `confidence: 0.75 → 0.85`, `source_count: 2 → 3`, `last_confirmed → 2026-05-07`.
+  - [[Anthropic]] — added the AEI-5 Opus selection slope to the models section. (Already bumped above for Managed Agents.)
+- **5 concept enrichments:**
+  - [[automation-vs-augmentation]] — added Feb 2026 row to the longitudinal table (53/45 split); added the surface-/cluster-specific-automation framing (sales / trading / coding API clusters); added 5th-report row to the convergence table. `source_count: 11 → 12`, `last_confirmed → 2026-05-07`.
+  - [[ai-employment-effects]] — added "Skill-biased technological change: high-tenure users gain more" subsection with the equalizing-vs-skill-biased reconciliation table. `source_count: 11 → 12`, `last_confirmed → 2026-05-07`.
+  - [[generative-ai]] — added "Learning curves: model selection becomes a skill" subsection; positioned tenure-success and model-selection slopes as "headline speedups are realized only when users learn the surface". `source_count: 13 → 15`, `last_confirmed → 2026-05-07`.
+  - [[enterprise-ai-adoption]] — added "The deployment-surface migration: coding moved to API" subsection; "single-surface adoption metrics undercount the shift" caveat. `source_count: 17 → 19`, `last_confirmed → 2026-05-07`.
+  - [[durable-skills]] — added the AEI-5 row to the cross-source-positioning section with the open question "is AI literacy a 5th durable skill or a fluency that enables the other three?" `confidence: 0.75 → 0.80`, `source_count: 1 → 2`, `last_confirmed → 2026-05-07`.
+- **index.md:** new source entry; refreshed [[Anthropic Economic Index]] one-liner.
+
+**Contradictions checked:** none. AEI 5 sharpens and extends the 4th report's findings.
+
+**Dangling references** (single-source mention, deferred): Maxim Massenkoff, Eva Lyubich, Peter McCrory, Ruth Appel, Ryan Heller (paper authors — Anthropic Economic Research team).
+
+**Source-quality flag:** vendor-of-deployment publication (Anthropic measuring its own platform's usage). Methodology is privacy-preserving and large-N (~2M conversations sampled). Confidence boost: +0.05 per "additional supporting source"; +0.05 for large-N empirical bonus where applicable. Per CLAUDE.md, vendor-sponsored work caps at 0.75 unless multiple independent sources agree — the Brynjolfsson Canaries paper independently uses AEI's automation/augmentation classification at occupation level, so the cross-validation supports the higher confidence on related claims.
+
+**Total file touch: 10** (1 source + 2 entity enrichments [1 new content here + 1 already counted under Managed Agents] + 5 concept enrichments + index + log + raw PDF; **ingested concurrently with the Managed Agents post in a single commit** per user request "Find and ingest them. please" — both are Anthropic-sourced and mutually reinforcing).

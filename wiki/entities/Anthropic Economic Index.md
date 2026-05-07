@@ -5,9 +5,9 @@ aliases: ["Anthropic Economic Index", "Economic Index", "AEI"]
 tags: [anthropic-economic-index, ai-research, anthropic, claude, ai-adoption]
 parent: "[[Anthropic]]"
 since: 2025
-confidence: 0.75
-last_confirmed: "2026-04-28"
-source_count: 2
+confidence: 0.85
+last_confirmed: "2026-05-07"
+source_count: 3
 relationships:
   - type: part-of
     target: Anthropic
@@ -16,7 +16,7 @@ relationships:
 
 # Anthropic Economic Index
 
-A research initiative by [[Anthropic]] that measures real-world AI use through privacy-preserving analysis of [[Claude]] conversations on Claude.ai (consumer) and the 1P API (enterprise). Recurring report cadence (four reports through Jan 2026).
+A research initiative by [[Anthropic]] that measures real-world AI use through privacy-preserving analysis of [[Claude]] conversations on Claude.ai (consumer) and the 1P API (enterprise). Recurring report cadence — five reports through March 2026.
 
 Stated mission (per Anthropic): provide ongoing, empirical measurement of how AI is changing tasks, occupations, and the labor market.
 
@@ -39,6 +39,7 @@ Stated mission (per Anthropic): provide ongoing, empirical measurement of how AI
 | Second | (early 2025) | Not separately ingested |
 | Third | August 2025 | Not separately ingested; numbers carried over |
 | **Fourth** | November 2025 | [[2026-04-28-anthropic-economic-index-q4-2025\|Ingested]] — introduces "economic primitives" framework |
+| **Fifth — *Learning curves*** | February 5–12, 2026 | [[2026-05-07-anthropic-economic-index-5-learning-curves\|Ingested]] — model selection matches task value; high-tenure users have ~3-4 pp higher success after controls; **skill-biased technological change** framing |
 
 ## Economic primitives (introduced in fourth report)
 
@@ -55,8 +56,8 @@ See [[2026-04-28-anthropic-economic-index-q4-2025|the fourth-report source page]
 ## Methodology notes
 
 - **Privacy-preserving** — random samples (typically 1M conversations on Claude.ai + 1M API transcripts).
-- **Tasks mapped to O*NET** taxonomy.
-- **Models change report-to-report** — fourth report uses [[Claude Sonnet 4.5]] predominantly; this affects comparability across editions.
+- **Tasks mapped to O*NET** taxonomy. **O*NET vintage shifted** between the 4th and 5th reports (4th used 2010 vintage; 5th uses 2019). Year-over-year comparisons of task-share need this caveat.
+- **Models change report-to-report** — fourth report uses [[Claude Sonnet 4.5]] predominantly; the fifth uses Claude Opus 4.5 / 4.6 in addition. This affects comparability across editions.
 
 ## Cited by external research
 

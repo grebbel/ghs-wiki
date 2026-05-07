@@ -4,7 +4,7 @@ aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizat
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity]
 confidence: 0.95
 last_confirmed: "2026-05-07"
-source_count: 17
+source_count: 19
 relationships:
   - type: uses
     target: automation-vs-augmentation
@@ -246,6 +246,15 @@ This is the wiki's first **measurable empirical evidence** for AI labor displace
 ### Integration depth correlates with productivity payoff
 
 Necula et al. 2024 (Romanian survey, n=233): organizations with high AI integration showed a **72% probability of significant productivity improvements** vs. **3.4%** for those with minimal integration.
+
+### The deployment-surface migration: coding moved to API ([[2026-05-07-anthropic-economic-index-5-learning-curves|Anthropic Economic Index, 5th report]])
+
+A finding worth flagging because it changes how enterprise AI deployment shape should be read: between Aug 2025 and Feb 2026, the **share of coding work on Claude.ai dropped sharply** while the **share on the 1P API rose from 36% → 47%**. The mechanism, per AEI 5: as **agentic coding harnesses** ([[Claude Code]], Cursor, etc.) matured, coding work migrated *off* the conversational consumer surface and *onto* the API where many short directive task-labelled calls happen per actual task. This has two consequences for adoption measurement:
+
+1. **Single-surface adoption metrics undercount the shift.** A survey that asks "do you use ChatGPT/Claude.ai" misses the place where enterprise coding adoption is now happening.
+2. **Where automation is rising is surface-specific.** AEI 5's "automation rising on API" finding (sales, trading, coding harnesses) is consistent with the Claude.ai split staying flat (53/45 augmentation/automation). The aggregate "AI is automating" / "AI is augmenting" framing dissolves once you separate the consumer chat surface from the agent-mediated API surface.
+
+Reinforces the [[micro-productivity-trap]] reading: the firms capturing real value from coding-AI today are the ones operating it through agentic harnesses on the API, not through individual ChatGPT/Claude.ai seats. The deployment surface itself is part of the maturity gradient.
 
 ## Debates / contradictions
 

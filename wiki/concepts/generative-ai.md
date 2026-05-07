@@ -4,7 +4,7 @@ aliases: ["GenAI", "generative AI", "generative artificial intelligence"]
 tags: [generative-ai, foundation-models, ai-adoption]
 confidence: 0.95
 last_confirmed: "2026-05-07"
-source_count: 13
+source_count: 15
 relationships:
   - type: uses
     target: foundation-models
@@ -46,6 +46,15 @@ In the [[AI Index]] taxonomy, "Generative AI" is a sub-class of AI distinguished
 - **U.S. AI-job postings citing GenAI skills tripled YoY** in 2024 (Lightcast data).
 - Top use cases (% of orgs deploying GenAI for this function): marketing strategy content (27%), knowledge management (19%), personalization (19%), design (14%), code creation (13%).
 - **Only 1% of C-suite executives describe their GenAI rollouts as "mature."** Most are still capturing value at small scale. See [[enterprise-ai-adoption]].
+
+### Learning curves: model selection becomes a skill ([[2026-05-07-anthropic-economic-index-5-learning-curves|Anthropic Economic Index, 5th report]])
+
+The fifth Economic Index report extends the four-report longitudinal series with a learning-curve analysis (Feb 5–12, 2026 sample). Two findings worth promoting up here from the [[ai-employment-effects]] page because they shape *how* GenAI productivity is realized:
+
+1. **Model selection slopes are steep and asymmetric**: users select premium-tier models (Opus over Sonnet/Haiku) differentially for higher-value tasks. **+1.48 pp Opus share per +$10/hour task value** on Claude.ai; **+2.79 pp per +$10** on the 1P API (about twice as steep on the enterprise surface). Choosing the right model tier per task is a learnable, measurable skill.
+2. **Tenure earns ~3–4pp success advantage after controls** — high-tenure Claude users reach the same model with the same task and still succeed more, controlling for task type, model, and conversation complexity. This is the wiki's first quantified evidence of *AI literacy as productivity differentiator at population scale*.
+
+These two findings reposition the productivity story: **headline speedups (9-12× for HS / college tasks)** are realized only when users learn the surface — model picker, prompt structure, recovery from failure. GenAI's productivity gain is partly endogenous to AI-literacy investment.
 
 ### Measurement framework: economic primitives ([[2026-04-28-anthropic-economic-index-q4-2025|Anthropic Economic Index, 4th report]])
 

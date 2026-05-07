@@ -3,8 +3,8 @@ type: concept
 aliases: ["RAI", "responsible AI", "AI ethics", "AI governance", "AI safety"]
 tags: [responsible-ai, ai-ethics, ai-governance, ai-safety, ai-policy]
 confidence: 0.95
-last_confirmed: "2026-04-30"
-source_count: 6
+last_confirmed: "2026-05-07"
+source_count: 7
 relationships:
   - type: part-of
     target: enterprise-ai-adoption
@@ -89,6 +89,16 @@ A new finding flagged in 2026: **improving one responsible-AI dimension can degr
 - Worked example: **[[Guardian Life Insurance]]** (regulated US insurance) — embedded governance with risk, legal, and compliance teams; architecture reviews via formal *and* fast-track boards so privacy, security, and regulatory requirements are built into new AI solutions at design time. Source: [[2026-04-28-mit-sloan-ai-maturity|MIT Sloan article]].
 - Worked example: **[[Italgas]]** — governance via a Chief People, Innovation & Transformation Officer + an AI Officer + a Group AI Office, overseeing integration and monitoring. Initiatives balance efficiency with new business opportunity (commercializing WorkOnSite generated €3M revenue in 2024). Source: [[2026-04-28-mit-sloan-ai-maturity|MIT Sloan article]].
 - This framing complements the policy-level RAI literature (OECD/EU/UN/AU frameworks) by giving the *organizational mechanism* for how policy principles get translated into procurement and design decisions.
+
+### Security as structural unreachability ([[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic Managed Agents]])
+
+A complementary engineering pattern to the policy frameworks above: in production agent architectures, the *most reliable* security control is **structural unreachability** rather than model-level refusal. The Managed Agents engineering post describes the brain/hands/session decomposition such that the model (the brain) can only emit tool-call *requests*; a separate executor decides whether and how to run them. Three concrete design moves:
+
+- **Per-tool sandboxing.** Each tool has its own blast-radius. The hands tier isolates them so a compromised tool call cannot reach others.
+- **Session ≠ context window.** Long-running orchestration state lives outside any one model call, so context-window manipulation by an adversarial input cannot persistently corrupt agent state.
+- **Out-of-band oversight.** Approval gates, allow-lists, and per-call telemetry sit on the executor, not the model — they cannot be reasoned around by the model.
+
+This reframes the [[ai-agents]] safety story: rather than relying on the model to *refuse* dangerous actions (a probabilistic guarantee at best), the architecture makes most dangerous actions structurally unreachable (a deterministic guarantee). Worth pairing with the MITTRI/Cisco AI security taxonomy below — they answer different questions ("what's the org's security posture?" vs. "what's the runtime architecture?") but reinforce the same direction.
 
 ### AI security as a discipline (MITTRI/Cisco)
 

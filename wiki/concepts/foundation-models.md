@@ -2,9 +2,9 @@
 type: concept
 aliases: ["foundation model", "foundation models", "FM", "frontier model", "frontier models"]
 tags: [foundation-models, generative-ai, ai-research]
-confidence: 0.80
-last_confirmed: "2026-04-30"
-source_count: 2
+confidence: 0.85
+last_confirmed: "2026-05-07"
+source_count: 4
 ---
 
 # Foundation Models
@@ -79,7 +79,7 @@ To be promoted to standalone entity pages when discussed in depth in another sou
 
 - **OpenAI**: GPT-4, GPT-4o, **o1**, o3 (test-time compute reasoning), **SORA** (video).
 - **Google DeepMind**: Gemini family (Gemini-1.5-Flash-8B is the 280×-cost-reduction marker), Veo 2 (video).
-- **Anthropic**: Claude 3 family (incl. Sonnet — implicit-bias study).
+- **Anthropic**: Claude 3 family (incl. Sonnet — implicit-bias study); [[Claude Sonnet 4.5]] (predominant model in AEI 4 sample, exhibits "context anxiety" per [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Managed Agents post]]); **Claude Opus 4.5** (released between AEI 4 and AEI 5 windows; the Managed Agents post notes the "context anxiety" failure mode is *absent* on Opus 4.5 — first evidence in this wiki of long-horizon reliability varying by model **within** a family, not just across families); **Claude Opus 4.6** (released coincident with AEI 5 sample window, Feb 2026).
 - **Meta**: Llama 3.1 405B (the 8,930-ton-CO2 marker), Movie Gen (video).
 - **Microsoft**: Phi-3-mini (the 3.8B-param-MMLU marker).
 - **Mistral AI**: French open-source.

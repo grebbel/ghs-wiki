@@ -2,9 +2,9 @@
 type: concept
 aliases: ["durable skills", "future-ready skills", "21st century skills", "21st-century skills", "transferable skills", "human skills"]
 tags: [durable-skills, 21st-century-skills, future-ready-skills, ai-deskilling, scalable-assessment, psychometrics, ai-evaluation]
-confidence: 0.75
+confidence: 0.80
 last_confirmed: "2026-05-07"
-source_count: 1
+source_count: 2
 relationships:
   - type: contradicts
     target: ai-deskilling
@@ -88,6 +88,7 @@ Other wiki sources have touched the underlying construct without using "durable 
 - **Brynjolfsson, Chandar & Chen (2025)** — Canaries in the Coal Mine. Empirical labor-market evidence that *young* workers in AI-exposed occupations are losing employment, but doesn't operationalise *which skills* remain valuable. Durable-skills work is the missing supply-side measurement.
 - **AI Index 2025 / 2026** — repeatedly cite McKinsey workforce-reshaping statistics ("46% expect >20% of the workforce to need reskilling") without a clean operational definition of *what* the reskilling targets should be. Durable skills are a candidate answer.
 - **Anthropic Economic Index (Q4 2025)** — measures task complexity and AI autonomy at population scale on Claude.ai conversations. Doesn't directly measure individual durable skills, but the "task success" primitive captures something adjacent.
+- **[[2026-05-07-anthropic-economic-index-5-learning-curves|Anthropic Economic Index 5 — Learning curves (Feb 2026)]]** — quantifies a different kind of *learnable* skill: **AI literacy itself**. High-tenure Claude users achieve **~3-4 percentage points higher task success** than lower-tenure users *after controlling for* task type, model selection, and conversation complexity. Model selection slopes (Opus differentially used for higher-value tasks: +1.48 pp per +$10/hour on Claude.ai; +2.79 pp on the 1P API) demonstrate that *choosing the right model tier* is itself a learnable behaviour visible in usage logs. This is a complementary kind of "durable skill" — not the open-ended, contextually-situated skills the Globerson paper measures, but rather a procedural meta-skill (knowing how to deploy AI well) that nonetheless is *learned-by-doing* and produces measurable productivity returns. Open question for synthesis: is AI-literacy a 5th durable skill alongside collaboration, creativity, critical thinking — or is it a fluency that *enables* the other three to operate in AI-saturated work environments?
 - **OECD Digital Education Outlook 2026** (cited in Globerson et al. ref [68]) — mainstream educational policy framing of "21st-century skills" matches the durable-skills construct closely.
 
 The construct is recurring; the operational measurement is new in 2026.

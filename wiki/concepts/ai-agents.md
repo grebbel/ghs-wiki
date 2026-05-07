@@ -2,9 +2,9 @@
 type: concept
 aliases: ["AI agent", "AI agents", "agentic AI", "autonomous agents", "agent", "agents"]
 tags: [ai-agents, agentic-ai, generative-ai, automation, ai-deployment]
-confidence: 0.85
-last_confirmed: "2026-04-28"
-source_count: 4
+confidence: 0.95
+last_confirmed: "2026-05-07"
+source_count: 6
 relationships:
   - type: instance-of
     target: generative-ai
@@ -56,6 +56,22 @@ The time-budget pattern is a sharp framing: **agents win at short horizons, huma
 - **Harvey** (legal contract drafting) — Anand-Wu cite it for the "quality control zone"
 - **Italgas DANA** — generative-AI-based network control system for natural gas distribution. Source: [[2026-04-28-mit-sloan-ai-maturity|MIT Sloan]].
 - **Cisco's customer-support agents** — Cisco internal deployment per [[2026-04-28-mittri-cisco-ai-enabled-enterprise|MITTRI/Cisco]].
+- **Claude Code** ([[Anthropic]]) — agentic coding harness now leaving a *measurable* signature in usage data: per the [[2026-05-07-anthropic-economic-index-5-learning-curves|fifth Anthropic Economic Index report]] (Feb 2026), the 1P API task-share for "Computer & Mathematical" jumped from 36% (Aug 2025) to 47% (Feb 2026), driven in large part by coding agents that decompose work into many shorter task-labelled API calls. Where Claude.ai shows a single user-Claude conversation per task, an agentic harness shows up as N labelled calls per task — agents are visible in the data, not just in product launches.
+
+### Engineering pattern: brain / hands / session decoupling
+
+The [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic Managed Agents]] engineering post (8 April 2026) names the architecture beneath production-grade agents — the layer the working-definition table abstracts over. Three concerns are deliberately split into independently-scaled tiers:
+
+| Tier | What it is | Why decoupled |
+|---|---|---|
+| **Brain** | The model + tool-use/reasoning loop | LLM inference is bursty and stateless; scale on its own clock |
+| **Hands** | Tool execution surface (code interpreter, browser, MCP servers, file system) | Each tool has its own latency, blast-radius, and security profile; isolation per-tool is mandatory |
+| **Session** | Long-running orchestration state — memory, conversation history, intermediate artefacts that outlive any one model call | A *session* is **not** the same as the model's context window: sessions can run for hours and span context resets |
+
+Two consequences worth marking:
+
+- **Security as structural unreachability, not as policy.** The hands tier runs in a sandbox the brain cannot directly drive — the model emits tool-call requests, and a separate executor decides whether and how to run them. This is the engineering version of the [[responsible-ai|"agent risk"]] story: rather than relying on the model to *refuse* dangerous actions, the architecture makes most dangerous actions structurally unreachable.
+- **"Context anxiety" is model-specific.** The post observes that [[Claude Sonnet 4.5]] sometimes wraps up tasks prematurely when its context window fills — a failure mode not present on **Claude Opus 4.5** under the same harness. This is the first empirical evidence in this wiki that long-horizon agent reliability varies by model within a family, not just across families. It also reframes the RE-Bench 32-hour finding: long-horizon weakness is partly an **architectural** problem (context window saturation) and partly a **model-quality** problem (how the model responds when saturation looms).
 
 ### Capgemini's expected agent benefits (n unknown, sponsor-cited)
 
@@ -82,7 +98,7 @@ Customer experience (CX) is the most-cited near-term agent application. Per [[20
   - [[2026-04-28-mittri-cisco-ai-enabled-enterprise|MITTRI/Cisco]]: agents as the **near-term productivity story for everyone** (>80% planning integration in 1–3 years).
   Reconciling: agents are *deployable today* in low-cost-of-error / explicit-data domains, *strategic* at higher maturity, and *projected* by most orgs. All three views can be true.
 - **Agentic vs. agent.** "Agentic" is sometimes used to describe behavior (autonomous, goal-pursuing) while "agent" is the system. The wiki uses both interchangeably for now; future ingests may force more precision.
-- **Hype vs. capability gap.** RE-Bench shows agents losing to humans at 32-hour budgets. Many enterprise workflows have multi-day horizons. Open question: as agent persistence/memory improves, does the long-horizon gap close?
+- **Hype vs. capability gap.** RE-Bench shows agents losing to humans at 32-hour budgets. Many enterprise workflows have multi-day horizons. The [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Managed Agents post]] partially reframes the gap as **architectural** (context-window saturation, brain/hands coupling) rather than purely capability-based — the brain/hands/session split is precisely the bet that long-horizon weakness is fixable with scaffolding. Open question: how much of the 32-hour gap closes with better orchestration vs. requires better models?
 - **Multi-agent systems are mostly aspirational.** MITTRI/Cisco frames the 3-stage progression as if multi-agent is on a near-term horizon, but production multi-agent systems remain rare. Discount accordingly.
 
 ## Related concepts

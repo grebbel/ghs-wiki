@@ -3,8 +3,8 @@ type: concept
 aliases: ["automation vs augmentation", "automation-vs-augmentation", "automate vs augment", "AI substitution vs complementarity", "AI labor substitution", "AI labor complementarity"]
 tags: [automation, augmentation, generative-ai, ai-deployment, ai-task-design]
 confidence: 0.95
-last_confirmed: "2026-05-05"
-source_count: 11
+last_confirmed: "2026-05-07"
+source_count: 12
 relationships:
   - type: supports
     target: ai-employment-effects
@@ -79,9 +79,9 @@ Headline result: **+15% productivity** with strong equalizing effect (low-skill 
 
 We do **not** have equivalent rigorous studies of *pure-automation* productivity gains in the wiki — because pure automation replaces the worker entirely, so "productivity per worker" is no longer a coherent measurement. The closest empirical signal we have for automation effects is occupation-level employment data ([[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson 2025 Canaries]]) showing entry-level employment declines in automate-able roles.
 
-### 6. Longitudinal split on Claude.ai ([[2026-04-28-anthropic-economic-index-q4-2025|Anthropic Economic Index, 4th report]])
+### 6. Longitudinal split on Claude.ai ([[2026-04-28-anthropic-economic-index-q4-2025|Anthropic Economic Index, 4th report]] → [[2026-05-07-anthropic-economic-index-5-learning-curves|5th report]])
 
-The [[Anthropic Economic Index]] tracks the augmentation/automation split on Claude.ai across reports. The current trajectory:
+The [[Anthropic Economic Index]] tracks the augmentation/automation split on Claude.ai across reports. The current trajectory, now extended through February 2026:
 
 | Sample period | Augmentation | Automation |
 |---|---|---|
@@ -89,8 +89,11 @@ The [[Anthropic Economic Index]] tracks the augmentation/automation split on Cla
 | March 2025 | 55% | 42% |
 | August 2025 | 47% | 49% |
 | November 2025 | 52% | 45% |
+| **February 2026** | **53%** | **45%** |
 
-Augmentation has led in three of four samples; the August 2025 sample was the only one where automation led. The series provides a quarterly cadence on which dimension dominates, measured at population scale via classification of ~1M Claude.ai conversations per sample.
+Augmentation has led in four of five samples; the August 2025 sample remains the only one where automation led. Across the most recent quarter (Nov 2025 → Feb 2026), the split has been **stable, not drifting toward automation** — a noteworthy finding given headline narratives that agentic deployment is rapidly displacing collaborative use.
+
+**Emergent automation patterns on the 1P API** (5th report, Feb 2026): three task clusters where automation share climbed sharply on the enterprise API endpoint between Aug 2025 and Feb 2026 — *first-line sales* (rising directive use of Claude in outbound sales workflows), *programmatic trading and brokerage* (automated financial-decision pipelines), and *coding agent harnesses* (Claude Code splitting work into many short directive calls). These are the three places where API automation is genuinely accelerating, even as the Claude.ai consumer split holds roughly flat. The divergence between consumer (mostly stable, augmentation-leaning) and API (automation rising in specific clusters) is a load-bearing methodological caveat: aggregate "AI is automating work" framings should specify which surface and which cluster.
 
 ### 7. Differentiated vs. independent search as fine-grained augmentation patterns ([[2026-04-29-boussioux-crowdless-future|Boussioux et al. 2024]])
 
@@ -151,6 +154,7 @@ Four wiki sources, with distinct vocabularies and methodologies, all draw essent
 | [[2026-04-28-mittri-cisco-ai-enabled-enterprise\|MITTRI/Cisco]] | "Replace vs. give agency with oversight" | "Chatbot → agent → multi-agent" progression |
 | [[2026-04-28-brynjolfsson-canaries-coal-mine\|Brynjolfsson et al. 2025]] | Automative vs. augmentative use (Anthropic Economic Index) | "Substitute vs. complement for labor" |
 | [[2026-04-28-anthropic-economic-index-q4-2025\|Anthropic Economic Index, 4th report]] | Longitudinal Claude.ai split (52% augmentation / 45% automation in Nov 2025) | "Directive / Feedback Loop / Task Iteration / Learning / Validation" |
+| [[2026-05-07-anthropic-economic-index-5-learning-curves\|Anthropic Economic Index, 5th report]] | Stable Claude.ai split through Feb 2026 (53/45); emergent API automation clusters (sales, trading, coding harnesses) where automation rose sharply at the surface where it matters for enterprise spend | "Surface- and cluster-specific automation"; "skill-biased technological change" |
 | [[2026-04-28-dellacqua-jagged-technological-frontier\|Dell'Acqua et al. 2026 (Jagged Frontier)]] | Per-task AI fit determines whether AI augments or harms; introduces "jagged frontier" | "Inside the frontier" (augmentation works) vs. "outside the frontier" (AI degrades performance) |
 | [[2026-04-29-boussioux-crowdless-future\|Boussioux et al. 2024 (Crowdless Future)]] | Augmentation pattern is fine-grained: *independent* search (multi-instance) vs *differentiated* search (single-instance with iterative diversification prompts); per-dimension trade-off (HC higher novelty; HAI higher value/quality) | "Independent search" vs. "differentiated search"; "AI-in-the-loop" |
 | [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation\|Dutt et al. 2026 (Bain/OpenAI HBR)]] | Two failure modes when augmentation is shallow: *offering lock-in* (AI optimizes existing offerings) and *process lock-in* (AI automates current processes without redesigning them). Successful firms "reinvent the business" instead, with 10–25% EBITDA gains | "Offering lock-in" vs. "process lock-in"; "improve the task" vs. "reinvent the business"; [[micro-productivity-trap]] |
