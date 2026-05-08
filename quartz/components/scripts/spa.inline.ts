@@ -1,6 +1,6 @@
 import micromorph from "micromorph"
 import { FullSlug, RelativeURL, getFullSlug, normalizeRelativeURLs } from "../../util/path"
-import { fetchCanonical } from "./util"
+import { fetchCanonicalWithFinalUrl } from "./util"
 
 // adapted from `micromorph`
 // https://github.com/natemoo-re/micromorph
@@ -62,20 +62,27 @@ async function _navigate(url: URL, isBack: boolean = false) {
   isNavigating = true
   startLoading()
   p = p || new DOMParser()
-  const contents = await fetchCanonical(url)
-    .then((res) => {
-      const contentType = res.headers.get("content-type")
+  const fetchResult = await fetchCanonicalWithFinalUrl(url)
+    .then(({ response, finalUrl }) => {
+      const contentType = response.headers.get("content-type")
       if (contentType?.startsWith("text/html")) {
-        return res.text()
+        return response.text().then((text) => ({ text, finalUrl }))
       } else {
         window.location.assign(url)
+        return undefined
       }
     })
     .catch(() => {
       window.location.assign(url)
+      return undefined
     })
 
-  if (!contents) return
+  if (!fetchResult) return
+  const { text: contents, finalUrl } = fetchResult
+  // If fetchCanonical followed an AliasRedirect, point the address bar at the
+  // canonical URL — otherwise relative links in the morphed body resolve
+  // against the alias path and miss the site's basePath. See AliasRedirects.
+  url = finalUrl
 
   // notify about to nav
   const event: CustomEventMap["prenav"] = new CustomEvent("prenav", { detail: {} })

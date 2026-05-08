@@ -33,14 +33,28 @@ export function removeAllChildren(node: HTMLElement) {
 const canonicalRegex = /<link rel="canonical" href="([^"]*)">/
 
 export async function fetchCanonical(url: URL): Promise<Response> {
+  const { response } = await fetchCanonicalWithFinalUrl(url)
+  return response
+}
+
+// Like `fetchCanonical`, but also reports the URL the response actually
+// represents — useful when the caller (e.g. SPA navigation) needs to keep
+// the address bar in sync with the canonical content after an AliasRedirect.
+export async function fetchCanonicalWithFinalUrl(
+  url: URL,
+): Promise<{ response: Response; finalUrl: URL }> {
   const res = await fetch(`${url}`)
   if (!res.headers.get("content-type")?.startsWith("text/html")) {
-    return res
+    return { response: res, finalUrl: url }
   }
 
   // reading the body can only be done once, so we need to clone the response
   // to allow the caller to read it if it's was not a redirect
   const text = await res.clone().text()
   const [_, redirect] = text.match(canonicalRegex) ?? []
-  return redirect ? fetch(`${new URL(redirect, url)}`) : res
+  if (redirect) {
+    const finalUrl = new URL(redirect, url)
+    return { response: await fetch(`${finalUrl}`), finalUrl }
+  }
+  return { response: res, finalUrl: url }
 }
