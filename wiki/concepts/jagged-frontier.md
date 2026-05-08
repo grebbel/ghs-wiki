@@ -1,10 +1,10 @@
 ---
 type: concept
-aliases: ["jagged frontier", "jagged-frontier", "jagged technological frontier", "AI capability frontier"]
-tags: [jagged-frontier, AI-capabilities, knowledge-work, productivity, automation, augmentation]
+aliases: ["jagged frontier", "jagged-frontier", "jagged technological frontier", "AI capability frontier", "jagged intelligence", "jagged skills", "jagged-intelligence", "animals vs ghosts", "ghosts not animals"]
+tags: [jagged-frontier, jagged-intelligence, AI-capabilities, knowledge-work, productivity, automation, augmentation, verifiability, animals-vs-ghosts]
 confidence: 0.90
-last_confirmed: "2026-04-30"
-source_count: 5
+last_confirmed: "2026-05-08"
+source_count: 6
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -65,6 +65,59 @@ Workers cannot reliably tell ex ante which side of the frontier a given task sit
 - Meta-cognitive skill to assess AI fit task-by-task.
 - Calibration against demonstrated performance, not perceived task similarity.
 
+### Cause-of-jaggedness: verifiability + labs care ([[Andrej Karpathy]], [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Sequoia AI Ascent 2026]])
+
+Where Dell'Acqua *describes* the jagged frontier (the *task-level observation*), [[Andrej Karpathy]]'s [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Sequoia AI Ascent interview]] (29 April 2026) supplies the **causal mechanism** at the training-process level — and renames the phenomenon **"jagged intelligence" / "jagged skills"** at the model side (vs. "jagged frontier" at the task side).
+
+Karpathy's framing:
+
+> *"Traditional computers can easily automate what you can specify in code, and this latest round of LLMs can easily automate what you can verify."*
+
+The mechanism, as he describes it:
+
+1. Frontier labs train these LLMs in **giant reinforcement-learning environments**. Models receive verification rewards.
+2. Models **peak on verifiable domains** (math, code, adjacent areas) and stay rough elsewhere.
+3. **Two factors** combine to make a domain "fly" or "struggle":
+   - **Verifiable**: the domain has a check function (correctness can be scored automatically).
+   - **Labs care**: the domain made it into the data distribution / RL environment mix because it was *commercially or strategically valuable to the labs.*
+4. Without one of these, you're "out of the RL circuits" — your application has to pull a fine-tuning lever itself.
+
+The **chess anecdote** Karpathy uses to make "labs care" concrete:
+
+> *"From GPT-3.5 to GPT-4 people noticed that chess improved a lot, and a lot of people thought 'oh well, it's just a progression of capabilities.' But actually, a huge amount of chess data made it into the pre-training set. Someone at OpenAI decided to add this data, and now you have a capability that just peaked a lot more. So we are slightly at the mercy of whatever the labs are doing, whatever they happen to put into the mix."*
+
+The implication: capability gains are **not uniform across domains** — they are *editorial* (decisions made by labs about what to include in training data and RL environments). A domain in 2024 that received no special attention might be added to the mix in 2025 and produce a step-change improvement; a different domain might never receive that attention and remain rough indefinitely.
+
+#### The canonical 2026 jaggedness story (replacing "letters in strawberry")
+
+Karpathy explicitly retires the older example (the model getting *"how many letters in strawberry"* wrong) — *"the models now patch this, I think"* — and replaces it with a 2026 version:
+
+> *"Opus 4.7 will simultaneously refactor a 100,000-line codebase or find zero-day vulnerabilities, and yet tells me to walk to a 50-meter-away car wash because it's so close. This is insane. And to whatever extent these models remain jagged, it's an indication that number one maybe something's slightly off, or number two you need to actually be in the loop a little bit and you need to treat them as tools."*
+
+The car-wash example is now the wiki's canonical jaggedness illustration. It captures the *qualitative* shape of the phenomenon better than benchmark statistics: simultaneous mastery of high-value verifiable domains and embarrassing failure on low-value reasoning the model wasn't optimised for.
+
+#### Operational implications for builders
+
+> *"You have to actually explore this thing that they give you that has no manual… you have to figure out which circuits you're in in your application. And if you're not in the circuits, then you have to really look at fine-tuning and doing some of your own work."*
+
+- **Identify which RL circuits your application sits in.** Verifiable + labs care → flies; otherwise → struggles.
+- **Build your own RL environments where labs aren't.** [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy 2026]]'s founder advice: *"If you are in a verifiable setting where you could create these RL environments or examples then that actually sets you up to potentially do your own fine-tuning and you might benefit from that. That is fundamentally technology that just works."*
+- **Stay in the loop**, treat models as tools, do not over-trust capability transfer across "similar-looking" tasks. This restates the Dell'Acqua observation in cause-and-effect form.
+
+### Animals vs ghosts ([[Andrej Karpathy]])
+
+Within the jagged-intelligence framing, [[Andrej Karpathy]] adds a **mindset framing** for *what kind of intelligence* the wiki should treat LLMs as:
+
+> *"We're not building animals; we are summoning ghosts. Jagged forms of intelligence shaped by data and reward functions, but not by intrinsic motivation or fun or curiosity or empowerment — things that came about via evolution."*
+
+He explicitly discounts the framing's operational power as *"a little bit of philosophising"* — but it does change three things about how to work with these systems:
+
+- **No anthropomorphic levers.** *"If you yell at them, they're not going to work better or worse — it doesn't have any impact."* Strategies that work on humans (motivation, encouragement, deadlines) don't transfer.
+- **No assumption of intrinsic drive.** The LLM doesn't get bored, curious, or empowered. There is no inner motivation pushing it toward a goal you didn't explicitly specify.
+- **Substrate awareness.** *"Statistical simulation circuits where the substrate is pre-training, like statistics, and then there's RL bolted on top."* The model is the sum of these — not an animal mind.
+
+The animals-vs-ghosts framing is held in the wiki as a **mindset convention**, not a recipe. It belongs alongside the verifiability mechanism above because both are about *what kind of intelligence the jaggedness reveals* — patchy, discontinuous, statistically-shaped, no underlying continuous-self that smooths over discontinuities.
+
 ## Practical implications
 
 - **Don't generalize AI capability across tasks** that "feel similar."
@@ -77,6 +130,9 @@ Workers cannot reliably tell ex ante which side of the frontier a given task sit
 - [[ai-employment-effects]] — the jaggedness explains why some occupations see employment declines while others see growth.
 - [[generative-ai]] — the underlying technology whose capability frontier is jagged.
 - [[ai-benchmarks]] — fixed-task benchmarks measure one slice of the frontier.
+- [[software-3.0]] — Software 3.0 programs run on jagged interpreters; verifiability + labs care determine which programs run reliably.
+- [[agentic-engineering]] — practitioners must know which RL circuits their work sits in; the discipline includes identifying when fine-tuning is needed.
+- [[foundation-models]] — the substrate whose training-process editorial choices produce the jaggedness.
 
 ## Mentioned in
 
@@ -91,3 +147,6 @@ SORT file.name ASC
 
 - The frontier shifts with model improvements; longitudinal measurement is sparse. The [[Anthropic Economic Index]] is the closest current source for tracking shifts at population scale.
 - The Centaur vs. Cyborg dichotomy comes from one paper's qualitative coding; replications across other domains and tools would strengthen it.
+- **Karpathy's hinted "valuable RL environments not in the labs' mix"** — declined to name specifics on stage in [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Sequoia AI Ascent]]. If a follow-up writeup names the domains, that's a high-value second source for the cause-of-jaggedness section.
+- **Aesthetics-as-RL-reward** — Karpathy specifically calls out that current code from agents is *"bloaty, copy-paste, awkward abstractions, brittle."* If labs add an aesthetic-quality reward signal, that closes one specific jaggedness gap; worth tracking which lab does this first.
+- **Animals-vs-ghosts as primary mindset** — Karpathy himself called it "philosophising"; worth tracking whether subsequent practitioner writing gives it operational force or quietly drops it.

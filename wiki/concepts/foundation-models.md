@@ -4,12 +4,14 @@ aliases: ["foundation model", "foundation models", "FM", "frontier model", "fron
 tags: [foundation-models, generative-ai, ai-research]
 confidence: 0.85
 last_confirmed: "2026-05-08"
-source_count: 7
+source_count: 8
 ---
 
 # Foundation Models
 
-Large pretrained models — typically transformer-based — that serve as the substrate for downstream AI applications via prompting, fine-tuning, or retrieval. Foundation models drive most modern [[generative-ai]] capability and are the locus of the "frontier" debate (capability, safety, transparency).
+Large pretrained models — typically transformer-based — that serve as the substrate for downstream AI applications via prompting, fine-tuning, or retrieval. Foundation models drive most modern [[generative-ai]] capability and are the locus of the "frontier" debate (capability, safety, transparency). In the [[software-3.0]] framing they are *the interpreter* — the runtime that executes context-window programs.
+
+Their capability profile is **jagged** — see [[jagged-frontier]] for the task-level observation (Dell'Acqua et al. 2026) and the cause-of-jaggedness mechanism ([[Andrej Karpathy]] in [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Sequoia AI Ascent 2026]]: *"LLMs automate what you can verify"* — verifiability + labs-care editorial choices about RL training data combine to produce uneven peaks and valleys).
 
 ## Working definition
 

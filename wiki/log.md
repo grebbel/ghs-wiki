@@ -1282,3 +1282,42 @@ Follow-up to the earlier "out-of-scope but flagged" note. Per user direction, tr
 - Primary-source ingest of Pan et al. (Tsinghua, March 2026) — would substantiate the SWE-bench / OS-Symphony deltas.
 - Primary-source ingest of Khattab et al. (Meta-Harness) — would substantiate Terminal Bench 2 76.4% and the transferability claim.
 - Whether *"raw traces > summaries"* generalises beyond auto-optimisation to any compounding-loop telemetry — direct implication for [[2026-05-07-chatterjee-anatomy-of-agent-harness|Chatterjee's]] Compounding layer if it does.
+
+## [2026-05-08] ingest | Andrej Karpathy: From Vibe Coding to Agentic Engineering (Sequoia AI Ascent, 29 April 2026)
+
+**Heaviest single-source ingest to date** — ~30-min interview at Sequoia Capital's *AI Ascent* event (Sequoia's first-ever guest), 29 April 2026. Second video ingest under the new `raw/videos/` schema; first interview-format video. Single-step rename from `video2.md` → `andrej-karpathy-from-vibe-coding-to-agentic-engineering.md` per the pre-flight rule.
+
+The source has two unusual properties that shape the ingest scope:
+
+1. **Karpathy is the upstream-spec author for this entire repo.** The repo's [`llm-wiki.md`](../llm-wiki.md) conceptual spec is his articulation of the LLM-knowledge-base pattern; CLAUDE.md cites him at the top. **In the closing section (29:00–29:30) Karpathy explicitly describes his continued use of an LLM-knowledge-base / wiki-from-articles workflow** as his primary information-processing tool — *"anytime I see a different projection onto information, I always feel like I gain insight"*. This is the **upstream-spec author confirming the pattern is still load-bearing for him in 2026** — a rare and citation-worthy artifact for this repo.
+2. **The video is an interview, not an explainer.** Per the `kind: video` schema committed yesterday (`author = channel`), `author: ["Sequoia Capital"]`. Karpathy is the substantive content owner but appears as a body wikilink to [[Andrej Karpathy]], whom we promote to entity page on cross-page-presence grounds (the **Jack Clark precedent** — he's named in [`llm-wiki.md`](../llm-wiki.md), [`llm-wiki-v2.md`](../llm-wiki-v2.md), [`llm-wiki-v2-plan.md`](../llm-wiki-v2-plan.md), and [`CLAUDE.md`](../CLAUDE.md)). Convention not extended; one-off judgment call.
+
+**Files touched (13):**
+
+1. **RENAMED** `raw/videos/video2.md` → `raw/videos/andrej-karpathy-from-vibe-coding-to-agentic-engineering.md` (per the new pre-flight rule committed yesterday).
+2. **NEW** [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering]] — full source page with section-by-section coverage of the 10 thematic segments. Confidence 0.80 (capped at 0.75 baseline + raised because Karpathy is the originator of half the vocabulary in question; not raised higher because opinion-format and several predictions are explicitly TBD).
+3. **NEW** [[Andrej Karpathy]] — entity page (cross-page-presence promotion). Coverage: ex-OpenAI co-founder, ex-Tesla Autopilot, Eureka Labs founder, originator of Software 1.0/2.0/3.0 framing, vibe coding, animals-vs-ghosts mindset, the LLM-wiki idea.
+4. **NEW** [[software-3.0]] — concept page. The 1.0/2.0/3.0 trilogy; LLM-as-programmable-computer; context-window-as-program; load-bearing claim is *"new things possible, not just speed-up"* (Menu Gen as worked example). Architecturally upstream of [[agent-harness]] (a Software 3.0 program needs a runtime).
+5. **NEW** [[agentic-engineering]] — concept page. The engineering discipline of writing software with AI agents while *preserving the quality bar*. Paired-with-vibe-coding contrast (floor vs ceiling). *"The 10× engineer used to be the upper bound; agentic engineering pushes far past 10×."* Hiring-format critique included.
+6. **NEW** [[vibe-coding]] — concept page. Coined by Karpathy 2024; the floor-raising democratisation half of Software 3.0. Includes the **December 2025 phase change** anecdote. When-to-use vs when-not-to-use guide.
+7. **EXTENDED** [[jagged-frontier]] — added "Cause-of-jaggedness: verifiability + labs care" sub-section + "Animals vs ghosts" sub-section + canonical 2026 example (Opus-4.7-refactors-100k-line-codebase-but-tells-you-to-walk-to-50m-car-wash). `source_count: 5 → 6`. Aliases extended ("jagged intelligence", "jagged skills", "animals vs ghosts").
+8. **UPDATED** [[agent-harness]] — `source_count: 6 → 7`; intro paragraph adds the **paradigm-vocabulary anchor** framing; convergence table extended with Karpathy row.
+9. **UPDATED** [[ai-agents]] — `source_count: 9 → 10`; intro adds the **intern entities** framing.
+10. **UPDATED** [[foundation-models]] — `source_count: 7 → 8`; intro adds the cause-of-jaggedness pointer (LLMs automate what you can verify).
+11. **UPDATED** [[generative-ai]] — `source_count: 19 → 20`; intro adds the [[software-3.0]] paradigm-vocabulary reframe + paired discipline pointer to [[agentic-engineering]] / [[vibe-coding]].
+12. **UPDATED** [[index]] — new source line (chronologically between 2026-04-28-werner-lebrun and 2026-04-29-boussioux); new entity line ([[Andrej Karpathy]] between Amy Webb and Andy Wu); three new concept lines ([[agentic-engineering]] after [[agent-harness]]; [[software-3.0]] after [[responsible-ai]]; [[vibe-coding]] after [[systems-thinking]]); existing concept lines updated for the new cross-references.
+13. **UPDATED** `wiki/log.md` (this entry).
+
+Plus: added `.env` and `.env.*` to `.gitignore` as a tiny separate task this session, on the same commit-scope.
+
+**Dangling (single-source mention, deferred per CLAUDE.md author-entity promotion rule):** *Sequoia Capital* (channel/publisher), *Nanobanana* (image-gen tool), *OpenClaude* (agentic coding tool), *micro-GPT* (Karpathy project), *Menu Gen* (Karpathy app), *Eureka Labs* (Karpathy's company), *Tesla* (already mentioned in AI Index reports — could be promoted on cross-page-presence in a later pass).
+
+**Strongest cross-source synthesis enabled by this ingest**: Karpathy provides the **paradigm vocabulary** (Software 3.0, agentic engineering as a discipline, jagged intelligence) for what the existing [[agent-harness]] / [[2026-05-04-rethinking-agents-harness-is-all-you-need|empirical-anchor]] / [[2026-05-07-chatterjee-anatomy-of-agent-harness|Chatterjee]] / [[2026-05-07-kokane-agent-harness-vs-systems-design|Kokane]] sources were already describing operationally. The wiki's 2026 AI-engineering corpus now has a **complete frame**: paradigm (Software 3.0) → discipline (agentic engineering) → artifact (agent harness) → empirical evidence (Pan et al. + Khattab et al. via the YouTube synthesis) → org-level economics (Kiron-Schrage, Ransbotham et al.).
+
+**The most surprising ingest finding** (worth flagging to future readers): Karpathy's closing-section reference to using an **LLM knowledge base / wiki built from articles** as his primary information-processing tool is *the very pattern this repo implements*. The upstream-spec author confirms his pattern is still load-bearing for him as of 29 April 2026 — that durability test hadn't been visible from inside the repo before this ingest.
+
+**Open questions surfaced for future ingest:**
+- Karpathy's hinted *"valuable RL environments not in the labs' mix"* — declined on stage. If a follow-up writeup names the domains, that's a high-value second source.
+- Population-level confirmation of the **December 2025 phase change** Karpathy describes — currently single-person testimony.
+- **Aesthetics-as-RL-reward** — Karpathy says current agent code is *"bloaty, copy-paste, awkward abstractions, brittle."* If labs add an aesthetic-quality reward signal, the gap between [[vibe-coding]] and [[agentic-engineering]] narrows.
+- Karpathy's plan-mode critique (*"work with your agent to design a spec; then have agents write against the docs"*) is richer than current plan-mode UIs — worth tracking which IDE / harness vendors ship something matching.

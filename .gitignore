@@ -22,6 +22,10 @@ wiki/.graph.json
 *.swp
 *~
 
+# Secrets / local environment — never commit
+.env
+.env.*
+
 # Raw source binaries — kept local-only for copyright/distribution reasons.
 # Wiki content (sources/, entities/, concepts/, syntheses/, threads/) is the
 # durable, redistributable artifact; raw/ holds your provenance. Each wiki

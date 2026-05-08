@@ -3,8 +3,8 @@ type: concept
 aliases: ["GenAI", "generative AI", "generative artificial intelligence"]
 tags: [generative-ai, foundation-models, ai-adoption]
 confidence: 0.95
-last_confirmed: "2026-05-07"
-source_count: 19
+last_confirmed: "2026-05-08"
+source_count: 20
 relationships:
   - type: uses
     target: foundation-models
@@ -17,6 +17,8 @@ relationships:
 # Generative AI
 
 AI systems that produce novel content (text, images, code, video, audio) by sampling from learned distributions over training data. Practically: large language models, image diffusion models, video generators, and the orchestrating systems built on top of them. As of 2024, GenAI represents **>20% of all AI-related private investment** ($33.9B globally) and is the dominant force behind the 2024 jump in [[enterprise-ai-adoption]].
+
+By 2026, the wiki tracks a parallel **paradigm-vocabulary** rename of generative-AI engineering: [[Andrej Karpathy]]'s [[software-3.0]] ([[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Sequoia AI Ascent, 29 April 2026]]) frames the same construct as the **third paradigm of computing** (1.0 = explicit rules / code; 2.0 = learned weights / datasets; 3.0 = prompts / context windows). Generative AI is what Software 3.0 *produces and runs on*; the practitioner-discipline that builds with it is [[agentic-engineering]] (professional quality bar) or [[vibe-coding]] (floor-raising democratisation).
 
 ## Working definition
 
