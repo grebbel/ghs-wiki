@@ -1321,3 +1321,62 @@ Plus: added `.env` and `.env.*` to `.gitignore` as a tiny separate task this ses
 - Population-level confirmation of the **December 2025 phase change** Karpathy describes — currently single-person testimony.
 - **Aesthetics-as-RL-reward** — Karpathy says current agent code is *"bloaty, copy-paste, awkward abstractions, brittle."* If labs add an aesthetic-quality reward signal, the gap between [[vibe-coding]] and [[agentic-engineering]] narrows.
 - Karpathy's plan-mode critique (*"work with your agent to design a spec; then have agents write against the docs"*) is richer than current plan-mode UIs — worth tracking which IDE / harness vendors ship something matching.
+
+
+## [2026-05-09] refactor | Adopt youtube-transcript-skill YAML frontmatter as canonical raw video format; backfill 2 legacy files
+
+**Trigger:** A new skill ([`youtube-transcript-skill`](../.claude/skills/youtube-transcript-skill/SKILL.md)) was added that fetches YouTube metadata + transcripts via Playwright and emits Markdown with rich YAML frontmatter (~20 fields incl. `video_id`, `channel`, `channel_id`, `channel_url`, `publish_date`, `upload_date`, `category`, `duration`, `length_seconds`, `view_count`, `caption_tracks`, `chapters`, `description`, `keywords`, `thumbnails`). The wiki's prior 4-line plain-text raw-video header convention is now a strict subset of this richer schema. The example file [[raw/videos/running-an-ai-native-engineering-org]] was already saved into the wiki in the new format on 2026-05-08.
+
+**Touched (CLAUDE.md schema):**
+
+1. Rewrote §"Pre-flight check (videos)" to specify the YAML-frontmatter contract (replacing the 4-line plain-text spec). Documented the canonical pre-flight fields (`title`, `url`, `channel`, `publish_date`) and added a legacy-format compatibility note for transition-window readers.
+2. Rewrote §"Source-page conventions specific to videos" to add an explicit field-mapping table from raw skill output → wiki source-page frontmatter (`channel:` → `author: [...]`; `publish_date:` → `date_published:` with timezone stripped; `caption_tracks[].kind` → source-quality flag in body, **not** confidence; etc.). Reaffirmed the existing `author = channel` convention. **Added a new body convention**: video source pages open with the YouTube `description:` rendered as a leading blockquote, before the wiki's TL;DR — channel framing first, wiki interpretation second.
+
+**Touched (raw videos):**
+
+3. **Backfilled** [[raw/videos/andrej-karpathy-from-vibe-coding-to-agentic-engineering]] from the legacy 4-line plain-text header to YAML frontmatter. Body preserved verbatim (manually-cleaned transcript). Skill re-fetch attempted but failed at the transcript-panel render step (Trusted Type CSP error — known YouTube DOM-drift failure mode per SKILL.md); rich fields populated from existing wiki source page metadata only. `notes:` block in the file documents the gap so it can be re-fetched once the skill is patched.
+4. **Backfilled** [[raw/videos/rethinking-agents-harness-is-all-you-need]] same way; same skill-fetch failure mode; same gap-flagging in `notes:`.
+
+**Decisions resolved with user:**
+
+- Backfill via skill re-fetch (selected over manual conversion or no-backfill) — but skill failed; fell back to manual conversion with explicit gap-flagging.
+- ASR transcript provenance does **not** feed into confidence math — sources are evidence, not claims, per [§Lifecycle](../CLAUDE.md#lifecycle). `caption_tracks[].kind` informs source-quality flag in body only.
+- YouTube `description:` rendered as leading blockquote on video source pages — channel framing first, wiki interpretation second.
+
+**Deferred (pending skill patch):**
+
+- The leading description-blockquote edit on [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering]] and [[2026-05-04-rethinking-agents-harness-is-all-you-need]]. The new convention is documented in CLAUDE.md and applies to *new* video source pages going forward; the two existing pages will get their description blockquotes once the skill's transcript-panel render issue is fixed and a fresh fetch surfaces the YouTube `description:` field. No fabricated content.
+- A follow-up to investigate / patch the `youtube-transcript-skill` Trusted Type CSP failure mode on current YouTube DOM. Worth flagging to the skill author.
+
+**No changes** to `scripts/*.mjs` — generic frontmatter readers handle both formats transparently (verified by exploration; lint-page.mjs / graph-export.mjs / session-start.mjs / lint-dangling-authors.mjs read frontmatter agnostically).
+
+**No changes** to existing wiki source-page frontmatter schema — only the body convention adds a leading blockquote (deferred above).
+
+## [2026-05-09] refactor | Fix youtube-transcript-skill (GH #2): Trusted Types CSP + panel-target-id drift + graceful no-transcript path; complete deferred legacy-video backfill
+
+**Trigger:** the skill failures documented in the prior 2026-05-09 log entry blocked legacy-video re-fetch. User (skill author) requested fix + completion of the deferred backfill.
+
+**Filed:** [GH #2](https://github.com/businessdatasolutions/ai-wiki/issues/2) at `businessdatasolutions/ai-wiki` documenting all three bug classes and the defense-in-depth fix. Issue updated mid-PR with the secondary panel-target-id bug discovery and the graceful-handling improvement.
+
+**Touched (skill):**
+
+1. [`fetch_transcript.py`](../.claude/skills/youtube-transcript-skill/fetch_transcript.py):
+   - `browser.new_context(...)` now passes `bypass_csp=True` (Change A — comprehensive CSP bypass).
+   - `page.add_init_script(...)` injects a default Trusted Types policy after `ctx.new_page()` (Change B — defense in depth, resilient if `bypass_csp` is later removed).
+   - Rewrote `_trigger_transcript_panel` / `_wait_for_transcript` / `_scroll_panel` / `_extract_segments` to be panel-target-id-agnostic: query `ytd-transcript-segment-renderer` elements directly anywhere on the page; direct `Show transcript` button click added as a fallback after the legacy event-dispatch.
+   - `_main` now writes the markdown file even when no transcript is fetched (metadata-only path) — exit code `1` signals partial output but the file IS written. Was: error out with no file.
+2. [`SKILL.md`](../.claude/skills/youtube-transcript-skill/SKILL.md): updated **Failure modes** section to document all three fixes and link to GH #2.
+
+**Touched (raw videos — completed deferred backfill):**
+
+3. [[raw/videos/andrej-karpathy-from-vibe-coding-to-agentic-engineering]] — re-fetched via fixed skill; YAML frontmatter now carries the full rich metadata (channel_id, channel_url, category, view_count, caption_tracks, chapters with mm:ss starts, description, thumbnail). Body unchanged (manually-cleaned transcript preserved).
+4. [[raw/videos/rethinking-agents-harness-is-all-you-need]] — same procedure; same outcome.
+
+**Touched (wiki source pages — completed deferred description blockquotes):**
+
+5. [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering]] — prepended the YouTube description as a leading blockquote (matching the new convention added on 2026-05-09).
+6. [[2026-05-04-rethinking-agents-harness-is-all-you-need]] — same; sponsor-mention and link list omitted with a note pointing to the raw file for the full text.
+
+**Remaining (tracked for future):** the transcript-panel timeout still affects long-format videos (≥20 min observed) — the legacy two videos populated metadata only, not transcript bodies. The skill is shippable because the metadata-only path is graceful. User confirmed the existing manually-copied transcripts in the legacy raw-file bodies are the source of truth; the skill's failure to extract them itself doesn't block the wiki workflow. GH #2 documents the open issue for follow-up.
+
+**Net effect:** the skill works end-to-end for short videos (full transcript), and for any length video produces a usable metadata-only markdown file when the transcript panel doesn't render. The legacy-video deferred backfill from the 2026-05-09 plan is now closed.

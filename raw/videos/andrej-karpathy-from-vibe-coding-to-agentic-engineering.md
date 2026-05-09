@@ -1,7 +1,74 @@
-title: Andrej Karpathy: From Vibe Coding to Agentic Engineering
-author: Sequoia Capital
+---
+title: 'Andrej Karpathy: From Vibe Coding to Agentic Engineering'
+video_id: 96jN2OCOfLs
 url: https://youtu.be/96jN2OCOfLs?si=4CPfTORIF_Cn8E2I
-date published: 29 apr 2026
+channel: Sequoia Capital
+channel_id: UCWrF0oN6unbXrWsTN7RctTw
+channel_url: https://www.youtube.com/channel/UCWrF0oN6unbXrWsTN7RctTw
+publish_date: '2026-04-29T08:21:18-07:00'
+upload_date: '2026-04-29T08:21:18-07:00'
+category: Science & Technology
+duration: '29:49'
+length_seconds: 1789
+view_count: 767146
+is_live: false
+is_family_safe: true
+thumbnail: https://i.ytimg.com/vi_webp/96jN2OCOfLs/maxresdefault.webp
+caption_tracks:
+- language_code: en
+  name: English (auto-generated)
+  kind: asr
+  is_translatable: true
+chapters:
+- title: Introduction
+  start: 0:00
+  start_ms: 0
+- title: Feeling Behind as a Coder
+  start: 0:44
+  start_ms: 0
+- title: Software 3.0 Explained
+  start: '2:28'
+  start_ms: 0
+- title: Agents as the Installer
+  start: '3:44'
+  start_ms: 0
+- title: Menu Gen vs Raw Prompts
+  start: '4:49'
+  start_ms: 0
+- title: What’s Obvious by 2026
+  start: '7:37'
+  start_ms: 0
+- title: Verifiability and Jagged Skills
+  start: '9:41'
+  start_ms: 0
+- title: Founder Advice and Automation
+  start: '13:39'
+  start_ms: 0
+- title: From Vibe Coding to Agent Engineering
+  start: '15:46'
+  start_ms: 0
+- title: Agents Everywhere and Learning
+  start: '25:17'
+  start_ms: 0
+description: |-
+  Andrej Karpathy (co-founder of OpenAI, former head of AI at Tesla, and now founder of Eureka Labs) talks with Sequoia partner Stephanie Zhan at AI Ascent 2026 about what's changed in the year since he coined "vibe coding." He explains why he's never felt more behind as a programmer, why agentic engineering is the more serious discipline taking shape on top of vibe coding, and why we should think of LLMs not as animals but as ghosts: jagged, statistical, summoned entities that require a new kind of taste and judgment to direct. He also touches on Software 3.0, the limits of verifiability, and why you can outsource your thinking but never your understanding.
+
+  00:00 Introduction
+  00:44 Feeling Behind as a Coder
+  02:28 Software 3.0 Explained
+  03:44 Agents as the Installer
+  04:49 Menu Gen vs Raw Prompts
+  07:37 What’s Obvious by 2026
+  09:41 Verifiability and Jagged Skills
+  13:39 Founder Advice and Automation
+  15:46 From Vibe Coding to Agent Engineering
+  25:17 Agents Everywhere and Learning
+notes: 'Re-fetched 2026-05-09 after skill fix landed (GH #2); rich metadata now populated. Body is the
+  manually-cleaned transcript carried over verbatim from the original legacy file (the skill couldn''t
+  extract the transcript itself on this long-format video due to a separate engagement-panel-render bug
+  noted in GH #2 follow-up; the transcript was manually copied from YouTube''s transcript panel by the
+  user).'
+---
 
 Introduction
 0:02

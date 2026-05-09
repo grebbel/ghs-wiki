@@ -16,6 +16,10 @@ last_confirmed: "2026-05-08"
 
 # Rethinking Agents — Harness is All you Need
 
+> Two new papers from Stanford and Tsinghua just put hard numbers on something most agent builders have been feeling — the orchestration code wrapping your LLM now drives more performance variation than the model itself. Same model, six-times the gap, depending entirely on what researchers are calling the harness. If you build agents, the lever you should be pulling is almost never the one you've been reaching for.
+>
+> *— [Prompt Engineering YouTube channel description](https://youtu.be/A0xu44a1BHE) (sponsor mention and link list omitted for brevity; full text in `raw/videos/rethinking-agents-harness-is-all-you-need.md`)*
+
 A **~14-minute YouTube explainer** on the *Prompt Engineering* channel, published 4 May 2026 — the wiki's **first video ingest**. Synthesises two recent academic papers on [[agent-harness|harness engineering]]: Pan et al. (Tsinghua, March 2026) on **natural-language harness representation**, and a paper from **Omar Khattab**'s team (DSPy authors) on **automatic harness optimization**. Headline claim: *"the orchestration code wrapping your LLM now drives more performance variation than the model itself — same model, six times the performance gap depending entirely on the wrapper or harness around it."*
 
 The video is the wiki's first **empirical** anchor for the harness-as-moat framing. Where [[2026-05-07-chatterjee-anatomy-of-agent-harness|Chatterjee 2026]] and [[2026-05-07-kokane-agent-harness-vs-systems-design|Kokane 2026]] argued *rhetorically* about harness importance from practitioner experience, this source brings **ablation numbers, benchmark deltas, and a transfer-across-models result**. The presenter (unnamed in the transcript) explicitly frames *harness engineering* as a discipline name and ends with a four-question audit checklist for builders.

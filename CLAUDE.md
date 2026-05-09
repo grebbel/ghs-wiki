@@ -62,36 +62,82 @@ Report findings; let the user decide what to act on.
 
 Filenames lie, samples masquerade as full sources, and PDFs get truncated. **Before treating any raw source as authoritative, run these pre-flight checks. Surface mismatches to the user *before* writing wiki pages — bad source data corrupts the wiki and is hard to remove cleanly later.**
 
-### Pre-flight check (videos): rename the raw file before reading further
+### Pre-flight check (videos): the YAML frontmatter contract
 
-Video transcripts arrive in `raw/videos/` with non-descriptive filenames (e.g. `video1.md`). The first four lines of the file carry the human-readable identity:
+For new YouTube sources, invoke the [`youtube-transcript-skill`](.claude/skills/youtube-transcript-skill/SKILL.md) first — it produces this format directly. The skill is auto-triggered by any YouTube URL request that mentions transcript / captions / subtitles, or can be invoked explicitly with `-o raw/videos/<slug>.md` to land at the canonical path.
 
-```
+Video transcripts in `raw/videos/` carry their human-readable identity in YAML frontmatter at the top of the file:
+
+```yaml
+---
 title: <video title>
-author: <channel or creator name>
+video_id: <youtube id>
 url: <source URL>
-date published: <YYYY-mon-DD or YYYY-MM-DD>
+channel: <channel name>
+channel_id: <youtube channel id>
+channel_url: <channel URL>
+publish_date: '<ISO-8601 with timezone, e.g. 2026-05-08T11:50:11-07:00'>
+upload_date: '<ISO-8601 with timezone>'
+category: <youtube category>
+duration: '<MM:SS>'
+length_seconds: <integer>
+view_count: <integer>
+caption_tracks:
+  - language_code: <iso>
+    name: <track name>
+    kind: <asr | manual>
+    is_translatable: <bool>
+description: |
+  <youtube description text, multi-line>
+notes: |
+  <ingest-time provenance: ASR cleanups applied, section headings inferred, etc.>
+---
 ```
+
+The skill emits all of the above plus optional fields (`thumbnails:`, `keywords:`, `chapters:`, `is_live:`, `is_family_safe:`, `default_language:`, `available_countries:`); they're useful but not load-bearing for pre-flight identity.
+
+**Canonical pre-flight fields the wiki cares about:** `title`, `url`, `channel`, `publish_date`. If any of these four is missing or empty, stop and ask the user.
 
 **Before treating the file as a source for ingest:**
 
-1. Read only the first ~6 lines to extract `title:`, `author:`, `url:`, and `date published:`. The four-line metadata block is mandatory; if any line is missing or empty, stop and ask the user.
+1. Read the YAML frontmatter (everything between the opening and closing `---`). Extract the four canonical fields plus `description:` and `caption_tracks[].kind` (used downstream during source-page creation, see [§Source-page conventions specific to videos](#source-page-conventions-specific-to-videos)).
 2. Slugify the title to a filesystem-safe form: lowercase, ASCII, words joined by `-`, drop punctuation. Example: `Rethinking Agents - Harness is All you Need` → `rethinking-agents-harness-is-all-you-need.md`.
-3. Rename the raw file in place (`mv raw/videos/video1.md raw/videos/<slug>.md`; use `git mv` once the file is tracked). **The non-descriptive name does not survive into the repo's history-of-record beyond this rename commit.**
-4. The source URL goes onto the wiki source page as a top-level frontmatter field: `url: "<youtube-or-other url>"`.
-5. The wiki source page filename uses `date published` as its date prefix: `wiki/sources/<YYYY-MM-DD>-<slug>.md`. Normalise month-name forms (`2026-may-04`) to ISO (`2026-05-04`) for the filename and the `date_published:` frontmatter.
-6. The raw `author:` line is the canonical attribution. For YouTube videos this is typically the **channel name**; presenter name, when known, can be added later as a body sentence ("Presented by ..."). Use the raw `author:` value verbatim in the source page's `author:` array.
-7. Then proceed with Checks 1–3 below (Scope / Identity / Honest scoping) adapted as: *scope* = full transcript? *identity* = does the title at top match what the transcript actually delivers? *honest scoping* = state runtime in mm:ss.
+3. The raw file should already be at `raw/videos/<slug>.md` if the skill was invoked with `-o`; otherwise rename in place (`mv raw/videos/<file>.md raw/videos/<slug>.md`; use `git mv` once the file is tracked). **The non-descriptive name does not survive into the repo's history-of-record beyond this rename commit.**
+4. The source URL goes onto the wiki source page as a top-level frontmatter field: `url: "<youtube-or-other url>"` (verbatim from the raw file).
+5. The wiki source page filename uses the **date component** of `publish_date:` as its prefix: `wiki/sources/<YYYY-MM-DD>-<slug>.md`. Strip any time/timezone component (`'2026-05-08T11:50:11-07:00'` → `2026-05-08`).
+6. The raw `channel:` line is the canonical attribution. Use it verbatim in the source page's `author:` array as a single-element list. Presenter name (when ≠ channel) is named in body prose, never in separate frontmatter.
+7. Then proceed with Checks 1–3 below (Scope / Identity / Honest scoping) adapted as: *scope* = full transcript? *identity* = does the title at top match what the transcript actually delivers? *honest scoping* = state runtime in mm:ss using `duration:` and `length_seconds:`.
 
-Source-page conventions specific to videos:
+**Legacy-format compatibility (transition).** Files written before 2026-05-09 may use a four-line plain-text header (`title:` / `author:` / `url:` / `date published:`) without `---` delimiters and without the rich fields. Both formats are readable; YAML is canonical for new ingests. Map legacy `author:` → new `channel:` and legacy `date published:` → new `publish_date:` mentally when reading. The two legacy raw files in this repo (Karpathy at Sequoia AI Ascent; Prompt Engineering YouTube) were backfilled to YAML on 2026-05-09.
+
+#### Source-page conventions specific to videos
+
+The wiki source-page schema is **unchanged**. Only the source field names from the raw file change. Use this field-mapping table when drafting a video source page:
+
+| Raw (skill output) | Wiki source page | Transformation |
+| --- | --- | --- |
+| `title:` | `title:` | quote-wrap if it contains `:`; otherwise verbatim |
+| `channel:` | `author:` | single-element list: `["<channel>"]` |
+| `url:` | `url:` | verbatim, quoted |
+| `publish_date:` | `date_published:` | strip time component → ISO date only |
+| `duration:` + transcript line count | `length:` | format `"~MM:SS minutes (transcript ~N lines)"`; line count computed at ingest time |
+| `caption_tracks:[].kind` | source-quality flag in body (not confidence) | `kind: asr` → "auto-generated transcript, ASR-cleaned"; `kind: manual` → "human-curated transcript". *Sources do not carry confidence per [§Lifecycle](#lifecycle); transcript provenance does not feed into confidence math.* |
+| `description:` | **leading blockquote in body**, before TL;DR | renders the channel's own framing of the video before the wiki's interpretation. Mandatory for video source pages. |
+| `chapters:` (if present) | optional: mirror as body section headings | not load-bearing — body structure follows the source page's own rhetorical needs |
+| `keywords:` | seed for `tags:` | merge with hand-curated tags |
+| `category:` | optional `tags:` entry | e.g. `Science & Technology` → `science-technology` if useful |
+
+Fixed schema fields on the source page:
 
 - `kind: video`
 - `length: "~MM:SS minutes (transcript ~N lines)"` — duration first, line count parenthetical.
-- `raw: "../../raw/videos/<slug>.md"` — points to the renamed file.
+- `raw: "../../raw/videos/<slug>.md"` — points to the canonical raw file.
 - `url:` is mandatory (videos are first-class web sources; the file we hold is just a transcript snapshot).
-- `date_published:` taken from the raw file's `date published:` line (ISO-normalised).
-- `author:` taken verbatim from the raw file's `author:` line (single-element array; channel name).
-- **No separate `channel:` field** — the convention is `author = channel` for videos. If a presenter ≠ channel ever needs separate tracking, do that as a body sentence, not a new frontmatter field.
+- `date_published:` taken from the raw file's `publish_date:` (legacy: `date published:`), ISO-normalised to date only.
+- `author:` taken from the raw file's `channel:` (legacy: `author:`) as a single-element array.
+- **No separate `channel:` field on the source page** — the convention is `author = channel` for videos. The skill's `channel_id:` and `channel_url:` are not promoted into source-page frontmatter; capture them in body if substantively useful.
+
+**Body opening for video source pages.** The body begins with the YouTube `description:` rendered as a blockquote (after the H1, before the wiki's own framing). This makes the channel's stated framing of the video legible to readers before the wiki's interpretation overlays it.
 
 ### Check 1 — Scope: is this the whole source?
 

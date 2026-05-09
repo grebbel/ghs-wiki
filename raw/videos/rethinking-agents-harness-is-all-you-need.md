@@ -1,7 +1,77 @@
+---
 title: Rethinking Agents - Harness is All you Need
-author: Prompt Engineering
+video_id: A0xu44a1BHE
 url: https://youtu.be/A0xu44a1BHE?si=4Zm9U1tpM5xQk4-B
-date published: 2026-may-04
+channel: Prompt Engineering
+channel_id: UCDq7SjbgRKty5TgGafW8Clg
+channel_url: https://www.youtube.com/channel/UCDq7SjbgRKty5TgGafW8Clg
+publish_date: '2026-05-04T06:45:03-07:00'
+upload_date: '2026-05-04T06:45:03-07:00'
+category: Science & Technology
+duration: '14:13'
+length_seconds: 853
+view_count: 11686
+is_live: false
+is_family_safe: true
+thumbnail: https://i.ytimg.com/vi_webp/A0xu44a1BHE/maxresdefault.webp
+caption_tracks:
+- language_code: en
+  name: English (auto-generated)
+  kind: asr
+  is_translatable: true
+chapters:
+- title: Harness Beats Model
+  start: 0:00
+  start_ms: 0
+- title: What Is a Harness
+  start: '1:12'
+  start_ms: 0
+- title: What's wrong with Harness Today
+  start: '2:44'
+  start_ms: 0
+- title: Ablations and Compute Costs
+  start: '4:02'
+  start_ms: 0
+- title: Natural Language Migration Win
+  start: '5:25'
+  start_ms: 0
+- title: Sponsor Data Impulse
+  start: '6:29'
+  start_ms: 0
+- title: Meta Harness Auto Optimization
+  start: '8:02'
+  start_ms: 0
+- title: Transferable Harness Insight
+  start: '10:00'
+  start_ms: 0
+- title: Subtraction Principle
+  start: '11:31'
+  start_ms: 0
+- title: Audit Checklist for Builders
+  start: '13:12'
+  start_ms: 0
+description: "Thanks to DataImpluse for sponsoring this video: https://dataimpulse.com/?utm_source=youtube&utm_medium=video&utm_campaign=engineerprompt\n\
+  \nTwo new papers from Stanford and Tsinghua just put hard numbers on something most agent builders have\
+  \ been feeling — the orchestration code wrapping your LLM now drives more performance variation than\
+  \ the model itself. Same model, six-times the gap, depending entirely on what researchers are calling\
+  \ the harness. If you build agents, the lever you should be pulling is almost never the one you've been\
+  \ reaching for.\n\nLINKS:\nTsinghua University:  https://arxiv.org/abs/2603.25723\nStanford University:\
+  \ https://arxiv.org/abs/2603.28052v1\n\nMy voice to text App: whryte.com\nWebsite: https://engineerprompt.ai/\n\
+  RAG Beyond Basics Course:\nhttps://prompt-s-site.thinkific.com/courses/rag\nSignup for Newsletter, localgpt:\n\
+  https://tally.so/r/3y9bb0\n\nLet's Connect: \n\U0001F9BE Discord: https://discord.com/invite/t4eYQRUcXB\n\
+  ☕ Buy me a Coffee: https://ko-fi.com/promptengineering\n|\U0001F534 Patreon: https://www.patreon.com/PromptEngineering\n\
+  \U0001F4BCConsulting: https://calendly.com/engineerprompt/consulting-call\n\U0001F4E7 Business Contact:\
+  \ engineerprompt@gmail.com\nBecome Member: http://tinyurl.com/y5h28s6h\n\n\U0001F4BB Pre-configured\
+  \ localGPT VM: https://bit.ly/localGPT (use Code: PromptEngineering for 50% off).  \n\nSignup for Newsletter,\
+  \ localgpt:\nhttps://tally.so/r/3y9bb0\n\n\n00:00 Harness Beats Model\n01:12 What Is a Harness\n02:44\
+  \ What's wrong with Harness Today\n04:02 Ablations and Compute Costs\n05:25 Natural Language Migration\
+  \ Win\n06:29 Sponsor Data Impulse\n08:02 Meta Harness Auto Optimization\n10:00 Transferable Harness\
+  \ Insight\n11:31 Subtraction Principle\n13:12 Audit Checklist for Builders"
+notes: 'Re-fetched 2026-05-09 after skill fix landed (GH #2); rich metadata now populated. Body is the
+  manually-cleaned transcript carried over verbatim from the original legacy file (the skill couldn''t
+  extract the transcript itself on this video due to a separate engagement-panel-render bug noted in GH
+  #2 follow-up; the transcript was manually copied from YouTube''s transcript panel by the user).'
+---
 
 0:00
 Okay, so the orchestration code wrapping

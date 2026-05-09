@@ -16,6 +16,10 @@ last_confirmed: "2026-05-08"
 
 # Andrej Karpathy: From Vibe Coding to Agentic Engineering
 
+> Andrej Karpathy (co-founder of OpenAI, former head of AI at Tesla, and now founder of Eureka Labs) talks with Sequoia partner Stephanie Zhan at AI Ascent 2026 about what's changed in the year since he coined "vibe coding." He explains why he's never felt more behind as a programmer, why agentic engineering is the more serious discipline taking shape on top of vibe coding, and why we should think of LLMs not as animals but as ghosts: jagged, statistical, summoned entities that require a new kind of taste and judgment to direct. He also touches on Software 3.0, the limits of verifiability, and why you can outsource your thinking but never your understanding.
+>
+> *— [Sequoia Capital YouTube channel description](https://youtu.be/96jN2OCOfLs)*
+
 The **inaugural guest interview** at Sequoia Capital's *AI Ascent* event (29 April 2026) — ~30 minutes with [[Andrej Karpathy]] (ex-OpenAI co-founder; ex-Tesla Autopilot lead; coined *vibe coding* in 2024). The interview is structured around ten thematic questions, anchored on Karpathy's claim that **"I've never felt more behind as a programmer"** — a startling line from one of the field's most prolific practitioners — which he traces to a sharp **December 2025 phase change** when the latest agentic-coding workflows tipped from *"useful but needs corrections"* to *"I just trust it now."*
 
 The interview lays out Karpathy's current synthesis of where AI engineering is going: a **Software 3.0** computing paradigm (prompting as programming; the LLM as interpreter; the context window as the program); **agentic engineering** as a discipline distinct from vibe coding; and a **jagged-intelligence** framing for why current models simultaneously refactor 100k-line codebases and tell you to walk to a 50-meter-away car wash.
