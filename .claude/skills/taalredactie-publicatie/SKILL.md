@@ -1,6 +1,6 @@
 ---
 name: taalredactie-publicatie
-description: Redigeert Nederlandse tekst voor professionele publicatie als expert Nederlandse taal. Corrigeert spelling, grammatica, lidwoorden, niet-bestaande woorden, anglicismen, speciale tekens, zinsstructuur en aanspreekvorm-consistentie — met aparte aandacht voor vertaalresten in tekst die uit het Engels is vertaald. Slaat de gecorrigeerde tekst op en genereert een redactierapport met alle wijzigingen.
+description: Redigeert Nederlandse tekst voor professionele publicatie als expert Nederlandse taal. Corrigeert spelling, grammatica, lidwoorden, niet-bestaande woorden, anglicismen, speciale tekens, zinsstructuur en aanspreekvorm-consistentie — met aparte aandacht voor vertaalresten in tekst die uit het Engels is vertaald. Signaleert daarnaast structuurproblemen volgens het McKinsey Pyramid Principle (SCQA, governing thought, horizontale en verticale logica) als adviserende laag. Slaat de gecorrigeerde tekst op en genereert een redactierapport met alle taalwijzigingen plus een aparte structuuranalyse.
 argument-hint: "pad naar het te redigeren markdown-bestand"
 ---
 
@@ -12,9 +12,9 @@ Je bent een expert Nederlandse taal en redacteur voor professionele publicaties 
 
 Lees het bestand op het pad dat als argument is meegegeven. Als geen pad is meegegeven of het bestand niet bestaat, meld dit en stop.
 
-## Stap 2: Taalkundige controle
+## Stap 2: Taalkundige en structurele controle
 
-Controleer de volledige tekst systematisch op de volgende punten.
+Controleer de volledige tekst systematisch op de volgende punten. Secties A t/m H zijn **corrigerend** (de redacteur past de tekst aan). Sectie I is **adviserend** (de redacteur signaleert, de auteur beslist).
 
 ### A. Spelling en grammatica
 - Spelfouten en tikfouten
@@ -47,11 +47,71 @@ Controleer de volledige tekst systematisch op de volgende punten.
 - **Het is niet aan de redacteur om een aanspreekvorm op te leggen.** Alleen om de gekozen vorm consequent door te trekken
 - Bij twijfel over de dominante vorm: vraag de auteur om de keuze te bevestigen voordat je harmoniseert
 
-### G. Zinsstructuur en leesbaarheid
-- Zinnen die te lang of te ingewikkeld zijn om in een keer te begrijpen
-- Dubbele negaties
-- Onduidelijke verwijswoorden ("dit", "dat", "het", "deze") zonder duidelijk antecedent
-- Tangconstructies (te grote afstand tussen vervoegd werkwoord en de rest van het werkwoordelijk gezegde)
+### G. Zinsstructuur, grammatica en leesbaarheid
+
+Lees elke zin hardop terug. Als de lezer halverwege moet stoppen om te bepalen waar een verwijswoord op slaat, welk werkwoord bij welk onderwerp hoort, of waar de zin grammaticaal heen loopt — is de zin niet goed gelopen.
+
+#### G.1 Antecedent van betrekkelijke voornaamwoorden
+
+Bij elk gebruik van *die*, *dat*, *wie*, *wat*, *waar*, *waarvoor*, *waarop* — controleer expliciet aan welk zelfstandig naamwoord het betrekkelijk voornaamwoord verwijst. Drie veelvoorkomende valkuilen:
+
+**Valkuil 1 — Relatieve bijzin hangt aan het verkeerde naamwoord.** Een relatieve bijzin direct na een meervoudig zelfstandig naamwoord trekt de verwijzing automatisch naar dat woord — ook als de auteur een eerder concept bedoelde.
+
+> *Verkeerd*: "...het bundelen vergde afstemming tussen **teams** die niemand de tijd had om te organiseren."
+> Hier hangt "die" grammaticaal aan "teams"; je organiseert geen teams, je organiseert afstemming. De bedoelde antecedent staat ervoor.
+>
+> *Goed*: "...het bundelen vergde afstemming tussen teams, en niemand had de tijd om die afstemming te trekken." (split de zin)
+> Of: "...het bundelen vergde afstemming tussen teams — afstemming die niemand de tijd had om op zich te nemen." (herhaal de bedoelde antecedent)
+
+**Valkuil 2 — Eindstandige relatieve bijzin verwijst onduidelijk terug.** Hoe verder de bedoelde antecedent, hoe groter het risico dat de lezer hem mist.
+
+> *Risico*: "De koppeling van uw productkennis aan uw **klantdata** waar niemand de tijd voor heeft." Welke "waar voor" — klantdata, productkennis, of de koppeling?
+>
+> *Goed*: "De koppeling van productkennis aan klantdata — een combinatie waar niemand de tijd voor heeft." (expliciete antecedent voor "waar")
+
+**Valkuil 3 — Pronomen zonder duidelijke antecedent in nummer of geslacht.** Een persoonlijk of betrekkelijk voornaamwoord ("hij", "zij", "ze", "het", "die") moet een nominale antecedent hebben die in nummer overeenkomt.
+
+> *Verkeerd*: "kost *praten* over welke **aanpak** u kiest meer dan **ze** alle drie proberen." Geen meervoud-antecedent voor "ze"; "aanpak" is enkelvoud.
+>
+> *Goed*: "kost *praten* over de juiste aanpak meer dan alle drie versies maken en vergelijken." (vermijd het pronomen)
+
+#### G.2 Onderwerp-werkwoord-congruentie en samentrekking
+
+- Subject-werkwoord-congruentie binnen lange zinnen: het werkwoord matcht met het werkelijke onderwerp, niet met een tussenliggend zelfstandig naamwoord.
+  - "Een groep van studenten **gaat** naar het examen" (niet "gaan").
+- "X% van de bedrijven gebruikt/gebruiken AI" — beide vormen verdedigbaar; kies één en houd consistent door het document.
+- Bij samentrekkingen: controleer dat de samengetrokken delen dezelfde grammaticale rol hebben.
+  - *Verkeerd*: "We hebben gegeten en wandelen."
+  - *Goed*: "We hebben gegeten en gewandeld." (twee voltooide deelwoorden)
+
+#### G.3 Tijdsconsistentie
+
+Een zin die opent met een present-state-frase ("Met AI alom aanwezig…", "Nu AI overal is…") en verdergaat met een past-tense werkwoord creëert een logische mismatch. Lijn de tijd uit.
+
+> *Mismatch*: "Met AI alom aanwezig **duurde het vroeger** uren voor een marketingmanager om…"
+> *Goed*: "Vroeger duurde het uren voor een marketingmanager om…" (laat de present-frase weg)
+> Of: "Wat vroeger uren duurde, doet u nu in vijf minuten." (parallellisme tussen vroeger en nu)
+
+#### G.4 Tangconstructies en woordvolgorde
+
+Te grote afstand tussen vervoegd werkwoord en de rest van het werkwoordelijk gezegde — verkort of herstructureer.
+
+> *Tang*: "…in een snel veranderende omgeving **werkt** een leider die niet zelf recent met de handen in het werk zat, **op verouderde intuïtie**."
+> *Beter*: "Een leider die niet zelf recent met de handen in het werk zat, werkt op verouderde intuïtie — in een snel veranderende omgeving is dat een handicap." (split + herstructureer)
+
+Vermijd ook **vooropplaatsingen** die het hoofdwerkwoord ver naar achteren duwen.
+
+#### G.5 Lange zinnen, dubbele negaties, vage verwijzingen
+
+- Zinnen met meer dan ~25 woorden: lees terug en bepaal of twee zinnen helderder zijn.
+- Dubbele negaties — vervang door positieve formulering tenzij de subtiliteit nodig is.
+  - *Verkeerd*: "levert niets op dat zonder die activiteit niet óók geleverd zou worden"
+  - *Beter*: "de organisatie zou hetzelfde resultaat ook zonder die activiteit halen"
+- Onduidelijke verwijswoorden ("dit", "dat", "het", "deze") die over een hele alinea heen verwijzen — vervang door het zelfstandig naamwoord of herstructureer.
+
+#### G.6 De hardop-leestest
+
+Na elke ingreep, **lees de zin hardop**. Als u struikelt over de woordvolgorde, op de verkeerde plek pauzeert, of moet stoppen om te bepalen waar "die" of "dat" op slaat — herzie. Een zin die mondeling niet vloeit, vloeit ook niet visueel.
 
 ### H. Vertaalresten (Engelse herkomst)
 Specifiek voor tekst die uit het Engels is vertaald — controleer op artefacten van het vertaalproces:
@@ -71,6 +131,64 @@ Specifiek voor tekst die uit het Engels is vertaald — controleer op artefacten
 - **Engels titel-hoofdlettergebruik in Nederlandse koppen** — *"De Toekomst Van Werken"* → *"De toekomst van werken"* (zinsletter; zie ook A)
 - **Hashtags en termen die in het Engels blijven** — vaak bewust gekozen op LinkedIn (bijv. `#AINative`); meld alleen wanneer ze inconsistent zijn met de rest van het document of duidelijk verkeerd zijn vertaald
 
+### I. Structuur en argumentatie (SCQA / Pyramid Principle) — adviserend
+
+Voor zakelijke publicaties (LinkedIn-artikelen, briefings, columns, opiniestukken, posts) loont een korte structuurcheck volgens het McKinsey **Pyramid Principle** van Barbara Minto. **Deze sectie is adviserend, niet corrigerend.** De redacteur wijzigt de argumentatieve volgorde niet — dat blijft een keuze van de auteur. Bevindingen komen in een aparte sectie van het redactierapport ("Structuuranalyse"), niet in de wijzigingstabel.
+
+Bij zeer korte teksten (<300 woorden, social posts, captions, micro-content): beperk de analyse tot de aanwezigheid van een herkenbare governing thought. De volledige piramidestructuur is voor langere stukken bedoeld.
+
+#### I.1 SCQA — opening van de tekst
+
+Toets of de openingsalinea's de SCQA-volgorde herkenbaar volgen:
+
+- **S — Situation**: een onbetwistbare context die auteur en lezer delen. Beantwoordt impliciet het *waarom* van het onderwerp — waarom dit nu?
+- **C — Complication**: wat er in die situatie wringt — de "so what". Beantwoordt het *hoe* — hoe manifesteert het probleem zich?
+- **Q — Question**: de vraag die de complication oproept. Soms expliciet ("Hoe kunnen we…?"), vaker impliciet — maar de lezer moet hem zelf kunnen formuleren.
+- **A — Answer**: de kerngedachte van het stuk — de actionable takeaway, idealiter samenvatbaar in één zin.
+
+Veelvoorkomende afwijkingen om te signaleren:
+
+- **Antwoord ontbreekt of komt te laat.** Het stuk doet pas in de slotalinea uit de doeken wat de auteur wil dat de lezer doet of denkt. In Nederlandse zakelijke schrijftaal is dit een patroon ("eerst context, dan claim"); voor publicatieformaten loont het meestal om de Answer naar voren te halen. Stel voor — leg niet op.
+- **Complication ontbreekt.** De tekst springt van situatie naar antwoord zonder de spanning te benoemen die het antwoord nodig maakt. De lezer mist *waarom dit nu een probleem is*.
+- **Situation is geen indisputable truth.** De openingscontext is zelf al een gekleurde claim; lezers met een ander startpunt haken af voordat het argument begint.
+- **Question is verstopt of onbepaald.** Als de impliciete vraag onduidelijk is, weet de lezer niet welk probleem het stuk oplost — en dus niet of het de tijd waard is.
+
+#### I.2 Pyramid — governing thought en supporting arguments
+
+Toets of de tekst een herkenbare piramidestructuur draagt:
+
+- **Top — governing thought**: één centrale claim, actionable, vroeg in de tekst (idealiter direct na de SCQA-opening).
+- **Midden — supporting arguments**: 2–4 argumenten die de governing thought dragen. McKinsey hanteert de **regel-van-drie** als richtlijn, niet als wet — drie argumenten zijn meestal genoeg om overtuigend te zijn zonder te vervlakken.
+- **Onder — evidence**: data, voorbeelden, citaten, cijfers per argument.
+
+Observaties om te melden:
+
+- **Geen herkenbare governing thought.** Het stuk bevat meerdere kandidaat-kernboodschappen die om voorrang concurreren — meld welke kandidaten je tegenkwam en stel de auteur voor er één te kiezen.
+- **Te veel of te weinig supporting arguments.** Eén argument maakt de governing thought kwetsbaar; vijf of meer vervaagt de boodschap. Bij 5+ losse argumenten: stel groepering voor (drie clusters van argumenten in plaats van vijf losse).
+- **Argumenten zonder evidence.** Een ondersteunend argument zonder data, voorbeeld of citaat blijft een herhaling van de governing thought in andere woorden.
+- **Ongelijksoortige argumenten op één niveau.** Argumenten op één laag van de piramide horen vergelijkbaar van soort te zijn (allemaal economisch, óf allemaal operationeel, óf allemaal moreel) — niet door elkaar.
+
+#### I.3 Horizontale en verticale logica
+
+- **Verticale logica** (top-down): elke laag onder de top moet de vraag beantwoorden die de laag erboven oproept. Lees het stuk als een question-and-answer-dialoog: roept de governing thought de juiste vervolgvraag op, en beantwoorden de supporting arguments precies díe vraag?
+- **Horizontale logica** (binnen een laag): argumenten op één niveau moeten **parallel gestructureerd** zijn (zelfde grammaticale vorm, zelfde abstractieniveau) en onderling **onderscheidend** (geen overlap). McKinsey onderscheidt deductief (algemene stelling → specifieke conclusie) en inductief (verzameling specifieke observaties → algemene conclusie) — een stuk hoort niet halverwege van vorm te wisselen.
+
+Observaties om te melden:
+
+- **Mismatch tussen governing thought en supporting arguments.** De top zegt "we moeten X" maar de argumenten gaan over Y — de verticale dialoog klopt niet.
+- **Niet-parallelle argumenten.** Argument 1 is een werkwoordsvorm ("Verlaag de prijs"), argument 2 een zelfstandig naamwoord ("Marktaandeel"), argument 3 een vraag ("Waarom productie verplaatsen?"). Stel parallelle herformulering voor.
+- **Overlap tussen argumenten.** Argument 1 en 2 zeggen in andere woorden hetzelfde — voorstel: samenvoegen, of duidelijker differentiëren.
+- **Volgorde niet rangordelijk.** Argumenten staan in willekeurige volgorde in plaats van geordend op belang, op causaliteit (oorzaak → gevolg), of op tijd (verleden → heden → toekomst).
+- **Mengen van inductie en deductie.** Het stuk opent deductief ("Birds can fly, I can fly, therefore I am a bird") maar bouwt verderop inductief verder, of andersom. Meld het patroon en stel één lijn voor.
+
+#### I.4 Toon en register van structuurmeldingen
+
+Houd de structuuranalyse **beschrijvend, niet normatief**:
+
+- Beschrijf wat je waarneemt, benoem het gevolg voor de lezer, doe geen oordeel over de inhoudelijke keuze van de auteur.
+- Geef bij elke observatie minstens één **concrete suggestie** (bijv. een voorgestelde herformulering of herordening van de eerste alinea), zodat de auteur er meteen iets mee kan.
+- Schrijf in de eerste persoon enkelvoud ("ik signaleer dat…") of onpersoonlijk ("de governing thought is moeilijk te lokaliseren omdat…"); vermijd gebiedende wijs ("herschrijf de opening").
+
 ## Stap 3: Correcties aanbrengen
 
 Breng alle gevonden correcties aan in de tekst. Richtlijnen:
@@ -79,6 +197,7 @@ Breng alle gevonden correcties aan in de tekst. Richtlijnen:
 - Als een zin taalkundig correct is maar inhoudsmatig kan worden verbeterd: laat ongemoeid
 - Bij twijfel tussen twee correcte varianten: kies voor de meest gangbare in de Nederlandse zakelijke schrijftaal
 - Citaten en exact aangehaalde uitspraken (bijvoorbeeld interviewquotes of geciteerde slogans) blijven onveranderd, ook als ze taalkundig niet perfect zijn — meld eventuele onvolkomenheden in het rapport zonder te wijzigen
+- **Structurele bevindingen uit sectie I worden NIET in de tekst doorgevoerd.** De redacteur verplaatst geen alinea's, herschikt geen argumenten en herschrijft geen openingen op grond van het Pyramid Principle. Die observaties horen uitsluitend in de sectie "Structuuranalyse" van het redactierapport, vergezeld van concrete suggesties die de auteur kan overwegen
 
 ## Stap 4: Gecorrigeerde tekst opslaan
 
@@ -86,12 +205,14 @@ Sla de gecorrigeerde tekst op in het oorspronkelijke bestand (overschrijf het or
 
 ## Stap 5: Redactierapport opstellen en opslaan
 
-Stel een redactierapport op met alle aangebrachte wijzigingen. Gebruik dit format:
+Stel een redactierapport op met **twee delen**: (1) de tabel met taalwijzigingen, (2) een narratieve sectie met de structuuranalyse uit sectie I. Gebruik dit format:
 
 ```
 ## Redactierapport — [bestandsnaam]
 
 **Datum redactie:** [datum]
+
+### Taalwijzigingen
 
 | # | Locatie | Origineel | Gecorrigeerd | Reden |
 |:--|:--------|:----------|:-------------|:------|
@@ -99,9 +220,25 @@ Stel een redactierapport op met alle aangebrachte wijzigingen. Gebruik dit forma
 
 **Aantal wijzigingen:** [n]
 **Oordeel:** [Geen wijzigingen nodig / Kleine correcties / Substantiële correcties]
+
+### Structuuranalyse (advies)
+
+Bevindingen tegen het McKinsey Pyramid Principle. Geen wijzigingen aangebracht in de tekst — de auteur beslist of en hoe hij deze observaties verwerkt.
+
+**SCQA-opening:** [observatie of "geen aandachtspunten"]
+
+**Governing thought en supporting arguments:** [observatie of "geen aandachtspunten"]
+
+**Horizontale en verticale logica:** [observatie of "geen aandachtspunten"]
+
+**Concrete suggesties:**
+- [voorstel 1 — bijvoorbeeld een herformulering van de eerste alinea]
+- [voorstel 2 — bijvoorbeeld een herordening van argumenten]
+
+**Structureel oordeel:** [Volgt het Pyramid Principle / Kleine structurele aandachtspunten / Substantiële structurele heroverweging aan te raden]
 ```
 
-Categorielabels voor de kolom "Reden":
+Categorielabels voor de kolom "Reden" in de tabel met taalwijzigingen:
 
 - Spelling
 - Lidwoord
@@ -112,12 +249,15 @@ Categorielabels voor de kolom "Reden":
 - Zinsstructuur
 - Vertaalrest
 
-Als er geen wijzigingen nodig zijn, noteer dit expliciet: *"Geen taalkundige correcties nodig."*
+Structuurbevindingen krijgen géén categorielabel in de tabel — ze horen uitsluitend in de narratieve sectie "Structuuranalyse".
+
+Als er geen taalwijzigingen nodig zijn, noteer dit expliciet onder de tabel: *"Geen taalkundige correcties nodig."* Als er geen structurele aandachtspunten zijn, noteer onder Structuuranalyse: *"Structuur volgt herkenbaar het Pyramid Principle. Geen structurele aandachtspunten."*
 
 Sla het rapport op als `taalrapport-<bestandsnaam>` in dezelfde map als de brontekst (bijv. invoer `inspiration/foo.md` → rapport `inspiration/taalrapport-foo.md`).
 
 ## Toon en stijl van het rapport
 
 - Zakelijk en bondig
-- Geen oordelen over de inhoud van de tekst — alleen over de taal
-- Categorielabels consistent gebruiken zodat patronen zichtbaar worden over meerdere documenten heen
+- Geen oordelen over de inhoud van de tekst — alleen over de taal en, in de aparte structuursectie, over de argumentatieve **vorm** (niet over de claim zelf)
+- Categorielabels in de wijzigingstabel consistent gebruiken zodat patronen zichtbaar worden over meerdere documenten heen
+- De structuuranalyse blijft beschrijvend en adviserend; geen gebiedende wijs, geen normatief oordeel over de inhoudelijke keuze van de auteur
