@@ -23,7 +23,7 @@ last_confirmed: "2026-05-09"
 
 A **~29-minute conference talk** by **Fiona Fung** (Director of Engineering for Claude Code at [[Anthropic]]; previously led teams at Meta and Microsoft) at *Code with Claude 2026* (a Claude-channel-published session). The wiki's first **inside-engineering** source on what running an AI-native engineering organisation actually looks like day-to-day — distinct from prior 2026 sources that argued the *case* for AI-native engineering rhetorically (Karpathy, Chatterjee, Kokane) or measured it ablation-by-ablation ([[2026-05-04-rethinking-agents-harness-is-all-you-need|Pan/Khattab via Prompt Engineering YouTube]]).
 
-This source's structural value: it pairs Karpathy's [[agentic-engineering|*agentic engineering*]] discipline-naming and Chatterjee's [[agent-harness|harness anatomy]] with **the operational team-norms rewrite that follows from them**. Where Karpathy says *"the 10× engineer used to be the upper bound; agentic engineering pushes far past 10×"*, Fung shows the org-shape, hiring, review, and process choices that ship the 10×-plus product (Claude Code itself).
+This source's structural value: it pairs Karpathy's *[[agentic-engineering|agentic engineering]]* discipline-naming and Chatterjee's [[agent-harness|harness anatomy]] with **the operational team-norms rewrite that follows from them**. Where Karpathy says *"the 10× engineer used to be the upper bound; agentic engineering pushes far past 10×"*, Fung shows the org-shape, hiring, review, and process choices that ship the 10×-plus product (Claude Code itself).
 
 ## TL;DR
 
