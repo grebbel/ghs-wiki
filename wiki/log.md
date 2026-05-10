@@ -1520,3 +1520,73 @@ The wiki's **second formalization** of the [[agent-development-lifecycle|ADLC]] 
 
 Candidate concepts noted but **not promoted** on single source: agent governance (six axes), simulation as agent eval primitive.
 
+
+## [2026-05-10] ingest | Marily Nika (Google) on the AI-enhanced PM toolkit (How I AI podcast, 1 Dec 2025)
+
+The wiki's **earliest source by publication date** — 5 months ahead of the next-earliest source ([[2026-04-22-cheung-ippolito-secchi-google-agents-cli|Cheung et al.]]) and **directly inside Karpathy's "December 2025 phase change"** ([[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy 2026]]). 40-minute video / podcast on the *How I AI* channel, host **Claire Vo** (ChatPRD), guest **Marily Nika** (AI Product Lead at [[Google]]; founder of AI Product Academy). Source page: [[2025-12-01-marily-nika-pms-who-use-ai-will-replace-those-who-dont]].
+
+**Substantive content:** worked-example "AI-enhanced PM" workflow for a hypothetical smart-fridge product, end-to-end in ~20 minutes (≥40 min on-air with chitchat):
+
+1. User research via **Perplexity** Discussions-and-Opinions filter (Reddit-only search) + the **twin-personas-debate** anti-sycophancy prompt.
+2. PRD generation via a **custom GPT** ("AI Product GPT" seeded with Marily's PRD template + voice).
+3. Interactive prototype via **v0** (PRD as full prompt input → working dashboard).
+4. Promo video via **Flow/Veo** and **Sora cameos**.
+5. **NotebookLM as AI-as-judge** for the AI Product Academy bootcamp demo day (audio overview + interactive radio-podcast mode + custom judging criteria).
+
+**Headline framings:**
+- *"PMs that use AI are the ones that are going to take over the role of people that don't use AI."*
+- *"Tool hopping"* as the load-bearing operational pattern — generalizes [[2026-05-07-anthropic-economic-index-5-learning-curves|Anthropic Economic Index 5's]] **model-selection slope** to the inter-tool layer.
+- *"PRD as input, not output"* — the PRD is now a structured prompt-input to vibe-coding tools, not a terminal artifact for engineers to read.
+- **Prototypes as stakeholder-influence-engineering tools**, not just design artifacts.
+- *"Use AI on AI"* — when one tool fails, kill the instance and have another LLM rewrite the prompt.
+
+**Touched pages:**
+- [[vibe-coding]] — `source_count` 2 → 3; `confidence` 0.80 → 0.82. Added Nika 2025 to the convergence table; added the "stakeholder-influence prototypes for non-engineers" right-tool entry; updated the "December 2025 phase change generalises?" open question to *partially answered* (now anchored at both engineer + PM ends).
+- [[Google]] — `source_count` 3 → 4; `confidence` 0.80 → 0.82. Added Flow / Veo / NotebookLM / Google AI Studio (prototyping) to the products section; added "People at Google" sub-section listing Marily Nika (Dangling), James Manyika, Jaana Dogan (Dangling), and the Solovyev/Dwivedi Gemini-File-Search team.
+- [[OpenAI]] — `source_count` 8 → 9. Added Sora (text-to-video + Cameo feature) and Custom GPTs to the products section.
+- [[index.md]] — added the source entry at the top of Sources (earliest-by-date); updated the [[vibe-coding]] concept entry to mention the new PM anchor.
+
+**Authors / orgs as Dangling first-mention** (per author-entity-promotion rule, not promoted on a single source): Marily Nika (Google) — guest; Claire Vo — host; *How I AI* — channel; AI Product Academy; Maven; Vercel (publisher of v0); ChatPRD (Claire Vo's product); Sora as a social network distinct from the model. Promote on second-source mention.
+
+**Candidate concepts noted but NOT promoted** on a single source: *tool hopping*, *AI-as-judge*, *influence engineering / prototype-as-stakeholder-tool*, *anti-sycophancy prompting / twin-personas debate*. These are tagged in the source-page frontmatter for future-source convergence detection.
+
+**Pre-flight notes:**
+- Transcript: Playwright skill path (the canonical YouTube-transcript route) hit the documented "transcript panel did not render" timeout for ≥20-min talks ([GH #2](https://github.com/businessdatasolutions/ai-wiki/issues/2)). Fell back to `youtube-transcript-api` `.fetch()` API in a temporary venv. 968 ASR segments retrieved; ASR-cleaned (proper nouns + filler reduction + ~10-second-window line grouping with lead-timestamp preservation); chapter section headings inserted from microformat. Metadata via the Playwright path.
+- Identity verified: title, channel, publish date, duration all match the YouTube URL.
+- Honest scoping: full transcript ingested end-to-end (10 chapters); two sponsor reads (WorkOS, Miro) preserved verbatim in the raw and skipped in the wiki interpretation.
+
+## [2026-05-10] ingest | Bob Sternfels (McKinsey) on the firm's AI strategy (HBR IdeaCast, 9 Feb 2026)
+
+The wiki's **first first-party McKinsey self-narrative source** — Bob Sternfels (Global Managing Partner since 2021) interviewed by Adi Ignatius on HBR IdeaCast. 31:36 episode; **manual (human-curated) caption track** (the wiki's first non-ASR video source). Source page: [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting]]. Complements [[2026-05-03-rewired-second-edition-sample|*Rewired* 2nd ed]] (the practitioner playbook) with the firm-as-vendor self-account.
+
+**Substantive content:**
+
+- **Workforce composition**: 60K = 40K humans + 20K agents (was 3K agents 18 months prior); on track for 1:1 human-to-agent ratio in ~18 months (originally projected 2030).
+- **Business-model migration**: pure-advisory / fee-for-service → outcome-underwriting (now ~33% of revenues; aspirationally majority by end-of-Sternfels-term). Direct convergence with [[2026-05-05-nishar-nohria-end-of-one-size-fits-all|Nishar-Nohria 2026]]'s outcome-pricing trend.
+- **Org-redesign mechanism**: flatter organizations cutting middle layers + workflow consolidation across departmental boundaries (mortgage-process worked example: 4–5 departments → one AI-enabled flow).
+- **CFO-vs-CIO truth-room dilemma** as the canonical [[micro-productivity-trap]] diagnostic from the client seat: high tech spend, low enterprise-level value, organizational change is the missing variable. *"Half, if not more, of the secret sauce is organizational change as opposed to technology implementation."* — second consulting firm (after Bain) to name this diagnosis.
+- **Four durable leadership skills models lack**: aspiration-setting / judgment / discontinuous-leap thinking / human-to-human skill. Direct convergence with [[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al. 2026]] from a hiring-criteria angle.
+- **Hiring overhaul via 20-year self-applied analytics**: three biggest under-weighted predictors of partner-track success — resilience-after-setback / team-sport-experience / aptitude-to-learn-novel-stuff. Now testing candidates in deliberate *no-pattern-recognition* environments.
+- **Post-controversy governance overhaul** ($1B over ~6 years): head of internal audit imported from Apple; head of compliance from Walmart; publicly-traded-equivalent governance standards adopted despite remaining private; partnership autonomy curtailed via new client-selection diligence framework. Named controversies: opioids / OxyContin work + South Africa partnerships + conflict-of-interest accusations.
+- **Three transversal CEO-level themes**: how to get value from AI / how to build institutional resilience under continuous shocks (offense-and-defense-at-the-same-time framing) / what should the future organization model be (matrix-organization tension everywhere).
+- **Three things great leaders most consistently get right**: hunger-for-new-information / collaboration-across-the-value-chain / speed (faster orgs outperform slower ones even with more mistakes — and yet organizations are risk-averse).
+
+**Touched pages:**
+- [[McKinsey & Company]] — `source_count` 4 → 5; `confidence` 0.85 → 0.88. Added the Sternfels source as the firm-as-vendor self-narrative anchor; added Bob Sternfels and Gil Clee (likely; ASR-uncertain) to the People section as Dangling first-mentions.
+- [[Harvard Business Review]] — `source_count` 8 → 9; `confidence` 0.85 → 0.88. Added an *HBR IdeaCast* sub-table under publishing-format breakdown; added Adi Ignatius (editor-in-chief) as Dangling first-mention.
+- [[durable-skills]] — `source_count` 4 → 5; `confidence` 0.85 → 0.87. Added Sternfels as the 5th source, framed as the *industrial selection-instrument validation* of the durable-skills frame (McKinsey measuring durable skills in candidates *pre-hire* via 20-year self-analytics).
+- [[micro-productivity-trap]] — `source_count` 7 → 8; `confidence` 0.90 → 0.92. Added Sternfels as the second-consulting-firm vantage on the trap; *two of the world's largest consulting firms converging on identical diagnoses* is structural evidence the trap is real.
+- [[index.md]] — added the source entry alphabetically (after Manditereza, before Cheung-Ippolito-Secchi); updated the [[durable-skills]] and [[micro-productivity-trap]] one-liners to reflect the new convergence.
+
+**People listed as Dangling first-mention** (per author-entity-promotion rule, not promoted on a single source): **Bob Sternfels** (McKinsey GMP); **Adi Ignatius** (HBR editor-in-chief); **Gil Clee** (likely, ASR-uncertain rendering "Gil Klee" — McKinsey Managing Director ~1967–1973, author of 1959 HBR paper Sternfels names as the matrix-organization precursor). Promote on second-source mention.
+
+**Candidate concepts noted but NOT promoted on a single source**:
+- *Outcome-based services / outcome-underwriting* — Sternfels (consulting) + [[2026-05-05-nishar-nohria-end-of-one-size-fits-all|Nishar-Nohria]] (Adobe / SaaS) reach the **two-source convergence threshold** in this batch. Strong promotion candidate for a follow-up sweep — the cross-industry pattern is already substantive.
+- *Agent-augmented workforce ratio (humans:agents)* — Sternfels' 60K=40K+20K is the wiki's first concrete vendor-level number.
+- *Continuous-shocks resilience (offense-and-defense)* — Sternfels' framing.
+- *Post-controversy governance overhaul (consulting subtype)* — single-source.
+
+**Pre-flight notes:**
+- Transcript: Playwright skill path hit the documented `transcript panel did not render` timeout for ≥20-min talks ([GH #2](https://github.com/businessdatasolutions/ai-wiki/issues/2)). Fell back to `youtube-transcript-api` `.fetch()` API in the same `/tmp/ytenv` venv from the Marily Nika ingest. Critically, this video has **two caption tracks** — one *manual* (human-curated, kind=manual) and one *ASR* (auto-generated, kind=asr). Picked the manual track for highest fidelity. Speaker labels (BOB STERNFELS / ADI IGNATIUS) preserved verbatim from the manual track; cleanup limited to line-break normalization, ~12-second-window grouping with speaker-turn breaks, and lead-timestamp preservation per group.
+- Identity verified: title, channel, publish date, duration, speaker names all match the YouTube URL.
+- Honest scoping: full 31:36 transcript ingested end-to-end (12 chapters from microformat).

@@ -1,10 +1,10 @@
 ---
 type: concept
 aliases: ["vibe coding", "Vibe coding", "vibe-coding", "vibe-code", "v-coding"]
-tags: [vibe-coding, agentic-engineering, software-3.0, ai-agents, accessibility, hobbyist-coding, karpathy]
-confidence: 0.80
-last_confirmed: "2026-05-09"
-source_count: 2
+tags: [vibe-coding, agentic-engineering, software-3.0, ai-agents, accessibility, hobbyist-coding, karpathy, pm-tooling, prototype-as-influence-tool, december-2025-phase-change]
+confidence: 0.82
+last_confirmed: "2026-05-10"
+source_count: 3
 relationships:
   - type: instance-of
     target: software-3.0
@@ -72,6 +72,7 @@ The danger in conflating them: vibe-coded artifacts shipped to production *as if
 - **Throwaway scripts.** Glue code, one-off data transformations, ad-hoc analysis.
 - **Proof-of-concept demos.** Where the goal is to learn *whether* something is possible, not yet to ship it reliably.
 - **Education and exploration.** Learning a new framework or library by having an agent walk you through a working example.
+- **Stakeholder-influence prototypes for non-engineers.** Per [[2025-12-01-marily-nika-pms-who-use-ai-will-replace-those-who-dont|Nika 2025]], the canonical PM use of v0 / Lovable / Google AI Studio is to turn a PRD into a clickable prototype *before* asking for engineering allocation, then take the prototype into a product review where stakeholders can touch / feel / move-around the vision. The prototype is **a communication and influence-engineering tool**, not a design artifact. This is vibe coding's *first-class non-engineer professional use* — the floor-raising claim made operational for the PM audience specifically.
 
 ## When vibe coding is the wrong tool
 
@@ -87,11 +88,12 @@ The danger in conflating them: vibe-coded artifacts shipped to production *as if
 | [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering\|Karpathy 2026]] | Original coinage + December 2025 phase change + the floor-vs-ceiling contrast with [[agentic-engineering]] |
 | [[2026-04-28-dellacqua-jagged-technological-frontier\|Dell'Acqua et al. 2026]] | The empirical underbelly: vibe-coded output *inside* the [[jagged-frontier]] is genuinely good; *outside* it can degrade performance even relative to the un-AI-assisted baseline |
 | [[2026-05-07-anthropic-economic-index-5-learning-curves\|AEI 5]] | Capacity-ceiling caveat: vibe coding works at single-task scale; once tasks compose (multi-step, long-horizon) the ceiling becomes load-bearing, and you need [[agentic-engineering]] |
+| [[2025-12-01-marily-nika-pms-who-use-ai-will-replace-those-who-dont\|Nika 2025 (How I AI)]] | The **PM-side worked example** + the **earliest contemporary primary source** for the December 2025 phase change. A Google AI Product Lead, on camera in late November / early December 2025, doing the workflow live (Perplexity → custom GPT → v0 → Veo/Sora → NotebookLM) and treating the tool stack as already-trustworthy. Substantiates *floor-raising* with a non-engineer professional (PM) audience: vibe coding's clickable-prototype pattern as **stakeholder influence engineering**, not just hobbyist iteration. *"PMs that use AI are the ones that are going to take over the role of people that don't use AI."* |
 
 ## Debates and supersession
 
 - **Is "vibe coding" a derogatory term or a legitimate mode?** When the term first spread on Twitter/X in 2024–25, some practitioners used it dismissively (*"that's just vibe coding, not real engineering"*). Karpathy's [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Sequoia framing]] resolves this: vibe coding is a *legitimate mode* (floor-raising democratisation) — the dismissive framing is misplaced because it conflates vibe coding with agentic engineering. The wiki adopts Karpathy's resolution.
-- **Does the December 2025 phase change generalise beyond Karpathy's experience?** No second source has yet ingested a parallel first-person account at his level of practitioner exposure. Worth tracking — if a survey or empirical study lands documenting a population-level phase change, that lifts confidence here.
+- **Does the December 2025 phase change generalise beyond Karpathy's experience?** ~~No second source has yet ingested a parallel first-person account.~~ *Partially answered* by [[2025-12-01-marily-nika-pms-who-use-ai-will-replace-those-who-dont|Nika 2025]] — a Google AI Product Lead doing the workflow live on camera in late November / December 2025, contemporary with Karpathy's named pivot. This isn't a survey or controlled study, but it is a second independent practitioner whose tool-stack is already trustworthy by the date Karpathy retroactively names. The remaining open question is whether a *population-level* signal (survey / empirical study) confirms it across professional audiences; the wiki now holds *two* practitioner anchors at the engineer (Karpathy) and PM (Nika) ends.
 - **Will vibe coding always need an [[agentic-engineering]] complement, or will model improvements close the gap?** Karpathy's view: *"I'm hoping that improves… there's nothing fundamental preventing it. It's just the labs haven't done it yet."* If labs add aesthetics-as-RL-reward and agent code stops being *bloaty / awkward / brittle*, the gap between vibe coding and agentic engineering narrows substantially. Open question.
 
 ## Related concepts

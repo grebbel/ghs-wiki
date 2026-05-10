@@ -2,12 +2,12 @@
 type: entity
 kind: org
 aliases: ["Harvard Business Review", "HBR"]
-tags: [publisher, business-magazine, management-research, harvard]
+tags: [publisher, business-magazine, management-research, harvard, hbr-ideacast, podcast]
 parent: "[[Harvard Business School]]"
 website: "https://hbr.org"
-confidence: 0.85
-last_confirmed: "2026-05-07"
-source_count: 8
+confidence: 0.88
+last_confirmed: "2026-05-10"
+source_count: 9
 ---
 
 # Harvard Business Review
@@ -43,7 +43,13 @@ HBR sources span both the print magazine (with `hbr_reprint` codes) and HBR.org 
 | [[2026-05-05-nishar-nohria-end-of-one-size-fits-all\|The End of One-Size-Fits-All Enterprise Software]] | [[Deep Nishar]], [[Nitin Nohria]] | 23 April 2026 | Firm-boundary 4-model framework (Build / Compose / Collaborate / Buy Outcomes) |
 | [[2026-05-07-carucci-resistance-as-data\|Leaders, Treat Resistance to Change as Valuable Data]] | [[Ron Carucci]] | 20 April 2026 | Resistance-as-data framework with four signal categories and three leader traps |
 
-HBR articles in the wiki use this convention: source `kind: article`. Print pieces include an `hbr_reprint` field; digital pieces use `journal_volume: "HBR.org Digital, <date>"`.
+**HBR IdeaCast (podcast / video):**
+
+| Episode | Guest | Host | Date | Topic |
+|---|---|---|---|---|
+| [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting\|How McKinsey Plans to Survive AI (and Reinvent Consulting)]] | Bob Sternfels (Global Managing Partner, [[McKinsey & Company]]) | Adi Ignatius (HBR editor-in-chief) | 9 Feb 2026 | McKinsey 100-yr reflection + AI strategy: 40k humans + 20k agents workforce, outcome-underwriting, post-controversy governance, hiring overhaul, four durable leadership skills |
+
+HBR articles in the wiki use this convention: source `kind: article`. Print pieces include an `hbr_reprint` field; digital pieces use `journal_volume: "HBR.org Digital, <date>"`. **HBR IdeaCast** episodes use source `kind: video` (since the wiki currently ingests them via the video transcript pipeline) with `author: ["Harvard Business Review"]` per the [video source-page convention](../../CLAUDE.md#source-page-conventions-specific-to-videos).
 
 ## Article structure (recurring "Idea in Brief")
 
@@ -64,7 +70,12 @@ WHERE contains(file.outlinks, this.file.link) OR contains(tags, "hbr")
 SORT file.name ASC
 ```
 
+## People affiliated with HBR
+
+- **Adi Ignatius** — Editor-in-chief; long-time *IdeaCast* host. First wiki source mention by name in [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels 2026]]. Per the [author-entity-promotion rule](../../CLAUDE.md#author-entity-promotion), do not promote on a single source — listed as Dangling. Promote on second-source mention.
+
 ## Open questions
 
 - HBR's editorial process for AI-strategy articles (peer review? practitioner review?). Worth investigating once a third HBR source is ingested.
 - Distinguishing HBR's flagship articles from HBR Press books and HBR.org "online" pieces — different rigor levels.
+- *IdeaCast* curation: does the podcast surface narratives that contradict HBR's print articles, or is it always-aligned? The wiki has only one IdeaCast source so far.

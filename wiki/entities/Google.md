@@ -2,11 +2,11 @@
 type: entity
 kind: organization
 aliases: ["Google", "Google LLC", "Alphabet (operating subsidiary)"]
-tags: [google, big-tech, hyperscaler, ai-lab, foundation-models, gemini, google-cloud, google-research, gemini-api, file-search, multimodal-rag]
+tags: [google, big-tech, hyperscaler, ai-lab, foundation-models, gemini, google-cloud, google-research, gemini-api, file-search, multimodal-rag, notebooklm, flow, veo, ai-product-management]
 since: 1998
-confidence: 0.80
+confidence: 0.82
 last_confirmed: "2026-05-10"
-source_count: 3
+source_count: 4
 relationships:
   - type: published-by
     target: 2026-04-22-cheung-ippolito-secchi-google-agents-cli
@@ -39,6 +39,17 @@ Big-tech platform company; operating subsidiary of Alphabet. Within this wiki Go
 - **Gemini API File Search** — hosted RAG primitive on the Gemini API. May 2026 update added multimodal support (via **Gemini Embedding 2**), custom metadata filters, and page-level citations. See [[2026-05-05-google-gemini-file-search-multimodal]].
 - **Gemini Embedding 2** — Google's multimodal embedding model (text + images), powering File Search as of May 2026.
 - **`gemini-3-flash-preview`** — generation model demonstrated in the File Search code sample.
+- **NotebookLM** (notebooklm.google) — Google's note-taking / multi-source-research tool with **audio-overview** and (newer) video-overview features. Surfaces in [[2025-12-01-marily-nika-pms-who-use-ai-will-replace-those-who-dont|Nika 2025]] as an unconventional **AI-as-judge** pattern: upload all student-pitch audio recordings into one notebook, prompt the audio-overview hosts with judging criteria, generate a live interactive radio-podcast that announces winners. Two-way interactive mode allows audience call-ins.
+- **Flow** (Google Labs, labs.google/flow) — text-to-video creator app, powered by Veo. Used in [[2025-12-01-marily-nika-pms-who-use-ai-will-replace-those-who-dont|Nika 2025]] for the smart-fridge promotional clip generation.
+- **Veo** — Google's video-generation model, the engine behind Flow. Also referenced in passing as a tool a PM can prompt directly with PRD-derived content.
+- **Google AI Studio (prototyping)** — named in [[2025-12-01-marily-nika-pms-who-use-ai-will-replace-those-who-dont|Nika 2025]] alongside v0 and Lovable as a vibe-coding-class prototyping tool. Not deeply demonstrated.
+
+## People at Google referenced in this wiki
+
+- **Marily Nika** — AI Product Lead at Google; founder of the AI Product Academy (separate from her Google role). First wiki source mention by name in [[2025-12-01-marily-nika-pms-who-use-ai-will-replace-those-who-dont|Nika 2025]] (How I AI). Per the [author-entity-promotion rule](../../CLAUDE.md#author-entity-promotion), do not promote on a single source.
+- **James Manyika** — see [[James Manyika]] entity (already in the wiki).
+- **Jaana Dogan** — engineering leader on Gemini API, surfaced via [[2026-05-07-kiron-schrage-compound-benefits|Kiron-Schrage 2026]]'s anchor anecdote (*"It's not perfect and I'm iterating on it."*). Single-source first mention; not yet promoted.
+- **Ivan Solovyev / Kriti Dwivedi** — Gemini File Search team members; see [[2026-05-05-google-gemini-file-search-multimodal|Solovyev & Dwivedi 2026]].
 
 ## Google DeepMind
 

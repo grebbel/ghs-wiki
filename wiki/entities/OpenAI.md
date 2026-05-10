@@ -2,11 +2,11 @@
 type: entity
 kind: organization
 aliases: ["OpenAI"]
-tags: [openai, ai-lab, foundation-models, chatgpt, gpt-4, gpt-5, codex, agentic-engineering]
+tags: [openai, ai-lab, foundation-models, chatgpt, gpt-4, gpt-5, codex, agentic-engineering, sora, custom-gpts]
 since: 2015
 confidence: 0.90
 last_confirmed: "2026-05-10"
-source_count: 8
+source_count: 9
 relationships:
   - type: employs
     target: Aaron-Chatterji
@@ -35,6 +35,8 @@ AI research and deployment company. Originator of **ChatGPT** (Nov 2022) and the
 - **Codex** — agent-driven software engineering platform documented in [[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo 2026]]. Five months of internal use produced ~1M LOC and ~1,500 PRs across an internal product, with **0 lines of manually-written code** and throughput averaging 3.5 PRs / engineer / day across 7 engineers (increasing with team size).
 - **Codex CLI** — command-line interface for Codex; used (with GPT-5) to generate the initial repository scaffold for Lopopolo's project. The wiki's first concrete operational reference to Codex CLI tooling.
 - **Aardvark** — second agent operating on the same Codex-team codebase, named in passing in [[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo 2026]] as a beneficiary of repository legibility investments. Not detailed.
+- **Sora** — text-to-video model + social-network app. Surfaces in [[2025-12-01-marily-nika-pms-who-use-ai-will-replace-those-who-dont|Nika 2025]] as the parallel demo to Google Flow / Veo for PM-side promo videos, with the **Cameo** feature (custom-instruction-shipped — *"always make me look good"*; reportedly Mark Cuban's cameo auto-injects a Cost Plus Drugs ad). Marily / Claire's tentative read: *"the social-network aspect of it is a distribution method for the underlying API models — power users find what's possible, then commercial applications follow."*
+- **Custom GPTs** — user-authored, system-prompt-+-knowledge ChatGPT instances. [[2025-12-01-marily-nika-pms-who-use-ai-will-replace-those-who-dont|Nika 2025]] demonstrates a domain-specific custom GPT ("AI Product GPT") seeded with a PRD template and the author's voice, used as a structured prompt-input-to-prototype-tool pipeline component. Operationally a domain-specific *Context-layer artifact* in [[2026-05-07-chatterjee-anatomy-of-agent-harness|Chatterjee's]] vocabulary.
 
 ## Research initiatives appearing in this wiki
 

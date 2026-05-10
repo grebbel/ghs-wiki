@@ -1,10 +1,10 @@
 ---
 type: concept
 aliases: ["micro-productivity trap", "micro-productivity-trap", "offering lock-in", "process lock-in"]
-tags: [micro-productivity-trap, AI-transformation, EBITDA, process-redesign, workflow-redesign, enterprise-ai]
-confidence: 0.90
-last_confirmed: "2026-05-07"
-source_count: 7
+tags: [micro-productivity-trap, AI-transformation, EBITDA, process-redesign, workflow-redesign, enterprise-ai, organizational-change-vs-tech-implementation]
+confidence: 0.92
+last_confirmed: "2026-05-10"
+source_count: 8
 relationships:
   - type: instance-of
     target: enterprise-ai-adoption
@@ -147,8 +147,9 @@ The micro-productivity-trap framing sits among several wiki vocabularies address
 - [[2026-05-07-carucci-resistance-as-data|Carucci 2026]] — *human-reaction lens* on the trap; the Flaws-in-change resistance signal is operators surfacing exactly what process lock-in misses; leaders' three traps (personalize / moralize / rush) systematically suppress it.
 - [[2026-05-07-ransbotham-augmented-learners|Ransbotham et al. 2024]] + [[2026-05-07-kiron-schrage-compound-benefits|Kiron & Schrage 2026]] — *organizational-learning lens* on the trap; 59% of orgs are "Limited Learners" stuck in the trap; the verification → evaluation → learning capture flywheel is the operational machinery to escape it. ROI reframed as **return on iteration**.
 - [[2026-05-07-chatterjee-anatomy-of-agent-harness|Chatterjee 2026]] + [[2026-05-07-kokane-agent-harness-vs-systems-design|Kokane 2026]] — *agent-harness engineering lens* on the trap; the [[agent-harness|agent harness]] is the runtime infrastructure where the trap is escaped or perpetuated. Friday-in-March story makes the failure-mode concrete; "build constraints before you build cleverness" is the operational discipline.
+- [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels 2026 (HBR IdeaCast / McKinsey)]] — *consulting-vendor-self-narrative lens* on the trap; the **second consulting firm** (after Bain via [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt-Chatterji 2026]]) to name the same diagnosis from inside the engagement: *"Half, if not more, of the secret sauce is organizational change as opposed to technology implementation."* Sternfels' **CFO-vs-CIO truth-room dilemma** captures the trap from the client's seat: *"My CFO is in my ear that we're spending a lot of money on technology, but we're not yet seeing enterprise-level value. ... CIO's saying: this is one of those moments. And if we're not in the lead, we're going to get disrupted."* Two of the world's largest consulting firms converging on identical diagnoses is **structural evidence that the trap is real and pervasive** — not just a Bain framing or a McKinsey framing. Operational escape mechanism Sternfels names: **flatter organizations cutting middle layers** + **workflow consolidation across departmental boundaries** (his mortgage-process worked example: origination + credit-scoring + collection + after-service collapse from 4–5 departments to one AI-enabled flow once the boundaries are removed).
 
-Each names the same broad gap with a different vocabulary; the wiki's [[syntheses/organizational-frameworks-for-ai-adoption|organizational-frameworks-for-ai-adoption]] synthesis maps the cluster (the synthesis was filed when 6 frameworks were ingested; Nishar-Nohria is the 7th and Carucci is the 8th, at layers the synthesis didn't surface).
+Each names the same broad gap with a different vocabulary; the wiki's [[syntheses/organizational-frameworks-for-ai-adoption|organizational-frameworks-for-ai-adoption]] synthesis maps the cluster (the synthesis was filed when 6 frameworks were ingested; Nishar-Nohria is the 7th, Carucci the 8th, and Sternfels the 9th, at layers the synthesis didn't surface).
 
 ## Related concepts
 
