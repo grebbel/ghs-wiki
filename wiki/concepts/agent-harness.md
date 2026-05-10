@@ -1,10 +1,10 @@
 ---
 type: concept
 aliases: ["agent harness", "harness", "AI agent harness", "agent runtime", "agent runtime layer"]
-tags: [agent-harness, ai-agents, ai-engineering, harness-frameworks, context-management, constraints, contracts, telemetry, llm-non-determinism]
-confidence: 0.90
-last_confirmed: "2026-05-09"
-source_count: 8
+tags: [agent-harness, ai-agents, ai-engineering, harness-frameworks, context-management, constraints, contracts, telemetry, llm-non-determinism, hooks, repository-as-system-of-record]
+confidence: 0.92
+last_confirmed: "2026-05-10"
+source_count: 11
 relationships:
   - type: part-of
     target: ai-agents
@@ -16,7 +16,7 @@ relationships:
 
 # Agent Harness
 
-The **runtime engineering layer that lives between a foundation model and the user** in any production [[ai-agents|AI agent]] system. The harness wraps the model with context management, permission/guardrails, state and memory, tool execution, retry/error handling, human-in-the-loop, observability, and (in mature systems) a self-tuning meta-learning loop. The construct emerged in late 2025 / early 2026 as practitioner vocabulary; by April–May 2026 it had become the dominant frame for *what production AI engineering actually is*, with at least seven wiki sources engaging the term substantively — including primary-source vendor announcements from [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic]] (8 April 2026) and [[2026-04-22-cheung-ippolito-secchi-google-agents-cli|Google]] (22 April 2026) that productize the harness/runtime layer as a hosted service or CLI toolkit, plus the wiki's first **empirical anchor** ([[2026-05-04-rethinking-agents-harness-is-all-you-need|Prompt Engineering YouTube, 4 May]]) bringing ablation data and a **transfer-across-models** finding, and the wiki's first **paradigm-vocabulary anchor** ([[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy at Sequoia AI Ascent, 29 April]]) placing the harness inside the broader [[software-3.0]] computing paradigm and naming the practitioner discipline that wields it: [[agentic-engineering]].
+The **runtime engineering layer that lives between a foundation model and the user** in any production [[ai-agents|AI agent]] system. The harness wraps the model with context management, permission/guardrails, state and memory, tool execution, retry/error handling, human-in-the-loop, observability, and (in mature systems) a self-tuning meta-learning loop. The construct emerged in late 2025 / early 2026 as practitioner vocabulary; by April–May 2026 it had become the dominant frame for *what production AI engineering actually is*, with **eleven** wiki sources engaging the term substantively — including primary-source vendor announcements from [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic]] (8 April 2026) and [[2026-04-22-cheung-ippolito-secchi-google-agents-cli|Google]] (22 April 2026) that productize the harness/runtime layer as a hosted service or CLI toolkit; the wiki's first **empirical anchor** ([[2026-05-04-rethinking-agents-harness-is-all-you-need|Prompt Engineering YouTube, 4 May]]) bringing ablation data and a **transfer-across-models** finding; the wiki's first **paradigm-vocabulary anchor** ([[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy at Sequoia AI Ascent, 29 April]]) placing the harness inside the broader [[software-3.0]] computing paradigm and naming the practitioner discipline that wields it: [[agentic-engineering]]; and now (10 May 2026 ingest batch) the wiki's first **vendor-side production case study** at scale ([[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo / OpenAI Codex, 11 Feb 2026]] — five months, ~1M LOC, 0 manually-written lines), the wiki's first **operationalization of hooks-as-portable-primitive across harnesses** ([[2026-05-08-bratanic-unified-agentic-memory-hooks|Bratanic / Towards Data Science, 8 May]]), and the wiki's second-vendor formalization of the surrounding [[agent-development-lifecycle|lifecycle]] ([[2026-05-09-chase-agent-development-lifecycle|Chase / LangChain, 9 May]]) — which incidentally sharpens the wiki's vocabulary by splitting *frameworks*, *runtimes*, and *harnesses* into three distinct Build-phase layers.
 
 The wiki treats agent harness as a **distinct concept** from [[ai-agents]] (the technology + deployment progression), [[foundation-models]] (the substrate the harness wraps), and [[generative-ai]] (the broader application class). The harness is *specifically* the application-layer software around the model.
 
@@ -211,6 +211,73 @@ The video closes with a **diagnostic order-of-operations** that is operationally
 
 The two underlying papers are not separately ingested. Treat the specific numbers as second-hand until primary-source ingest confirms them — but the *direction* (transferability, subtraction, raw-traces-irreplaceable) is durable independent of the specific magnitudes.
 
+### Hooks as a first-class harness primitive ([[2026-05-08-bratanic-unified-agentic-memory-hooks|Bratanic 2026]] + [[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo 2026]])
+
+The 10 May 2026 ingest batch makes **lifecycle hooks** explicit as a first-class harness primitive — distinct from MCP tools, distinct from middleware, distinct from observability. Two converging vantages:
+
+- **[[2026-05-08-bratanic-unified-agentic-memory-hooks|Bratanic 2026]]** demonstrates that **Claude Code, Codex, and Cursor all support the same five lifecycle events** with near-identical contracts: `SessionStart`, `UserPromptSubmit` (Cursor: `beforeSubmitPrompt`), `PreToolUse`, `PostToolUse`, `Stop`. The hook receives JSON on stdin and may emit JSON on stdout to inject context. Two of the five events are *injection points*: `SessionStart` prepends to the system prompt; `UserPromptSubmit` appends to the user prompt.
+- **[[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo 2026]]** shows the same primitive in production at OpenAI: background "doc-gardening" tasks, custom linters, taste-invariant scans, and golden-principle GC are all hook-shaped — system-initiated, deterministic, lifecycle-fired.
+
+The clean **hooks vs. MCP** distinction is operationally load-bearing:
+
+| Property | MCP tools | Hooks |
+|---|---|---|
+| Initiator | Agent (LLM-decided) | System (lifecycle-event-fired) |
+| Reliability | Inconsistent — model has to "remember to remember" | Deterministic — every event fires |
+| Context cost | Consumes model attention | Zero context cost |
+| Best for | On-demand search, store, update, delete | Passive logging, profile injection, append-only context |
+
+> *"What you really want is passive, deterministic logging — something that captures every session event regardless of what the model is doing, without consuming any of its context or attention. This is exactly what hooks give you."* — [[2026-05-08-bratanic-unified-agentic-memory-hooks|Bratanic 2026]]
+
+The architectural implication is sharp: **memory is portable across harnesses if it lives in hooks, locked-in if it lives in vendor-internal session state.** Bratanic's working demo (shared Python hook scripts + Neo4j store) shows you can switch from Cursor to Claude Code to Codex mid-project and pick up exactly where you left off. This is one tier higher than [[2026-05-04-rethinking-agents-harness-is-all-you-need|the Khattab et al. transferability finding]] (a harness optimised on one model improved five other models): a *substrate component of harness configuration* (memory) is portable across vendor harnesses, not just across models.
+
+This convergence also has **wiki-internal** resonance: the schema layer of *this* repository (see [§Hooks](../../CLAUDE.md#hooks)) is built on the same primitive — `SessionStart` injects wiki snapshot context, `PostToolUse` lints edited pages, `Stop` re-exports the graph. Three independent vantages (Lopopolo / Bratanic / this repo) supply convergent evidence that hooks are a stable cross-vendor harness primitive.
+
+#### The dream-phase pattern
+
+Bratanic names a specific architectural pattern that Lopopolo's "doc-gardening" and Chatterjee's *Compounding* layer both gesture at without naming:
+
+- **Hooks (online)** — passively log every event into a store. No model calls, no latency cost, just append.
+- **Dream phase (offline)** — a batch job reads accumulated events, asks an LLM to distill them into durable Markdown memories, writes them back. Memories are organized by topic and merged rather than appended, so they stay current instead of growing forever.
+- **Injection (online)** — on the next session start in any harness, profile memories are loaded into context. On each user prompt, relevant memories are searched and appended automatically.
+
+The dream-phase pattern preserves the [[2026-05-04-rethinking-agents-harness-is-all-you-need|Khattab et al. *raw-traces-irreplaceable* finding]] (50% → 34% accuracy when traces removed; 34.9% when summarized — the signal lives in the raw failure detail) by keeping raw events in the store and only summarizing into the *injected* layer. The summary is for the *next* session's context, not for the meta-learning loop's training input.
+
+### Refined Build-layer vocabulary ([[2026-05-09-chase-agent-development-lifecycle|Chase 2026]])
+
+Until 9 May 2026 the wiki used [[2026-05-07-kokane-agent-harness-vs-systems-design|Kokane's]] 4-layer stack (App / Frameworks / Harness / Model). Chase's lifecycle piece sharpens the framework/harness boundary by introducing a **third layer** between them:
+
+| Layer | Focus | Examples |
+|---|---|---|
+| **Frameworks** | Pure abstractions: model calls, tools, prompts, retrieval, agent loops | LangChain, CrewAI |
+| **Runtimes** | Execution-layer concerns: state, control flow, durability, persistence, human intervention | LangGraph, Temporal-based custom |
+| **Harnesses** | The agent's environment: prompts, skills, MCP servers, hooks, middleware, memory, sometimes filesystem | Deep Agents, Claude Agent SDK |
+| **No-code** | Configuration UI for non-engineers | LangSmith Fleet, Claude Cowork, n8n |
+
+This refines what *agent harness* means in this concept page going forward:
+
+- **Kokane's "harness"** is broad — Layer 3 in his 4-layer stack, conceptually everything that wraps the model. Operationally compatible with the wiki's prior usage.
+- **Chase's "harness"** is narrower — specifically the *content + environment* the agent operates within (prompts, skills, MCP, hooks, middleware, memory), with frameworks (abstractions) and runtimes (execution) treated as separate adjacent layers.
+
+Both are correct vocabularies. The wiki holds them as **scope variants**: when discussing the harness in the [[2026-05-07-chatterjee-anatomy-of-agent-harness|Chatterjee Context/Constraints/Contracts/Compounding]] sense, Chase's narrow scope fits best (skills, prompts, hooks, memory). When discussing the harness as the *full runtime layer wrapping a model*, Kokane's broad scope fits. Both definitions converge on **the harness is what compounds with use; the model is rented**.
+
+### The OpenAI Codex case study — what production looks like ([[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo 2026]])
+
+Until February 2026 the wiki carried *practitioner essays* and *vendor announcements* about the harness construct, plus one *empirical anchor* (the YouTube synthesis). [[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo 2026]] adds the wiki's first **first-person production case study from a foundation-model vendor** running its own engineering on its own model:
+
+- **Five months, ~1M LOC, ~1,500 PRs, 7 engineers, 3.5 PRs / engineer / day, throughput increasing as team grew** — built with **0 lines of manually-written code.**
+- **Repository as system of record**: every architectural rule, design doc, exec plan, taste invariant encoded as repo-local versioned markdown. *"From the agent's point of view, anything it can't access in-context while running effectively doesn't exist."* This is Chatterjee's Context layer made operational: *if a Slack thread aligned the team, that decision is illegible until it's encoded in the repo.*
+- **AGENTS.md as table of contents, not encyclopedia**: progressive disclosure with verification status, ownership, freshness checks, and a **doc-gardening agent that opens fix-up PRs** for stale or obsolete docs. The directory tree itself *is* the natural-language harness — operationally identical to Pan et al.'s OS-Symphony NL migration ([[2026-05-04-rethinking-agents-harness-is-all-you-need|YouTube source]]).
+- **Layered architecture mechanically enforced**: per-domain Types → Config → Repo → Service → Runtime → UI dependency direction; cross-cutting concerns route through a single Providers interface; custom linters (Codex-generated) enforce. *"This is the kind of architecture you usually postpone until you have hundreds of engineers. With coding agents, it's an early prerequisite: the constraints are what allows speed without decay or architectural drift."*
+- **Throughput inverts merge philosophy**: minimal blocking gates; PRs short-lived; flakes addressed with follow-up runs not blocked CI; *"In a system where agent throughput far exceeds human attention, corrections are cheap, and waiting is expensive."*
+- **Golden principles + scheduled GC**: opinionated mechanical rules (prefer shared utilities; never probe data, validate at boundaries with typed SDKs); background Codex tasks scan for deviations and open targeted refactoring PRs, mostly auto-merged. *"Technical debt is like a high-interest loan."*
+- **Application legibility primitives**: Chrome DevTools Protocol wired into the agent runtime so Codex can take DOM snapshots, take screenshots, validate UI behavior; per-worktree observability stack (LogQL/PromQL/TraceQL) so prompts like *"ensure service startup completes in under 800ms"* become tractable; single Codex runs work on a single task for upwards of six hours.
+- **Increasing autonomy**: end-to-end feature flow from a single prompt — validate state, reproduce bug, record video, implement fix, validate fix, record resolution, open PR, respond to feedback, detect/remediate build failures, escalate only when judgment is required, merge.
+
+> *"Our most difficult challenges now center on designing environments, feedback loops, and control systems that help agents accomplish our goal: build and maintain complex, reliable software at scale."*
+
+This **substantiates** the rhetorical claims of [[2026-05-07-chatterjee-anatomy-of-agent-harness|Chatterjee]] and [[2026-05-07-kokane-agent-harness-vs-systems-design|Kokane]] with a concrete operational case at vendor scale. It is also the strongest worked example yet of [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy's]] *agentic engineering* discipline: humans steer, agents execute, the discipline shows up in *the scaffolding* — not the code.
+
 ## Convergence with prior wiki claims
 
 | Source | Construct | Wiki vocabulary in this concept |
@@ -222,8 +289,11 @@ The two underlying papers are not separately ingested. Treat the specific number
 | [[2026-05-07-kiron-schrage-compound-benefits\|Kiron & Schrage 2026]] | verification → evaluation → learning capture | the Compounding layer at organizational level |
 | [[2026-05-04-rethinking-agents-harness-is-all-you-need\|Prompt Engineering YouTube, May 2026]] | same-model 6× variance + transferable harness + subtraction principle | the **empirical anchor** — ablation data behind the prior rhetorical claims |
 | [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering\|Karpathy at Sequoia AI Ascent, Apr 2026]] | [[software-3.0]] paradigm + [[agentic-engineering]] as discipline | the **paradigm-vocabulary anchor** — the harness is the runtime that executes Software 3.0 programs; the practice that builds it is agentic engineering |
+| [[2026-02-11-lopopolo-codex-harness-engineering\|Lopopolo / OpenAI Codex, Feb 2026]] | repository-as-system-of-record + AGENTS.md table-of-contents + layered architecture + golden-principles GC | the **vendor-side production case study** — five months, 0 manually-written lines, ~1M LOC; the rhetorical claims become observed fact at vendor scale |
+| [[2026-05-08-bratanic-unified-agentic-memory-hooks\|Bratanic / TDS, May 2026]] | hooks vs. MCP + dream-phase memory + cross-vendor hook contract | the **hooks-as-portable-primitive anchor** — same five lifecycle events across Claude Code / Codex / Cursor; memory portable across harnesses |
+| [[2026-05-09-chase-agent-development-lifecycle\|Chase / LangChain, May 2026]] | Build → Test → Deploy → Monitor + Govern; frameworks / runtimes / harnesses / no-code split | the **lifecycle-vocabulary refinement** — sharpens the framework/harness boundary, names governance axes for agent scaling |
 
-This is the strongest cross-source convergence in the wiki on a *runtime-engineering* construct — seven sources, six vantages (two big-vendor announcements / two Medium practitioner essays / MIT SMR column / YouTube empirical synthesis / venture-capital-keynote interview), all describing the same architecture. Two of the six — [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic Managed Agents]] (8 April) and [[2026-04-22-cheung-ippolito-secchi-google-agents-cli|Google Agents CLI]] (22 April) — are vendor-side productisations within two weeks of each other. The sixth — [[2026-05-04-rethinking-agents-harness-is-all-you-need|the YouTube synthesis]] — is the wiki's first *empirical* source, summarising two academic papers (Pan et al. Tsinghua March 2026, Khattab et al. DSPy team) and turning *"the harness is the moat"* from a rhetorical assertion into a measured one (transfer of one optimised harness across five models without re-tuning).
+This is the strongest cross-source convergence in the wiki on a *runtime-engineering* construct — eleven sources, eight vantages (two big-vendor announcements / two Medium practitioner essays / MIT SMR column / YouTube empirical synthesis / venture-capital-keynote interview), all describing the same architecture. Two of the six — [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic Managed Agents]] (8 April) and [[2026-04-22-cheung-ippolito-secchi-google-agents-cli|Google Agents CLI]] (22 April) — are vendor-side productisations within two weeks of each other. The sixth — [[2026-05-04-rethinking-agents-harness-is-all-you-need|the YouTube synthesis]] — is the wiki's first *empirical* source, summarising two academic papers (Pan et al. Tsinghua March 2026, Khattab et al. DSPy team) and turning *"the harness is the moat"* from a rhetorical assertion into a measured one (transfer of one optimised harness across five models without re-tuning).
 
 ## Debates / contradictions
 

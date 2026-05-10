@@ -1476,3 +1476,47 @@ Plus: added `.env` and `.env.*` to `.gitignore` as a tiny separate task this ses
 - `grep -rnE '\[\[[^]]*\|[^]]*\*[^]]*\]\]' wiki/`: 0 remaining matches across the corpus.
 
 **Stats:** 17 files changed, 21 insertions / 21 deletions (perfect 1-for-1 line swaps; no body-content drift). Plus 1 CLAUDE.md schema addition (this rule). Plus this log entry.
+
+## [2026-05-10] ingest | Solovyev & Dwivedi — *Gemini API File Search is now multimodal* (Google — The Keyword, 5 May 2026)
+
+Short developer-relations announcement (5-page PDF, ~3-min read) introducing three updates to the Gemini API File Search tool: **multimodal** retrieval via Gemini Embedding 2 (images and text in the same store); **custom metadata** (`department: legal`, `status: final`) for query-time filtering; **page-level citations** tying responses to specific pages of indexed PDFs. Three-primitive API: `file_search_stores.create` → `upload_to_file_search_store` → `generate_content` with `tools=[{file_search: …}]`. Source page: [[2026-05-05-google-gemini-file-search-multimodal]]. Authors **Ivan Solovyev** (PM, Google DeepMind) and **Kriti Dwivedi** (SE) listed as Dangling first-mention. Source-count bump for [[Google]] (2 → 3). No structural concept changes — substantiates a *Context-layer retrieval primitive* the wiki has been gesturing at.
+
+## [2026-05-10] ingest | Lopopolo — *Harness engineering: leveraging Codex in an agent-first world* (OpenAI Engineering blog, 11 Feb 2026)
+
+The wiki's first **vendor-side production case study** of [[agent-harness]] / [[agentic-engineering]] at scale: five months, ~1M LOC, ~1,500 PRs, 7 engineers, 3.5 PRs/engineer/day with throughput **increasing** as the team grew — built with **0 lines of manually-written code**. Source page: [[2026-02-11-lopopolo-codex-harness-engineering]]. Author **Ryan Lopopolo** listed as Dangling first-mention. Ingested three months after publication (Feb 11) — reactive ingest discipline, not a freshness gap. Touched pages:
+
+- [[agent-harness]] — added vendor case-study section + hooks-as-primitive section (alongside Bratanic) + Build-layer-vocabulary refinement (alongside Chase). `source_count` 8 → 11; `confidence` 0.90 → 0.92; `last_confirmed` → 2026-05-10.
+- [[agentic-engineering]] — added Codex case-study row in convergence table + new "Operational invariants" section (8 named invariants distilled from the Codex team's experience: repository-as-system-of-record, AGENTS.md as table-of-contents, layered architecture mechanically enforced, throughput inverts merge philosophy, encoded golden principles + scheduled GC, application legibility, hire for environment-design taste). `source_count` 2 → 3; `confidence` 0.80 → 0.85.
+- [[OpenAI]] — added Codex / Codex CLI / Aardvark to "Products and tooling" section. `source_count` 7 → 8; `confidence` 0.85 → 0.90.
+- [[index.md]], [[log.md]] — updated.
+
+## [2026-05-10] ingest | Bratanic — *Unified Agentic Memory Across Harnesses Using Hooks* (Towards Data Science, 8 May 2026)
+
+The wiki's first source naming **lifecycle hooks as a first-class harness primitive** — distinct from MCP tools — with an **emerging cross-vendor contract**: Claude Code, Codex, and Cursor all support the same five lifecycle events (`SessionStart`, `UserPromptSubmit`, `PreToolUse`, `PostToolUse`, `Stop`) with near-identical JSON-stdin / JSON-stdout semantics. Three-layer architecture (hooks online + dream-phase offline + injection online); shared Python scripts + Neo4j store; switch from Cursor to Claude Code to Codex mid-project and pick up where you left off. Dream-phase markdown wiki is structurally identical to Karpathy's LLM-wiki idea and to Anthropic's Skills. Source page: [[2026-05-08-bratanic-unified-agentic-memory-hooks]]. Author **Tomaz Bratanic** (Neo4j) listed as Dangling first-mention; **Neo4j** also Dangling first-mention. Touched pages:
+
+- [[agent-harness]] — major hooks-as-primitive section added (cross-referencing Lopopolo + the wiki's own [`hooks` schema section](CLAUDE.md#hooks)); MCP-vs-hooks distinction tabled; dream-phase pattern named explicitly. (Co-listed under the Lopopolo entry above for the source_count update.)
+- [[index.md]] — added entry; co-listed under [[agent-harness]] convergence summary.
+
+Operational note: this source's hook contract converges with the wiki's own [§Hooks](../CLAUDE.md#hooks) section — **three independent vantages** (Lopopolo / Bratanic / this repo's own scripts) now supply convergent evidence that hooks are a stable cross-vendor harness primitive.
+
+## [2026-05-10] ingest | Manditereza — *Building Ontology-Driven Intelligence for Industrial AI Agents* (HiveMQ Technical White Paper, Feb 2026)
+
+The wiki's **first OT/industrial-manufacturing source** on agentic AI specifically — opening a parallel track to the SaaS / coding-agent cluster. 15-page PDF, ~12 pages of body content. Three-tier semantic data layer (semantic model + domain ontologies + knowledge graph); four structural pillars of an industrial ontology (object types / properties / link types / **action types** with preconditions and state changes); three-layer architecture (Data Streaming + Data Intelligence + Agentic AI); five mechanisms why ontologies enable reliable agentic AI (unified operational awareness / semantic layer / compounding returns / closed-loop learning / governed autonomy). Source page: [[2026-02-01-manditereza-ontology-driven-industrial-ai]]. Author **Kudzai Manditereza** listed as Dangling first-mention; **HiveMQ** also Dangling first-mention. Customer references: Audi, BMW, Eli Lilly, Liberty Global, Mercedes-Benz, Siemens — none promoted on a single mention. Touched pages:
+
+- [[industrial-ai-agents]] — **new concept page** created (single-source stub at confidence 0.70; aliases: industrial AI agents / industrial agentic AI / OT AI agents / manufacturing AI agents). Names three distinguishing properties: data-fabric primacy, action-precondition governance, continuous real-time data dependency.
+- [[index.md]] — added entry under both Sources and Concepts.
+
+Candidate sub-concepts noted but **not promoted** on single source: Ontology / Semantic Data Layer, Unified Namespace (UNS), Action types / action-precondition governance. **Knowledge graph** reaches second-source convergence in this same ingest batch (Bratanic + Manditereza); flagged as promotion candidate for a follow-up sweep.
+
+## [2026-05-10] ingest | Chase — *The Agent Development Lifecycle* (LangChain Blog, 9 May 2026)
+
+The wiki's **second formalization** of the [[agent-development-lifecycle|ADLC]] — and the first non-Google one. Four-phase loop wrapped by governance: **Build → Test → Deploy → Monitor → Iterate**, with **Govern** wrapping the whole. Refines the wiki's [[agent-harness|harness]] vocabulary by splitting Build into four distinct sub-layers (Frameworks / Runtimes / **Harnesses** / No-code) — sharper than the prior Kokane 4-layer stack. Names six governance axes for agent scaling (cost / tool access / audit trails / HITL / discoverability of skills / shared infrastructure across teams). Source page: [[2026-05-09-chase-agent-development-lifecycle]]. Touched pages:
+
+- [[agent-development-lifecycle]] — bumped from single-source stub (confidence 0.70) to two-source confidence 0.80; rewritten extensively to compare Google's 9-stage wheel and Chase's 4-phase loop side-by-side; added Codex case study as worked example. `source_count` 1 → 2.
+- [[agent-harness]] — added "Refined Build-layer vocabulary" section. (Co-listed with Lopopolo entry for the source_count update; cumulative source_count now 11.)
+- [[LangChain]] — **new entity page** created (organization). Cumulative cross-page mentions ([[agent-harness]], [[ai-agents]], [[generative-ai]] + this fresh source-page mention) cleared the entity-promotion bar. `source_count` 4. Lists products (LangChain framework, LangGraph runtime, Deep Agents harness, LangSmith Platform / Observability / Evaluation / Deployment / Sandboxes / Fleet, LangChain Academy).
+- **Harrison Chase** — first wiki source mention by name; listed as Dangling per author-entity-promotion rule. Promote on second-source mention.
+- [[index.md]] — added entry under Sources and Entities; updated [[agent-development-lifecycle]] and [[agent-harness]] one-liners.
+
+Candidate concepts noted but **not promoted** on single source: agent governance (six axes), simulation as agent eval primitive.
+

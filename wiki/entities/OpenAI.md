@@ -2,11 +2,11 @@
 type: entity
 kind: organization
 aliases: ["OpenAI"]
-tags: [openai, ai-lab, foundation-models, chatgpt, gpt-4]
+tags: [openai, ai-lab, foundation-models, chatgpt, gpt-4, gpt-5, codex, agentic-engineering]
 since: 2015
-confidence: 0.85
-last_confirmed: "2026-05-02"
-source_count: 7
+confidence: 0.90
+last_confirmed: "2026-05-10"
+source_count: 8
 relationships:
   - type: employs
     target: Aaron-Chatterji
@@ -28,6 +28,13 @@ AI research and deployment company. Originator of **ChatGPT** (Nov 2022) and the
 - **GPT-3** — substrate of the customer-support augmentation system in [[2026-04-28-brynjolfsson-li-raymond-generative-ai-at-work|Brynjolfsson, Li & Raymond (2025) QJE]].
 - **GPT-3.5 / ChatGPT** — the democratization breakthrough cited by [[2026-04-28-anand-wu-genai-playbook|Anand-Wu]] and the trigger for the [[generative-ai|GenAI]] adoption wave.
 - **GPT-4** — basis of the [[2026-04-28-dellacqua-jagged-technological-frontier|Dell'Acqua et al. 2026 BCG RCT]] and the [[2026-04-29-boussioux-crowdless-future|Boussioux et al. 2024 crowdless-future study]].
+- **GPT-5** — used by [[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo's Codex team]] (Feb 2026) to generate the initial repository scaffold via Codex CLI.
+
+## Products and tooling referenced in this wiki
+
+- **Codex** — agent-driven software engineering platform documented in [[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo 2026]]. Five months of internal use produced ~1M LOC and ~1,500 PRs across an internal product, with **0 lines of manually-written code** and throughput averaging 3.5 PRs / engineer / day across 7 engineers (increasing with team size).
+- **Codex CLI** — command-line interface for Codex; used (with GPT-5) to generate the initial repository scaffold for Lopopolo's project. The wiki's first concrete operational reference to Codex CLI tooling.
+- **Aardvark** — second agent operating on the same Codex-team codebase, named in passing in [[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo 2026]] as a beneficiary of repository legibility investments. Not detailed.
 
 ## Research initiatives appearing in this wiki
 

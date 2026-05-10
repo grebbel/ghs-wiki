@@ -2,11 +2,11 @@
 type: entity
 kind: organization
 aliases: ["Google", "Google LLC", "Alphabet (operating subsidiary)"]
-tags: [google, big-tech, hyperscaler, ai-lab, foundation-models, gemini, google-cloud, google-research]
+tags: [google, big-tech, hyperscaler, ai-lab, foundation-models, gemini, google-cloud, google-research, gemini-api, file-search, multimodal-rag]
 since: 1998
-confidence: 0.75
-last_confirmed: "2026-05-08"
-source_count: 2
+confidence: 0.80
+last_confirmed: "2026-05-10"
+source_count: 3
 relationships:
   - type: published-by
     target: 2026-04-22-cheung-ippolito-secchi-google-agents-cli
@@ -36,6 +36,13 @@ Big-tech platform company; operating subsidiary of Alphabet. Within this wiki Go
 
 - **Gemini family** — the Google Research foundation-model line referenced as the autorater substrate in [[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al. 2026]] (Pearson r = 0.88 vs human experts on creativity assessment).
 - **Gemini CLI** — Google's coding-agent CLI; named as an Agents-CLI consumer alongside Claude Code and Cursor in the [[2026-04-22-cheung-ippolito-secchi-google-agents-cli|Agents CLI]] announcement.
+- **Gemini API File Search** — hosted RAG primitive on the Gemini API. May 2026 update added multimodal support (via **Gemini Embedding 2**), custom metadata filters, and page-level citations. See [[2026-05-05-google-gemini-file-search-multimodal]].
+- **Gemini Embedding 2** — Google's multimodal embedding model (text + images), powering File Search as of May 2026.
+- **`gemini-3-flash-preview`** — generation model demonstrated in the File Search code sample.
+
+## Google DeepMind
+
+The combined Google AI research org (formed via DeepMind / Google Brain merger). Surfaces here as the publishing org for [[2026-05-05-google-gemini-file-search-multimodal|the Gemini File Search multimodal announcement]] (Solovyev's team affiliation). Distinct from [[Google Research]] (the older Research arm), though boundaries are not always clear in public-facing communications. Promote to its own entity page on second-source mention if the editorial distinction becomes load-bearing.
 
 ## Mentioned in
 

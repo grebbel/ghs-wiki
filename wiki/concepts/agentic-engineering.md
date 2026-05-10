@@ -1,10 +1,10 @@
 ---
 type: concept
 aliases: ["agentic engineering", "Agentic Engineering", "agentic-engineering", "agent engineering"]
-tags: [agentic-engineering, vibe-coding, software-3.0, ai-agents, agent-harness, software-engineering, hiring, karpathy]
-confidence: 0.80
-last_confirmed: "2026-05-09"
-source_count: 2
+tags: [agentic-engineering, vibe-coding, software-3.0, ai-agents, agent-harness, software-engineering, hiring, karpathy, codex-case-study]
+confidence: 0.85
+last_confirmed: "2026-05-10"
+source_count: 3
 relationships:
   - type: depends-on
     target: agent-harness
@@ -138,6 +138,22 @@ The distinction is not about *how much* AI is used — it's about *who owns what
 | [[2026-05-07-kiron-schrage-compound-benefits\|Kiron-Schrage 2026]] | Verification → evaluation → learning capture | The *organisation-level analogue* of the agentic engineer's day-to-day flywheel |
 | [[2026-05-07-ransbotham-augmented-learners\|Ransbotham et al. 2024]] | Augmented Learners 2×2 | The *empirical correlate*: agentic engineers are individual-level Augmented Learners — high org-learning capacity + high AI-specific learning |
 | [[2026-05-08-running-an-ai-native-engineering-org\|Fung 2026]] | What running an AI-native engineering org *looks like operationally* — JIT planning, code-wins-over-whiteboard debate, three-signal dashboard, manager-starts-as-IC dogfooding, "Claudify everything", "explicit permission to kill processes" | The **inside-engineering vantage**: Karpathy named the discipline; Fung shows the team-norms rewrite that ships the 10×-plus product (Claude Code itself). First wiki source on the *org-shape* of agentic engineering at scale |
+| [[2026-02-11-lopopolo-codex-harness-engineering\|Lopopolo / OpenAI Codex 2026]] | *0 manually-written lines, ~1M LOC in 5 months, 7 engineers, 3.5 PRs/engineer/day with throughput **increasing** as the team grew* — repository-as-system-of-record + AGENTS.md table-of-contents + layered-domain Providers + custom linters + golden-principles GC + doc-gardening agent | The **vendor-side production case study** at scale. Karpathy named the discipline; Fung described the org-shape; Lopopolo shows the artifact-shape inside one repo. Substantiates *"the discipline shows up more in the scaffolding rather than the code"* with five months of operational data |
+
+## Operational invariants from the Codex case study
+
+[[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo 2026]] surfaces a cluster of operational invariants worth naming as a checklist for agentic-engineering practice — distilled from the Codex team's five-month experience:
+
+- **Repository-as-system-of-record.** *"From the agent's point of view, anything it can't access in-context while running effectively doesn't exist."* Every architectural rule, design decision, taste invariant, and acceptance criterion belongs in repo-local versioned markdown. Knowledge in Slack, docs, or people's heads is *illegible*.
+- **AGENTS.md as table of contents, not encyclopedia.** Progressive disclosure: ~100-line top-level map with pointers to deeper sources, each with verification status, ownership, freshness checks, and mechanical lints. Monolithic instruction files fail predictably (context scarce / too much guidance becomes non-guidance / rots / hard to verify).
+- **Layered architecture, mechanically enforced.** Forward-only dependency direction within domains; cross-cutting concerns route through one explicit interface (Lopopolo's Providers). Custom linters enforce. *"This is the kind of architecture you usually postpone until you have hundreds of engineers. With coding agents, it's an early prerequisite."*
+- **Throughput inverts the merge philosophy.** Minimal blocking gates; PRs short-lived; flakes addressed with follow-up runs. *"In a system where agent throughput far exceeds human attention, corrections are cheap, and waiting is expensive."*
+- **Encode taste as mechanical rules, not Friday cleanups.** Human-taste corrections become either (a) doc updates the agent reads, or (b) custom lint rules the agent's commits must pass. *"Human taste is captured once, then enforced continuously on every line of code."*
+- **Garbage-collection as background workload.** Codex replicates patterns including suboptimal ones; entropy creeps in. Background scheduled tasks scan for deviations and open targeted refactoring PRs, mostly auto-merged. *"Technical debt is like a high-interest loan: better to pay it down continuously."*
+- **Make the application legible to the agent.** UI legibility (Chrome DevTools Protocol so Codex can take DOM snapshots / screenshots / validate UI behaviour); observability legibility (per-worktree LogQL/PromQL/TraceQL). The harder you make application-state legible, the more leverage the agent gets.
+- **Hire for taste in environment design, not coding-puzzle speed.** *"Building software still demands discipline, but the discipline shows up more in the scaffolding rather than the code."* Operationally consistent with [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy's]] hiring-refactor argument.
+
+These are not *additions* to Karpathy's discipline definition — they're the **operational instantiation** in one production environment. Other vendor case studies will likely vary specifics; the *invariants* (legibility, encoded taste, mechanically-enforced boundaries, GC-as-workload) are the candidates for cross-org generalization.
 
 ## Debates and supersession
 
