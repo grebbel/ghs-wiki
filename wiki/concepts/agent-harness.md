@@ -2,9 +2,9 @@
 type: concept
 aliases: ["agent harness", "harness", "AI agent harness", "agent runtime", "agent runtime layer"]
 tags: [agent-harness, ai-agents, ai-engineering, harness-frameworks, context-management, constraints, contracts, telemetry, llm-non-determinism, hooks, repository-as-system-of-record]
-confidence: 0.93
+confidence: 0.94
 last_confirmed: "2026-05-10"
-source_count: 12
+source_count: 13
 relationships:
   - type: part-of
     target: ai-agents
@@ -293,6 +293,7 @@ This **substantiates** the rhetorical claims of [[2026-05-07-chatterjee-anatomy-
 | [[2026-05-08-bratanic-unified-agentic-memory-hooks\|Bratanic / TDS, May 2026]] | hooks vs. MCP + dream-phase memory + cross-vendor hook contract | the **hooks-as-portable-primitive anchor** — same five lifecycle events across Claude Code / Codex / Cursor; memory portable across harnesses |
 | [[2026-05-09-chase-agent-development-lifecycle\|Chase / LangChain, May 2026]] | Build → Test → Deploy → Monitor + Govern; frameworks / runtimes / harnesses / no-code split | the **lifecycle-vocabulary refinement** — sharpens the framework/harness boundary, names governance axes for agent scaling |
 | [[2026-05-06-bockeler-engineering-of-ai-agents-context-harnessing-autonomy\|Böckeler / Thoughtworks at QCon London 2026]] | Feed-forward × feedback × CPU-vs-GPU two-axis decomposition; structural tests (ArchUnit, Spring Modulith, Dependency Cruiser) as agent feedback; enhanced lint messages as "good prompt injection"; harness templates as the next abstraction layer | the **practitioner-observer-from-consultancy vantage** — propagates Lopopolo's harness-engineering term to the broader engineering audience and adds Thoughtworks' cross-client perspective on which mechanisms actually carry load |
+| [[2026-04-14-thompson-the-daily-workers-letting-ai-do-their-jobs\|Thompson / NYT The Daily 2026]] | Manu Ebert's "10 Commandments" file — uppercase, repetitive, high-stakes emotional framing ("failure to do these tests is unacceptable and embarrassing") — as a small-startup-developer worked example of rules-file design; agent-driven Socratic-dialogue spec elicitation; distributional-semantics explanation for why stern/emotional prompts work | the **journalist-observer + first-person operator vantage** — Lopopolo showed the vendor-engineering rules-file at OpenAI scale, Böckeler named the enhanced-lint-as-good-prompt-injection pattern at consultancy clients, and Thompson surfaces what the same mechanism looks like in the hands of an individual startup developer. Confirms the rules-file pattern is now visible at *three distinct organisational scales* (vendor, consultancy clients, individual developer/startup) |
 
 This is the strongest cross-source convergence in the wiki on a *runtime-engineering* construct — eleven sources, eight vantages (two big-vendor announcements / two Medium practitioner essays / MIT SMR column / YouTube empirical synthesis / venture-capital-keynote interview), all describing the same architecture. Two of the six — [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic Managed Agents]] (8 April) and [[2026-04-22-cheung-ippolito-secchi-google-agents-cli|Google Agents CLI]] (22 April) — are vendor-side productisations within two weeks of each other. The sixth — [[2026-05-04-rethinking-agents-harness-is-all-you-need|the YouTube synthesis]] — is the wiki's first *empirical* source, summarising two academic papers (Pan et al. Tsinghua March 2026, Khattab et al. DSPy team) and turning *"the harness is the moat"* from a rhetorical assertion into a measured one (transfer of one optimised harness across five models without re-tuning).
 

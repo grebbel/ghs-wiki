@@ -2,9 +2,9 @@
 type: concept
 aliases: ["jagged frontier", "jagged-frontier", "jagged technological frontier", "AI capability frontier", "jagged intelligence", "jagged skills", "jagged-intelligence", "animals vs ghosts", "ghosts not animals"]
 tags: [jagged-frontier, jagged-intelligence, AI-capabilities, knowledge-work, productivity, automation, augmentation, verifiability, animals-vs-ghosts]
-confidence: 0.91
+confidence: 0.92
 last_confirmed: "2026-05-10"
-source_count: 7
+source_count: 8
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -124,6 +124,7 @@ The animals-vs-ghosts framing is held in the wiki as a **mindset convention**, n
 - **Centaur/Cyborg strategies are post-hoc descriptions of effective use**, not prescriptions; both can fail when applied indiscriminately.
 - **Familiarity training can backfire**: in the Dell'Acqua experiment, the GPT + overview condition performed *worse than GPT-only* on outside-the-frontier correctness — more familiarity led to more over-reliance.
 - **The practitioner-operational form: probability × impact × detectability**. [[2026-05-06-bockeler-engineering-of-ai-agents-context-harnessing-autonomy|Böckeler 2026]] (Thoughtworks at QCon London) offers a risk-assessment trio for *how much human supervision a given task warrants*: probability of AI error in *this* context (assessed by knowledge of the context given to the agent + experience using the tool for similar tasks + requirement clarity), impact if it errs (proof-of-concept vs critical-path), and detectability of the error (quality of feedback loops). Of the three, only the first is genuinely new — the other two are pre-existing engineering judgement applied to a new tool. Böckeler's framing: *"you have to be this tall to ride the roller coaster — you have to be this tall to reduce supervision"*. The trio is the practitioner's operational expression of the jagged-frontier insight: don't assume capability, *assess* it per-task.
+- **The "skill we thought was ours" inversion** ([[2026-04-14-thompson-the-daily-workers-letting-ai-do-their-jobs|Thompson 2026 (NYT The Daily)]]): the wiki's cleanest **expository** statement of jaggedness for a general audience. Thompson invokes the chess/speech historical inversion — *"Back in the '80s, it seemed like chess was so hard to play there was no way a computer was going to do it. But it seemed like speaking — that's easy. Surely a computer should be able to just speak. But it turned out that chess was actually easier for computers to do than to learn to speak."* — and generalises: *"things that we thought maybe were 'oh, this is my big skill' — yeah, that's not really your skill. Your skill lies elsewhere."* Operationally for working developers: the technical writing-the-code work they thought defined the craft is the more-automatable part; the communication, priority-setting and deciding-what-to-build work they took for granted is the less-automatable part. Direct convergence with the [[durable-skills]] frame and complementary to Dell'Acqua et al.'s controlled-experiment empirical anchor.
 
 ## Related concepts
 

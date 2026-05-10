@@ -2,9 +2,9 @@
 type: concept
 aliases: ["AI deskilling", "ai-deskilling", "task composition shift", "deskilling"]
 tags: [deskilling, task-composition, ai-employment-effects, occupations]
-confidence: 0.75
-last_confirmed: "2026-05-07"
-source_count: 2
+confidence: 0.78
+last_confirmed: "2026-05-10"
+source_count: 3
 relationships:
   - type: instance-of
     target: ai-employment-effects
@@ -52,6 +52,20 @@ Deskilling, in the [[Anthropic Economic Index]] sense ([[2026-04-28-anthropic-ec
 > "We're not necessarily predicting that this deskilling will occur: it's possible that even if AI fully automated the tasks it currently supports, the labor market would dynamically adjust in ways that this analysis doesn't account for."
 
 The report frames the analysis as a *useful first-order signal*, not a labor-market forecast.
+
+## First-person developer worked example: Pia Torian ([[2026-04-14-thompson-the-daily-workers-letting-ai-do-their-jobs|Thompson 2026 (NYT The Daily)]])
+
+The wiki's first **first-person developer self-report** of measurable deskilling, surfaced in [[2026-04-14-thompson-the-daily-workers-letting-ai-do-their-jobs|Thompson 2026]]'s 75-developer survey:
+
+- **Pia Torian** — *"reasonably newer developer"*; early-job employers required heavy [[Microsoft]] Copilot use; *"hundreds of prompts a day for months"*. Her self-report: *"this is actually degrading my own knowledge of code. I feel like I'm losing my ability to code."*
+
+The senior-developer vantage Thompson surfaces is the **inter-generational worry**:
+
+> *"They would tell me that it's great for us to have the AI agents because if they produce something wrong or flabby, we have the experience to look at that and go, 'That's not good. Do it again.' And they would all say, 'Well, what about the next generation? Are we going to discover 5 or 10 years from now that the next generation of software developers, you know, just simply don't have that deep code sense that lets them be really, really good engineers?'"*
+
+The structural concern: code-review-of-AI-output competence depends on having previously developed *code sense* by writing code by hand. If new developers never go through that phase, the corrective-review skill never develops — leaving the team without anyone who can catch subtle bad-pattern AI output. This is **selection-instrument decay** at the human-capital layer: the senior developers who can spot bad AI work are also the developers who learned to code in the pre-AI era; their cohort is non-renewable.
+
+Convergent with Sternfels' *"durable leadership skills"* framing (judgment, discontinuous-leap thinking) from a hiring vantage, and with [[2026-05-06-bockeler-engineering-of-ai-agents-context-harnessing-autonomy|Böckeler's]] *"you have to be this tall to ride the roller coaster"* — the skill required to *safely reduce supervision* is the skill agentic engineering is potentially eroding.
 
 ## The inverse frame: durable skills ([[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al. 2026]])
 

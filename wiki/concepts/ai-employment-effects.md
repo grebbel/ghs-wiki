@@ -3,8 +3,8 @@ type: concept
 aliases: ["AI employment effects", "AI labor effects", "AI job displacement", "AI labor market", "AI employment impact"]
 tags: [employment, labor-market, ai-displacement, automation, labor-economics, age-effects]
 confidence: 0.95
-last_confirmed: "2026-05-07"
-source_count: 14
+last_confirmed: "2026-05-10"
+source_count: 15
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -38,6 +38,7 @@ Using ADP payroll data (~25M U.S. workers, monthly Jan 2021–July 2025):
 
 - **Early-career workers (ages 22–25) in the most AI-exposed occupations: ~13% relative decline** in employment since late 2022, after controlling for firm-level shocks.
 - **Software developers ages 22–25**: employment declined nearly **20%** from peak in late 2022 to July 2025.
+- **Updated job-postings signal** ([[2026-04-14-thompson-the-daily-workers-letting-ai-do-their-jobs|Thompson 2026 (NYT The Daily)]]): Thompson cites a *more recent* Brynjolfsson job-postings analysis showing **software-developer hires down 16%** *"in the last year or so"* — i.e. extending the 2022-onset effect into 2025-26 at the *hiring* (not just employment-stock) layer. Thompson's framing: *"if that's happening when the AI coding tools are really just going from a crawl to a walk to a run, what might happen when they're sprinting?"* — primary-source ingest of the underlying job-postings analysis is an open target.
 - **22–25 year-olds in highest AI-exposure quintiles**: -6% absolute from late 2022 to July 2025.
 - **35–49 year-olds in same occupations**: +6% to +9%.
 - **22–25 year-olds in lower exposure quintiles**: +6% to +13% (no clear ordering by exposure).

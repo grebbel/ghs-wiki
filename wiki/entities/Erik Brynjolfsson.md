@@ -6,9 +6,9 @@ tags: [stanford, nber, ai-research, digital-economy, labor-economics, productivi
 affiliation: "[[Stanford Digital Economy Lab]] / [[Stanford HAI]] / [[NBER]]"
 role: "Director, Stanford Digital Economy Lab; AI Index Steering Committee member"
 contact: "erikb@stanford.edu"
-confidence: 0.85
-last_confirmed: "2026-04-28"
-source_count: 3
+confidence: 0.87
+last_confirmed: "2026-05-10"
+source_count: 4
 relationships:
   - type: part-of
     target: Stanford-Digital-Economy-Lab
@@ -48,6 +48,10 @@ Note: the wiki previously cited the working-paper version (+14.2%) via [[2026-04
 - Adjustments visible in **employment more than wages** (wage stickiness).
 
 This is the wiki's headline empirical evidence for AI labor displacement.
+
+### 3. Updated job-postings signal (cited in [[2026-04-14-thompson-the-daily-workers-letting-ai-do-their-jobs|Thompson 2026 (NYT The Daily)]])
+
+In the 14 April 2026 episode of *The Daily*, **Clive Thompson** cites a more recent Brynjolfsson analysis of job postings showing **software-developer hires down 16%** *"in the last year or so"* — extending the *Canaries* employment-stock signal (2022 onset, age-22-25 cohort, ~20% software-developer decline by July 2025) into the *hiring-flow* layer through 2025-26. Thompson reports the number verbally without naming the paper; primary-source ingest of the underlying job-postings analysis is an open target. The cited number is structurally consistent with — and somewhat sharper than — the headline numbers from *Canaries*, suggesting the trend is continuing rather than plateauing as AI coding tools mature.
 
 ### Cross-paper synthesis
 

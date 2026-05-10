@@ -2,9 +2,9 @@
 type: concept
 aliases: ["agentic engineering", "Agentic Engineering", "agentic-engineering", "agent engineering"]
 tags: [agentic-engineering, vibe-coding, software-3.0, ai-agents, agent-harness, software-engineering, hiring, karpathy, codex-case-study]
-confidence: 0.87
+confidence: 0.88
 last_confirmed: "2026-05-10"
-source_count: 4
+source_count: 5
 relationships:
   - type: depends-on
     target: agent-harness
@@ -140,6 +140,7 @@ The distinction is not about *how much* AI is used — it's about *who owns what
 | [[2026-05-08-running-an-ai-native-engineering-org\|Fung 2026]] | What running an AI-native engineering org *looks like operationally* — JIT planning, code-wins-over-whiteboard debate, three-signal dashboard, manager-starts-as-IC dogfooding, "Claudify everything", "explicit permission to kill processes" | The **inside-engineering vantage**: Karpathy named the discipline; Fung shows the team-norms rewrite that ships the 10×-plus product (Claude Code itself). First wiki source on the *org-shape* of agentic engineering at scale |
 | [[2026-02-11-lopopolo-codex-harness-engineering\|Lopopolo / OpenAI Codex 2026]] | *0 manually-written lines, ~1M LOC in 5 months, 7 engineers, 3.5 PRs/engineer/day with throughput **increasing** as the team grew* — repository-as-system-of-record + AGENTS.md table-of-contents + layered-domain Providers + custom linters + golden-principles GC + doc-gardening agent | The **vendor-side production case study** at scale. Karpathy named the discipline; Fung described the org-shape; Lopopolo shows the artifact-shape inside one repo. Substantiates *"the discipline shows up more in the scaffolding rather than the code"* with five months of operational data |
 | [[2026-05-06-bockeler-engineering-of-ai-agents-context-harnessing-autonomy\|Böckeler / Thoughtworks at QCon London 2026]] | Year-on-year practitioner review across many client engagements; explicit propagation of *harness engineering* as the discipline name (crediting the OpenAI Codex team); feed-forward × feedback × CPU-vs-GPU decomposition of the harness; *Goldilocks speed* counter-framing to speed-at-all-costs | The **practitioner-observer-from-consultancy vantage**. Karpathy named the discipline (paradigm); Fung described the org-shape (vendor team norms); Lopopolo showed the artifact-shape (one repo); Böckeler shows what the discipline looks like when *observed across many client codebases* — and confirms the discipline's name-form is settling on *harness engineering* in operator circles |
+| [[2026-04-14-thompson-the-daily-workers-letting-ai-do-their-jobs\|Thompson / NYT The Daily 2026]] | 75-developer cross-industry field-report; *"feel like Steve Jobs picking from nine designs"* operator self-description; Socratic-dialogue spec elicitation (agent interviews the developer); Manu Ebert's "10 Commandments" rules-file as small-startup analog of OpenAI Codex golden-principles; construction-workers-to-architects shift in operator vocabulary | The **journalist-observer vantage** on the discipline. Karpathy named it / Fung showed the org-shape / Lopopolo the artifact / Böckeler the consultancy view across many clients / Thompson reports what 75 working developers *say it feels like* in week-to-week practice. Confirms the discipline-shape from outside the practitioner community to a general (NYT) audience |
 
 ## Operational invariants from the Codex case study
 
