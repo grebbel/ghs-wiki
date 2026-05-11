@@ -2171,3 +2171,51 @@ The two videos are topically divergent but both extend recent wiki concept clust
 4. **Iteration-speed-as-moat** now hits a two-source threshold (Hu + Singhal). Strong concept-promotion candidate.
 
 Both videos are post-2026-04 (recent ingests). No new concept page created in this batch — but five strong promotion candidates surfaced (iteration-speed-as-moat / four-company-phases / product-builder / brand-at-all-time-low / Context Rot) for future ingests.
+
+## [2026-05-12] ingest | Doug Blank (Comet ML) — MIT 6.S191 Lecture 7: The Three Laws of AI (Alexander Amini YouTube, 11 May 2026; 51:48)
+
+The wiki's **first MIT 6.S191 source**. A 51:48 lecture by **Doug Blank** (Head of Research at [[Comet ML]]) in MIT 6.S191 Introduction to Deep Learning, **2026 Edition**. Published 11 May 2026 (same day as Huber/Chroma — coincidentally) on the [[Alexander Amini]] channel. ASR caption track; no chapters. Source page: [[2026-05-11-blank-mit-6s191-three-laws-of-ai]].
+
+**The course's lineage anchor**: 2017 was MIT 6.S191's first offering — coinciding with the transformer year. 9-year run by 2026.
+
+**Substantive findings:**
+
+- **The Three Laws of AI as teaching framework** — Asimov's 1942 *Three Laws of Robotics* + zeroth law modernised in two versions: (a) **EU-AI-Act-style aspirational** — safe-secure-robust / aligned-with-human-direction / respect-human-rights-fairness-societal-values / transparent (zeroth); (b) **Blank's practitioner-operational** — log-your-traces / build-and-test-dataset / evaluate-prompts-and-models-often-and-be-transparent. Plus an audience-derived **minus-one law**: *"if you can't guarantee safety and security, don't build it"* — sourced from YouTube comments (Ryan Hajes pointing the contradiction; Karan Low agreeing; Violin-Sheet-Music-Blog coining the *"don't build it then"* axiom).
+- **The dataset / metric / experiment / model-comparison eval vocabulary** — formal teaching of the four-ingredient framework. Message → chat prompt → trace/span → project → dataset → metric (code-based OR LLM-as-judge) → experiment. **Two-source threshold met** with [[2025-06-27-guthrie-braintrust-evals-101-ai-engineer-worlds-fair|Guthrie / Braintrust 2025]] — academic-pedagogical vantage convergent with vendor-platform vantage. Strong concept-promotion candidate (defer pending third source).
+- **The Sam Nelson safety-drift case study** — Blank treats it as the lecture's most-difficult section. Nelson died 2025 after a long conversation with ChatGPT during which the model's initial refusal eroded into providing dangerous information by mimicking the user's framing. **Named failure mode**: *safety drift in long-context LLM uses*. Mitigation (1 of 5 listed but only one stated verbatim): **build long-message datasets (system / user / assistant / user / assistant / ...) and test for safety drift**. The wiki's first first-hand-named-incident anchor for the long-context-safety-degradation failure mode.
+- **Live 90-second agentic AI demo** — 4 tools constructed live: get_time / get_weather / send_email / delete_files (the last suggested by the audience — destructive). *"Can you trust an LLM? No. Can you trust an agentic AI built on LLMs? No."* Demo includes a hallucinated date (*"next Thursday is January 12th"* — it isn't), showing LLMs hallucinate even with tool access. Convergent with the wiki's existing harness-tooling cluster — agentic systems amplify the need for the eval discipline.
+- **Live prompt-injection / jailbreaking demo** — the six-bears password example. 123-item jailbreak dataset categorised by attack class. Audience-discovered attack vectors: *define-secret* command-mode bypass; *single-quote-injection*; *translate-into-Klingon* lateral-task bypass; *redaction-fill* bypass. **Model-comparison results** on the six-bears benchmark: **GPT-5 100% / GPT-4o 94% / GPT-4o-mini 78% / Gemini 2.5 Flash worst**. The wiki's first first-party-academic-comparative-eval of 2026 frontier models on jailbreak resistance with concrete numbers — bifurcation is sharp.
+- **AI history retrospective 1956-2026** — five-phase narrative: symbolic reasoning (1956-1970s) → expert systems (1970s) → statistical ML (1980s-2000s) → deep-learning breakthrough era (2010-2017) → transformer era (2017-now). The wiki's first ingest covering the **pre-2017 AI history** at lecture-content granularity.
+- **Blank's first-person AI-winter testimony** — PhD in neural networks 1997; ~100 professorship applications, few responses; struggled to get NN papers accepted at AI journals; 2005 *"Tale of Two AIs"* talk arguing NN-is-AI to a skeptical audience. The wiki's first first-person-AI-winter operator anchor — useful empirical context for the *current-AI-boom-is-permanent* implicit framing the wiki's existing sources often elide.
+
+**Touched pages:**
+
+- [[agent-harness]] — `source_count` 19 → 20; `confidence` 0.95 (cap). Blank's practitioner-three-laws (log / dataset / evaluate) operationalise the Contracts + Compounding layers. Prose lead "nineteen" → "twenty".
+- [[agentic-engineering]] — `source_count` 9 → 10; `confidence` 0.92 → 0.93. Live 90-second agent demo as worked example; *"can you trust an LLM/agentic-AI? No"* convergent with Karpathy's *animals vs ghosts* framing.
+- [[agent-development-lifecycle]] — `source_count` 3 → 4; `confidence` 0.83 → 0.85. Blank's three laws map onto Test + Monitor + Iterate phases — academic-pedagogical reinforcement of Chase's ADLC vocabulary.
+- [[jagged-frontier]] — `source_count` 8 → 9; `confidence` 0.92 (cap stays). Live demo of LLM jaggedness — can't tell time / weather without tools; the capability-boundary made visible as a classroom-teaching primitive.
+- [[index.md]] — added the source entry; bumped [[agent-harness]] one-liner (19 → 20 sources).
+
+**People listed as Dangling first-mention**: **Doug Blank** (Comet ML Head of Research; ex-college-professor at a liberal arts college; PhD NN 1997); **Alexander Amini** (MIT 6.S191 co-organiser; channel host); **Ava Soleimany** (MIT 6.S191 co-organiser; introduces Blank); **Isaac Asimov** (1942 Three Laws of Robotics author); **Sam Nelson** (named-incident case study, single-mention for traceability — not a promotion candidate); **Ryan Hajes**, **Karan Low**, **Violin Sheet Music Blog** (YouTube commenters whose contributions shaped the minus-one-law adoption).
+
+**Products / orgs listed as Dangling first-mention**: **Comet ML** (ML/LLM evaluation platform vendor; multi-mention candidate); **OPIC / Opik** (Comet's open-source LLM-eval tool; Apache 2 license; 17k GitHub stars; github.com/cometml/opik); **MIT 6.S191** (Introduction to Deep Learning course; first offered 2017; introtodeeplearning.com); **Boston Dynamics** / **Atlas robot** (referenced in Asimov-context opening); **Tandy Color Computer** (Blank's first computer; Asimov sold it in mid-1980s).
+
+**Concept candidates surfaced**:
+- *Three Laws of AI* (Blank's modernisation of Asimov) — strong promotion candidate; defer pending second-source mention.
+- *Safety drift in long-context LLM uses* — Blank's named failure mode for the Sam-Nelson-class case. **Strong promotion candidate** on second-source mention — the failure pattern is wiki-load-bearing for any future agentic-AI ingest.
+- *Practitioner-three-laws* (log / dataset / evaluate) — operational compounding-cycle. Convergent with Kiron-Schrage + Hu + Chase. Strong concept candidate but folded into [[agent-harness]] for now.
+- *Lateral-task jailbreak* (translate-into-Klingon class) — named jailbreak vector. Single-source.
+- *Minus-one law / "don't build it then"* — operator-elevated YouTube-comment-as-axiom. Single-source.
+
+**Pre-flight notes**: Identity verified. Transcript fetched via `youtube-transcript-api` fallback after Playwright timeout (51:48 > 20-min threshold). 1023 raw ASR segments → 229 grouped windows. No chapters (lecture); transcript is a flat `## Transcript` section. ASR transcription quirks: *"OPIC"* may be the Comet product *Opik* — Blank pronounces it variably; *"Cherny"* / *"Hajes"* / *"Karan Low"* / *"Violin Sheet Music Blog"* are ASR best-guesses of names that may need primary-source verification.
+
+**Cross-batch synthesis with prior ingests (12 May 2026)**:
+
+This ingest **continues the recent thematic batch** on the eval discipline / context engineering / AI-safety cluster:
+
+- **Two-source threshold met** for the *dataset / metric / experiment* eval vocabulary (Blank + Guthrie). Strong concept-promotion candidate.
+- **Three sources** now describe the *compounding-feedback architecture* (Kiron-Schrage organisational + Hu company + Blank LLM-engineering). The three-laws / three-architectures / closed-loop-company framings are all variations on the same principle at different organisational scales.
+- **The Sam Nelson named-incident anchor** complements [[2026-05-06-bockeler-engineering-of-ai-agents-context-harnessing-autonomy|Böckeler 2026]]'s *lethal trifecta* framing — Böckeler names the failure class abstractly; Blank names a concrete incident.
+- **GPT-5 jailbreak resistance** is a new empirical-numbers anchor — *100% on the six-bears benchmark* (single-benchmark; not yet generalised). Convergent with [[2026-05-11-huber-chroma-rag-is-dead-agentic-search|Huber's]] *Context Rot* empirical-numbers anchor — both push the wiki toward *measured-not-narrated* model evaluation.
+
+The lecture's framing as *"fundamentals of AI"* (per the user's description) reflects the lecture's **multi-layer pedagogical structure**: history retrospective (the fundamentals) + eval discipline (the modern practice) + agentic demo (the new frontier) + Three Laws (the ethical/safety wrap-around). The lecture is **course-content rather than research-discourse** — first-author MIT-classroom pedagogy, which is a new wiki vantage on the cluster.

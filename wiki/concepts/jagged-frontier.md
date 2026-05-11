@@ -3,8 +3,8 @@ type: concept
 aliases: ["jagged frontier", "jagged-frontier", "jagged technological frontier", "AI capability frontier", "jagged intelligence", "jagged skills", "jagged-intelligence", "animals vs ghosts", "ghosts not animals"]
 tags: [jagged-frontier, jagged-intelligence, AI-capabilities, knowledge-work, productivity, automation, augmentation, verifiability, animals-vs-ghosts]
 confidence: 0.92
-last_confirmed: "2026-05-10"
-source_count: 8
+last_confirmed: "2026-05-12"
+source_count: 9
 relationships:
   - type: supports
     target: automation-vs-augmentation
