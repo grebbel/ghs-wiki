@@ -2,9 +2,9 @@
 type: concept
 aliases: ["agent development lifecycle", "ADLC", "agent SDLC", "agent lifecycle"]
 tags: [agent-development-lifecycle, adlc, ai-agents, agent-engineering, lifecycle-frameworks, sdlc-parallel, build-test-deploy-monitor, agent-governance]
-confidence: 0.80
-last_confirmed: "2026-05-10"
-source_count: 2
+confidence: 0.83
+last_confirmed: "2026-05-11"
+source_count: 3
 relationships:
   - type: part-of
     target: ai-agents
@@ -81,6 +81,28 @@ This sub-layering is **load-bearing for the wiki's [[agent-harness|harness]] voc
 - **Metrics**: ground-truth correctness for extraction/classification tasks; criteria-based evaluation for multi-valid-path tasks (was the response grounded? did the agent follow policy? did it ask for clarification? did it complete efficiently?).
 - **Experiments**: compare prompts/models/retrieval/tool schemas/orchestration patterns against the same eval set; show whether the agent is improving or regressing.
 - **Simulations**: multi-turn evaluation (voice agents, support agents, coding agents, internal-ops agents). *"For those agents, single-turn evals are not enough."*
+
+#### Operational vocabulary anchor — Guthrie / Braintrust 2025 ([[2025-06-27-guthrie-braintrust-evals-101-ai-engineer-worlds-fair|Guthrie 2025]])
+
+The wiki's earliest source on AI evaluation as a formalised discipline (27 June 2025, ~9 months before Chase 2026) supplies the operational *how* of the Test phase. Four ingredients of an eval, in Guthrie's vendor-specific framing:
+
+| Construct | Guthrie's framing | Chase's vocabulary |
+|---|---|---|
+| **Task** | The code or prompt to evaluate — *"as simple as a single prompt or this full agentic workflow"* — requires only `(input) -> (output)` | (implicit in Build phase: the agent under test) |
+| **Dataset** | Real-world examples: `{input, expected?, metadata?}` per row; metadata is load-bearing for filtering | Datasets |
+| **Scores** | The logic — **LLM-as-judge** (LLM scores against criteria) or **code-based** (heuristic/binary check in TS/Python); auto-evals library provides out-of-the-box scores | Metrics |
+| **Experiment** | Snapshot in time of an eval run; enables regression detection across weeks/months | Experiments |
+
+Operational practices Guthrie names that Chase doesn't articulate at this level of detail:
+
+- **Two-mode operation — offline + online + flywheel**: offline = pre-production iteration; online = real-time tracing in production (wrap LLM clients, decorate functions, score at the span-level with sampling rates 10-20%); flywheel = filter low-scored production logs, human-review them, add to offline datasets. The flywheel is Chase's *Iterate* arrow operationalised.
+- **Use higher-quality models for scoring than for the prompt**; **break scoring into focused areas** (accuracy / formatting / correctness as separate scores rather than one combined); **avoid overloading the score prompt with context**.
+- **Just-start-don't-optimise-the-dataset-first** — anti-pattern call-out: *"A lot of people get caught in creating this golden dataset of test cases that they can then iterate from. Start — you don't necessarily have to do that."*
+- **Evals-as-offense, not just defense** — Anker Goyal (Braintrust CEO) reframing: tests catch defects post-hoc; evals drive intent forward.
+- **Evals-as-CI-check**: pre-merge eval gate via CI/CD (Braintrust ships a GitHub Action template).
+- **Score-at-the-span-level for agentic workflows**: not just root-span scoring; e.g. a conversational-analytics app that first *rephrases* the user's question can have a score specifically on the rephrasing span.
+
+Convergent with [[2026-05-07-chatterjee-anatomy-of-agent-harness|Chatterjee 2026]]'s Contracts layer (formal evaluable specifications) and [[2026-05-07-kiron-schrage-compound-benefits|Kiron-Schrage 2026]]'s verification-evaluation-learning-capture flywheel at three different scales (per-span / per-application / org-learning).
 
 ### Deploy (more than hosting)
 

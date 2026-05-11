@@ -2,9 +2,9 @@
 type: concept
 aliases: ["AI deskilling", "ai-deskilling", "task composition shift", "deskilling"]
 tags: [deskilling, task-composition, ai-employment-effects, occupations]
-confidence: 0.78
-last_confirmed: "2026-05-10"
-source_count: 3
+confidence: 0.80
+last_confirmed: "2026-05-11"
+source_count: 4
 relationships:
   - type: instance-of
     target: ai-employment-effects
@@ -66,6 +66,18 @@ The senior-developer vantage Thompson surfaces is the **inter-generational worry
 The structural concern: code-review-of-AI-output competence depends on having previously developed *code sense* by writing code by hand. If new developers never go through that phase, the corrective-review skill never develops — leaving the team without anyone who can catch subtle bad-pattern AI output. This is **selection-instrument decay** at the human-capital layer: the senior developers who can spot bad AI work are also the developers who learned to code in the pre-AI era; their cohort is non-renewable.
 
 Convergent with Sternfels' *"durable leadership skills"* framing (judgment, discontinuous-leap thinking) from a hiring vantage, and with [[2026-05-06-bockeler-engineering-of-ai-agents-context-harnessing-autonomy|Böckeler's]] *"you have to be this tall to ride the roller coaster"* — the skill required to *safely reduce supervision* is the skill agentic engineering is potentially eroding.
+
+## The open question raised by the open-education vantage ([[2026-05-06-mit-ocw-future-of-mit-open-education|MIT OCW panel, May 2026]])
+
+The final audience question of the [[2026-05-06-mit-ocw-future-of-mit-open-education|MIT OCW Future of Open Education panel]] (6 May 2026) raised the cognitive-impact concern directly at the supply-side institutional leadership:
+
+> *"Several studies from MIT have shown that using AI to supplement learning can sometimes actually hinder those learning faculties in the brain. So my question is, how do you decide how much AI is enough?"*
+
+The audio cuts off as Bertsimas begins his response — the wiki holds only the *question* with no first-party answer from MIT OpenLearning leadership.
+
+The question's structural significance for this concept: it is the wiki's first articulation of de-skilling as an *open question MIT institutional leadership is being asked to resolve* — not merely a worker-side or industry-side worry. The Pia Torian first-person concern (Thompson 2026) and the senior-vs-junior inter-generational concern (Thompson 2026) now have an institutional-pedagogy-leadership counterpart. Open primary-source target: the underlying MIT studies on AI-as-pedagogical-supplement-vs-cognitive-load.
+
+Convergent with the wiki's [[durable-skills]] concept from the *educational-supply-side* vantage: if AI tutors (AskTIM, personalised learning, AI translation) supply the floor-raised skills that vibe-coding-era developers will need, but also hinder the cognitive faculties needed to evaluate AI output, the open-education program inherits the de-skilling risk it is trying to mitigate. The question is unresolved in the wiki as of May 2026.
 
 ## The inverse frame: durable skills ([[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al. 2026]])
 

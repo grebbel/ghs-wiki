@@ -4,7 +4,7 @@ aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizat
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity]
 confidence: 0.95
 last_confirmed: "2026-05-11"
-source_count: 25
+source_count: 26
 relationships:
   - type: uses
     target: automation-vs-augmentation

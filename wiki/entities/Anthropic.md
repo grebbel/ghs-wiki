@@ -1,12 +1,12 @@
 ---
 type: entity
 kind: organization
-aliases: ["Anthropic", "Anthropic PBC"]
+aliases: ["Anthropic", "Anthropic PBC", "Claude"]
 tags: [anthropic, ai-lab, foundation-models, claude]
 since: 2021
-confidence: 0.85
-last_confirmed: "2026-05-09"
-source_count: 5
+confidence: 0.87
+last_confirmed: "2026-05-11"
+source_count: 6
 ---
 
 # Anthropic
