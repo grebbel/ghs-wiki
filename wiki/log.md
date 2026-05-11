@@ -2219,3 +2219,86 @@ This ingest **continues the recent thematic batch** on the eval discipline / con
 - **GPT-5 jailbreak resistance** is a new empirical-numbers anchor — *100% on the six-bears benchmark* (single-benchmark; not yet generalised). Convergent with [[2026-05-11-huber-chroma-rag-is-dead-agentic-search|Huber's]] *Context Rot* empirical-numbers anchor — both push the wiki toward *measured-not-narrated* model evaluation.
 
 The lecture's framing as *"fundamentals of AI"* (per the user's description) reflects the lecture's **multi-layer pedagogical structure**: history retrospective (the fundamentals) + eval discipline (the modern practice) + agentic demo (the new frontier) + Three Laws (the ethical/safety wrap-around). The lecture is **course-content rather than research-discourse** — first-author MIT-classroom pedagogy, which is a new wiki vantage on the cluster.
+
+## [2026-05-12] synthesize | Two synthesis pages on the RAG / LLM Wiki / Fat Skills convergence — *Is RAG dead?* + *Knowledge architectures for LLM agents*
+
+User-flagged synthesis-shaped gap: the wiki had no standalone RAG page despite 5 sources (Raju, Liu, Huber, OceanBase, SurrealDB) independently converging on *complement, not replace*. Resolution: **two thread + synthesis pairs** per CLAUDE.md §Synthesis schema. Both retroactively-opened threads, immediately closed by their syntheses.
+
+### [2026-05-12] synthesize | Is RAG dead? (5 sources)
+
+Thread page: [[threads/is-rag-dead]]. Synthesis page: [[syntheses/is-rag-dead]].
+
+**Question**: Is RAG dead, or just the term? Resolution: **the term is being retired; the technique persists as a substrate primitive**. Three explicit sources (Raju / Liu / Huber) + two substrate-implementation worked examples (OceanBase / SurrealDB) converge on *complement-not-replace*.
+
+**Findings captured**:
+- Term-vs-technique distinction made explicit across three independent sources.
+- Three failure-mode axes (too much / too little / confusing — Huber's superset) mapping Liu's three failure points (chunking / re-derivation / passivity) and SurrealDB's three vector-only modes (context clash / context confusion / dense neighbourhood) onto a single taxonomy.
+- Context engineering as the rebranding (Huber explicit; Karpathy-compatible).
+- Bitter-lesson direction: context engineering folds back into models (Huber + Karpathy Software-3.0).
+- Specialised small models for retrieval (Chroma Context One: 10× faster, 25× cheaper).
+- File-systems-are-bad-databases critique (Huber + Swyx article reference).
+
+**Lessons** (each a single transferable claim):
+1. *"RAG is dead"* = the term is dead; the technique persists.
+2. Hybrid is the right answer for serious knowledge systems.
+3. Context engineering is the rebranding to converge on.
+4. The naive-RAG pipeline has three named scale-related failure modes.
+5. Specialised small retrieval LMs beat gigabrain models on cost+speed.
+6. File systems are bad databases as agent substrates.
+7. Context engineering will fold back into models.
+8. The agentic-search-vs-vector-RAG cutover is corpus-size dependent.
+
+**Open question**: The Cherny-vs-Huber agentic-search-vs-RAG empirical disagreement (Huber promised data *"next week"* — primary-source target).
+
+### [2026-05-12] synthesize | Knowledge architectures for LLM agents — RAG / LLM Wiki / Fat Skills (7 sources)
+
+Thread page: [[threads/knowledge-architectures-for-llm-agents]]. Synthesis page: [[syntheses/knowledge-architectures-for-llm-agents]].
+
+**Question**: Which knowledge architecture fits which class of agent task, and how do they hybridise? Resolution: **no single architecture wins everywhere; choose by job; hybrid production reality**.
+
+**Adopted scaffold**: Liu's three-architecture comparison matrix (core verb / scale / compounds / proactive / context / setup cost / best for). Decision tree: *"what is your agent's job?"* — retrieve at scale → RAG; build deep expertise → LLM Wiki; act autonomously → Fat Skills. Most production agents need 2-of-3.
+
+**Findings captured**:
+- Per-architecture failure mode tables (RAG / LLM Wiki / Fat Skills) — wiki's first systematic side-by-side.
+- Hybrid architecture's operational-instantiation table — substrate (SurrealDB/seekdb) + synthesis (LLM Wiki) + action (GBrain) layers with concrete examples.
+- Claude Code as the partial-convergence example (CLAUDE.md = wiki + auto-memory = compounding + skills = action — Liu's load-bearing observation).
+- Convergence prediction timeline: 2023 RAG era → 2025 Wiki+Skills emerge → 2026+ hybrid.
+- Signals the convergence is happening (LLM Wiki v2 community extensions / GBrain on pgvector / Neo4j knowledge layers / Mintlify virtualized-bash-on-Chroma / Chroma Context One / Claude Code).
+
+**Lessons** (each a single transferable claim):
+1. Choose by job, not loyalty.
+2. RAG scales where LLM Wiki cannot; LLM Wiki compounds where RAG cannot.
+3. Fat Skills are codebase-level investment.
+4. GBrain's *thin harness, fat skills* inverts typical agent design.
+5. Vector retrieval becomes a substrate primitive, not the application architecture.
+6. Hybrid search in a single query is the substrate-layer pattern emerging across vendors.
+7. The convergence is empirically observable in Claude Code today.
+8. Specialised small retrieval LMs beat gigabrain models.
+9. RESOLVER.md routing-via-skill-descriptions is the thin-harness load-bearing primitive.
+10. The boundary between LLM Wiki and Fat Skills is the *act* axis.
+
+**Open questions**: 2024 RAG-failure-points paper / LLM Wiki v2 community extensions / GBrain GitHub repo / enterprise-scale LLM Wiki / Neo4j knowledge layers / OpenClaw + Hermes / Cherny-vs-Huber disagreement / point-of-role-and-architecture-convergence (Hu's IC/DRRI/AI-founder × Singhal's product-builder).
+
+### Companion-page relationship
+
+The two syntheses are nested:
+
+- [[syntheses/is-rag-dead]] = the narrow synthesis on *just RAG*. Tighter; ~5 sources; cleaner for citation when the question is specifically about RAG.
+- [[syntheses/knowledge-architectures-for-llm-agents]] = the broader synthesis on *RAG / LLM Wiki / Fat Skills*. Wider; 7 sources; captures the full three-architecture decision framework + the convergence prediction.
+
+Both cross-reference each other. The narrow synthesis is mostly subsumed by the broader one; we keep both because:
+
+1. The narrow synthesis is a load-bearing citation target when only RAG is in scope.
+2. The broader synthesis would dilute as a citation target if the reader is only asking *"is RAG dead?"*.
+3. Per CLAUDE.md the synthesis convention rewards specificity; cross-linking handles the overlap.
+
+**Touched pages:**
+
+- [[concepts/llm-wiki|llm-wiki]] — no count change but conceptually validated by both syntheses; the narrow RAG synthesis is a citation target alongside the concept page.
+- [[knowledge-graphs]] — referenced as substrate primitive in both syntheses.
+- [[agent-harness]] — referenced as the runtime that reads from the chosen architecture.
+- [[index.md]] — added both syntheses + both threads to the Syntheses + Threads sections respectively. (No new sources; this is a synthesize operation per CLAUDE.md §"The four operations".)
+
+**Pre-flight notes**: Both threads opened retroactively per the user-approved workflow (option A in the AskUserQuestion). Thread `opened` dates set to the first ingested source raising the question (2026-04-09 for *is-rag-dead* — OceanBase, which explicitly references Karpathy's gist; 2026-04-27 for *knowledge-architectures* — Liu, who introduced the canonical three-architecture comparison). Both `closed` 2026-05-12. No new source pages; no concept/entity counter bumps required — this is a *synthesize* operation, not an *ingest* operation.
+
+**Schema compliance**: Both synthesis pages follow CLAUDE.md §Synthesis structure exactly — Question / Findings / Sources consulted / Lessons / Open questions, plus the `type: synthesis` frontmatter with `derived_from`, `opened`, `closed`, `confidence`, `source_count`, and `relationships:` typed edges.
