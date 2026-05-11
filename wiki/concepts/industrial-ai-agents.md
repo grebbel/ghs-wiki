@@ -2,9 +2,9 @@
 type: concept
 aliases: ["industrial AI agents", "industrial agentic AI", "OT AI agents", "manufacturing AI agents"]
 tags: [industrial-ai-agents, ai-agents, ot-it-convergence, manufacturing, ontology, semantic-data-layer, knowledge-graph, unified-namespace, mqtt, scada, mes, cmms, qms, erp]
-confidence: 0.70
-last_confirmed: "2026-05-10"
-source_count: 1
+confidence: 0.75
+last_confirmed: "2026-05-12"
+source_count: 2
 relationships:
   - type: instance-of
     target: ai-agents
@@ -91,7 +91,7 @@ The industrial-AI thread sits **adjacent to but distinct from** the agent-harnes
 
 - **Ontology / Semantic Data Layer** — the three-tier model (semantic model + domain ontologies + knowledge graph). Defer to second-source mention; the broader knowledge-representation literature would substantiate it instantly but is not yet ingested.
 - **Unified Namespace (UNS)** — named here as the data-streaming substrate addressing fragmentation at the data layer; not yet substantiated independently.
-- **Knowledge graph** — appears in two sources in this same ingest batch ([[2026-02-01-manditereza-ontology-driven-industrial-ai|Manditereza]] industrial; [[2026-05-08-bratanic-unified-agentic-memory-hooks|Bratanic]] agentic-memory). Cross-domain second-source threshold reached; promotion candidate for a follow-up sweep.
+- **Knowledge graph** — **promoted to [[knowledge-graphs]] concept page on 12 May 2026** after four-source threshold met ([[2026-02-01-manditereza-ontology-driven-industrial-ai|Manditereza]] industrial-OT + [[2026-05-08-bratanic-unified-agentic-memory-hooks|Bratanic]] agentic-memory + [[2026-04-27-surrealdb-knowledge-graphs-for-ai-agents-practical-guide|SurrealDB]] practical-engineering + [[2023-12-07-leskovec-stanford-cs224w-knowledge-graph-embeddings|Leskovec]] academic-foundation). The wiki's KG-substrate cluster is now anchored at the concept layer. The KG-as-industrial-substrate framing this page describes is one of four named vantages on the construct.
 - **Action types / action-precondition governance** — single-source for now; distinct enough from runtime guardrails to track separately.
 
 ## Open questions

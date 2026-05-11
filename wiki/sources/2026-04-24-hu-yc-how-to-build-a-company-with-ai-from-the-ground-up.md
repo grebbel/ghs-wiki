@@ -169,7 +169,7 @@ None substantive. Hu's claims are forward-looking and prescriptive; the wiki hol
 **Dangling** (single-source first-mention, deferred per the author-entity-promotion rule):
 
 - **Diana Hu** — YC Partner; the speaker.
-- **[[Y Combinator]]** — the channel/publisher; major Silicon Valley accelerator. Promotion candidate on second-source mention.
+- **[[Y Combinator]]** — channel/publisher; major Silicon Valley accelerator. **Promoted to a wiki entity page on 12 May 2026** following the [[2026-04-23-tan-yc-how-to-make-claude-code-your-ai-engineering-team-gstack|Tan / GStack 2026]] ingest (second source).
 - **Jack Dorsey** — Block CEO; attributed for the three-archetypes framing. Promotion candidate on second-source mention.
 - **Block** — Jack Dorsey's company; named as worked example of the rebuild-as-intelligence-layer prescription.
 - **Strong DM** — named as worked example of a software-factory team (repository with no handwritten code).

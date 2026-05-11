@@ -1896,3 +1896,113 @@ This three-source batch closes several wiki gaps simultaneously:
 **Convergence threshold notes**:
 - *Eval flywheel / online-to-offline feedback*: three-source threshold met (Guthrie + Kiron-Schrage + Hu) — **strong promotion candidate** for a learning-capture-flywheel concept page.
 - *Personalized vs personalizable materials*: Newton's distinction sits next to Karpathy's *floor-vs-ceiling* (vibe-coding / agentic-engineering) and Hu's *personalizable substrate via queryable artifacts* — three related two-axis distinctions across different domains worth tracking for synthesis.
+
+## [2026-05-12] ingest-batch | Three video sources — GStack (Garry Tan / YC), Knowledge Graphs for AI Agents (SurrealDB), Stanford CS224W KG Embeddings (Leskovec)
+
+A three-video batch with two distinct thematic clusters: (1) [Tan/GStack] continues the AI-engineering-team / harness / agentic-engineering cluster from the prior YC ingest (Hu 24 April), with Tan published the day before; (2) [SurrealDB + Leskovec] establishes the **knowledge-graphs** concept page after a four-source threshold met across academic, industrial, agentic-memory, and practical-engineering vantages.
+
+### [2026-05-12] ingest | Garry Tan (YC President/CEO) on GStack — How to Make Claude Code Your AI Engineering Team (YC YouTube, 23 April 2026; 21:49)
+
+A 21:49 demo + monologue from Garry Tan introducing **GStack**, an open-source toolkit (built in 3 weeks; *"more GitHub stars than Ruby on Rails"*) that wraps Claude Code with named skills for office hours, plan/CEO/adversarial review, design shotgun, code review, SLQA/SL browse, and ship. ASR caption track; 15 chapters. Source page: [[2026-04-23-tan-yc-how-to-make-claude-code-your-ai-engineering-team-gstack]]. **The YC-batch-context anchor pair** with Hu 2026 — two consecutive-day YC-partner-vantage sources on AI-native engineering.
+
+**Substantive findings:**
+
+- **GStack as an open-source harness-of-skills shipping at venture pace** — Tan ships in 3 weeks at YC-president scale; demonstrates the *harness templates* future-prediction Hu made the next day at startup-development scope. Skills: Office Hours (16-YC-partners adversarial-review distilled at 10% strength); Plan / CEO Review / Adversarial Review (multi-step auto-fix; demoed 6/10→8/10 in two rounds); Design Shotgun (multiple AI variants in ~60s); Code Review (staff-level bug-catching); SLQA / SL browse (Playwright+Chromium wrapped as CLI); Ship (pre-merge gate).
+- **The wiki's first founder-CEO-of-major-accelerator open-source-harness instantiation** — distinct from Lopopolo's in-vendor harness, Anthropic's Skills (modules), or Böckeler's consultancy framing. Tan ships an entire bundled harness as an open-source repo with all skills wired together.
+- **AI founder type archetype operationalised at YC-president scale** — Tan reports 10-15 parallel Claude Code sessions, ~400 PRs in review, *"10, 15, 20, sometimes 50 PRs in any given day."* Direct worked example of Hu's *AI founder type* archetype (still builds / still coaches / leads by example).
+- **Steve Yegge Gas Town stage 7 invoked explicitly** — *"GStack does not get you to level 8, but I do think it gets you to level seven."* **Two-source threshold met** on Yegge's eight-stages-of-dev-evolution-to-AI framework (Böckeler + Tan).
+- **Playwright-as-CLI as the wiki's first vendor-published browser-control-without-MCP worked example** — Tan's motivation: *"Claude in Chrome MCP is one of the worst pieces of software I've ever used."* Wrapped Playwright + Chromium at the CLI level so *"your Claude Code and any agent can actually just use the browser"* — screenshots, complex interactions, click/fill, regression tests, CSS-bug-assessment.
+- **ADHD-CEO-vs-autistic-CTO model-allocation framing** — Tan: *"by default [Claude Code] uses Claude. And I think Opus 4.6 is sort of ADHD CEO. He's the guy you want to get a beer with and he's got a billion ideas, but when the going gets tough, you got to call in your autistic CTO and that's Codex."* First-party-CEO articulation of model-allocation-by-personality-fit-to-task.
+- **Bottleneck-shift to QA when coding is automated** — *"once the agent was doing all the work of planning and design and coding, I found myself sitting there doing QA, probably the least fun part of software development."*
+- **Live demo** — full idea-to-near-shippable-design in ~10 minutes of video time on a tax-document-aggregator example. Office Hours surfaces business-model expansion (document-aggregation → CPA matchmaking is *"10× more"* monetisable).
+- **Closing peroration** — *"the barrier to building just collapsed. The only question left is what are you going to build? It's time to let it rip. Go make something people want."*
+
+**Touched pages:**
+
+- [[vibe-coding]] — `source_count` 7 → 8; `confidence` 0.89 → 0.90. Added Tan as the **live-demo-of-vibe-coding-with-discipline-at-YC-president-scale** vantage.
+- [[agent-harness]] — `source_count` 16 → 17 (with V9 also touching this, 16 → 18 net); `confidence` 0.95 (cap). Added Tan as the **founder-CEO open-source-toolkit harness vantage**.
+- [[agentic-engineering]] — `source_count` 7 → 8; `confidence` 0.90 → 0.91. Added Tan as the **founder-CEO operationalisation vantage** — the worked example of Hu's AI-founder-type archetype.
+- [[index.md]] — added the source entry; updated agent-harness one-liner.
+
+**People listed as Dangling first-mention**: **Garry Tan** (YC President & CEO; engineer; Stanford CS; ex-Palantir #10; Posterous co-founder; built Bookface). Promote on second-source mention.
+
+**Organisations / products listed as Dangling first-mention**: **GStack** (Garry Tan's open-source toolkit; **strong promotion candidate**); **Conductor** (multi-session Claude Code orchestrator); **Palantir** (Tan's first decade employer; ASR rendered as *"Palunteer"*); **Posterous** (Tan's pre-YC startup, sold to Twitter); **Bookface** (YC's internal social platform).
+
+**Candidate concepts noted**: *Model-allocation-by-personality-fit-to-task* (Tan's ADHD-CEO/autistic-CTO framing); *Open-source-toolkit-of-skills-shipping-in-weeks*; *Bottleneck-shift-to-QA-when-coding-is-automated*. All single-source.
+
+**Pre-flight notes**: Identity verified. Transcript fetched via `youtube-transcript-api` fallback after Playwright timeout. ASR-only caption track. 521 raw segments → 103 grouped windows. Chapter `start_ms: 0` bug recurs as expected; recomputed from `mm:ss` strings. ASR errors flagged: *"Palunteer"* for Palantir, *"Gary"* for Garry, *"GSAC"* for GStack, *"Gritan"* for Garry Tan in GitHub URL.
+
+### [2026-05-12] ingest | Martin (SurrealDB) on Knowledge Graphs for AI Agents — A Practical Guide (SurrealDB YouTube, 27 April 2026; 60:04)
+
+A 60:04 webinar by Martin (Solutions Engineer at SurrealDB) on knowledge-graph-grounded RAG for AI agents. Manual caption track; 9 chapters. Source page: [[2026-04-27-surrealdb-knowledge-graphs-for-ai-agents-practical-guide]]. **The wiki's first dedicated knowledge-graph-architecture source** with substantive vendor-practitioner depth on the full ETL pipeline.
+
+**Substantive findings:**
+
+- **Three named vector-only-RAG failure modes** — **context clash** (multiple chunks compete, all correct, but the LLM gets overloaded); **context confusion** (chunks contradict each other); **dense neighbourhood degradation** (high-dimensional space saturated near common topics). The wiki's first first-party-vendor articulation of vector-only-RAG's breakdown modes as named failure patterns.
+- **GraphRAG mechanic walk-through** — vector-search trimmed by graph-relationship subset; multi-hop traversal in single SurrealQL query (vector + graph + full-text + relational together). Worked customer-support example: *"my mouse Bluetooth isn't working"* → infer product+issue → vector-search-within-product-graph-subset reduces dense neighbourhood. *"Adding graph to that helps you trim down the results."*
+- **The KG-ETL pipeline as a named discipline** — Extract (parsing + chunking + embedding + entity-extraction + relationship-extraction) → Transform (deduplication + ontology + canonicalisation) → Load. Each stage has named-strategy choices with explicit accuracy-vs-cost tradeoffs.
+- **Chunking-strategy taxonomy** — first explicit framing as a *choose-by-tradeoff* discipline: recursive (cheapest, lowest accuracy) → structural → **semantic (sweet spot)** → agentic (research frontier) → no-chunking (research frontier; let LLM read whole document). Martin's recommendation: semantic chunking for production.
+- **The "smaller chunks better" research finding** cited verbally by Martin — *"there are research papers that have demonstrated that the smaller the context you give to an LLM, the better the result."* Open primary-source target.
+- **Two specimen KG-architecture styles** — explicit/transactional-mapped (e-commerce database with foreign-key-derived entities and relationships) vs hybrid/LLM-inferred (articles where authors+years are explicit but chunks+concepts+companies+relationships are LLM-inferred).
+- **Decision criteria for KG vs vector-only** — manual-driven Q&A on a single product line → vector-only may suffice; multiple products / domains / use-cases → graph trimming becomes valuable; decisions / explainability / dynamic-knowledge → KG required.
+- **SurrealQL hybrid-query mechanic** — single query expresses vector + graph + full-text + relational; *"the beauty of having our own SQL-like query language is that we can have all those modalities in a single query."*
+- **Agentic RAG with retrieval-tool-selection** — the LLM chooses among vector / graph / full-text / hybrid tools at runtime based on query nature.
+- **KGs are not new** — *"this became very popular a couple of decades ago already and was very popular in the Google search engine."* Martin grounds the construct historically.
+
+**Touched pages:**
+
+- [[knowledge-graphs]] — **NEW CONCEPT PAGE created** — anchored by this source + Leskovec + Manditereza + Bratanic (4 sources, confidence 0.85).
+- [[agent-harness]] — `source_count` 17 → 18; `confidence` 0.95 (cap). Added SurrealDB as the **KG-as-persistent-context-substrate vantage**; prose lead "sixteen" → "eighteen".
+- [[industrial-ai-agents]] — `source_count` 1 → 2; `confidence` 0.70 → 0.75. Added SurrealDB as the second-vendor cross-domain anchor on KG-as-substrate. Updated the knowledge-graph note to reflect the promotion to its own concept page.
+- [[index.md]] — added the source entry; added the new [[knowledge-graphs]] concept entry; updated industrial-ai-agents one-liner from *stub* to *2 sources*.
+
+**People listed as Dangling first-mention**: **Martin** (SurrealDB Solutions Engineer; surname not given); **Sebastian** (audience-Q-asker, first-name only); **Santi** (audience-greeting, first-name only).
+
+**Organisations / products listed as Dangling first-mention**: **SurrealDB** (multimodal database; ~31k GitHub stars; Rust-based; **strong promotion candidate**); **SurrealQL** (SurrealDB query language); **Surrealist** (SurrealDB browser-based UI).
+
+**Candidate concepts noted**: *Context clash / context confusion / dense neighbourhood degradation* (single-source named-failure-modes); *Hybrid search in a single query* (single-source architectural claim); *Agentic RAG with retrieval-tool-selection* (single-source as named pattern).
+
+**Pre-flight notes**: Identity verified. Transcript fetched via `youtube-transcript-api`. Manual caption track at `language_code: en` — both manual and ASR tracks at `en`, picked manual by listing tracks first and selecting `not is_generated`. 728 raw manual segments → 244 grouped windows.
+
+### [2026-05-12] ingest | Jure Leskovec on Stanford CS224W: Knowledge Graph Embeddings (Stanford Online YouTube, 7 December 2023; 70:04)
+
+A 70:04 academic lecture by **Jure Leskovec** (Professor of Computer Science at Stanford; SNAP Group lead) from CS224W (Machine Learning with Graphs) autumn 2023 semester. Manual `en-US` caption track. **The wiki's oldest video source by publish date** — by more than a year. Source page: [[2023-12-07-leskovec-stanford-cs224w-knowledge-graph-embeddings]]. Pre-GenAI-era foundational academic reference for the [[knowledge-graphs]] concept the LLM-era practitioner sources operate on top of.
+
+**Substantive findings:**
+
+- **The KG-completion task formulation** — *"given a head entity and a relation type, predict the missing tails."* The canonical academic task; example: `(J.K. Rowling, genre, ?) → Fantasy / Young-Adult Fiction`. Generalises basic-graph link-prediction to heterogeneous-relation graphs.
+- **Four shallow KG-embedding methods**: TransE (`h + r ≈ t` Euclidean translation), TransR (project entities into relation-specific space then translate), DistMult (bilinear scoring via Hadamard product), ComplEx (complex-valued embeddings; bilinear with conjugate).
+- **Relation-pattern taxonomy** — symmetric / antisymmetric / inverse / composite / 1-to-N. The discriminator-set for embedding-method comparison.
+- **Method × pattern coverage matrix** — the lecture's central pedagogical artifact. No single shallow-embedding method covers all relation patterns. *"At the end, basically, this table will be filled in and it will make sense."*
+- **Contrastive / triplet loss training** — for each true triple `(h, r, t)`, sample corrupted triple `(h, r, t')` and minimise hinge-loss violation. Subtlety: *"pick a tail that is of the same type, but wrong"* — type-matched negative sampling rather than random sampling.
+- **FreeBase scale-and-incompleteness empirical anchor** — ~80M entities, 38k relation types, 3B edges. **93% of people in FreeBase don't have a place-of-birth**; 80% don't have a nationality. The wiki's first concrete-numbers anchor for the KG-incompleteness problem.
+- **Industrial KG product catalogue** — Google Knowledge Graph, Amazon, Facebook Graph API, IBM Watson, Microsoft Satori, LinkedIn, Yandex. Pre-GenAI-era industrial KG deployments (circa 2023).
+- **Question-answering example** — *"what are the latest films by the director of Titanic?"* — multi-hop graph traversal in production search systems. Direct historical antecedent to the SurrealDB GraphRAG patterns 30 months later.
+- **Word-embedding analogy** as motivational frame for translation-embeddings — King→Queen, China→Beijing, USA→Washington DC. TransE generalises the same arithmetic to typed KG relations.
+- **Lecture self-correction** — Leskovec discovers wrong-slides at 1:30 and restarts (*"sorry, sorry, sorry ... brand new lecture"*); preserved verbatim in manual transcript.
+
+**Touched pages:**
+
+- [[knowledge-graphs]] — academic-foundation anchor on the new concept page (one of four sources).
+- [[index.md]] — added the source entry.
+
+**People listed as Dangling first-mention**: **Jure Leskovec** (Stanford CS professor; SNAP Group; co-creator of GraphSAGE, Node2Vec, DeepWalk; **strong promotion candidate** — academically canonical in this space and likely to recur); **Jiaxuan** (CS224W TA, transcript-uncertain spelling).
+
+**Organisations / products listed as Dangling first-mention**: **Stanford Online** (channel/publisher); **Stanford SNAP** (Leskovec's research group); **CS224W** (Stanford ML-with-Graphs course); **FreeBase** (~80M entities, 38k relations, 3B edges; Google-acquired); **FB15k / FB15k-237** (academic benchmark KGs); **Wikidata**; **DBpedia**; **Google Knowledge Graph**; **Microsoft Satori**; **IBM Watson**; **Node2Vec / DeepWalk** (shallow-embedding methods Leskovec generalises); **TransE / TransR / DistMult / ComplEx** (KG-embedding method family).
+
+**Candidate concepts noted**: *KG completion task*; *Relation pattern taxonomy*; *Contrastive/triplet loss with type-matched negative sampling*. All single-source as named-constructs (Leskovec is the academic-canonical source but pre-GenAI-era practitioner literature also uses them).
+
+**Pre-flight notes**: Identity verified. **Oldest wiki source by publish date** (2023-12-07) — by more than a year vs the next-oldest source. Transcript fetched via `youtube-transcript-api` with `languages=['en-US', 'en']` priority order. Manual caption track at `language_code: en-US` (not `en` — the ASR track is at `en`). 1247 raw manual segments → 299 grouped windows. The lecture's first-segment timestamp was already in video-time (no event-time normalisation needed). The transcript preserves Leskovec's on-record self-correction at 1:30 (*"sorry, sorry, sorry ... brand new lecture"*) — evidence of manual track fidelity.
+
+### Cross-batch synthesis (12 May 2026 ingest cohort)
+
+This three-source batch closes one significant wiki gap and tightens another:
+
+1. **The knowledge-graphs concept gap** — closed. Four-source threshold met (Leskovec academic-foundation + Manditereza industrial-OT + Bratanic agentic-memory + SurrealDB practical-engineering). [[knowledge-graphs]] promoted to a dedicated concept page with 0.85 confidence. KG-as-construct is now load-bearing across the wiki's harness / agentic-memory / RAG / industrial-AI clusters.
+2. **The YC-batch-context anchor pair** — Tan (23 April) + Hu (24 April) on consecutive days, both YC-partner-vantage sources on AI-native engineering. The agentic-engineering concept page is now structurally rich with seven distinct vantages on the discipline.
+3. **Two-source threshold on Yegge Gas Town** — met (Böckeler + Tan). Yegge's eight-stages-of-dev-evolution-to-AI framework is now a named pattern in the wiki.
+
+**Convergence threshold notes**:
+- *KG-construct as universal-substrate-across-agentic-stack-layers* — four-vantage convergence is unusually strong; the construct demonstrates **maximal polymorphism** (same data structure, four distinct uses across the agentic stack).
+- *Agent-driven question-narrowing / Socratic-dialogue spec elicitation* — four-source convergence now met (Rufus / Thompson / Böckeler / Tan-Office-Hours). Strong promotion candidate.
+- *Founder-as-AI-founder-type archetype operationalised* — two-source threshold met (Hu prescribes / Tan demonstrates at YC-president scale).
