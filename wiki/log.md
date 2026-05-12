@@ -2302,3 +2302,27 @@ Both cross-reference each other. The narrow synthesis is mostly subsumed by the 
 **Pre-flight notes**: Both threads opened retroactively per the user-approved workflow (option A in the AskUserQuestion). Thread `opened` dates set to the first ingested source raising the question (2026-04-09 for *is-rag-dead* — OceanBase, which explicitly references Karpathy's gist; 2026-04-27 for *knowledge-architectures* — Liu, who introduced the canonical three-architecture comparison). Both `closed` 2026-05-12. No new source pages; no concept/entity counter bumps required — this is a *synthesize* operation, not an *ingest* operation.
 
 **Schema compliance**: Both synthesis pages follow CLAUDE.md §Synthesis structure exactly — Question / Findings / Sources consulted / Lessons / Open questions, plus the `type: synthesis` frontmatter with `derived_from`, `opened`, `closed`, `confidence`, `source_count`, and `relationships:` typed edges.
+
+## [2026-05-12] ingest | Ross & Schneider — *Resilience Won't Save Your Organization. Adaptability Will* (HBR.org Partner Content / Egon Zehnder, 9 Feb 2026)
+
+The wiki's **first HBR Partner Content / advertorial source**. Mike James Ross and Greig Schneider (Egon Zehnder partners) argue that AI-driven continuous change has rendered "resilience" the wrong organising frame because it presupposes a fixed destination once the disruption passes; the proposed replacement is **adaptability**, operationalised across leadership practice / hiring / personal-discipline layers. Headline empirical anchor: Egon Zehnder survey of **1,200+ global CEOs**, 92% agreeing on adaptability as the necessary cultivation (no methodology disclosed). Cites Linda Hill's *creative abrasion* and Etienne van der Walt (Neurozone) on resilience's clinical definition.
+
+**Pre-flight checks passed**: 6 pages (full article); identity matches filename; honest scoping — flagged as advertorial in the source page `§Source-quality flag` and in this log entry. Per the [Lifecycle vendor-source rule](../CLAUDE.md#lifecycle), this source's confidence boost caps at +0.05 and at 0.75 absolute — meaning for any concept already above that ceiling from independent sources, this source contributes only as a *cross-source positioning* bullet, not as a confidence multiplier.
+
+**Touched pages** (5 wiki files):
+
+- [[2026-02-09-ross-schneider-adaptability]] — new source page; `kind: article`; `section: "Partner Content from Egon Zehnder"`; `journal_volume: "HBR.org Partner Content, 9 February 2026"`. No URL captured (HBR Partner Content path not guessed).
+- [[durable-skills]] — added cross-source bullet pairing this source with [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels]] (same date, overlapping hiring-criteria construct: *aptitude-to-learn-novel-stuff* / *interview for what new skills they have learned*). `source_count` 8→9; `last_confirmed` 2026-05-12. **`confidence` unchanged at 0.91** — vendor source does not raise; the concept was already past the vendor-cap from rigorous sources.
+- [[2026-04-28-werner-lebrun-octopus-organization]] — added neutral `See also` bullet under Linked entities and concepts.
+- [[2026-05-07-carucci-resistance-as-data]] — added neutral `See also` bullet under Linked entities and concepts.
+- [[Harvard Business Review]] — **new sub-table** added: *HBR.org Partner Content (sponsored / advertorial)*. `source_count` 10→11; `last_confirmed` 2026-05-12. Frontmatter and body convention documented: `section: "Partner Content from <sponsor>"` + `journal_volume: "HBR.org Partner Content, <date>"`.
+
+**Dangling authors / entities** (single-source first mentions; not promoted per the [author-entity promotion rule](../CLAUDE.md#author-entity-promotion)): Mike James Ross, Greig Schneider (article authors), Etienne van der Walt (cited body mention), Linda Hill (cited body mention with substantive citations from *Collective Genius* / *Genius at Scale* / *creative abrasion* — flagged for promotion on second source), Egon Zehnder (sponsoring firm), Neurozone (van der Walt's firm).
+
+**Not done by design** — and noted here so a future ingest doesn't re-relitigate the choice:
+
+- **No update to [[dynamic-capabilities]]** (the academic concept page) — this is a vendor source making informal claims; touching the Teece-anchored concept page from an advertorial would muddy the citation graph.
+- **Not added to [[syntheses/organizational-frameworks-for-ai-adoption|frameworks synthesis]]** — synthesis cluster is built from 12 mostly-rigorous sources; adding an advertorial would dilute the cluster. Cross-positioning is captured in the source page and on the two adjacent source pages instead.
+- **No new `adaptability` concept page** — adaptability is already listed in [[durable-skills]] and adjacent to [[dynamic-capabilities]]. Promotion to its own concept page is deferred until a non-vendor source centres adaptability with operational definition or measurement.
+- **Hiring-criteria convergence with Sternfels (also 9 Feb 2026)** noted in the source page and the durable-skills concept page but **not promoted to a thread** — two sources is below the threshold for a thread, and the convergence is descriptive (same construct named in different vocabulary) rather than a research question. Reconsider on a 3rd source naming the same construct from another vantage.
+

@@ -106,6 +106,8 @@ This is **practitioner opinion writing**, not empirical research. Carucci has de
 
 **Threads/syntheses:** [[syntheses/organizational-frameworks-for-ai-adoption|organizational-frameworks-for-ai-adoption]] — flagged in concept pages as a reaction-layer addendum to the synthesis's deployment-layer analysis.
 
+**See also (shared topic — leading through continuous change):** [[2026-02-09-ross-schneider-adaptability|Ross & Schneider 2026 (HBR Partner Content / Egon Zehnder)]] operates on the *leader-disposition* layer (what the leader must become) where Carucci operates on the *human-reaction* layer (how to read what people do when the change lands).
+
 ## Source
 
 - **Raw PDF (~8 pages):** [article file](../../raw/articles/Leaders%2C%20Treat%20Resistance%20to%20Change%20as%20Valuable%20Data.pdf)

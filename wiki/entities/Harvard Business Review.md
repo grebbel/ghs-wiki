@@ -6,8 +6,8 @@ tags: [publisher, business-magazine, management-research, harvard, hbr-ideacast,
 parent: "[[Harvard Business School]]"
 website: "https://hbr.org"
 confidence: 0.90
-last_confirmed: "2026-05-11"
-source_count: 10
+last_confirmed: "2026-05-12"
+source_count: 11
 ---
 
 # Harvard Business Review
@@ -49,7 +49,15 @@ HBR sources span both the print magazine (with `hbr_reprint` codes) and HBR.org 
 |---|---|---|---|---|
 | [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting\|How McKinsey Plans to Survive AI (and Reinvent Consulting)]] | Bob Sternfels (Global Managing Partner, [[McKinsey & Company]]) | Adi Ignatius (HBR editor-in-chief) | 9 Feb 2026 | McKinsey 100-yr reflection + AI strategy: 40k humans + 20k agents workforce, outcome-underwriting, post-controversy governance, hiring overhaul, four durable leadership skills |
 
-HBR articles in the wiki use this convention: source `kind: article`. Print pieces include an `hbr_reprint` field; digital pieces use `journal_volume: "HBR.org Digital, <date>"`. **HBR IdeaCast** episodes use source `kind: video` (since the wiki currently ingests them via the video transcript pipeline) with `author: ["Harvard Business Review"]` per the [video source-page convention](../../CLAUDE.md#source-page-conventions-specific-to-videos).
+**HBR.org Partner Content (sponsored / advertorial):**
+
+Partner Content is a paid placement: a sponsor (named at the top of the article) authors the piece, HBR hosts it. Editorial standards differ from HBR editorial — no peer review, no Idea-in-Brief panel, no reprint code. Treat as **vendor-sponsored** per the [[../../CLAUDE.md#lifecycle|Lifecycle vendor-source rule]]: confidence boosts to any concept page cap at +0.05 and at 0.75 absolute when this is the sole supporting source.
+
+| Article | Authors | Sponsor | Date | Topic |
+|---|---|---|---|---|
+| [[2026-02-09-ross-schneider-adaptability\|Resilience Won't Save Your Organization. Adaptability Will]] | [[Mike James Ross]], [[Greig Schneider]] | [[Egon Zehnder]] | 9 Feb 2026 | Leadership disposition + hiring criteria + personal practice for continuous-change adaptability; 1,200-CEO survey (92% agreement) |
+
+HBR articles in the wiki use this convention: source `kind: article`. Print pieces include an `hbr_reprint` field; digital pieces use `journal_volume: "HBR.org Digital, <date>"`; partner-content pieces use `journal_volume: "HBR.org Partner Content, <date>"` and `section: "Partner Content from <sponsor>"`. **HBR IdeaCast** episodes use source `kind: video` (since the wiki currently ingests them via the video transcript pipeline) with `author: ["Harvard Business Review"]` per the [video source-page convention](../../CLAUDE.md#source-page-conventions-specific-to-videos).
 
 ## Article structure (recurring "Idea in Brief")
 

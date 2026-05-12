@@ -119,6 +119,8 @@ For the wiki, this article opens a [[threads/organizational-frameworks-for-ai-ad
 
 **Threads:** [[threads/organizational-frameworks-for-ai-adoption|organizational-frameworks-for-ai-adoption]] (new — Octopus/Tin Man enters as the org-design-level framework).
 
+**See also (shared topic — organizational adaptation under continuous change):** [[2026-02-09-ross-schneider-adaptability|Ross & Schneider 2026 (HBR Partner Content / Egon Zehnder)]] reframes the same problem space at the *leader-disposition* and *hiring-criteria* layers rather than at org structure.
+
 ## Source
 
 - **Raw PDF (12 pp):** [article file](../../raw/articles/Werner%20and%20Le-Brun%20-%202025%20-%20Become%20an%20Octopus%20Organization..pdf)
