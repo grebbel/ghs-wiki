@@ -2,16 +2,31 @@
 type: entity
 kind: organization
 aliases: ["Anthropic", "Anthropic PBC", "Claude"]
-tags: [anthropic, ai-lab, foundation-models, claude]
+tags: [anthropic, ai-lab, foundation-models, claude, public-benefit-corporation, long-term-benefit-trust]
 since: 2021
-confidence: 0.87
-last_confirmed: "2026-05-11"
-source_count: 6
+confidence: 0.92
+last_confirmed: "2026-05-13"
+source_count: 7
 ---
 
 # Anthropic
 
-AI safety and research company; publisher of the [[Claude]] family of models and the [[Anthropic Economic Index]] research series. Founded 2021. Public Benefit Corporation. Partnered with [[Amazon Web Services]] (~$8B total invested as of 2024 per [[2026-04-28-werner-lebrun-octopus-organization]]).
+AI safety and research company; publisher of the [[Claude]] family of models and the [[Anthropic Economic Index]] research series. Founded 2021 by **Dario Amodei** and **Daniela Amodei** (with a cohort of OpenAI departures) following the Amodei team's exit from [[OpenAI]] *"two or three OpenAI crises ago"* per [[2026-05-10-ries-lennys-force-destroys-companies-within|Ries 2026]]. **Public Benefit Corporation** with a **two-tier governance structure** (see [§Governance structure](#governance-structure) below). Partnered with [[Amazon Web Services]] (~$8B total invested as of 2024 per [[2026-04-28-werner-lebrun-octopus-organization]]).
+
+## Governance structure
+
+Per [[2026-05-10-ries-lennys-force-destroys-companies-within|Ries 2026]] (who advised the Amodeis on the structure during Anthropic's founding):
+
+> *"Anthropic has directors on its for-profit board who are appointed by and are accountable to an outside group of trustees who are AI safety experts who do not have equity in Anthropic."*
+
+The mechanism: **Long-Term Benefit Trust (LTBT)** as the **mission guardian** entity. Two-tier:
+
+1. **For-profit board** — the standard corporate governance layer; directors operate under PBC fiduciary obligations.
+2. **Long-Term Benefit Trust** — outside trustees who (a) are AI safety experts, (b) hold *no equity* in Anthropic, and (c) **appoint and hold accountable** the for-profit board's directors.
+
+The novel structural property: trustee accountability **flows the right direction with respect to mission-relevant decisions** — directors are accountable to the trust (not to shareholders) on the mission axis. Ries' first-hand framing of what this buys: *"Whenever you see Anthropic do the right thing, like when they refuse to release a model because they think it's too dangerous, think about how much that's costing them."*
+
+Ries (who plays *"no important role"* but *"a very big role"* in the founding-advice phase) was approached by *"one of their investors"* and told the Amodeis *"if you don't get this right, here's what's going to happen"* — the early framing that became the LTBT. Per Ries' framework, **PBC + LTBT** is **strictly stronger** than **PBC alone** ([[OpenAI]]'s post-2025 structure) because the LTBT introduces *outside trustee accountability* that PBC-alone does not.
 
 ## Research initiatives appearing in this wiki
 

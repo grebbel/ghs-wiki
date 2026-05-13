@@ -2,11 +2,11 @@
 type: entity
 kind: organization
 aliases: ["Google", "Google LLC", "Alphabet (operating subsidiary)"]
-tags: [google, big-tech, hyperscaler, ai-lab, foundation-models, gemini, google-cloud, google-research, gemini-api, file-search, multimodal-rag, notebooklm, flow, veo, ai-product-management]
+tags: [google, big-tech, hyperscaler, ai-lab, foundation-models, gemini, google-cloud, google-research, google-brain, gemini-api, file-search, multimodal-rag, notebooklm, flow, veo, ai-product-management, bfloat16, coral-edge-tpu, tensorflow, edge-ml]
 since: 1998
-confidence: 0.82
-last_confirmed: "2026-05-10"
-source_count: 4
+confidence: 0.87
+last_confirmed: "2026-05-13"
+source_count: 5
 relationships:
   - type: published-by
     target: 2026-04-22-cheung-ippolito-secchi-google-agents-cli
@@ -23,6 +23,15 @@ Big-tech platform company; operating subsidiary of Alphabet. Within this wiki Go
 - **Google Cloud / Google Cloud Platform** — hyperscaler division. Surfaces in this wiki via Cloud Run, GKE, Agent Runtime, Cloud Build, Cloud Trace / Logging / Monitoring as deployment, CI/CD, and observability substrates for agents. Sponsor of the Agents CLI announcement.
 - **Google Developers** — developer-relations division publishing the Google Developers Blog; the channel for the [[2026-04-22-cheung-ippolito-secchi-google-agents-cli|Agents CLI]] announcement.
 - **Gemini Enterprise** — enterprise distribution surface for agents registered via the Agents CLI. (Single-source mention; promote on second-source coverage.)
+- **Google Brain** — Google's ML research division (subsumed into Google DeepMind / Google Research over time). Surfaces in this wiki as the **originator of Bfloat16** — the ML-bespoke 16-bit floating-point format (1 sign + 8 exponent + 7 mantissa) that won the training-precision war over IEEE 754 FP16 (1+5+10) because the extra exponent bits give wider *dynamic range* at the cost of mantissa precision. Bfloat16 is named in [[2025-05-17-turc-llms-low-precision-quantization-fundamentals|Turc 2025]] as *"introduced by Google Brain, hence the B, specifically for machine learning ... important for training models where we want the ability to represent very low numbers in the vicinity of zero."* The wiki's first **vendor-built-data-format-becomes-industry-standard** example.
+
+## Edge ML hardware
+
+- **Coral Edge TPU** — Google's low-power processor for IoT devices (sensors, smart cameras, on-device ML). Named in [[2025-05-17-turc-llms-low-precision-quantization-fundamentals|Turc 2025]] as the example of edge-ML hardware that *"doesn't even support floating-point operations at all"* — making INT8 quantization not an optimisation but a *prerequisite* for deployment. The wiki's first **Google edge-ML hardware mention**, and the wiki's first concrete anchor for the bottom-end of the [[2026-04-28-ftsg-convergence-outlook-2026|FTSG]] *edge-AI convergence* claim.
+
+## ML frameworks
+
+- **TensorFlow** — Google's open-source ML framework. Named in [[2025-05-17-turc-llms-low-precision-quantization-fundamentals|Turc 2025]] as having **built-in quantization support** alongside Meta's [[PyTorch]]; both abstract the integer-only-arithmetic / fixed-point-multiplication machinery from end-user model developers. *The framework-level companion to the Coral hardware-level edge-ML deployment story.*
 
 ## Platform / product engineering
 

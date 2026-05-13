@@ -2,11 +2,11 @@
 type: entity
 kind: organization
 aliases: ["OpenAI"]
-tags: [openai, ai-lab, foundation-models, chatgpt, gpt-4, gpt-5, codex, agentic-engineering, sora, custom-gpts]
+tags: [openai, ai-lab, foundation-models, chatgpt, gpt-4, gpt-5, codex, agentic-engineering, sora, custom-gpts, public-benefit-corporation, nonprofit-foundation]
 since: 2015
-confidence: 0.90
-last_confirmed: "2026-05-10"
-source_count: 9
+confidence: 0.95
+last_confirmed: "2026-05-13"
+source_count: 10
 relationships:
   - type: employs
     target: Aaron-Chatterji
@@ -22,6 +22,14 @@ relationships:
 # OpenAI
 
 AI research and deployment company. Originator of **ChatGPT** (Nov 2022) and the **GPT-3 / GPT-4 / GPT-5** series. Self-described in [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|the Bain/OpenAI HBR article]] as "an AI provider to over one million businesses."
+
+## Governance trajectory
+
+Originally founded (2015) as a **nonprofit foundation**. **Two or three "OpenAI crises" ago** ([[2026-05-10-ries-lennys-force-destroys-companies-within|Ries 2026]], 1:12:28), Dario and Daniela Amodei left OpenAI to spin out [[Anthropic]] — the moment Ries dates as his own entry into the AI-governance-advice arc. Mid-2025, OpenAI **converted from the nonprofit-foundation governance to Public Benefit Corporation (PBC) structure** (Ries: *"although now they've converted to a public benefit corp structure"*).
+
+Per Ries' framework, **PBC alone** is structurally weaker than the **PBC + Long-Term Benefit Trust** structure adopted by Anthropic — a PBC replaces the *any-lawful-act-or-purpose* clause with a specific declared purpose (making mission-pursuit a fiduciary obligation of the board) but lacks an *outside trustee body* holding the for-profit board accountable to that mission. The implication Ries does not state outright but the structural comparison implies: OpenAI's *original* nonprofit-foundation guardian was **stronger** than the eventual PBC-only structure; the 2025 conversion is a **governance downgrade** by Ries' criteria.
+
+Ries describes the OpenAI history as *"a really hard case study to learn from because it's such a bizarre story and has involves like mega personalities like Elon and Sam like dueling to the death."* The deeper case-study narrative is deferred to *Incorruptible* (book, out 26 May 2026), not given on-air.
 
 ## Models referenced in this wiki
 
