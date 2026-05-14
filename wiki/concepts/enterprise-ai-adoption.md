@@ -3,8 +3,8 @@ type: concept
 aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizational AI adoption", "AI maturity"]
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity]
 confidence: 0.95
-last_confirmed: "2026-05-11"
-source_count: 26
+last_confirmed: "2026-05-14"
+source_count: 28
 relationships:
   - type: uses
     target: automation-vs-augmentation
@@ -313,6 +313,13 @@ A finding worth flagging because it changes how enterprise AI deployment shape s
 2. **Where automation is rising is surface-specific.** AEI 5's "automation rising on API" finding (sales, trading, coding harnesses) is consistent with the Claude.ai split staying flat (53/45 augmentation/automation). The aggregate "AI is automating" / "AI is augmenting" framing dissolves once you separate the consumer chat surface from the agent-mediated API surface.
 
 Reinforces the [[micro-productivity-trap]] reading: the firms capturing real value from coding-AI today are the ones operating it through agentic harnesses on the API, not through individual ChatGPT/Claude.ai seats. The deployment surface itself is part of the maturity gradient.
+
+### Sharper formulations from May 2026 (Chamath, Spiegel)
+
+Two operator-narrated framings push the wiki's existing position further:
+
+- **Firm-rebuild as the ROI gating condition** ([[2026-05-05-stanford-ai-club-chamath-on-how-to-win-in-the-ai-era|Chamath 2026]]). The wiki has held that *shallow adoption produces task-level gains without firm-level value*; Chamath sharpens it: *"Unless you completely rebuild how those companies operate, it will not pay [the trillion-dollar AI capex] off and there will be blood in the streets."* The claim is **stronger than the wiki's prior formulation**: not merely *adoption-depth-matters* but *only-full-rebuild-justifies-the-capex*. The mechanism named: legacy enterprise systems carry institutional tribal knowledge inaccessible to AI agents until reconstructed (see the [[micro-productivity-trap|COBOL retiree anecdote]]). 8090's *Software Factory* is the **first wiki source describing an enterprise-rebuild as a productised offering** (target sectors: healthcare, financial services, manufacturing, government).
+- **JTBD-as-sequencing for AI transformation** ([[2026-04-26-how-to-win-when-software-is-not-a-moat-evan-spiegel-snapchat-ceo|Spiegel 2026]]). A consumer-scale operational answer to *"how do you sequence AI deployment across the company without it dissolving into chaos."* Snap's method: enumerate jobs-to-be-done per user type, map agents and cross-functional teams to those jobs, track progress against the per-job business outcome. Paired explicitly with the *"thousand flowers bloom"* idea-generation default — bloom at the *experimentation* layer, sequence at the *resourcing* layer. The wiki's first **operator-grade consumer-scale AI-transformation sequencing framework** — complementing the consulting-firm frameworks (Bain / McKinsey / Thoughtworks) with a single-company in-product-team narration.
 
 ## Debates / contradictions
 

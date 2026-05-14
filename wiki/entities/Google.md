@@ -5,8 +5,8 @@ aliases: ["Google", "Google LLC", "Alphabet (operating subsidiary)"]
 tags: [google, big-tech, hyperscaler, ai-lab, foundation-models, gemini, google-cloud, google-research, google-brain, gemini-api, file-search, multimodal-rag, notebooklm, flow, veo, ai-product-management, bfloat16, coral-edge-tpu, tensorflow, edge-ml]
 since: 1998
 confidence: 0.87
-last_confirmed: "2026-05-13"
-source_count: 5
+last_confirmed: "2026-05-14"
+source_count: 6
 relationships:
   - type: published-by
     target: 2026-04-22-cheung-ippolito-secchi-google-agents-cli

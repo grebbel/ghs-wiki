@@ -10,6 +10,30 @@ Ordering flipped on 2026-05-12 (GH [#3](https://github.com/businessdatasolutions
 
 ---
 
+## [2026-05-14] ingest | Paired ingest — Chamath at Stanford AI Club (5 May 2026) + Spiegel on Lenny's Podcast (26 April 2026)
+
+Two complementary operator-narrated video sources ingested together as a paired batch (user-requested batch mode):
+
+1. **[[2026-05-05-stanford-ai-club-chamath-on-how-to-win-in-the-ai-era|Chamath at Stanford AI Club]]** (54:23 / 520 unique ASR lines) — Chamath Palihapitiya on **8090**, the *AI-native software factory*. Five contributions: the *control plane for AI* / English-as-control-plane thesis; the *software factory* as governed assembly line (forward + reverse passes); the *COBOL-retiree anecdote* as wiki's most concrete enterprise-scale [[micro-productivity-trap]] instance; the *trough-of-disillusionment* claim that long-horizon and complex tasks still don't work; and the *network-effect-in-shared-code* cross-industry-ontology-recompilation construct. Plus operating-model details (no-org-chart + chronic-under-hire as deliberate flow-state design) and the positive-sum-vs-tokenize-and-sell-vs-replace-and-fire AI-compact taxonomy.
+
+2. **[[2026-04-26-how-to-win-when-software-is-not-a-moat-evan-spiegel-snapchat-ceo|Spiegel on Lenny's Podcast]]** (70:25 / 698 unique ASR lines, 28 chapters) — Evan Spiegel (Snap CEO) on the 15-year *software is not a moat* learning; distribution-as-new-moat; design-as-intentional-bottleneck (9-12-person team, no titles, CEO-reviews-everything-weekly); designers-shipping-code with billion-user-scale guardrails (10K auto-detected bugs, shake-to-report → agent-debug → forecast-auto-fix); jobs-to-be-done as AI-transformation organising principle; humanity-as-adoption-bottleneck forecast; the *crucible moment* framing for Snap's 2026.
+
+**Pre-flight notes.** Video 1 hit the *"panel did not render"* skill-failure-mode on the second fetch ([youtube-transcript-skill GH #2](https://github.com/businessdatasolutions/ai-wiki/issues/2)), but the initial JSON fetch had succeeded with all 520 segments; markdown reconstructed from JSON manually. **Both videos had duplicate transcripts** in the JSON output — the script captured the full transcript twice consecutively (1040 segs → 520 unique for Chamath; 1396 → 698 for Spiegel). Deduplication applied at write time. Chapter grouping for Spiegel had to be re-derived from `start` strings rather than `start_ms` (all `start_ms` came through as 0). Raw markdown for both videos written to `raw/videos/`; transcripts not aggressively ASR-cleaned per the batch-ingest mode.
+
+**New entity promoted on this ingest**: [[Lenny's Podcast]] (second `author:` mention triggers entity per the author-entity promotion rule; first was [[2026-05-10-ries-lennys-force-destroys-companies-within|Ries 2026]]).
+
+**Pages touched (≈14 files):**
+
+- Source pages created: 2.
+- Entity pages created: 1 ([[Lenny's Podcast]]).
+- Entity pages updated: 3 ([[Anthropic]] 8→10, Claude Cowork + Jenny Wen + flow-state-org section added; [[OpenAI]] 10→11; [[Google]] 5→6).
+- Concept pages updated (frontmatter + substantive body additions): 6 ([[enterprise-ai-adoption]] 26→28 with new Chamath+Spiegel section; [[micro-productivity-trap]] 13→14 with COBOL-retiree anchor; [[ai-employment-effects]] 16→17 with designer-vindication section; [[agentic-engineering]] 10→11 with enterprise-rebuild row; [[agent-harness]] 20→21 with control-plane vantage row; [[strategic-foresight]] 2→3 with operator-grade-forecasts section, confidence 0.75→0.80).
+- `index.md` updated; this `log.md` entry prepended.
+
+**Cross-source convergences flagged:** Chamath × [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy]] on *spec-as-load-bearing-artifact* at two scales; Chamath × [[2026-05-10-ries-lennys-force-destroys-companies-within|Ries]] on flow-state-orgs as a category (different layers: operating-structure vs governance); Spiegel × Chamath on *what AI doesn't solve* (distribution vs long-horizon-complex) as the 2026 AI-capability-frontier from two operator vantages.
+
+**Dangling-author / concept candidates surfaced (15+ each)** — see source pages' *Linked entities and concepts* sections. Strongest promotion candidates on next source: Chamath Palihapitiya, Evan Spiegel, 8090, Snap. Strongest concept candidates on second source: *control plane for AI* / *English-as-control-plane*, *distribution-as-the-new-moat*, *software-is-not-a-moat*, *design-as-intentional-bottleneck*, *humanity-as-adoption-bottleneck*.
+
 ## [2026-05-14] ingest | Mysore — *What Is Andrej Karpathy's LLM Wiki — And How Can You Extend It?* (Vishal Mysore / Medium, 18 April 2026; ~5-min read)
 
 The wiki's **6th source on Karpathy's LLM Wiki** and the **single-author-extension** entry in the cluster — distinct in scope and reception from the four prior LLM-Wiki sources. Vishal Mysore's piece uses the Karpathy explainer as a front door for his own open-source browser-only extension, **LLM WikiZZ**, which proposes a **5W1H Wiki Frame** (Who / What / When / Where / Why / How) the LLM autonomously populates before any user query, plus three UI patterns (**Autonomous Scaffolding**, **Contrast Engine**, **LLM Jury**). Coins **"Context Debt"** and **"transient RAG"** as vocabulary candidates. The article's **empirical anchor** is a side-by-side global-warming Plain-vs-WikiZZ comparison screenshot — the WikiZZ output **better captures the document's essence** by reorganising the activity list around the emitted gas (CO₂ / methane / nitrous oxide) and adding a closing synthesis sentence; this output is captured **verbatim in the source page** so future readers can judge for themselves. Two more load-bearing visuals captured in the source page: a **Star Wars 5W1H** worked example (4 interconnected nodes, each with its own six-axis lens) and a **3-phase Living Knowledge Graph** diagram (Small Web → Growing Web of Two Topics → Living Knowledge Graph).

@@ -6,7 +6,7 @@ tags: [anthropic, ai-lab, foundation-models, claude, public-benefit-corporation,
 since: 2021
 confidence: 0.92
 last_confirmed: "2026-05-14"
-source_count: 8
+source_count: 10
 ---
 
 # Anthropic
@@ -39,7 +39,7 @@ Ries (who plays *"no important role"* but *"a very big role"* in the founding-ad
 - **Claude Platform** — Anthropic's developer-facing platform.
   - **Claude Managed Agents** — hosted service for long-horizon agent work; brain/hands/session decoupled architecture; published April 2026 ([[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Engineering blog]]).
   - **Claude Code** — agentic coding harness; described as "an excellent harness" in the Managed Agents post; its agentic architecture (splits coding work into smaller API calls labeled as distinct tasks) is the empirical signature of agent-mediated work in the [[2026-05-07-anthropic-economic-index-5-learning-curves|5th Economic Index report]]. Engineering leadership: [[Boris Cherny]] (10–15 concurrent Claude instances + CLAUDE.md as in-workflow learning capture per [[2026-05-07-kiron-schrage-compound-benefits|Kiron-Schrage 2026]]) and *Fiona Fung* (Director of Engineering; documents the Claude Code team-norms rewrite — JIT planning, code-wins-over-whiteboard debate, manager-starts-as-IC dogfooding, "Claudify everything", "explicit permission to kill processes" — in [[2026-05-08-running-an-ai-native-engineering-org]]).
-- **Cowork** — Anthropic product co-led by Fung alongside Claude Code; deferred for separate page on second-source mention.
+- **Claude Cowork** — Anthropic collaborative-design product, referenced by [[2026-04-26-how-to-win-when-software-is-not-a-moat-evan-spiegel-snapchat-ceo|Spiegel 2026]] in the *designers-shipping-code* discussion (alongside the named team member *Jenny Wen*, head of design at Claude, ex-Figma director — the move from Figma director to Claude IC designer is narrated by Spiegel as a case study in the *crits-as-core-skill* dimension of post-AI design work).
 
 ## Third-party uses of the Anthropic API
 
@@ -51,6 +51,15 @@ Ries (who plays *"no important role"* but *"a very big role"* in the founding-ad
 - **Claude Opus 4.5** — released between the 4th and 5th Economic Index sample windows. The Managed Agents engineering post notes that the "context anxiety" seen on Sonnet 4.5 was *not present* on Opus 4.5.
 - **Claude Opus 4.6** — released coincident with the 5th Economic Index sample window (Feb 2026).
 - Family-level cost/speed/performance tradeoff: Haiku (fast, cheap) → Sonnet (default) → Opus (most capable, higher per-token price). The 5th Economic Index report quantifies that users select Opus differentially for higher-value tasks: **+1.48 pp Opus per +$10/hour** task value (Claude.ai); **+2.79 pp per +$10** (1P API — about twice as steep).
+
+## As a flow-state organisation
+
+Two recent sources name Anthropic specifically as a *flow-state organisation* — a place where structural pressure + lack of hierarchy strips away traditional thinking:
+
+- [[2026-05-10-ries-lennys-force-destroys-companies-within|Ries 2026]] frames it from the **governance** layer: PBC + LTBT make the structural mission-protection real.
+- [[2026-05-05-stanford-ai-club-chamath-on-how-to-win-in-the-ai-era|Chamath 2026]] names it from the **operating-structure** layer: *"if you find one of these places — Anthropic is such a place, OpenAI is such a place, Facebook was such a place, Google was such a place, SpaceX is such a place"* — alongside no-org-chart and chronic-under-hire as deliberate organisational design.
+
+The two framings are at different layers (governance vs operating-structure) but converge on Anthropic as **the AI-era exemplar** of the category.
 
 ## Mentioned in
 

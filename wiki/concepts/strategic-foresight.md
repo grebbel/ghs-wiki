@@ -2,9 +2,9 @@
 type: concept
 aliases: ["strategic foresight", "strategic-foresight", "corporate foresight", "futures thinking"]
 tags: [strategic-foresight, scenarios, futures, signal-detection, FTSG, webb]
-confidence: 0.75
-last_confirmed: "2026-04-28"
-source_count: 2
+confidence: 0.80
+last_confirmed: "2026-05-14"
+source_count: 3
 relationships:
   - type: part-of
     target: dynamic-capabilities
@@ -77,6 +77,15 @@ Conditions enabling a convergence cycle (FTSG): general-purpose tech reaching sc
 - **Netflix** — DVD → streaming pivot is a textbook foresight case (anticipated consumer-behavior shift).
 - **Schibsted** (Oslo digital media) — used foresight to anticipate internet's threat to advertising; built its own digital advertising business ahead of time.
 - **AI as bank infrastructure** (hypothetical) — Webb's worked example: smart-home compute marketplaces → banks become trusted intermediaries for peer-to-peer compute payments.
+
+### Operator-grade forecasts (consumer tech)
+
+Two operator-narrated forecasts from May 2026 belong here as **first-person foresight claims with explicit horizons**:
+
+- **Humanity-as-adoption-bottleneck** ([[2026-04-26-how-to-win-when-software-is-not-a-moat-evan-spiegel-snapchat-ceo|Spiegel 2026]]): *"Humanity is far more important [than AI capability] because humanity dictates how technology is adopted … there's going to be a huge amount of societal pushback on a lot of the changes that are coming with AI."* The wiki's first **named-as-such humanity-as-bottleneck forecast** from a long-tenured consumer-tech operator, distinct from the more common *"compute is the bottleneck"* and *"alignment is the bottleneck"* framings.
+- **Next-form-factor as the next consumer wave** (Spiegel 2026): glasses (and adjacent next-gen hardware form factors) as the platform shift that creates the next generation of consumer companies — analogous to mobile's role in producing Uber, Snapchat, and the 2010s consumer cohort. Spiegel pairs this with a worry: *"it's going to be very hard for a startup to get any attention with existing incumbents"* — so the form-factor shift is a *necessary but not sufficient* condition.
+
+A complementary forecast at the enterprise-software layer comes from [[2026-05-05-stanford-ai-club-chamath-on-how-to-win-in-the-ai-era|Chamath 2026]]: the **trough of disillusionment is structurally guaranteed** unless long-horizon and complex AI tasks become reliable — a foresight claim that frames the trillion-dollar AI capex trajectory as **conditionally bounded** rather than smoothly extrapolating.
 
 ## Related concepts
 
