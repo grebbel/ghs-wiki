@@ -5,8 +5,8 @@ aliases: ["Anthropic", "Anthropic PBC", "Claude"]
 tags: [anthropic, ai-lab, foundation-models, claude, public-benefit-corporation, long-term-benefit-trust]
 since: 2021
 confidence: 0.92
-last_confirmed: "2026-05-13"
-source_count: 7
+last_confirmed: "2026-05-14"
+source_count: 8
 ---
 
 # Anthropic
@@ -40,6 +40,10 @@ Ries (who plays *"no important role"* but *"a very big role"* in the founding-ad
   - **Claude Managed Agents** — hosted service for long-horizon agent work; brain/hands/session decoupled architecture; published April 2026 ([[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Engineering blog]]).
   - **Claude Code** — agentic coding harness; described as "an excellent harness" in the Managed Agents post; its agentic architecture (splits coding work into smaller API calls labeled as distinct tasks) is the empirical signature of agent-mediated work in the [[2026-05-07-anthropic-economic-index-5-learning-curves|5th Economic Index report]]. Engineering leadership: [[Boris Cherny]] (10–15 concurrent Claude instances + CLAUDE.md as in-workflow learning capture per [[2026-05-07-kiron-schrage-compound-benefits|Kiron-Schrage 2026]]) and *Fiona Fung* (Director of Engineering; documents the Claude Code team-norms rewrite — JIT planning, code-wins-over-whiteboard debate, manager-starts-as-IC dogfooding, "Claudify everything", "explicit permission to kill processes" — in [[2026-05-08-running-an-ai-native-engineering-org]]).
 - **Cowork** — Anthropic product co-led by Fung alongside Claude Code; deferred for separate page on second-source mention.
+
+## Third-party uses of the Anthropic API
+
+- **WikiZZ / LLM WikiZZ** ([[2026-04-18-mysore-medium-wikizz-extending-karpathy-llm-wiki|Mysore 2026]]) — single-author open-source browser-only extension of Karpathy's LLM Wiki pattern that routes API requests via a Cloudflare Worker CORS proxy to **NVIDIA NIM, Anthropic, and Gemini** as user-selectable provider backends. The wiki's first **third-party-developer-tool-uses-Anthropic-API** mention in the [[concepts/llm-wiki|LLM Wiki]] cluster. Surfaced here as a one-line context note; the substantive treatment is on the source page.
 
 ## Models referenced in this wiki
 

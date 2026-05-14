@@ -3,8 +3,8 @@ type: concept
 aliases: ["LLM Wiki", "LLM-Wiki", "llm wiki", "Karpathy's LLM Wiki", "LLM-maintained wiki", "compounding wiki"]
 tags: [llm-wiki, knowledge-compilation, three-layer-architecture, ingest-query-lint, agent-memory, claude-md, knowledge-compounding, agentic-knowledge-base]
 confidence: 0.91
-last_confirmed: "2026-05-12"
-source_count: 5
+last_confirmed: "2026-05-14"
+source_count: 6
 relationships:
   - type: part-of
     target: agent-harness
@@ -21,12 +21,15 @@ relationships:
 
 The **LLM Wiki** is a knowledge-management pattern named by **[[Andrej Karpathy]]** in a GitHub Gist published 4 April 2026 (which hit 17 million views, 5,000 stars, and 4,282 forks within days). In the pattern, an LLM compiles raw source materials into a persistent, interlinked markdown wiki that the LLM owns and maintains — *"knowledge compounds; the synthesis, the cross-references, the identified contradictions are built once and kept current, not re-derived on every query."* The pattern is **the foundational architecture for this very repository** (see [`llm-wiki.md`](../../llm-wiki.md), [`llm-wiki-v2.md`](../../llm-wiki-v2.md), and [`CLAUDE.md`](../../CLAUDE.md) at the repo root).
 
-The wiki holds four sources engaging this concept substantively, from four distinct vantages:
+The wiki holds five sources engaging this concept substantively, from five distinct vantages:
 
 - **The upstream spec**: [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy 2026 (Sequoia AI Ascent)]] — *"I really enjoy whenever I read an article I have my wiki that's being built up from these articles ... anytime I see a different projection onto information, I always feel like I gain insight."* Karpathy's first-person continued use of the pattern, plus the gist itself (cited via the explainer articles below) is the upstream spec.
 - **The clearest explainer**: [[2026-04-16-raju-rag-isnt-dead-karpathys-llm-wiki-explained|Raju 2026 (Medium)]] — three-layer architecture (raw / wiki / schema); three operations (ingest / query / lint); working Python implementation; honest comparison vs RAG with limitations named explicitly (scale ceiling, hallucination baking, ingest cost).
 - **The comparative-architecture treatment**: [[2026-04-27-liu-rag-llm-wiki-or-gbrain-how-your-agent-remembers|Liu 2026 (AI Advances)]] — places LLM Wiki alongside RAG and GBrain in a unified decision framework; predicts hybrid convergence (2023 RAG → 2025 Wiki+Skills emerge → 2026+ convergence); notes Claude Code already implements partial-convergence.
-- **The vendor implementation**: [[2026-04-09-oceanbase-ex-brain-knowledge-base-that-thinks|OceanBase / ex-brain 2026]] — first-vendor implementation worked example using seekdb (AI-native database); demonstrates compiled-truth + timeline-extraction + entity-linking + hybrid-search; MCP-server-as-LLM-Wiki-interface for Claude Code integration.
+- **The vendor implementation (server-side / durable end of the spectrum)**: [[2026-04-09-oceanbase-ex-brain-knowledge-base-that-thinks|OceanBase / ex-brain 2026]] — first-vendor implementation worked example using seekdb (AI-native database); demonstrates compiled-truth + timeline-extraction + entity-linking + hybrid-search; MCP-server-as-LLM-Wiki-interface for Claude Code integration.
+- **The single-author extension (browser-only / session-scoped end of the spectrum)**: [[2026-04-18-mysore-medium-wikizz-extending-karpathy-llm-wiki|Mysore 2026 (Medium)]] — proposes a **5W1H Wiki Frame** (Who / What / When / Where / Why / How) the LLM auto-populates from each document before any query, plus three UI patterns: *Autonomous Scaffolding* (LLM-as-Architect not user-as-Clerk), *Contrast Engine* (side-by-side Plain-vs-WikiZZ output), *LLM Jury* (evaluator LLM judges the delta). Live demo at [vishalmysore.github.io/lllmwikiZZ](https://vishalmysore.github.io/lllmwikiZZ/); zero-server / static-first / `FileReader` parsing / Cloudflare Worker CORS proxy to NVIDIA NIM + Anthropic + Gemini providers. **Source-quality flags**: single-author experiment (anecdotal per [§Lifecycle](#lifecycle)); engagement = 1 clap at fetch time; "persistent" is session-scoped not durable. Coins **"Context Debt"** and **"transient RAG"** as vocabulary candidates — both deferred to second-source mention.
+
+The five sources now span **the full architectural spectrum** of LLM-Wiki implementations: from **privacy-maximalist / browser-only / session-scoped** (Mysore's WikiZZ) through **MCP-server-with-seekdb** (OceanBase ex-brain) to **durability-maximalist / Postgres-pgvector / 21-cron-jobs / 17,888-page** (Liu's GBrain, which Liu positions as a distinct architecture but which shares the LLM-compiles-knowledge premise with the LLM-Wiki pattern).
 
 ## Working definition
 
