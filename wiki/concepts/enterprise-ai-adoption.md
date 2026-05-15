@@ -1,10 +1,10 @@
 ---
 type: concept
 aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizational AI adoption", "AI maturity"]
-tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity]
+tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity, ai-foundation, omniscalers, future-arenas]
 confidence: 0.95
-last_confirmed: "2026-05-14"
-source_count: 28
+last_confirmed: "2026-05-15"
+source_count: 29
 relationships:
   - type: uses
     target: automation-vs-augmentation
@@ -20,6 +20,9 @@ relationships:
     via: "shallow adoption produces task-level gains without firm-level value"
   - type: caused
     target: ai-employment-effects
+  - type: supports
+    target: 2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas
+    via: "MGI quantifies the firm-side scale of the AI deployment race: AI foundation cluster (semiconductors + cloud + AI software) added $11T market cap + $500B revenue since 2022; nine omniscalers spent $800B on R&D + capex in 2025 alone"
 ---
 
 # Enterprise AI Adoption
@@ -313,6 +316,34 @@ A finding worth flagging because it changes how enterprise AI deployment shape s
 2. **Where automation is rising is surface-specific.** AEI 5's "automation rising on API" finding (sales, trading, coding harnesses) is consistent with the Claude.ai split staying flat (53/45 augmentation/automation). The aggregate "AI is automating" / "AI is augmenting" framing dissolves once you separate the consumer chat surface from the agent-mediated API surface.
 
 Reinforces the [[micro-productivity-trap]] reading: the firms capturing real value from coding-AI today are the ones operating it through agentic harnesses on the API, not through individual ChatGPT/Claude.ai seats. The deployment surface itself is part of the maturity gradient.
+
+### The AI foundation cluster: $11T market-cap accretion since 2022 ([[2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas|MGI 2026]])
+
+The wiki's first **economy-side scale anchor** for the AI deployment race. MGI's [[2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas|*The race takes off in the next big arenas of competition*]] (March 2026, 127 pp.) names a three-arena cluster — **semiconductors + cloud services + AI software & services** — as the **"AI foundation"**, and quantifies its 2022–25 trajectory in firm-level terms:
+
+| AI-foundation metric | Value | Comparator |
+|---|---|---|
+| Market-cap accretion since 2022 | **+$10.77T** | 60% of the *entire* 18-future-arena market-cap accretion of $17.79T |
+| Revenue accretion since 2022 | **+$490B** | one-third of the 18-future-arena revenue accretion |
+| AI software & services market-cap CAGR 2022–25 | **142%** | vs 8% non-arena market-cap CAGR |
+| AI software & services revenue CAGR 2022–25 | **55%** | vs 1% non-arena revenue CAGR |
+| AI software & services 2040 revenue projection | **$1.5T–$4.6T** | from $85B baseline (17–25% CAGR) |
+| Semiconductors market-cap accretion alone | **+$7.39T** | ~68% of the AI-foundation total |
+
+This **firm-level scale** is the empirical complement to the wiki's prior adoption-depth gradient (78% adoption / 1% mature). Adoption breadth + AI-foundation valuation accretion together imply *the deployment race the wiki has tracked qualitatively is now visible in the listed-equity market caps of the firms providing the substrate*. Open question that MGI itself raises: *"Whether investor expectations for AI's future will be supported by companies' sustained returns on invested capital above the cost of capital is one of the biggest open questions in business today."*
+
+### The omniscaler thesis as cross-arena platform play ([[2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas|MGI 2026]])
+
+MGI coins **"omniscalers"** for nine firms competing in three or more future arenas *and* sitting in the top-30 global R&D + capex spenders: **Amazon (cluster — incl. Blue Origin, Prometheus), Tesla/X (incl. SpaceX), Alphabet (cluster), Microsoft (cluster), Meta, Apple, Samsung, Alibaba, Huawei**. **6 of 9 are US-headquartered**. Collectively in 2025:
+
+- **~$700B operating cash flow** (combined)
+- **~$800B R&D + capex** (combined)
+- **~$2.7T total revenue** (larger than Italy's GDP)
+- **~$200B average per-omniscaler arena revenue** vs **~$10B average for other arena players** — a **~20× advantage** per arena that compounds across the 3-to-9-arena spread.
+
+The structural advantage: *"reusable infrastructure, data network effects, high risk appetites, and top talent attraction among their interlocking strengths."* Capability built in one arena (e.g., Alphabet's search/YouTube engagement data → AI training data) becomes accretive in the next. **Alphabet plays in 9 arenas; Amazon in 8; Samsung in 7.**
+
+This sharpens the wiki's prior tracking of enterprise AI adoption: **at the top end of the firm-size distribution, "AI adoption" is no longer a category that captures the operative dynamic — these firms are not adopting AI, they are simultaneously building, selling, and reselling it across arenas.** The omniscaler concept is single-source so far; the wiki tracks it as a candidate concept page pending second-source corroboration. Worked example of how to read it alongside [[2026-04-24-hu-yc-how-to-build-a-company-with-ai-from-the-ground-up|Hu / YC]]: Hu's *"thousand-fold engineer + closed-loop company"* prescription is the startup-side analogue of the omniscaler advantage — the omniscalers operate the same closed-loop pattern at multi-arena scale.
 
 ### Sharper formulations from May 2026 (Chamath, Spiegel)
 

@@ -1,10 +1,10 @@
 ---
 type: concept
 aliases: ["GenAI", "generative AI", "generative artificial intelligence"]
-tags: [generative-ai, foundation-models, ai-adoption]
+tags: [generative-ai, foundation-models, ai-adoption, ai-foundation, future-arenas]
 confidence: 0.95
-last_confirmed: "2026-05-08"
-source_count: 20
+last_confirmed: "2026-05-15"
+source_count: 21
 relationships:
   - type: uses
     target: foundation-models
@@ -12,6 +12,9 @@ relationships:
   - type: caused
     target: enterprise-ai-adoption
     via: "the 2024 jump from 55% → 78% adoption was driven by GenAI specifically"
+  - type: supports
+    target: 2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas
+    via: "MGI names AI foundation as a three-arena cluster (semiconductors + cloud + AI software & services) and projects AI software & services revenue of $1.5T–$4.6T by 2040 from $85B baseline (17–25% CAGR); first wiki source decomposing GenAI's macro footprint into a three-arena bundle"
 ---
 
 # Generative AI
@@ -31,6 +34,26 @@ In the [[AI Index]] taxonomy, "Generative AI" is a sub-class of AI distinguished
 - **$33.9B private investment in GenAI in 2024**, up 18.7% from 2023, **8.5× 2022 levels**. Now >20% of all AI-related private investment.
 - U.S. GenAI investment **exceeded the combined total of China + EU + UK by $25.4B** in 2024 (gap was $21.8B in 2023).
 - Source: [[2026-04-28-ai-index-report-2025|AI Index 2025]] §4.3 Chapter Highlights 2–3.
+
+### GenAI as part of the "AI foundation" three-arena cluster ([[2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas|MGI 2026]])
+
+MGI's *The race takes off in the next big arenas of competition* (March 2026) bundles GenAI into a **three-arena "AI foundation" cluster** with semiconductors and cloud services. The cluster is the largest single contributor to the 18-future-arena market-cap accretion since 2022:
+
+| Metric | Value (2022–25) |
+|---|---|
+| AI foundation theme market-cap accretion | **+$10.77T** (60% of the 18-arena total) |
+| AI foundation theme revenue accretion | **+$490B** |
+| AI software & services market cap 2022–25 CAGR | **142%** |
+| AI software & services revenue 2022–25 CAGR | **55%** |
+| AI software & services 2040 revenue projection | **$1.5T–$4.6T** (17–25% CAGR from $85B baseline) |
+| Semiconductors market-cap accretion since 2022 | **+$7.39T** alone — ~68% of the AI-foundation total |
+| Cloud services market-cap accretion since 2022 | **+$1.83T** |
+| AI software & services market-cap accretion since 2022 | **+$1.55T** |
+
+Two structural reads:
+
+- **GenAI is not an industry on its own** in MGI's frame; it is *one of three arenas* in the AI-foundation bundle, with the other two (semiconductors + cloud) capturing the *infrastructure* and *deployment substrate*. Semiconductors alone account for ~68% of the AI-foundation market-cap accretion — i.e., **value-capture in the GenAI wave has so far accrued disproportionately to the firms that *enable* GenAI rather than the firms that *deploy GenAI as an end product*** (consistent with the wiki's existing automation-vs-augmentation and adoption-depth gradients showing firm-side returns are heavily concentrated at the substrate layer).
+- The **$1.5T–$4.6T 2040 revenue projection for AI software & services** is the wiki's longest-horizon empirically-grounded GenAI revenue number. The headline open question MGI itself raises: *"Whether investor expectations for AI's future will be supported by companies' sustained returns on invested capital above the cost of capital is one of the biggest open questions in business today."*
 
 ### Enterprise application spending: 22× in two years
 

@@ -36,10 +36,12 @@ A new source has been added to the raw collection.
 1. Read the source.
 2. Discuss key takeaways with the user before writing (default to one source at a time, supervised — unless the user says batch).
 3. Write a summary page in the wiki.
-4. Update **every** affected entity, concept, and topic page across the wiki — a single ingest may touch 10–15 files. On every touched concept/entity page, bump `last_confirmed` to today's date and recompute `source_count` and `confidence` per [§Lifecycle](#lifecycle).
-5. Update `index.md` (catalog of pages, one-line summaries, organized by category).
-6. Prepend an entry to `log.md` using the agreed prefix format — new entries go directly under the `---` separator at the top of the file (reverse-chronological convention since 2026-05-12, GH #3), so the most recent entry is the first one in the file.
-7. When new data contradicts an older claim, flag it explicitly in the page's `## Debates and supersession` section. If the new source supersedes an older one wholesale, set `supersedes:` on the new source page and `status: stale` + `superseded_by:` on the retired page — never delete the retired page.
+4. **Tag the source's `dynamic_capabilities:` frontmatter** with the Warner & Wäger microfoundation(s) / strategic-renewal outcome(s) / contextual factors it touches, per [§Dynamic-capabilities tagging](#dynamic-capabilities-tagging). Tagging is encouraged, not forced — skip when the source genuinely sits outside the W&W lens (e.g. pure LLM-internals papers).
+5. **Run a neighbour-source scan.** Query `wiki/sources/` for sources that share at least one `dynamic_capabilities:` cell with the new source, **or** that already cite any of the concept pages you intend to update in step 6 (the fallback path catches pre-GH #4 sources that don't carry W&W tags yet). For each candidate, decide on a typed `relationships:` edge — typically `supports` if both sources address the same phenomenon from compatible angles, `contradicts` if findings or framings conflict (pair with `via:`), or `supersedes` if the new source replaces a prior claim wholesale (per [§Supersession protocol](#supersession-protocol)). Add the edge to the **new source's** frontmatter `relationships:` block. Reverse-linking from the neighbour is encouraged but not required — the graph export computes inverses, and the body-wikilink rule applies in both directions. Skip neighbours where no defensible edge type fits — *not every co-occurrence is a relationship*. **At ≥3 candidate neighbours, surface the list in your response so the user can spot omissions before commit.** See [§Source-to-source relationships](#source-to-source-relationships) for vocabulary guidance.
+6. Update **every** affected entity, concept, and topic page across the wiki — a single ingest may touch 10–15 files. On every touched concept/entity page, bump `last_confirmed` to today's date and recompute `source_count` and `confidence` per [§Lifecycle](#lifecycle).
+7. Update `index.md` (catalog of pages, one-line summaries, organized by category).
+8. Prepend an entry to `log.md` using the agreed prefix format — new entries go directly under the `---` separator at the top of the file (reverse-chronological convention since 2026-05-12, GH #3), so the most recent entry is the first one in the file.
+9. When new data contradicts an older claim, flag it explicitly in the page's `## Debates and supersession` section. If the new source supersedes an older one wholesale, set `supersedes:` on the new source page and `status: stale` + `superseded_by:` on the retired page — never delete the retired page.
 
 ### Query
 The user asks a question against the wiki.
@@ -318,6 +320,12 @@ relationships:
 
 Use the type that fits. Inverse relationships are not stored explicitly — `scripts/graph-export.mjs` computes them by walking the corpus.
 
+### Source-to-source relationships
+
+The closed vocabulary works for source pages too. A source page may declare typed `relationships:` pointing to other source pages — the most common types in practice are **`supports`** (e.g., a research-frontier paper supports an applied practitioner workshop on the same topic; an empirical dataset supports the framework a prior conceptual paper named), **`contradicts`** (e.g., a study disconfirms a prior empirical claim — always pair with `via:` describing what the disagreement turns on), and **`supersedes`** (per [§Supersession protocol](#supersession-protocol) — pair with `status: stale` + `superseded_by:` on the retired source).
+
+Source-to-source edges are how the wiki encodes its **thematic cluster index** — two sources on the same topic with no typed edge between them is a graph-quality smell, not a neutral state. The [§Ingest](#ingest) workflow's step 5 (Neighbour-source scan) is the disciplined way to keep this layer consistent.
+
 ### Body-wikilink rule (load-bearing)
 
 **Every typed relationship in frontmatter must also appear as a body `[[wikilink]]` with at least one sentence of context.**
@@ -344,6 +352,53 @@ This rule applies to body text, table cells, and any other markdown context wher
 ### Formalized `kind:` enum (entities)
 
 `kind:` on entity pages is now restricted to one of: `person | organization | product | project | place | event | library | dataset | benchmark | venue`. Drift from earlier ingests (e.g. `org` for organization) gets normalized during the v0.3 migration.
+
+## Dynamic-capabilities tagging
+
+Source pages may carry a `dynamic_capabilities:` frontmatter field declaring which **Warner & Wäger (2019) process-model cells** the source touches. This adds a queryable meta layer parallel to v0.3's typed `relationships:`, but specialised to the digital-transformation lens: rather than "this source supports/contradicts another wiki page," the tag answers "what kind of digital-transformation work is this source about?"
+
+The closed vocabulary, the operational definitions for each slug, and the `role_defaults:` matrix that drives role-relevance inheritance all live in one place: [[concepts/warner-wager-process-model|warner-wager-process-model]]. That concept page is the single source of truth; CLAUDE.md only documents the *contract* between source pages and the lint.
+
+### Frontmatter contract (source pages)
+
+```yaml
+dynamic_capabilities:
+  - <bucket>/<element>
+  - ...
+roles: [<role-slug>, ...]   # optional override, see §Role-relevance
+```
+
+- `dynamic_capabilities:` is **optional**. Pre-2026-05-14 source pages do not need backfill; new ingests should tag when the W&W lens applies.
+- Each entry must be drawn from the closed vocabulary published on [[concepts/warner-wager-process-model|warner-wager-process-model]] (15 cells across 5 buckets: `digital-sensing/*`, `digital-seizing/*`, `digital-transforming/*`, `strategic-renewal/*`, `contextual/*`).
+- Multiple entries allowed when a source genuinely speaks to multiple cells.
+- **Tagging is encouraged, not forced.** When a source sits outside the W&W lens (e.g. pure LLM-internals papers, model-quantization mechanics), omit the field rather than stretching the vocabulary.
+- `dynamic_capabilities:` tags do **not** carry per-entry `confidence:` — the tag is a binary "touches / doesn't touch" classification, not a graded claim.
+
+**Tags as discovery index.** Beyond classification, `dynamic_capabilities:` cells are the corpus's **thematic adjacency index**. Two source pages sharing a cell are conceptually adjacent — they are the first candidates for source-to-source typed `relationships:` per [§Source-to-source relationships](#source-to-source-relationships). The [§Ingest](#ingest) workflow uses this affordance in its step 5 (Neighbour-source scan), with a fallback path through shared concept-page citations for pre-GH #4 sources that don't carry W&W tags yet. A future lint rule can flag sources with ≥2 overlapping cells but no typed relationship between them; until then the discipline is the ingestor's, and the *"≥3 candidate neighbours, surface the list"* rule in Ingest step 5 is the accountability mechanism.
+
+### Body twin rule (load-bearing)
+
+**Every `dynamic_capabilities:` entry in frontmatter must be reflected in the body** — at minimum one sentence in the page summary saying *how* the source touches that cell, ideally naming which of the bullet-level activities listed on [[concepts/warner-wager-process-model|warner-wager-process-model]] are in play. Frontmatter is the typed layer; body is the navigable layer. Both required.
+
+This mirrors v0.3's [§Body-wikilink rule](#body-wikilink-rule-load-bearing) for typed relationships — same architectural pattern, same enforcement mechanism. Lint matches on the cell slug or its trailing element (e.g. either `digital-seizing/balancing-digital-portfolios` or `balancing-digital-portfolios` in body prose satisfies the rule).
+
+### Role-relevance inheritance
+
+Each cell carries a **default role profile** — the business roles that would typically care about a source in that cell. The matrix lives on [[concepts/warner-wager-process-model|warner-wager-process-model]] as a `role_defaults:` block, with 15 role slugs across nine C-suite (`ceo`, `coo`, `cfo`, `cso`, `cdo`, `cto`, `cio`, `chro`, `cmo`) and six functional roles (`product-manager`, `tech-lead`, `rd-director`, `innovation-lab-lead`, `transformation-lead`, `strategy-consultant`).
+
+Role-relevance is **derived** from `dynamic_capabilities:` by default — no per-source `roles:` needed. A source page may add an explicit `roles:` list when its emphasis diverges from the cell defaults; when present, `roles:` **replaces** the inherited defaults for that source (half-overrides are not supported in v1).
+
+`roles:` is a list of role slugs from the closed vocabulary on the concept page. Lint validates the vocabulary on source pages. (On person-entity pages, `roles:` — if used — remains a free-text job-title field, not a slug list. Lint distinguishes by `type:`.)
+
+The body-twin rule does **not** extend to `roles:` — role-relevance is a derived view, not an independent claim.
+
+### When not to tag
+
+- Sources purely about LLM internals (training dynamics, quantization, attention mechanics) where the W&W lens does not apply.
+- Sources where the only plausible cell is `contextual/external-triggers` and even that feels forced — leave the field off rather than over-fit.
+- Sources whose contribution is purely methodological (analysis tools, vocabularies, benchmarks) without a digital-transformation use case attached.
+
+The point of the tagging layer is to make the *digital-transformation reading* of the corpus queryable. A source that does not contribute to that reading should not be forced into the vocabulary just to have a tag.
 
 ## Synthesis
 

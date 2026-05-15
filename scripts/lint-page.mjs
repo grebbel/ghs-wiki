@@ -86,14 +86,38 @@ if (typeof fm.confidence === "number") {
   }
 }
 
-// 3. last_confirmed must be an ISO date string (v0.2 used quoted YAML strings)
+// 3. Confidence vs source_count consistency (v0.2 §Lifecycle Confidence rules):
+//    0.70 baseline + 0.05 per additional source + 0.05 peer-reviewed bonus,
+//    cap 0.95. The defensible generous max simplifies to
+//      min(0.95, 0.70 + 0.05 * source_count)
+//    We warn when declared confidence exceeds this max (small tolerance avoids
+//    floating-point quirks). We do NOT warn on values BELOW the range — being
+//    more conservative than the math is legitimate (unflagged contradictions,
+//    judgment-call dampening, vendor-/anecdotal-source cap at 0.75 applied
+//    without explicit frontmatter flag). Inspired by Mysore 2026's "Context
+//    Debt" vocabulary — the lint that names claims-beyond-evidence.
+if (
+  typeof fm.confidence === "number" &&
+  typeof fm.source_count === "number" &&
+  fm.source_count > 0
+) {
+  const defensibleMax = Math.min(0.95, 0.70 + 0.05 * fm.source_count)
+  const TOLERANCE = 0.01
+  if (fm.confidence > defensibleMax + TOLERANCE) {
+    warnings.push(
+      `confidence ${fm.confidence} > defensible max ${defensibleMax.toFixed(2)} for source_count ${fm.source_count} (v0.2 §Lifecycle Confidence rules: 0.70 baseline + 0.05 per additional source + 0.05 peer-reviewed bonus, cap 0.95). Either add a source or lower confidence. Note: vendor-/anecdotal sources are capped at 0.75 regardless of count.`,
+    )
+  }
+}
+
+// 4. last_confirmed must be an ISO date string (v0.2 used quoted YAML strings)
 if (fm.last_confirmed !== undefined && typeof fm.last_confirmed !== "string") {
   warnings.push(
     "last_confirmed must be a quoted YAML string like \"2026-05-05\", not a bare date (gray-matter parses bare dates as Date objects)",
   )
 }
 
-// 4. v0.3 body-wikilink rule: every relationship target must appear as a body
+// 5. v0.3 body-wikilink rule: every relationship target must appear as a body
 //    wikilink. Match `[[target]]` or `[[target|...]]` or `[[folder/target]]`
 //    and `[[folder/target|...]]`. Compare on simplified slug (basename only,
 //    spaces normalized to dashes).
@@ -123,7 +147,7 @@ if (Array.isArray(fm.relationships) && fm.relationships.length > 0) {
   }
 }
 
-// 5. Closed relationship vocabulary (v0.3 §Graph)
+// 6. Closed relationship vocabulary (v0.3 §Graph)
 const RELATIONSHIP_VOCAB = new Set([
   "supports",
   "contradicts",
@@ -149,13 +173,95 @@ if (Array.isArray(fm.relationships)) {
   }
 }
 
-// 6. Stale-page protocol (v0.2 §Lifecycle): a page with `status: stale` must
+// 7. Stale-page protocol (v0.2 §Lifecycle): a page with `status: stale` must
 //    have `superseded_by`.
 if (typeof fm.status === "string" && fm.status.toLowerCase() === "stale") {
   if (!fm.superseded_by) {
     warnings.push(
       "status: stale but no `superseded_by` set (v0.2 §Lifecycle supersession protocol)",
     )
+  }
+}
+
+// 8. Dynamic-capabilities tagging (CLAUDE.md §Dynamic-capabilities tagging):
+//    closed vocabulary of W&W process-model cells; body twin rule. Single
+//    source of truth for the vocabulary lives on
+//    wiki/concepts/warner-wager-process-model.md — keep this Set in sync.
+const DYNAMIC_CAPABILITIES_VOCAB = new Set([
+  "digital-sensing/digital-scouting",
+  "digital-sensing/digital-scenario-planning",
+  "digital-sensing/digital-mindset-crafting",
+  "digital-seizing/rapid-prototyping",
+  "digital-seizing/balancing-digital-portfolios",
+  "digital-seizing/strategic-agility",
+  "digital-transforming/navigating-innovation-ecosystems",
+  "digital-transforming/redesigning-internal-structures",
+  "digital-transforming/improving-digital-maturity",
+  "strategic-renewal/business-model",
+  "strategic-renewal/collaborative-approach",
+  "strategic-renewal/organizational-culture",
+  "contextual/external-triggers",
+  "contextual/internal-enablers",
+  "contextual/internal-barriers",
+])
+
+if (Array.isArray(fm.dynamic_capabilities)) {
+  const bodyLower = body.toLowerCase()
+  for (const tag of fm.dynamic_capabilities) {
+    if (typeof tag !== "string") continue
+    const slug = tag.trim()
+    if (!DYNAMIC_CAPABILITIES_VOCAB.has(slug)) {
+      warnings.push(
+        `dynamic_capabilities entry \`${slug}\` is outside the closed vocabulary (see wiki/concepts/warner-wager-process-model.md for the 15-cell vocabulary; CLAUDE.md §Dynamic-capabilities tagging)`,
+      )
+      continue
+    }
+    // Body-twin rule: the slug, or its trailing element, must appear in body
+    // prose. Word-boundary match avoids `business-model` falsely matching
+    // `business-modeling`.
+    const trailing = slug.split("/").pop()
+    const wbRe = (s) =>
+      new RegExp(`(?<![A-Za-z0-9_-])${s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&")}(?![A-Za-z0-9_-])`, "i")
+    const found = wbRe(slug).test(bodyLower) || wbRe(trailing).test(bodyLower)
+    if (!found) {
+      warnings.push(
+        `dynamic_capabilities \`${slug}\` has no body mention (CLAUDE.md §Dynamic-capabilities tagging body-twin rule — every tag needs at least one sentence of body prose naming the cell or its trailing element)`,
+      )
+    }
+  }
+}
+
+// 9. Roles vocabulary (CLAUDE.md §Dynamic-capabilities tagging):
+//    On source pages, `roles:` is a list of slugs from the closed vocabulary.
+//    On entity pages, `roles:` (if present) is a free-text job-title field —
+//    skip vocabulary validation there.
+const ROLES_VOCAB = new Set([
+  "ceo",
+  "coo",
+  "cfo",
+  "cso",
+  "cdo",
+  "cto",
+  "cio",
+  "chro",
+  "cmo",
+  "product-manager",
+  "tech-lead",
+  "rd-director",
+  "innovation-lab-lead",
+  "transformation-lead",
+  "strategy-consultant",
+])
+
+if (fm.type === "source" && Array.isArray(fm.roles)) {
+  for (const role of fm.roles) {
+    if (typeof role !== "string") continue
+    const slug = role.trim()
+    if (!ROLES_VOCAB.has(slug)) {
+      warnings.push(
+        `roles entry \`${slug}\` is outside the closed vocabulary (15 slugs; see wiki/concepts/warner-wager-process-model.md §Roles vocabulary)`,
+      )
+    }
   }
 }
 

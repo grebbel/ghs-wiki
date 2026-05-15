@@ -8,9 +8,13 @@ journal_volume: "1st Edition"
 url: "https://ftsg.com/convergence-outlook-2026"
 date_published: 2026-01-01
 date_ingested: 2026-04-28
-tags: [convergence, foresight, FTSG, webb, creative-destruction, schumpeter, compute, agentic, labor, biology, panopticon]
+tags: [convergence, foresight, FTSG, webb, creative-destruction, schumpeter, compute, agentic, labor, biology, panopticon, mgi-cross-reference]
 length: "~317 pages (read pp. 1-15: front matter, intro, Webb letter, four rules of convergences, framework — body sections deferred to per-section ingest)"
 raw: "../../raw/reports/Convergence_Outlook_2026.pdf"
+relationships:
+  - type: supports
+    target: 2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas
+    via: "FTSG's convergence framework predicts what MGI's 2022–25 firm-level data shows: 18 future arenas adding $18T market cap (FTSG rule 'capital concentrates rapidly') and nine omniscalers redistributing per-arena value at ~20× over other players (FTSG rule 'redistribute power and value'). MGI's three-ingredient arena-creation potion is a subset of FTSG's seven enabling conditions; the remaining FTSG conditions surface in MGI as swing factors / time-to-build constraints rather than as creation ingredients"
 ---
 
 # FTSG — Convergence Outlook 2026
@@ -97,13 +101,24 @@ Methodology built on FTSG's nearly two decades of foresight work (see [[2026-04-
 - FTSG is a commercial foresight consultancy; the report frames consulting offerings.
 - "Convergence" framing is FTSG's proprietary lens — comparison with adjacent academic literatures (e.g., systems thinking, dynamic capabilities, complexity theory) is not made within the report itself.
 
+## MGI Race Takes Off 2026 as empirical validation
+
+[[2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas|MGI's *The race takes off in the next big arenas of competition*]] (March 2026) is the **firm/industry-layer empirical validator** of FTSG's convergence framework. Where FTSG describes *how* convergence happens (four rules + seven enabling conditions), MGI quantifies *where* convergence has materialised in the 2022–25 data:
+
+- **"Capital concentrates rapidly in emerging sectors"** (FTSG condition 6) → MGI: 18 future arenas added **$18T market cap** since 2022, with the AI-foundation cluster (semiconductors + cloud + AI software & services) alone accounting for **$10.77T** — 60% of the total.
+- **"Convergences redistribute power and value"** (FTSG rule 3) → MGI: nine **omniscalers** generate ~**$700B operating cash flow** with ~**$800B R&D + capex in 2025 alone**; their per-arena revenue is **~20× higher** than other arena players (~$200B vs ~$10B average). Alphabet plays in 9 arenas, Amazon in 8.
+- **"Industry boundaries become porous"** (FTSG condition 4) → MGI: omniscalers move fluidly across e-commerce, EVs, AI, digital media, robotics, and space — the Tesla/X + xAI infrastructure deal of 9–10 May 2026 made *"one of the report's slides out of date"* by reclassifying Tesla/X as a cloud-services participant.
+
+The five FTSG outlook sections also map to MGI's five themes (with one partial gap): *Power Is Physical Again* ↔ AI foundation; *When Machines Take the Wheel* ↔ AI foundation + shared autonomous vehicles; *A World That Watches Back* ↔ robotics-as-physical-AI + cybersecurity; *When Systems Become Alive* ↔ obesity drugs + non-medical biotech; *Who We Turn To Now* (Emotional Outsourcing) — *less directly mapped*; this section extends beyond MGI's economy-mapper frame. See [[strategic-foresight]] for the full **FTSG process-lens ↔ MGI outcome-lens bridge**.
+
 ## Related in this wiki
 
-- [[strategic-foresight]] — concept page; FTSG's 10-step process is the underlying methodology
+- [[strategic-foresight]] — concept page; FTSG's 10-step process is the underlying methodology; carries the explicit FTSG ↔ MGI bridge
 - [[Future Today Strategy Group]] — publisher entity
 - [[Amy Webb]] — editorial / authorial lead
 - [[2026-04-28-webb-strategic-foresight]] — Webb's HBR article describing the 10-step process used here
 - [[2026-04-28-bansal-birkinshaw-systems-thinking]] — adjacent conceptual approach (systems-level, cross-domain)
+- [[2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas]] — MGI's *Race takes off* report; firm/industry-layer empirical validator of FTSG's convergence framework
 - [[ai-employment-effects]] — Section Two ("New Labor Equation") will likely contribute when deep-read
 - [[ai-agents]] — Section Two ("Agentic Economies") will likely contribute when deep-read
 - [[generative-ai]] — Section One/Four overlap with AI compute and embodiment topics
