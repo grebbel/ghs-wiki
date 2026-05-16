@@ -2,9 +2,9 @@
 type: concept
 aliases: ["agentic engineering", "Agentic Engineering", "agentic-engineering", "agent engineering"]
 tags: [agentic-engineering, vibe-coding, software-3.0, ai-agents, agent-harness, software-engineering, hiring, karpathy, codex-case-study]
-confidence: 0.93
-last_confirmed: "2026-05-14"
-source_count: 11
+confidence: 0.95
+last_confirmed: "2026-05-16"
+source_count: 12
 relationships:
   - type: depends-on
     target: agent-harness
@@ -22,6 +22,10 @@ relationships:
 The **engineering discipline of writing software with AI agents that preserves the quality bar of professional software while going much faster**. Coined explicitly as a paired concept with [[vibe-coding]] by [[Andrej Karpathy]] in the [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Sequoia AI Ascent interview]] (29 April 2026): vibe coding *raises the floor* (everyone can vibe code anything); agentic engineering *raises the ceiling* (professional engineers can ship faster *without* sacrificing quality).
 
 The construct's load-bearing claim: **"the 10× engineer used to be the upper bound; agentic engineering pushes far past 10×"** — implying the productivity distribution gets fatter-tailed, with agentic engineers at the top of it pulling significantly further away. The discipline's day-to-day artifacts are the [[agent-harness]] (the runtime), the spec (the design the human owns), and the agents (the *intern entities* that fill in the blanks).
+
+### Practitioner-side ratification: "harness engineering" as the working-engineer naming
+
+[[2026-05-15-osmani-agent-harness-engineering|Osmani's O'Reilly Radar essay]] (May 2026) introduces **"harness engineering"** as the working-engineer-altitude name for the same discipline Karpathy named *agentic engineering* at paradigm altitude. The wiki holds them as a paired vocabulary: **paradigm-level frame = agentic engineering (Karpathy)**; **practitioner-level discipline = harness engineering (Trivedy, Osmani)**. Osmani's load-bearing rule — **"every line in a good AGENTS.md should be traceable back to a specific thing that went wrong"** (*ratchet, don't brainstorm*) — is the operational test for what *preserves the quality bar at agent speed* actually looks like in a working codebase. The convergence observation Osmani names — *top coding agents (Claude Code, Cursor, Codex, Aider, Cline) look more like each other than their underlying models do* — is the empirical confirmation of agentic engineering's claim that the discipline is more load-bearing for outcomes than the model is.
 
 ## Working definition
 

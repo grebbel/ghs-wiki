@@ -3,8 +3,8 @@ type: concept
 aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizational AI adoption", "AI maturity"]
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity, ai-foundation, omniscalers, future-arenas]
 confidence: 0.95
-last_confirmed: "2026-05-15"
-source_count: 29
+last_confirmed: "2026-05-16"
+source_count: 30
 relationships:
   - type: uses
     target: automation-vs-augmentation
@@ -367,6 +367,16 @@ Two operator-narrated framings push the wiki's existing position further:
 - [[responsible-ai]] — the risk-management discipline orgs are scrambling to build alongside adoption
 - [[foundation-models]] — what enterprise AI is increasingly built on top of
 - [[ai-benchmarks]] — context for the capability claims that drive procurement decisions
+
+## *"The year of increased accountability"* — the editorial framing for 2026 ([[2026-01-09-baron-signals-for-2026|Baron / O'Reilly]], January 2026)
+
+[[Julie Baron]]'s annual *Signals for 2026* outlook gives the wiki its **single best editorial-framing headline** for the 2026 adoption-curve inflection: *"Expect enterprises to shift focus from experimentation to measurable business outcomes and sustainable AI costs."* This is the [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt et al. "experimentation-to-transformation"]] reframe compressed into a single phrase, written for an O'Reilly Radar trade-press audience three months before the HBR essay.
+
+Baron also names the **strategic-crisis framing** explicitly: *"Most companies have moved past simple AI experiments but are now facing a strategic crisis. Their existing product playbooks (sizing markets, roadmapping, UX) weren't designed for AI-native products. Organizations must develop clear frameworks for building a portfolio of differentiated AI products, managing new risks, and creating sustainable value."* The wiki's reading: **2026 is the year *measurable-outcome* obligations finally bite** — the [[micro-productivity-trap]] becomes operationally untenable, and the [[2026-05-05-nishar-nohria-end-of-one-size-fits-all|firm-boundary build/compose/collaborate/buy framework]] becomes a forced choice.
+
+### Vendor-side productization of agentic adoption ([[2026-05-05-loukides-radar-trends-may-2026|May 2026 Radar Trends digest]])
+
+The May 2026 digest's framing line — ***"AI is becoming operational"*** — names the *vendor-side* version of the same inflection: **shared team agents as enterprise process automation** instead of language-game demos. **Five vendor-side moves toward harness-as-a-service in a single month** (Anthropic Managed Agents + Claude Code routines + OpenAI workspace agents + OpenAI Agents SDK open-source + Amazon Bedrock AgentCore agent registry + Cursor 3 as orchestrator) signal that **the substrate for enterprise agent deployment is being commoditised** by the foundation-model vendors themselves. Direct implication for this concept page: the adoption-curve bottleneck is shifting from *"can we get a working agent into production"* (largely solved by HaaS) to *"can we govern the agents we now have running in production"* — the **governance-and-evaluation** layer becomes the binding constraint.
 
 ## Mentioned in
 

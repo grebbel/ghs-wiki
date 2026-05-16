@@ -3,8 +3,8 @@ type: concept
 aliases: ["AI employment effects", "AI labor effects", "AI job displacement", "AI labor market", "AI employment impact"]
 tags: [employment, labor-market, ai-displacement, automation, labor-economics, age-effects]
 confidence: 0.95
-last_confirmed: "2026-05-14"
-source_count: 17
+last_confirmed: "2026-05-16"
+source_count: 19
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -231,6 +231,18 @@ Position relative to the displacement literature: not contradictory. Brynjolfsso
 - [[generative-ai]] — the technology driving the displacement
 - [[ai-agents]] — concentrated in the automation quadrant where employment is declining
 - [[responsible-ai]] — the labor disruption is an under-attended RAI concern
+
+## The "AI is not taking jobs" attribution claim ([[2026-01-09-baron-signals-for-2026|Baron / O'Reilly]], January 2026)
+
+The O'Reilly Radar editorial entry to the wiki adds a quotable attribution claim that complements the empirical record: **"AI is not taking jobs: The decisions of people deploying it are"** — [[Tim O'Reilly]] (via [[2026-01-09-baron-signals-for-2026|Baron's annual *Signals for 2026* outlook]]). The wiki absorbs this as the *deployment-decision-attribution* framing — useful as a rhetorical counter to "AI as automatic-displacement" narratives, but **not as a claim that AI lacks labor-market effects** (the empirical record on [[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson's canary]] and the [[2026-04-30-ai-index-report-2026|AI Index 2026]]'s −20% software-dev employment from 2024 are both load-bearing). The wiki's reading: **the labor-market effects are real and measurable; the attribution to deployment decisions rather than to the technology itself is a useful framing for thinking about agency and policy levers.**
+
+### Mixed-signal labor-market data from Loukides's monthly digests (Apr–May 2026)
+
+[[2026-04-07-loukides-radar-trends-april-2026|The April 2026 Radar Trends digest]] adds two trade-press datapoints worth tracking:
+
+- **Software-development employment −20% from 2024** — direct match to the AI Index 2026 headline figure.
+- **Product-manager roles at decade highs; engineering demand recovering.** The PM/engineering split is the wiki's first observation that **AI's labor-market effect is *role-asymmetric within tech*** — not a uniform tech-sector decline. Track for future ingest of any large-N study that decomposes by role.
+- ***"Copilot correlates with reduced management and collaborative time."*** First wiki signal on **AI's labor-market effect at the *team-shape* level** — not just headcount but *what work the remaining people do*. Adjacent to [[ai-deskilling]] (the skill-formation side) but distinct: the collaboration-erosion claim is about *how teams work*, not *what individuals know how to do*. Worth a future synthesis-pair with the [[2026-02-03-loukides-radar-trends-february-2026|February digest's]] Kent Beck reframe (*"AI augments junior developers, accelerates learning cycles"*) — Beck's claim and the Copilot-collaboration finding are not strictly contradictory but they cut in opposite directions on whether AI grows or shrinks the team-coordination surface.
 
 ## Mentioned in
 

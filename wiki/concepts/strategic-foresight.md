@@ -3,8 +3,8 @@ type: concept
 aliases: ["strategic foresight", "strategic-foresight", "corporate foresight", "futures thinking"]
 tags: [strategic-foresight, scenarios, futures, signal-detection, FTSG, webb, arena-creation-potion, arenas-radar, MGI]
 confidence: 0.85
-last_confirmed: "2026-05-15"
-source_count: 4
+last_confirmed: "2026-05-16"
+source_count: 5
 relationships:
   - type: part-of
     target: dynamic-capabilities
@@ -154,6 +154,12 @@ A complementary forecast at the enterprise-software layer comes from [[2026-05-0
 - [[systems-thinking]] — overlaps with foresight in treating the firm as embedded in a multi-actor system; convergence framing is systems-level.
 - [[enterprise-ai-adoption]] — strategic foresight informs AI deployment decisions under deep uncertainty.
 - [[automation-vs-augmentation]] — a strategic-positioning choice that benefits from foresight scenarios.
+
+## Trade-press adoption: Loukides's genre shift to signal-detection ([[2026-04-07-loukides-radar-trends-april-2026|O'Reilly Radar Trends, April 2026]])
+
+The April 2026 *Radar Trends to Watch* digest carries an **explicit genre-shift** in O'Reilly Radar's monthly trend-curation channel: from chronicling toward signal-detection. [[Mike Loukides]] reframes the digest's purpose with [[Amy Webb|William Gibson]]'s line *"the future is here. It's just not evenly distributed yet"* and adopts the framing **"news from the future"** — items that *"confirm or challenge assumptions about the present."* This is the wiki's first **trade-press adoption signal** for Webb/FTSG-style strategic-foresight vocabulary at editorial scope.
+
+The implication for this concept page: the *signal-detection-over-prediction* stance (Webb's *"we don't predict the future, we identify signs of it"*) — quoted by [[Julie Baron]] in [[2026-01-09-baron-signals-for-2026|Signals for 2026]] directly to Loukides — is moving from foresight-practitioner literature into mainstream trade-press editorial framing. The strategic-foresight discipline is no longer adjacent to tech-trends curation; it is becoming the **editorial methodology** for tech-trends curation.
 
 ## Mentioned in
 
