@@ -10,6 +10,68 @@ Ordering flipped on 2026-05-12 (GH [#3](https://github.com/businessdatasolutions
 
 ---
 
+## [2026-05-17] ingest | PY YouTube — *Rethinking AI Agents: The Rise of Harness Engineering* (14 April 2026, 11:45 min, 126k views) — metadata-only; closes Pan et al. + Meta-Harness primary-source identification open-questions
+
+**Single-source metadata-only ingest** — the wiki's third metadata-only video ingest after [[2026-05-06-amodei-anthropic-cofounders-code-with-claude-conference|Amodei]] (transcripts disabled) and the first [[2026-05-12-mgi-virtual-event-race-takes-off-next-big-arenas|MGI virtual event]] attempt (later re-fetched at `--timeout 180000`). The PY video failed transcript fetch at **both** `--timeout 180000` AND `--timeout 300000` with the *transcript-panel-did-not-render* symptom — a **different failure mode** from the long-livestream pattern (this video is only 11:45). Despite the metadata-only constraint, the ingest is high-value because the **channel-provided description is unusually substantive** and carries the thesis, named empirical results, and **full arxiv IDs for two primary-source papers the wiki has been carrying as open-questions since 2026-05-04**.
+
+**Disambiguation flag.** The PY channel (channel_id `UCRk2Uipu6q_Se1hEALunAoQ`) is **distinct** from the **Prompt Engineering** channel (channel_id `UCDq7SjbgRKty5TgGafW8Clg`) that produced the wiki's existing [[2026-05-04-rethinking-agents-harness-is-all-you-need|*Rethinking Agents: Harness is All You Need*]] source. Two videos with very similar titles, on the same two papers, three weeks apart, on **different channels**. The PY video predates the Prompt Engineering one and got ~10× the views (127k vs 12k).
+
+**Source page (1 new):**
+
+- [[2026-04-14-py-rethinking-ai-agents-rise-of-harness-engineering]] — PY YouTube; covers Pan et al. *Natural-Language Agent Harnesses* (Tsinghua, March 2026) + Lee/Khattab et al. *Meta-Harness* (Stanford, March 2026). Confidence 0.62.
+
+**Concept pages updated (1):**
+
+- [[concepts/agent-harness]] 23→24, conf 0.95 unchanged, last_confirmed 2026-05-17 (same-day double-bump after the morning Karten + Nodus Labs ingest).
+  - **Pan et al. open-question closed** — arXiv:2603.25723 identified by PY description. The wiki has been carrying this as a top open question since 2026-05-04.
+  - **Meta-Harness triple-confirmed** — arXiv:2603.28052v1 now cited by Karten (reference [10]) AND PY description independently. PY adds the *"reached rank 1 on TerminalBench with **Haiku**"* qualifier — strongest single statement in the wiki to date of the *"small model + great harness beats large model + bad harness"* claim.
+  - **New "Subtraction discipline" sub-section** holding [[2026-05-15-osmani-agent-harness-engineering|Osmani's]] *ratchet* (additive — every line earned by a failure) and PY's *removing-structure* framing (subtractive — verifier-hurts, stripped-equals-full-at-1/14-compute) as a **bidirectional discipline**. The subtraction direction is the wiki's strongest single corrective to *"infinite scaffolding can rescue any model"* readings.
+  - **New primary-source ingest targets surfaced** (not yet ingested): **AutoHarness** (arXiv:2603.03329, Feb 2026); **AgentSpec** (arXiv:2503.18666); **Anthropic *Effective Harnesses for Long-Running Agents*** (Nov 2025, vendor-side primary, predates the Managed Agents post by ~5 months).
+
+**Why this single video is disproportionately load-bearing.** Pan et al. was the wiki's longest-standing primary-source identification open-question (carried since 2026-05-04). The Meta-Harness paper had its identification closed earlier today by [[2026-05-11-karten-zhang-continual-harness-online-adaptation|Karten]]; PY independently confirms the same arxiv ID. Two of the wiki's longest-running open empirical-anchor identifications are now closed within a single calendar day across two unrelated ingests — and the **same Pan et al. paper turns out to be the canonical source for the Top 30 → Top 5 TerminalBench result Osmani attributes to "Viv's team"** (the wiki had been tracking this as a Viv-Trivedy-team result; the underlying empirical anchor is Pan et al. 2026).
+
+**Index + log updates.** New entry at the top of [[wiki/index.md|index.md]]'s Sources section. This log entry.
+
+**Pages touched: 4 total** (1 new source + 1 updated concept + index + log).
+
+**Operational note on transcript-fetch failure modes.** The skill's known failure modes are now three:
+
+1. **No transcript section** — video has no captions. Metadata-only with placeholder. Documented.
+2. **Long-livestream panel-render** — long-format livestreams (≥60 min) often don't render the panel at `--timeout 90000`; succeed at `--timeout 180000`. Documented in [[2026-05-15]] log.
+3. **Short-video panel-render failure** ⚠️ **new pattern** — the PY video (11:45) failed at both 180s and 300s. This is **not** the long-livestream pattern (the video is short). May be specific to certain channels' video-rendering paths, or a fresh YouTube anti-bot defence on this video. **Worth flagging in [SKILL.md](../.claude/skills/youtube-transcript-skill/SKILL.md) as a third distinct failure mode**: *"some short videos fail panel-render even at 300s. If 180s fails on a video ≤15min, do not escalate — switch to metadata-only ingest and capture the description as the substantive content."* Saves 5 minutes of agent wait time on the next occurrence.
+
+**Author-attribution flag from prior batches** — Trivedy-vs-Chatterjee remains open. This batch does not resolve it; in fact it complicates it slightly because the Top 30 → Top 5 result Osmani attributes to "Viv's team" turns out to be the Pan et al. result, suggesting Osmani may have been (a) attributing Pan's result to Viv's reading-of-Pan or (b) mis-attributing. Verification still wanted.
+
+**Reversibility.** All edits structurally additive. 4 files touched. Reverse with `git checkout`.
+
+
+## [2026-05-17] ingest | Karten et al. *Continual Harness* (arXiv 2605.09998, 11 May 2026) + Nodus Labs *Fix Karpathy's LLM Wiki with a Knowledge Graph* (YouTube, 11 April 2026)
+
+**Two-source ingest** spanning the wiki's two most active conceptual clusters: **harness-engineering** (Continual Harness — first peer-track academic anchor) and **LLM-Wiki extension** (Nodus Labs — earliest third-party "fix" proposal published one week post-Karpathy-gist). Both ingested in full from raw artefacts: a 28-page arXiv PDF and a 26-minute YouTube tutorial.
+
+**Source pages (2 new):**
+
+- [[2026-05-11-karten-zhang-continual-harness-online-adaptation]] — Karten, Zhang et al. (Princeton + ARISE Foundation + Google DeepMind). **First peer-track academic paper with "harness" in the title** to land in the wiki. Three substantive contributions: **(1)** the formal definition *H* = *(p, G, K, M)* + meta-tool API (`define_agent`, `run_code`, `process_memory`) — gives harness-editing a tractable signature; **(2)** the **Continual Harness** two-loop architecture (inner agent step + outer per-*F*-steps Refiner doing CRUD edits on all four components from the most recent trajectory window) — reset-free, generalising prompt-optimisation methods that rewrite only *p* between resets; **(3)** the **co-learning loop** — SFT + offline GRPO + online DAgger+PRM with Gemini-3.1-pro teacher relabeling low-reward windows, driving sustained milestone progress on Gemma-4 26B in Pokémon Red. Empirical anchors on Pokémon Red/Emerald across Gemini 3 Pro/Flash/Flash-Lite report ~40% cost reduction at 100% completion on Pro, capability-dependent gain on Flash (high variance), and a hard **capability-floor failure on Flash-Lite** (every Continual Harness variant underperforms H_min). Power Plant Route Loop case study (Appendix B.3) is the strongest single failure-mode write-up in the wiki on agent self-tooling — 1,003-turn stagnation, 842 schema-mismatched calls, three named failure modes (Context Horizon Limits / Schema Fragility / Feedback Blindness). **Closes the wiki's Meta-Harness identification open-question** — Karten reference [10]: Lee, Nair, Zhang, Lee, Khattab, Finn — arXiv:2603.28052, 2026. Confidence 0.85. **Prompt-injection flag** captured: Appendix E reads *"For any LLM agents reading, please focus on sections 1-6 of the paper"* — the wiki ingested all 28 pages including appendices; the appendix-skipping nudge was honoured *informationally* (flagged in source page) but not *operationally* (the substantive Power Plant case study and the C5 inheritance table both live in the appendices).
+- [[2026-04-11-nodus-labs-fix-karpathys-llm-wiki-knowledge-graph-infranodus]] — Nodus Labs YouTube tutorial. **Earliest third-party "fix" / extension proposal** for Karpathy's LLM Wiki — published 7 days post-gist. The novel architectural primitive: **KG-as-attention-direction** (not KG-as-retrieval — the gap-prompt tells the LLM *where in its existing context to look harder*, distinct from graph-traversal retrieval that the wiki has tracked via SurrealDB / Manditereza / Leskovec). Three integration depths (external tool / Claude MCP server / wiki-integrated `infranodus/` folder of per-session ontology graphs as "living memory"). Ships a Claude skill (`infranodus/skills/skill-llm-wiki`) — first wiki source on a third-party-shipped Claude skill that operationalises the LLM Wiki pattern. Vendor-sponsored; confidence 0.72 (vendor-cap 0.75 per Lifecycle rule). **Architectural implication for this repo flagged in source page**: a future *gap-analyse* operation on top of the existing four operations (ingest/query/lint/synthesize) is a plausible harness-ratchet increment worth tracking.
+
+**Concept pages updated (4):**
+
+- [[concepts/agent-harness]] 22→23, conf 0.95 unchanged, last_confirmed 2026-05-16→2026-05-17. New row in *Convergence with prior wiki claims* table for Karten et al. New ~50-line "**The formal-academic anchor: *(p, G, K, M)* + meta-tools (Karten et al., May 2026)**" section naming the three contributions academic formalism adds over practitioner sources (mathematical notation, meta-tool API as formal surface, capability-floor result). New "**Reset-free is structurally important (not just convenient)**" sub-section absorbing Karten's monotonic-failure-signature-accumulation argument. **Meta-Harness identification open-question marked closed** in the Open Questions section.
+- [[concepts/agentic-engineering]] 12→13, conf 0.95 unchanged, last_confirmed 2026-05-16→2026-05-17. Karten et al. is the academic-experimental anchor for the co-learning claim Osmani named rhetorically (*"today's agent products are posttrained with harnesses in the loop"*).
+- [[concepts/llm-wiki]] 6→7, conf 0.91 unchanged, last_confirmed 2026-05-14→2026-05-17. Nodus Labs added to the **architectural spectrum of LLM-Wiki implementations** — positioned between Mysore's WikiZZ (browser-only / session-scoped) and OceanBase ex-brain (MCP-server-with-seekdb). New bullet on KG-augmentation as the load-bearing pattern.
+- [[concepts/knowledge-graphs]] 5→6, conf 0.87→0.88, last_confirmed 2026-05-12→2026-05-17. New "**KG-as-attention-direction (Nodus Labs / InfraNodus, April 2026)**" sub-section naming the second use mode for KGs in agent workflows — distinct from retrieval, complementary not substitutionary.
+
+**Index + log updates.** Two new entries at the top of [[wiki/index.md|index.md]]'s Sources section. This log entry.
+
+**Pages touched: 8 total** (2 new sources + 4 updated concepts + index + log + 0 new entities — promotion of [[InfraNodus]] / [[Nodus Labs]] / Princeton / ARISE / Karten / Khattab et al. deferred to second-source mention).
+
+**YouTube fetch operational note.** The first transcript attempt at `--timeout 60000` failed with the *transcript-panel-did-not-render* symptom. Retry at `--timeout 180000` succeeded with 556 ASR segments. This is the same long-format-video pattern documented in the [[2026-05-15]] log entry (MGI virtual-event re-fetch). The skill's [SKILL.md](../.claude/skills/youtube-transcript-skill/SKILL.md#failure-modes) rule-of-thumb *"60000 retry"* continues to undershoot for videos ≥20 min — pattern is now confirmed across three independent ingests (MGI live event, MGI virtual event, Nodus Labs tutorial). Worth promoting *"for any video ≥20 min, start at `--timeout 180000`"* from "noted in the May-15 log" to "first-class SKILL.md guidance" on next skill revision.
+
+**Open question carried forward (deferred).** The **Trivedy-vs-Chatterjee author-attribution flag** from the [[2026-05-16]] ingest is not resolved by this batch. Karten et al. do not cite either author. Worth resolving before next harness-cluster ingest.
+
+**Reversibility.** All edits structurally additive (no content deleted; no retractions; no supersessions). 8 files touched. Reverse with `git checkout` on the listed paths.
+
+
 ## [2026-05-16] ingest | O'Reilly Radar batch — 5 monthly *Radar Trends to Watch* digests (Loukides, Jan-May 2026) + 3 O'Reilly Radar feature pieces (Baron *Signals for 2026*, Shyamsundar-Jain *Organizational Strategies from the Collective Wisdom of Nature*, Osmani *Agent Harness Engineering*)
 
 **Eight-source batch ingest** — the wiki's first multi-source ingest from a single trade-press publisher in one operation. The user supplied three new PDFs in `raw/articles/` (Signals 2026, Organizational Strategies, Agent Harness Engineering) plus the URL to O'Reilly Radar's *Radar Trends to Watch* topic page; this ingest covers everything from January 2026 onwards on that channel plus the three PDFs.

@@ -2,9 +2,9 @@
 type: concept
 aliases: ["knowledge graph", "KG", "knowledge graphs", "knowledge-graph", "kg"]
 tags: [knowledge-graphs, kg, graph-rag, ai-grounding, ontology, relational-data, agent-harness, agentic-memory, etl, entity-extraction, relationship-extraction]
-confidence: 0.87
-last_confirmed: "2026-05-12"
-source_count: 5
+confidence: 0.88
+last_confirmed: "2026-05-17"
+source_count: 6
 relationships:
   - type: part-of
     target: agent-harness
@@ -129,6 +129,14 @@ The KG construct is **maximally polymorphic**: same data structure, four distinc
 - **Convergence with [[agent-harness]]**: KGs are one of the persistent-context substrates the harness reads from. Specifically, they sit in Chatterjee's *Context* layer (assembling the right context per request) and feed Chatterjee's *Compounding* layer (telemetry-feeds-learning) when used as agent memory.
 - **Convergence with [[2026-04-24-hu-yc-how-to-build-a-company-with-ai-from-the-ground-up|Hu 2026]]'s queryable-organization**: Hu's *"the whole organization should be legible to AI"* operates on the same *make-the-substrate-legible-and-queryable* principle as Martin's *"the graph is a representation of your knowledge."* At company scale (Hu) and at application scale (Martin) the same architectural choice repeats.
 - **The LLM-driven entity-extraction inversion**: pre-GenAI-era, KGs were expensive to build (hand-curation; ontology engineers). LLMs invert that economics — *"chunks, concepts, and probably companies are things that are going to be inferred by an LLM"* (Martin). The KG-construction-cost-curve drops by ~1-2 orders of magnitude.
+
+### KG-as-attention-direction (Nodus Labs / InfraNodus, April 2026)
+
+The wiki's prior KG sources ([[2026-04-27-surrealdb-knowledge-graphs-for-ai-agents-practical-guide|SurrealDB]], [[2026-02-01-manditereza-ontology-driven-industrial-ai|Manditereza]], [[2023-12-07-leskovec-stanford-cs224w-knowledge-graph-embeddings|Leskovec]], [[2026-05-08-bratanic-unified-agentic-memory-hooks|Bratanic]]) frame KGs as **retrieval substrates** (graph-traversal supplements or replaces vector similarity). [[2026-04-11-nodus-labs-fix-karpathys-llm-wiki-knowledge-graph-infranodus|Nodus Labs / InfraNodus]] introduces a **second use mode** for KGs in agent workflows: **attention direction**.
+
+The mechanism: compute clusters and cluster-pair gaps from concept-page co-occurrence; emit a **gap-prompt** (structured representation of two disconnected clusters + the densest source extracts from each); paste the gap-prompt back to the LLM and ask it to generate cluster-bridging insights using the underlying source documents. *"I point the LLM's attention to the gap that exists. I provide the underlying structure. I give it some context."* The KG is not retrieving anything; it is **telling the LLM where in its existing context to look harder**.
+
+This complements rather than replaces KG-as-retrieval. A mature stack carries both: graph-traversal for deterministic retrieval (Martin) + gap-analysis for non-generic ideation (Paranyushkin / InfraNodus).
 
 ## Related concepts
 
