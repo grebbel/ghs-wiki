@@ -4,6 +4,7 @@ aliases: ["micro-productivity trap", "micro-productivity-trap", "offering lock-i
 tags: [micro-productivity-trap, AI-transformation, EBITDA, process-redesign, workflow-redesign, enterprise-ai, organizational-change-vs-tech-implementation]
 confidence: 0.95
 last_confirmed: "2026-05-14"
+accessed_at: "2026-05-17"
 source_count: 14
 relationships:
   - type: instance-of
@@ -12,6 +13,8 @@ relationships:
   - type: contradicts
     target: automation-vs-augmentation
     via: "process lock-in = automation without redesign; reinvent-the-business resists this trap"
+quality_score: 0.79
+quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)']
 ---
 
 # Micro-Productivity Trap

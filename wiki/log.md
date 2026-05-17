@@ -4,9 +4,288 @@ Reverse-chronological record of wiki operations — **newest entry at the top, o
 
     ## [YYYY-MM-DD] <op> | <title>
 
-Permitted operations: `ingest`, `query`, `lint`, `synthesize`, `refactor`, `bulk-refactor` (added v0.2 — for any operation touching >10 wiki pages, with affected slug list and reversibility note). See [the design doc, §9.2](../docs/superpowers/specs/2026-04-28-llm-wiki-design.md#92-wikilogmd) for details.
+Permitted operations: `ingest`, `acquire`, `query`, `lint`, `synthesize`, `refactor`, `bulk-refactor` (added v0.2 — for any operation touching >10 wiki pages, with affected slug list and reversibility note). `acquire` was added in v0.9 (2026-05-17) for sessions that land raw files but defer processing to a later session; the umbrella `ingest` op stays for the typical Acquire+Process-in-the-same-session case. See [the design doc, §9.2](../docs/superpowers/specs/2026-04-28-llm-wiki-design.md#92-wikilogmd) for details.
 
 Ordering flipped on 2026-05-12 (GH [#3](https://github.com/businessdatasolutions/ai-wiki/issues/3)): the file used to grow from the top; it now grows from the bottom. Old entries are unchanged; only their position relative to newer entries is reversed. Tools that read the log should take the first N entries to get the most recent.
+
+---
+
+## [2026-05-17] refactor | quality-score gap-fix on [[enterprise-ai-adoption]] (0.60 → 1.00) + `/wq` accessed_at bumps
+
+Follow-up to a `/wq` query about AI-native organization design. The query landed on the wiki's central concept page [[enterprise-ai-adoption]] (then `quality_score: 0.60`); the user asked me to "close the gaps." Three of four gaps surfaced in the answer require new-source ingestion (academic change-management bridge to Carucci, empirical compounding-cycle measurement, post-GenAI MIT CISR survey wave) and were flagged for deferral. The fourth — internal schema discipline on [[enterprise-ai-adoption]] — was closable in-session.
+
+**Issues fixed** (per [`scripts/quality-score.mjs`](../scripts/quality-score.mjs) rubric):
+
+- Renamed `## Debates / contradictions` → `## Debates and supersession` to satisfy the v0.2 Structure check (concept pages with `source_count > 1` must carry the canonical heading; 20 of 100 rubric points hinged on this single rename — 10 Structure + 10 Cross-consistency).
+- Filled the empty `## Key claims` H2 (`0 chars` between header and next H3) with an orientation paragraph indexing the six empirical lenses (breadth / depth / use-case mix / financial impact / productivity / workforce) and embedding the missing `[[jagged-frontier]]` body wikilink that the v0.3 *body-wikilink rule* required to match the `uses → jagged-frontier` relationship in frontmatter.
+- Stripped six dangling-entity wikilinks (`[[Guardian Life Insurance]]`, `[[Italgas]]`, `[[Ford]]`, `[[Harvey]]`, `[[GitHub Copilot]]`, `[[Julie Baron]]`) per the [author-entity promotion rule](../CLAUDE.md#author-entity-promotion) — all six are single-source mentions that should remain `**bold**`/plain text until a second source lands.
+- Stripped `[[Claude Code]]` similarly, but **flagged it as a clear entity-promotion candidate**: 22 source-page mentions across the wiki, far above the 2-source threshold. Entity-page creation is a separate ingest-style task, not a schema-fix.
+
+**Score progression**: `0.60` (29/30/1) → `1.00` (40/30/30). Maximum on every dimension.
+
+**Accessed_at bumps** (from the upstream `/wq` query):
+
+- [[concepts/enterprise-ai-adoption]] — bumped to 2026-05-17 by [`scripts/wiki-query.mjs`](../scripts/wiki-query.mjs); §Retention reinforcement signal.
+- [[concepts/micro-productivity-trap]] — same.
+- [[Y Combinator]] — same.
+
+**Reversibility**: low-risk. Three files touched; no relationships restructured; no source pages affected; no schema rules edited.
+
+**Deferred (require new sources)**:
+
+- Academic change-management bridge between [[2026-05-07-carucci-resistance-as-data|Carucci 2026]] and the Kotter / Lewin literature — no academic change-management primary source is in the corpus yet.
+- Quantitative measurement of the compounding cycle (Kiron-Schrage slope; Chatterjee telemetry → harness-adjustment rate) — no empirical anchor available.
+- Post-GenAI MIT CISR Future Ready Survey wave to replace the 2022 baseline (N=721) — would require a 2025/2026 CISR wave.
+
+## [2026-05-17] refactor | v0.5 quality-slice follow-up — wiki-query wrapper + `/wq` slash command + MCP route documented
+
+User-driven follow-up to the v0.5 quality slice that landed earlier today: provide an **API-shaped path** so agents (and humans via slash command) can hit the wiki with one operation that bundles *qmd query + accessed_at reinforcement*. Closes the deferral §Search marked as "MCP integration would auto-bump as part of `qmd_query` tool semantics; until then `bump-accessed.mjs` is the manual path" — but with a wrapper rather than full MCP, because qmd's MCP server doesn't know about the wiki's reinforcement rule.
+
+**Three integration routes, documented in §Search:**
+
+1. **`/wq` slash command** ([`.claude/commands/wq.md`](../.claude/commands/wq.md)) — ergonomic interactive frontend. `/wq <query>` dispatches to the wrapper, which runs `qmd query --json -n 8`, prints results, and auto-bumps. Language-agnostic (Dutch query → Dutch answer).
+2. **CLI wrapper** ([`scripts/wiki-query.mjs`](../scripts/wiki-query.mjs), 110 lines) — shell-friendly. Flags: `-n <N>` (default 8), `--no-bump` (skip reinforcement), `--json` (raw qmd output for piping). Sources in results are skipped from the bump pass (they don't decay).
+3. **qmd MCP server** — agents in the repo can get direct `query` / `get` / `multi_get` / `status` tools by adding `.mcp.json` at the repo root with the qmd server config (documented in §Search). **Caveat:** MCP route doesn't auto-bump — qmd's MCP server doesn't know the wiki's reinforcement rule. Agents using MCP directly must still call `bump-accessed.mjs` afterward to honour §Retention.
+
+**Why three routes instead of one MCP install:**
+
+- The slash command and wrapper bundle *query + bump* as one operation — that's the §Retention semantic.
+- qmd's MCP server returns results but doesn't bump. Direct MCP use trades the bundling for direct tool access. Trade-off worth offering.
+- Auto-mode classifier (correctly) blocks the agent from writing `.mcp.json` because it registers a persistent agent-control config. The schema documents what to put there; the user copies the JSON block to `.mcp.json` at the repo root manually. **One-time, user-authorised.**
+
+**Schema changes — [`CLAUDE.md`](../CLAUDE.md):**
+
+- §Search §"Bumping `accessed_at` after a query" replaced with a three-route documentation block (slash command / wrapper / MCP), the manual `bump-accessed.mjs` fallback noted for ad-hoc cases.
+- The verbatim `.mcp.json` block is included in §Search so the user has the exact config to drop in.
+
+**Validation:**
+
+- `node scripts/wiki-query.mjs -n 3 "agent harness production-grade"` returned `Trivedy LangChain` (#1, score 0.93), `AI Agents` (#2, 0.56), `Kokane` (#3, 0.47). One concept in the result — bump worked. ✓
+- Dutch query `"wat zegt de wiki over dynamische capaciteiten van organisaties"` returned Dynamic Capabilities + Warner & Wäger Process Model + Warner & Wäger source — *both concepts auto-bumped from older dates to 2026-05-17*. ✓
+- Re-run of the same Dutch query: bump idempotent — both pages reported as "already at 2026-05-17", 0 bumped. ✓
+- `--json` flag passes qmd's raw output unchanged for downstream piping. ✓
+- Slash command file `.claude/commands/wq.md` reads as the §wq spec (description + workflow steps + conventions).
+
+**What is NOT in this patch:**
+
+- **`.mcp.json` was not created by tooling.** The auto-mode classifier (correctly) blocks agent self-modification of MCP server configs. The user adds it manually after deciding to enable the MCP route.
+- **No global qmd install.** Wrapper uses `npx --yes @tobilu/qmd ...` which adds ~1s startup overhead per call. Acceptable for query workloads. A user wanting lower latency can `npm install -g @tobilu/qmd` and edit the wrapper.
+- **No MCP-side bump.** Even after MCP is enabled, agents using MCP directly bypass the reinforcement signal. The `/wq` path bundles both; that's the recommendation.
+
+**Files changed:**
+
+- [`scripts/wiki-query.mjs`](../scripts/wiki-query.mjs) — new, 110 lines.
+- [`.claude/commands/wq.md`](../.claude/commands/wq.md) — new, slash command spec.
+- [`CLAUDE.md`](../CLAUDE.md) — §Search bump-after-query replaced with three-route documentation.
+- This log entry.
+- No wiki content pages touched.
+
+**Why a "refactor" log op, not "bulk-refactor".** Three files (new wrapper, new slash command, one §Search rewrite). The earlier quality slice was `bulk-refactor` because it touched 30 wiki pages. This patch is paper + tooling only.
+
+**Reversibility.** `git revert` cleanly removes both new scripts and the §Search rewrite. The `.mcp.json` (if user added it) is independent and stays.
+
+**Next.** Same as before: v0.8 (Plan operation) per the renumbered roadmap. The wrapper script is in place; v0.8's gap detector can call qmd via the same `--json` interface to identify under-cited concepts.
+
+---
+
+## [2026-05-17] bulk-refactor | v0.5 quality slice — §Quality + `quality_score` on 30 pages + helpers
+
+Closes v0.5. Lands the **mechanical quality scorer** and the **`accessed_at` bump helper** that together complete the lifecycle / search / quality triad. LLM-as-judge quality scoring is deferred to v0.6 per the original plan; everything mechanical (and the procedural plumbing the v2 spec demands) ships here.
+
+**Schema changes — [`CLAUDE.md`](../CLAUDE.md):**
+
+- §Lifecycle frontmatter contract: **concepts and syntheses** additionally carry `quality_score: 0.0–1.0` and `quality_notes: [...]` (the latter optional, omitted at ceiling). These are the **only frontmatter fields the schema permits tooling to write**, and only via [`scripts/quality-score.mjs`](../scripts/quality-score.mjs) — explicit user invocation, idempotent, derived.
+- §Lifecycle `accessed_at` description extended: **syntheses also carry the field** (omission caught by the new scorer; see *retention-slice bug-find* below).
+- New top-level **§Quality** section (between §Retention and §Search). Covers: what gets scored (concepts + syntheses, not entities, not sources, not threads), the rubric with weights, thresholds, how it runs, and **the auto-write exception** — narrow on purpose: derived, deterministic, user-triggered.
+- §Retention tau-table extended: **90 days for concepts AND syntheses, 365 days for entities, ∞ for sources** (syntheses decay like concepts because they are claim-bearing, not evidence).
+- §Search gains a "Bumping `accessed_at` after a query" sub-section pointing at the new helper.
+
+**Tooling — new scripts in [`scripts/`](../scripts/):**
+
+- **[`scripts/quality-score.mjs`](../scripts/quality-score.mjs)** — 260 lines. Walks `wiki/concepts/` and `wiki/syntheses/`, scores three dimensions (structure 0.40 / citation density 0.30 / cross-consistency 0.30), writes `quality_score` + `quality_notes` back to frontmatter. Idempotent (no-ops via content compare). Flags: `--dry-run` (print scores, no write), `--page <slug>` (single page). Knows about all wiki slugs (concepts + entities + sources + syntheses + threads + aliases) for the cross-consistency check.
+- **[`scripts/bump-accessed.mjs`](../scripts/bump-accessed.mjs)** — 110 lines. Procedural helper for the v0.5 §Retention reinforcement signal: `node scripts/bump-accessed.mjs <slug> [<slug> ...]` bumps `accessed_at` to today on concept/entity/synthesis pages. Resolves slugs against the three searchable dirs; rejects sources (they don't decay); idempotent (already-current is a no-op). Pending MCP integration, this is the manual path called out in §Search.
+
+**Migration — first quality-score pass over 30 pages:**
+
+- 27 concepts + 3 syntheses scored. Initial distribution: **13 pages ≥0.85** (good), **15 pages 0.65–0.85** (acceptable, addressable opportunistically), **2 pages <0.65** ([`enterprise-ai-adoption`](../wiki/concepts/enterprise-ai-adoption.md) at 0.60 — 7 dangling entity wikilinks + missing Debates section; [`ai-benchmarks`](../wiki/concepts/ai-benchmarks.md) at 0.64 — similar pattern). Both <0.65 pages will be picked up by the v0.4 SessionStart hook's surfacing of low-quality pages.
+- **Retention-slice bug-find:** the quality scorer flagged "missing frontmatter: accessed_at" on all three synthesis pages. The v0.5 retention-slice seed script targeted only `wiki/concepts/` and `wiki/entities/` — syntheses were silently excluded. Fixed by extending [`scripts/seed-accessed-at.mjs`](../scripts/seed-accessed-at.mjs)'s target list and seeding the three syntheses. **This is exactly the value-add of a mechanical scorer: a six-line omission in an earlier migration's scope, invisible to a human reviewer, surfaced by deterministic check.** Documented as the rationale for adding syntheses to the `accessed_at` contract.
+- **Wikilink-regex bug-find** during scorer development: markdown tables use `[[slug\|alias]]` (backslash-escaped pipe) — the base regex `\[\[([^\]|]+)(?:\|[^\]]*)?\]\]` captures the trailing backslash as part of the slug, producing spurious "broken wikilink" reports. Fixed with a `normTarget()` helper that strips trailing backslashes. **Worth back-porting to [`scripts/lint-page.mjs`](../scripts/lint-page.mjs)** which uses the same pattern — deferred to a separate refactor entry.
+
+**Validation:**
+
+- `node scripts/quality-score.mjs` exits 0; 30 pages scored, frontmatter written. Re-run = 0 writes, 30 unchanged (idempotent). MD5 of any individual page unchanged across re-runs. ✓
+- `node scripts/quality-score.mjs --dry-run` produces the same distribution without writing. ✓
+- `node scripts/quality-score.mjs --page agent-harness` scores a single page and prints its notes. ✓
+- `node scripts/bump-accessed.mjs --dry-run agent-harness ai-agents llm-wiki` correctly: skips already-current (`agent-harness`, `llm-wiki`), bumps stale (`ai-agents` from 2026-05-08). ✓
+- `node scripts/bump-accessed.mjs --dry-run "Erik Brynjolfsson"` resolves entity with whitespace in filename. ✓
+- `node scripts/bump-accessed.mjs --dry-run 2026-05-15-osmani-agent-harness-engineering` rejects source slug (not found in concept/entity/synthesis dirs — sources don't decay). ✓
+- `node scripts/lint-confidence.mjs` exits 0; 113 lifecycle pages, 0 missing fields, 0 stale, 0 out-of-range, post-all-v0.5-slices.
+
+**The auto-write exception, justified.**
+
+The v0.4 §Hooks contract forbids automation from editing wiki content pages. `quality_score` and `quality_notes` are the **only fields** the schema permits tooling to write to, and even then **only via explicit user invocation** of `quality-score.mjs` — never from a hook. The exception is narrow: derived (not editorial), deterministic (same input → same output), user-triggered. Any future "auto-write" proposal must clear the same three bars; the precedent is documented in §Quality.
+
+**Cuts vs. `llm-wiki-v2-plan.md` v0.5 spec:**
+
+- **No LLM-as-judge** — v0.6 turf. The mechanical scorer is the structural floor; LLM-as-judge will overlay a content-correctness rubric.
+- **No MCP integration for qmd** — deferred to v0.6 or whenever it becomes friction. Until then, `bump-accessed.mjs` is the manual path. The retention reinforcement signal works, it just isn't yet automatic on every search hit.
+- **No scheduled hook** for daily retention sweep. Per §Hooks, hooks may not edit content; `quality_score` writes happen by explicit `node scripts/quality-score.mjs` call. A read-only retention-candidate surfacing hook is a v0.6+ candidate.
+
+**Files changed:**
+
+- [`CLAUDE.md`](../CLAUDE.md) — §Lifecycle (quality fields, syntheses-also-decay), new §Quality section, §Retention tau-table extension, §Search bump-after-query sub-section, §"Current state" v0.5-done update.
+- [`scripts/quality-score.mjs`](../scripts/quality-score.mjs) — new.
+- [`scripts/bump-accessed.mjs`](../scripts/bump-accessed.mjs) — new.
+- [`scripts/seed-accessed-at.mjs`](../scripts/seed-accessed-at.mjs) — extended target list (`syntheses` added) and header comment.
+- 27 concept pages + 3 synthesis pages — `quality_score` and `quality_notes` frontmatter fields added.
+- 3 synthesis pages — `accessed_at` seeded (retention-slice catch-up).
+- This log entry.
+
+**Reversibility.** `git revert` removes the schema sections, both scripts, the frontmatter quality fields, and the synthesis `accessed_at` seeds in one operation.
+
+**Where v0.5 lands the wiki.** Lifecycle, search, and quality now form a closed loop: every concept/synthesis page has a confidence (how sure), a freshness signal (`accessed_at` + decay tau), a quality score (how well-structured), and is searchable via hybrid retrieval that integrates all three. The bookkeeping that would have crushed a human wiki maintainer at 200 pages is now mechanical.
+
+**Next.** Per the renumbered roadmap in [`llm-wiki-v2-plan.md`](../llm-wiki-v2-plan.md): **v0.8 (Plan operation)** — gap-driven todo generation, sourced from InfraNodus. Then v0.6 (crystallization + LLM-as-judge), then v0.7 (output formats + scoping). v0.8 is well-positioned now because the graph (v0.3), search (v0.5 search-slice), and quality-score (this slice) together give the gap detector three orthogonal signals to work from.
+
+---
+
+## [2026-05-17] refactor | v0.5 search slice — qmd installed, wiki indexed, §Search added
+
+Lands the **search half of v0.5**. The wiki has crossed v2's "starts to creak past 100–200 pages" threshold (now 205 pages indexed including `index.md` + `log.md`), and the discovery surface for queries has shifted from "read `index.md` end-to-end" to "narrow via search, then drill". Sourced from the v0.5 search-slice in [`llm-wiki-v2-plan.md`](../llm-wiki-v2-plan.md); the retention slice landed earlier today as its own bulk-refactor entry below.
+
+**Tool chosen: [qmd](https://github.com/tobi/qmd) (`@tobilu/qmd` on npm).**
+
+- Karpathy's [`llm-wiki.md`](../llm-wiki.md) names qmd as a candidate; v2 leaves the engine unspecified. qmd was selected for: (a) **fully local** — embedding + reranking via [`node-llama-cpp`](https://github.com/withcatai/node-llama-cpp) with GGUF models, no OpenAI/Anthropic API exposure, (b) hybrid BM25 + vector + LLM-rerank natively, (c) MCP server interface available for future Claude Code integration, (d) installable via `npx @tobilu/qmd` so no global commitment.
+- npm package name is **`@tobilu/qmd`**, not `qmd` (the bare name resolves to an unrelated placeholder). Documented in [§Search](#search) so future installs don't mis-key.
+
+**What was installed and indexed:**
+
+- qmd v2.1.0 via `npx --yes @tobilu/qmd <command>` (no global install).
+- Collection registered: `ai-wiki` rooted at `./wiki`, glob `**/*.md`. **205 documents** indexed for BM25 (the 27 concepts + 83 entities + 86 sources + 4 threads + 3 syntheses + `index.md` + `log.md`).
+- Context-string registered for the collection: schema summary + frontmatter contract (so qmd's LLM reranker has framing when returning results to a calling LLM).
+- Models cached at `~/.cache/qmd/models/` (outside the repo):
+  - `embeddinggemma-300M-Q8_0.gguf` — 333MB, Google's lightweight embedding model. Used by `qmd embed` / `qmd vsearch` / `qmd query`.
+  - `qmd-query-expansion-1.7B-q4_k_m.gguf` — 1.28GB, query-expansion model used by `vsearch` / `query` to broaden the search vocabulary before retrieval. Download in progress as of log entry write; first `vsearch` will block on completion (~5–8 min one-time).
+- Embeddings: **1466 chunks** generated across the 205 documents in 2m 40s. qmd chunks long pages at ~512 tokens so a long synthesis doesn't collapse into one averaged vector; each chunk is independently retrievable.
+
+**Schema changes — [`CLAUDE.md`](../CLAUDE.md):**
+
+- New top-level **§Search** section (after §Retention, before §Graph). Covers: index location (qmd's `~/.cache/qmd/models/`, not the repo), the collection mapping, **when to use qmd vs `index.md`** (5-page heuristic), the cheat-sheet for `search` / `vsearch` / `query` / `get` / `multi-get`, re-embedding after writes (`npx @tobilu/qmd embed`), **the §Retention integration rule** (qmd results re-ranked by `effective_confidence` at the answer-synthesis layer), and the cuts vs v2.
+- §"Current state" amended to note that v0.5 retention + search are live, with the explicit deferral of `quality_score` (the third leg of the v0.5 spec).
+
+**Validation:**
+
+Three test queries run after the embedding pass and the 1.28GB query-expansion model finished downloading:
+
+- **Test 1 — `qmd search "agent harness"` (BM25)** returns the expected top-3: the LangChain "Improving deep agents with harness engineering" source, the [`agent-harness`](../wiki/concepts/agent-harness.md) concept page itself, and the Osmani agent-harness-engineering source. **Top-3 hits exactly match what `index.md` would suggest a human reviewer to read first.** ✓
+- **Test 2 — `qmd vsearch "hoe zorgen we dat AI niet kapot gaat in productie"` (pure vector, Dutch paraphrase)** returned **the wrong cluster**: Thompson NYT *Workers Letting AI Do Their Jobs*, [`industry-4-0`](../wiki/concepts/industry-4-0.md), [`ai-employment-effects`](../wiki/concepts/ai-employment-effects.md), MIT Tech Review *AI-enabled enterprise*, MIT 6.S191 *Three Laws of AI*. None of the harness/runtime concepts surfaced. **Why this happened:** the Dutch "in productie" is lexically ambiguous — production-deployment vs workplace-productivity — and the pure vector model resolved to the labor/employment semantic cluster rather than the systems-engineering one. This is a textbook over-generalisation by a vector model when faced with a paraphrased ambiguous query. ✗ for vsearch on this query, **but exactly the failure mode v2 names as the reason for hybrid search.**
+- **Test 3 — `qmd query "what makes an agent harness production-grade"` (hybrid + LLM-rerank)** returned, in order: [`ai-agents`](../wiki/concepts/ai-agents.md), [`agent-harness`](../wiki/concepts/agent-harness.md), [`agentic-engineering`](../wiki/concepts/agentic-engineering.md), Osmani *Agent Harness Engineering*, [`vibe-coding`](../wiki/concepts/vibe-coding.md). **All five top hits are directly relevant to the question.** The BM25 leg of the hybrid pipeline matched the literal "agent harness" term that pure vector had dropped, and the LLM-reranker chose the harness/runtime interpretation over labor/employment. ✓
+
+The Test 2 / Test 3 contrast is the empirical case for `query` as the default for complex semantic queries — `vsearch` alone is unreliable when query phrasing is ambiguous, but the hybrid pipeline's BM25 backbone catches what vector misses.
+
+- `node scripts/lint-confidence.mjs` exits 0 after both today's slices (retention + search). 113 lifecycle-bearing pages, 0 missing fields, 0 stale, 0 out-of-range.
+
+**What is NOT in this slice (and why):**
+
+- **No `quality_score` field, no `scripts/quality-score.mjs`.** v0.5 spec's third leg. Deferred to a quality-slice session so the search-slice ships now and quality scoring lands together with its LLM-judge cousin (v0.6 turf anyway).
+- **No scheduled hook that bumps `accessed_at` on query-time reads.** §Search documents the gap: qmd's CLI can't observe what the calling LLM subsequently consumed, the PostToolUse hook sees only edits, and Claude Code does not expose a "page read" event the session-end hook could scan. Cleanest path is **MCP integration** (qmd ships a server; wire it as a Claude Code MCP tool, then `qmd_query` calls can bump `accessed_at` themselves as part of the tool's contract). Deferred to the quality slice or whenever it becomes friction. **Until then:** `accessed_at` is bumped manually by Process step 6 (alongside `last_confirmed`) on ingest-time touches.
+- **No re-embed automation.** A hook that calls `qmd embed` after every wiki edit would thrash. Re-embedding is part of the manual ingest-completion checklist — a single `npx @tobilu/qmd embed` after a batch of ingests, taking seconds because qmd hashes documents and only re-embeds changed ones.
+- **No `quartz.config.ts` change.** qmd lives outside the published-site build. No new Quartz extension.
+
+**Cuts vs. `llm-wiki-v2.md`:**
+
+- **No external embeddings API.** v2 is API-agnostic; qmd's local GGUF route honours the spirit (everything on-device) without OpenAI/Anthropic exposure or recurring cost.
+- **No graph-aware retrieval inside qmd.** v2 envisions BM25 + vector + graph as one fused retrieval. This slice merges qmd's BM25+vector with the wiki's typed graph (`wiki/.graph.json`) **at the answer-synthesis layer**, not inside the engine. Pragmatic, revisable.
+- **No four-tier consolidation pipeline.** Per the v2 plan's original cuts, `raw/` → sources → concepts/entities → `CLAUDE.md` remains the implicit tier mapping. No new directory.
+
+**Files changed:**
+
+- [`CLAUDE.md`](../CLAUDE.md) — new §Search section + §"Current state" amendment.
+- This log entry.
+- No wiki page content touched. No new script in `scripts/` (qmd's own CLI is the interface).
+
+**Network/disk cost (one-time):** 333MB + 1.28GB ≈ 1.6GB model cache at `~/.cache/qmd/models/`, plus qmd's own index store (location: qmd-managed, not in repo). Per-machine cost; portable via re-running `qmd collection add` + `qmd embed` on another machine.
+
+**Next.** v0.5 **quality slice** (LLM-judge `quality_score` + MCP integration for `accessed_at` auto-bump) — this finishes v0.5 fully and unblocks v0.6 (crystallization, which depends on `quality_score`). Then **v0.8 (Plan operation)** per the renumbered roadmap, then v0.6 → v0.7. Begroot: 1 sessie voor de quality slice (mits qmd MCP integratie zonder verrassingen werkt).
+
+---
+
+## [2026-05-17] bulk-refactor | v0.5 retention slice — §Retention added + `accessed_at` seeded on 110 concept/entity pages
+
+Lands the **retention half of v0.5** per [`llm-wiki-v2-plan.md`](../llm-wiki-v2-plan.md). The search half (qmd / hybrid retrieval) and the quality half (`quality_score` + `quality-score.mjs`) are deferred to a separate v0.5 search-slice session — they're nutteloos zonder hun tooling, so it's cheaper to land them as a single package later. Today's slice is paper + one deterministic seed.
+
+**Schema changes — [`CLAUDE.md`](../CLAUDE.md):**
+
+- §Lifecycle §"Frontmatter contract (concepts and entities)" gains a fourth field: **`accessed_at: YYYY-MM-DD`**. Semantics: the date the page was last *read into context*, distinct from `last_confirmed` (which is bumped only on *write* — i.e. when an ingest reinforces the page). Sources do not carry `accessed_at` (sources don't decay).
+- New top-level **§Retention** section between §Lifecycle and §Graph. Contents:
+  - **The decay curve.** `effective_confidence = stored_confidence × exp(-days_since_access / tau)`, with tau = 90 days for concepts, 365 for entities, ∞ for sources. Concepts decay ~4× faster than entities because conceptual framings shift faster than the people, orgs, and products they describe. `effective_confidence` is computed at lint-time and never overwrites the stored `confidence:` value.
+  - **What decay does and does not do.** Lint surfaces decay candidates (pages where `effective_confidence < 0.5`), search rank drops low-effective-confidence pages (lands with the search slice), SessionStart hook can highlight them. Decay never deletes pages, never auto-writes `status: stale`, never overwrites `confidence:`, never touches source pages.
+  - **The reinforcement signal.** `accessed_at:` bumps on: (1) ingest touching the page (same trigger as `last_confirmed`), (2) query reading the page into context (lands with search slice — a scheduled hook will bump on search-returned pages), (3) manual re-confirmation during lint. Pages where `accessed_at < last_confirmed` are *read-aged*: factually current but not actively engaged with.
+  - **Cuts vs. `llm-wiki-v2.md`.** No auto-deletion; no per-page tau override (use `confidence:` if a concept should resist decay); no scheduled retention sweep that auto-marks pages stale. Hooks may not edit content — per [§Hooks](#hooks), confirmed.
+
+**Migration — `accessed_at` seed on 110 pages:**
+
+- New script [`scripts/seed-accessed-at.mjs`](../scripts/seed-accessed-at.mjs) — idempotent, deterministic seed: `accessed_at := last_confirmed` (verbatim, quote style preserved). Skips pages where `accessed_at:` already exists; skips pages without `last_confirmed:`; skips pages without frontmatter. Re-run safe.
+- Dry-run output before write: 110 scanned, 110 would-be seeded, 0 already-present, 0 no-last-confirmed, 0 no-frontmatter. Write was run after dry-run inspection.
+- Wet-run results: 110 pages seeded (27 concepts + 83 entities). Spot-checked: [`agent-harness`](../wiki/concepts/agent-harness.md) (concept, `accessed_at: "2026-05-17"` placed directly after `last_confirmed: "2026-05-17"`, quote style preserved), [`Erik Brynjolfsson`](../wiki/entities/Erik%20Brynjolfsson.md) (entity with whitespace in filename, no issue).
+- Idempotence verified by re-run: 0 new seeds, 110 already-present.
+- Post-seed lint: `node scripts/lint-confidence.mjs` exits 0; confidence distribution unchanged (74 pages 0.7–0.85, 39 pages 0.85–1.0); 0 pages missing lifecycle fields; 0 pages stale.
+
+**Why a script and not a supervised batch.** The v2 plan's "supervised batches of ~10" rule applies to migrations with *judgment* (confidence values, relationship targeting). This seed is deterministic — `accessed_at := last_confirmed`, no value to defend, no edge case to weigh. The script's idempotence + verbatim-copy + spot-check audit trail is defensible. The same rule would forbid blind-scripting a confidence migration (and v0.2 honoured that).
+
+**Cuts vs. the full v0.5 spec — what is NOT in this slice:**
+
+- No qmd install. No `§Search` section. No `index.md → qmd` ranker integration. — *Lands with the search slice.*
+- No `quality_score:` field on concepts. No `scripts/quality-score.mjs`. — *Lands with the quality slice (search-slice session or its own session).*
+- No scheduled hook that bumps `accessed_at` on query-time page reads. The field exists; the bump-on-read mechanism lands with the search slice. Until then, `accessed_at` is bumped *manually* during ingest-time touches (alongside `last_confirmed`) and *automatically* by the same v0.2 ingest discipline that bumps `last_confirmed`. **Action item for §Process step 6:** when bumping `last_confirmed` on a touched concept/entity page, bump `accessed_at` to the same value. This is a procedural-only update (no CLAUDE.md edit needed because §Lifecycle's frontmatter contract already lists `accessed_at` as a required field; ingest-time touches that don't bump it will be flagged by the lint script when it learns the field — deferred to the quality slice).
+- No daily retention-candidate scan as a hook. The §Retention rules are documented but unmonitored until the search slice wires up the lint extension.
+
+**Files changed:**
+
+- [`CLAUDE.md`](../CLAUDE.md) — §Lifecycle frontmatter contract + new §Retention section.
+- [`scripts/seed-accessed-at.mjs`](../scripts/seed-accessed-at.mjs) — new, 67 lines.
+- 110 wiki pages under `wiki/concepts/` (27) and `wiki/entities/` (83) — `accessed_at:` field added.
+- This log entry.
+
+**Reversibility.** `git revert <this-commit>` cleanly removes the `accessed_at` field from all 110 pages, the §Retention section from CLAUDE.md, and the seed script. The frontmatter shape returns to the pre-v0.5 contract.
+
+**Next.** v0.5 search slice — qmd installation (or MCP equivalent), `§Search` regel in CLAUDE.md, `quality_score` field + `scripts/quality-score.mjs`, scheduled hook for `accessed_at` bump on search-returned pages. Begroot op 1–2 sessies. After that: v0.8 (Plan operation) per the renumbered roadmap, then v0.6 (crystallization) which depends on `quality_score`.
+
+---
+
+## [2026-05-17] refactor | v0.9 — split §Ingest into §Acquire + §Process
+
+Schema-only refactor. Names the two phases of the ingest operation that this repo has been running de facto since the [`youtube-transcript-skill`](../.claude/skills/youtube-transcript-skill/SKILL.md) became the canonical front end for video sources: **Acquire** lands a raw file in a typed `raw/` subfolder (and stops); **Process** reads `raw/` and writes `wiki/`. The split was sourced from the InfraNodus `skill-llm-wiki/SKILL.md` (Phases 8 + 9), which is the only upstream that names it; neither Karpathy's `llm-wiki.md` nor the agentmemory `llm-wiki-v2.md` distinguishes the two phases. Sourced and slotted as a single-session paper-only release in the 2026-05-17 update to [`llm-wiki-v2-plan.md`](../llm-wiki-v2-plan.md).
+
+**Changes to [`CLAUDE.md`](../CLAUDE.md):**
+
+- §"The four operations" intro now flags Acquire/Process as Ingest's two sub-phases. Operation count stays at four (Ingest / Query / Lint / Synthesize); Ingest is now an umbrella over Acquire + Process rather than a single linear flow.
+- New §"Ingest = Acquire + Process" pointer paragraph between the intro and the sub-sections.
+- New **§Acquire** sub-section (5 numbered points): typed `raw/` subfolder rule, convert-before-landing for PDFs / YouTube / `.docx` / `.epub` / `.html`, the **acquire-time skill contract** (a skill emits a raw file at `raw/<type>/<slug>.md` with canonical YAML frontmatter), re-runnability of acquisition, and the `acquire | ...` log-op convention for standalone-Acquire sessions. The video-format frontmatter contract at [§"Pre-flight check (videos): the YAML frontmatter contract"](../CLAUDE.md#pre-flight-check-videos-the-yaml-frontmatter-contract) is now referenced from §Acquire as the canonical reference implementation for future acquire-time skills (PDF→markdown, web clipper integration, podcast transcription).
+- Existing **§Ingest** body (steps 0–9) renamed to **§Process** unchanged in substance; one sentence added to the section intro explaining that Process can run same-session-with-Acquire (the typical case) or stand alone on an earlier-acquired file. Step 8 amended to spell out the log-op choice: `ingest | ...` for the umbrella case, `acquire | ...` only for the standalone-Acquire case.
+- §"Current state" `<op>` enum extended to `ingest | acquire | query | lint | synthesize | refactor | bulk-refactor`. Section also bumped from "six staged versions (v0.2 → v0.7)" to "eight staged versions (v0.2 → v0.9)" to reflect the 2026-05-17 plan update.
+
+**Changes to [`wiki/log.md`](../wiki/log.md):**
+
+- Permitted-operations header line extended to include `acquire`, with a parenthetical explaining the v0.9 distinction (`acquire` for deferred-Process sessions; `ingest` remains the umbrella for the typical case).
+
+**Wiki content touched:** zero pages. This is a paper-only refactor — no concept, entity, source, synthesis, or thread page is edited.
+
+**Why now.** Same-day momentum from the 2026-05-17 comparative synthesis across Karpathy / agentmemory / InfraNodus (see [`inspiration/`](../inspiration/) draft and the 2026-05-17 update block in [`llm-wiki-v2-plan.md`](../llm-wiki-v2-plan.md)). The rationale was scratched fresh; landing it now is cheaper than re-deriving it later. Also opens the door for v0.5's scheduled `accessed_at` hook to reason about Acquire-only sessions distinctly from full Ingest, without retrofitting language.
+
+**Cuts vs. the InfraNodus skill (Phases 8 + 9).**
+
+- No 10-phase guided scaffolding (Discover / Scope / Structure / Schema / Workflows / Tooling / Scaffold). That's an onboarding skill for *new* wikis; this repo is already instantiated.
+- No `infranodus/` folder of append-only ontology files. The typed `relationships:` block (v0.3) + `wiki/.graph.json` already serve the role InfraNodus's ontology files do, from a single source of truth.
+- No new tooling. The `youtube-transcript-skill` already fits the acquire-time skill contract; future skills (PDF→markdown, web clipper, podcast transcription) will be authored against the contract as they're needed.
+
+**Verification.**
+
+- `CLAUDE.md` renders with §Acquire and §Process as siblings under §"The four operations"; §Ingest survives as a pointer paragraph.
+- Permitted-ops enum consistent across `CLAUDE.md` §"Current state" and `wiki/log.md` header.
+- The `youtube-transcript-skill` is the live reference implementation — no skill changes required; the schema now names the contract it already satisfies.
+
+**Next per [`llm-wiki-v2-plan.md`](../llm-wiki-v2-plan.md):** v0.5 kernslice — hybrid search (qmd or MCP equivalent) + retention/forgetting (`accessed_at`, `quality_score`, decay curve). At 86 sources + ~200 pages total, `index.md` is approaching v2's "starts to creak past 100-200 pages" threshold; search is now the binding constraint.
 
 ---
 

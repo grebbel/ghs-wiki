@@ -4,6 +4,7 @@ aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizat
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity, ai-foundation, omniscalers, future-arenas]
 confidence: 0.95
 last_confirmed: "2026-05-16"
+accessed_at: "2026-05-17"
 source_count: 30
 relationships:
   - type: uses
@@ -23,6 +24,7 @@ relationships:
   - type: supports
     target: 2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas
     via: "MGI quantifies the firm-side scale of the AI deployment race: AI foundation cluster (semiconductors + cloud + AI software) added $11T market cap + $500B revenue since 2022; nine omniscalers spent $800B on R&D + capex in 2025 alone"
+quality_score: 1
 ---
 
 # Enterprise AI Adoption
@@ -131,9 +133,9 @@ Driving the change requires a **united front among the CEO, CIO, chief strategy 
 
 ### Worked examples
 
-- **[[Guardian Life Insurance]]** (regulated US insurance, [[2026-04-28-mit-sloan-ai-maturity|MIT Sloan]]): Automated RFP and quoting process — turnaround **1 week → 24 hours**. Embedded compliance/legal in architecture review boards. Reskilling into AI-focused roles.
-- **[[Italgas]]** (Europe's largest natural gas distributor, [[2026-04-28-mit-sloan-ai-maturity|MIT Sloan]]): "Digital Factory" innovation hub since 2017; **300TB data platform, 23 AI models**; WorkOnSite (+40% construction speed, -80% inspections); DANA (GenAI network control); 30,000 hours of AI training in 2024; **commercialized WorkOnSite for €3M revenue in 2024**.
-- **[[Ford]]** (manufacturing, [[2026-04-28-mittri-cisco-ai-enabled-enterprise|MITTRI/Cisco]]): AI-augmented vision systems for assembly inspection — defects on "squish tube" rubber seals dropped from **63 per month to zero**. Computational fluid dynamic test for vehicle airflow: **15 hours → 10 seconds** with AI prediction.
+- **Guardian Life Insurance** (regulated US insurance, [[2026-04-28-mit-sloan-ai-maturity|MIT Sloan]]): Automated RFP and quoting process — turnaround **1 week → 24 hours**. Embedded compliance/legal in architecture review boards. Reskilling into AI-focused roles.
+- **Italgas** (Europe's largest natural gas distributor, [[2026-04-28-mit-sloan-ai-maturity|MIT Sloan]]): "Digital Factory" innovation hub since 2017; **300TB data platform, 23 AI models**; WorkOnSite (+40% construction speed, -80% inspections); DANA (GenAI network control); 30,000 hours of AI training in 2024; **commercialized WorkOnSite for €3M revenue in 2024**.
+- **Ford** (manufacturing, [[2026-04-28-mittri-cisco-ai-enabled-enterprise|MITTRI/Cisco]]): AI-augmented vision systems for assembly inspection — defects on "squish tube" rubber seals dropped from **63 per month to zero**. Computational fluid dynamic test for vehicle airflow: **15 hours → 10 seconds** with AI prediction.
 
 ## The Anand-Wu 2×2 task framework
 
@@ -144,7 +146,7 @@ A complementary task-level lens from [[2026-04-28-anand-wu-genai-playbook|Anand 
 
 | | Tacit knowledge | Explicit data |
 |---|---|---|
-| **High cost of errors** | **Human-first zone** — Human leads, AI assists with minor tasks. Setting strategy, integrating enterprise systems, disciplinary decisions, hiring critical employees. | **Quality control zone** — AI produces, human verifies. Drafting high-value contracts ([[Harvey]]); writing production software code ([[GitHub Copilot]]); due diligence. |
+| **High cost of errors** | **Human-first zone** — Human leads, AI assists with minor tasks. Setting strategy, integrating enterprise systems, disciplinary decisions, hiring critical employees. | **Quality control zone** — AI produces, human verifies. Drafting high-value contracts (Harvey); writing production software code (GitHub Copilot); due diligence. |
 | **Low cost of errors** | **Creative catalyst zone** — AI creates options, human selects. Creating advertisements, outlining sales scripts, developing products. | **No regrets zone** — AI does it all (no human in the loop). Bulk customer inquiries, document summarization, résumé screening. *Where [[ai-agents]] thrive.* |
 
 The framework's punchline: stop debating GenAI's intelligence; ask which tasks GenAI can assist with today to make human judgment more effective. See [[syntheses/organizational-frameworks-for-ai-adoption|organizational-frameworks-for-ai-adoption]] for how this maps to other frameworks.
@@ -175,6 +177,8 @@ A counterweight to the "AI is a competitive moat" rhetoric: **"Because everyone 
 Implication: **competitive differentiation in 2025+ comes from complementary assets** — proprietary data, unique people/processes/culture — not from "having AI." See [[syntheses/organizational-frameworks-for-ai-adoption|organizational-frameworks-for-ai-adoption]].
 
 ## Key claims
+
+Empirical claims drawn across the corpus, organised by the layer they speak to: **breadth** (how many organisations use AI at all), **depth** (how mature that use is), **use-case mix** (where AI is being deployed), **financial impact** (what the gains look like in P&L), **productivity** (task-level effects, with the consistent equalising signature surfaced by [[jagged-frontier|jagged-frontier]] task-by-task variance), and **workforce** (expectations vs. realised outcomes from the [[ai-employment-effects|Brynjolfsson canaries]] panel).
 
 ### The 2024 jump (breadth)
 
@@ -310,7 +314,7 @@ The **eighth annual** MIT SMR × BCG global survey (3,467 respondents) finds tha
 
 ### The deployment-surface migration: coding moved to API ([[2026-05-07-anthropic-economic-index-5-learning-curves|Anthropic Economic Index, 5th report]])
 
-A finding worth flagging because it changes how enterprise AI deployment shape should be read: between Aug 2025 and Feb 2026, the **share of coding work on Claude.ai dropped sharply** while the **share on the 1P API rose from 36% → 47%**. The mechanism, per AEI 5: as **agentic coding harnesses** ([[Claude Code]], Cursor, etc.) matured, coding work migrated *off* the conversational consumer surface and *onto* the API where many short directive task-labelled calls happen per actual task. This has two consequences for adoption measurement:
+A finding worth flagging because it changes how enterprise AI deployment shape should be read: between Aug 2025 and Feb 2026, the **share of coding work on Claude.ai dropped sharply** while the **share on the 1P API rose from 36% → 47%**. The mechanism, per AEI 5: as **agentic coding harnesses** (Claude Code, Cursor, etc.) matured, coding work migrated *off* the conversational consumer surface and *onto* the API where many short directive task-labelled calls happen per actual task. This has two consequences for adoption measurement:
 
 1. **Single-surface adoption metrics undercount the shift.** A survey that asks "do you use ChatGPT/Claude.ai" misses the place where enterprise coding adoption is now happening.
 2. **Where automation is rising is surface-specific.** AEI 5's "automation rising on API" finding (sales, trading, coding harnesses) is consistent with the Claude.ai split staying flat (53/45 augmentation/automation). The aggregate "AI is automating" / "AI is augmenting" framing dissolves once you separate the consumer chat surface from the agent-mediated API surface.
@@ -352,7 +356,7 @@ Two operator-narrated framings push the wiki's existing position further:
 - **Firm-rebuild as the ROI gating condition** ([[2026-05-05-stanford-ai-club-chamath-on-how-to-win-in-the-ai-era|Chamath 2026]]). The wiki has held that *shallow adoption produces task-level gains without firm-level value*; Chamath sharpens it: *"Unless you completely rebuild how those companies operate, it will not pay [the trillion-dollar AI capex] off and there will be blood in the streets."* The claim is **stronger than the wiki's prior formulation**: not merely *adoption-depth-matters* but *only-full-rebuild-justifies-the-capex*. The mechanism named: legacy enterprise systems carry institutional tribal knowledge inaccessible to AI agents until reconstructed (see the [[micro-productivity-trap|COBOL retiree anecdote]]). 8090's *Software Factory* is the **first wiki source describing an enterprise-rebuild as a productised offering** (target sectors: healthcare, financial services, manufacturing, government).
 - **JTBD-as-sequencing for AI transformation** ([[2026-04-26-how-to-win-when-software-is-not-a-moat-evan-spiegel-snapchat-ceo|Spiegel 2026]]). A consumer-scale operational answer to *"how do you sequence AI deployment across the company without it dissolving into chaos."* Snap's method: enumerate jobs-to-be-done per user type, map agents and cross-functional teams to those jobs, track progress against the per-job business outcome. Paired explicitly with the *"thousand flowers bloom"* idea-generation default — bloom at the *experimentation* layer, sequence at the *resourcing* layer. The wiki's first **operator-grade consumer-scale AI-transformation sequencing framework** — complementing the consulting-firm frameworks (Bain / McKinsey / Thoughtworks) with a single-company in-product-team narration.
 
-## Debates / contradictions
+## Debates and supersession
 
 - **High adoption vs. low maturity.** 78% adoption + 1% mature (per AI Index) and 28%+34% in Stages 1–2 + only 7% Stage 4 (per MIT CISR) describe an organization-wide scramble in early innings. Sources interpreting 78% as "AI is mainstream" are technically correct but misleading about depth. See [[ai-maturity-measurement-comparison]].
 - **Methodology divergence between sources.** The AI Index uses McKinsey's binary "use in ≥1 function" instrument; MIT CISR uses a triangulated AI-effectiveness score across operations, CX, and ecosystem support, banded into 4 stages. Different definitions of "mature" — 1% (AI Index, GenAI specifically, C-suite self-report) vs. 7% (MIT CISR, Stage 4, score-based). [[ai-maturity-measurement-comparison]] tracks the cross-walk.
@@ -370,7 +374,7 @@ Two operator-narrated framings push the wiki's existing position further:
 
 ## *"The year of increased accountability"* — the editorial framing for 2026 ([[2026-01-09-baron-signals-for-2026|Baron / O'Reilly]], January 2026)
 
-[[Julie Baron]]'s annual *Signals for 2026* outlook gives the wiki its **single best editorial-framing headline** for the 2026 adoption-curve inflection: *"Expect enterprises to shift focus from experimentation to measurable business outcomes and sustainable AI costs."* This is the [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt et al. "experimentation-to-transformation"]] reframe compressed into a single phrase, written for an O'Reilly Radar trade-press audience three months before the HBR essay.
+Julie Baron's annual *Signals for 2026* outlook gives the wiki its **single best editorial-framing headline** for the 2026 adoption-curve inflection: *"Expect enterprises to shift focus from experimentation to measurable business outcomes and sustainable AI costs."* This is the [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt et al. "experimentation-to-transformation"]] reframe compressed into a single phrase, written for an O'Reilly Radar trade-press audience three months before the HBR essay.
 
 Baron also names the **strategic-crisis framing** explicitly: *"Most companies have moved past simple AI experiments but are now facing a strategic crisis. Their existing product playbooks (sizing markets, roadmapping, UX) weren't designed for AI-native products. Organizations must develop clear frameworks for building a portfolio of differentiated AI products, managing new risks, and creating sustainable value."* The wiki's reading: **2026 is the year *measurable-outcome* obligations finally bite** — the [[micro-productivity-trap]] becomes operationally untenable, and the [[2026-05-05-nishar-nohria-end-of-one-size-fits-all|firm-boundary build/compose/collaborate/buy framework]] becomes a forced choice.
 
