@@ -10,6 +10,34 @@ Ordering flipped on 2026-05-12 (GH [#3](https://github.com/businessdatasolutions
 
 ---
 
+## [2026-05-17] acquire | `raw/videos/the-complete-guide-to-hybrid-search-in-rag-bm25-embeddings-reranker.md` — Ebbelaar tutorial as v0.10 seed (harvest-not-cite)
+
+User-initiated YouTube acquire via the [`youtube-transcript-skill`](../.claude/skills/youtube-transcript-skill/SKILL.md). Dave Ebbelaar (Datalumina) 59-min hands-on tutorial published 14 May 2026: *"The Complete Guide to Hybrid Search in RAG (BM25 + Embeddings + Reranker)"*. Built from scratch on the BEIR FinanceQA dataset (56k docs); evaluates BM25 / Dense / RRF-fused / Hybrid + Cohere reranker with NDCG@10.
+
+**Acquire-phase notes.** First attempt hit *"transcript panel did not render"* at default 30s timeout; retried with `--timeout 60000` and succeeded with 1130 ASR segments. Collapsed into 192 ~15s windows with light ASR cleanup (RAG / BM25 / Pydantic / Cohere / SPLADE / vector database). 117 KB markdown landed at canonical path with full YAML frontmatter contract.
+
+**Why §Acquire-only and not §Ingest.** Substantive analysis ran *during* this session against the wiki's existing coverage:
+
+- The **architectural conclusion** (*hybrid is the answer*) is already settled in [[syntheses/is-rag-dead]] (5 sources, closed 2026-05-12) and at the §Search layer in [CLAUDE.md](../CLAUDE.md) where qmd implements BM25 + vector + LLM-rerank.
+- A sixth source-page on the same conclusion would **dilute, not strengthen**, the synthesis — Ebbelaar adds nothing the wiki doesn't already have at the architectural level.
+- The tutorial *does* add four specific operational details the wiki was thin on: NDCG numbers, sizing rule, synthetic-eval-data prompt, RRF formula + bi/cross-encoder distinction.
+- **Decision: harvest these four into the wiki at the right points instead of writing a source page.** This is the first worked example of the cherry-pick-not-ingest pattern, and it relies on the v0.9 §Acquire/§Process split being explicit — Acquire is a legitimate terminal state.
+
+The four harvests are scoped into a new version slot **v0.10 — Search-quality empirical depth** (see [`llm-wiki-v2-plan.md`](../llm-wiki-v2-plan.md)), which lands when implemented:
+
+1. `## Empirical anchors` subsection on `[[syntheses/is-rag-dead]]` with the FinanceQA NDCG gradient (BM25=28 / Hybrid+Rerank=47).
+2. `### §Sizing decision` in CLAUDE.md §Search — *"under ~1M chunks, skip the vector DB"* rule with 30 MB BM25 + 350 MB dense `.npy` calibration anchor.
+3. New thread `wiki-search-evals` + `wiki/evals/search-evalset.json` seeded by Ebbelaar's synthetic-query-generation prompt looped over `wiki/sources/`.
+4. (Optional) New `[[concepts/reciprocal-rank-fusion]]` concept page with formula + bi-encoder/cross-encoder distinction.
+
+**Files touched (1 raw):**
+
+- `raw/videos/the-complete-guide-to-hybrid-search-in-rag-bm25-embeddings-reranker.md` (new — 117 KB).
+
+No `wiki/sources/` page written; no concept pages updated; no `wiki/index.md` change. By design — that's the harvest-not-cite contract.
+
+Reversibility: trivial. One raw file added, one log entry. Re-running the youtube-transcript-skill replaces the raw file; v0.10 itself is unaffected (the harvested *details* live in the plan, not in the raw file).
+
 ## [2026-05-17] ingest | [[2026-05-11-ognibeni-ai-agents-cool-demos-vs-real-revenue-china]] + [[2026-05-14-price-dfi-retail-asia-reinventing-how-it-sells]] — paired buyer/seller framing of the agentic-commerce disintermediation thesis
 
 User-initiated double ingest of two YouTube videos in one session: Björn Ognibeni's E-commerce Berlin Expo keynote (~28 min, 11 May) and Christine Tan's CNBC *Managing Asia* interview with DFI Retail Group CEO Scott Price (~15 min, 14 May). **Both videos hold the same agentic-commerce-disintermediation thesis from opposite sides of the buyer/seller table** — Ognibeni from the buyer-side outside-in (*"nobody will show up in your store when you only do search-driven e-commerce"*); Price from the seller-side incumbent-CEO (*"with [agentic AI] goes loyalty, with that goes access to data"*). The wiki's clearest paired articulation of the thesis to date.
