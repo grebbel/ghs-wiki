@@ -3,9 +3,9 @@ type: concept
 aliases: ["automation vs augmentation", "automation-vs-augmentation", "automate vs augment", "AI substitution vs complementarity", "AI labor substitution", "AI labor complementarity"]
 tags: [automation, augmentation, generative-ai, ai-deployment, ai-task-design, capability-reliability-gap]
 confidence: 0.95
-last_confirmed: "2026-05-14"
-accessed_at: "2026-05-14"
-source_count: 15
+last_confirmed: "2026-05-20"
+accessed_at: "2026-05-20"
+source_count: 18
 relationships:
   - type: supports
     target: ai-employment-effects
@@ -185,6 +185,18 @@ Four wiki sources, with distinct vocabularies and methodologies, all draw essent
 | [[2026-03-20-huggingface-agentic-evaluations-workshop\|Narayanan / Princeton @ HF Agentic Evals 2026]] | **Reliability as the gating dimension**. Automation deployments require a higher reliability threshold (10% failure rate on autonomous customer service = dead-on-arrival) than augmentation deployments (10% failure rate on coding-agent suggestions = still net-positive with human review). Capability and reliability are orthogonal; 12-sub-dimension reliability decomposition, most unsolved. | "Capability-reliability gap"; "release-decision threshold"; "automation tasks vs augmentation tasks" |
 
 When four independent sources arrive at the same cut from different angles (theory, strategy, vendor framing, and large-scale payroll data), the distinction is robust enough to be a load-bearing concept in the wiki.
+
+## The Claude-channel customer-story cluster (Feb–May 2026)
+
+A 2026 cluster of [[Anthropic|Anthropic]] Claude-channel customer-story videos supplies named-incumbent / named-platform practitioner anchors on both legs of the cut:
+
+| Source | Pattern | Vantage |
+|---|---|---|
+| [[2026-02-18-lyft-customer-support-with-claude\|Lyft / Claude customer support (Feb 2026)]] | **Augment-and-reinvest-the-savings** — 87% resolution-time reduction; savings (*"millions of dollars"*) explicitly reinvested into upskilling agents (anti-burnout) plus a new high-touch programme (*Lyft Silver*). The 87% time saving did *not* translate into headcount reduction in this telling | named-incumbent contemporary practitioner anchor for the augmentation leg. Practitioner-side data point on the same phenomenon [[2026-04-28-brynjolfsson-li-raymond-generative-ai-at-work\|Brynjolfsson, Li & Raymond (QJE 2025)]] measured at +15% RPH in a 2020–21 GPT-3 deployment — direction-of-effect consistent, scale of the practitioner-reported gain reinforces the QJE finding as a floor |
+| [[2026-02-09-hubspot-customer-success-with-claude\|HubSpot / Claude customer success (Feb 2026)]] | **Augmentation as role-level scope expansion** — Claude turns a call transcript + knowledge-base articles into hospitality-revenue analysis the CSM then takes to the customer (*"that is something so far beyond my typical role as a CSM"*). Augmentation here *changes what the role does*, not just how fast it does it. Vendor-side 40% developer-productivity claim included as testimonial only | extension of the augmentation framing into customer success (not only customer support), with role-scope-expansion as the operational mechanism — complementary to [[2026-05-07-ransbotham-augmented-learners\|Ransbotham's *augmented learners*]] and [[2026-05-05-nishar-nohria-end-of-one-size-fits-all\|Nishar/Nohria's *end of one-size-fits-all*]] |
+| [[2026-05-13-jha-emergent-democratizing-app-building-with-claude\|Emergent / Jha-Ryan interview (May 2026)]] | **Full automation, replacement-of-the-outside-vendor** — Emergent users are *not* augmenting an existing dev team; they're replacing the dev-shop alternative. CEO names the comparison: *"a $250,000 price point that they would have paid if they had gone and and hired a dev shop"*. The user class is SMBs / domain experts who *never had software at all* (Christy in Alaska shipping *Equ*). $100M ARR in 8 months; 7M users in 190 countries; 70–80% never wrote a line of code | the **automation leg at scale for non-developers**. Distinct from enterprise-internal automation (where staff is augmented or displaced) — this is *SMB-replacement-of-an-outside-vendor-relationship-they-could-not-previously-afford*. Adds a previously-missing third deployment pattern to the wiki's cut: augmentation-of-staff, automation-of-staff, and *automation-as-substitution-for-an-outside-services-spend* |
+
+The Lyft / HubSpot / Emergent triple is the wiki's first cluster on the automation/augmentation cut drawn entirely from *2026 named-incumbent practitioner self-reports* rather than third-party studies or vendor-CEO predictions. The two short-form videos (Lyft, HubSpot) are promotional and should not be cited as load-bearing on their own; the Emergent interview is substantive and load-bearing.
 
 ## Debates / contradictions
 
