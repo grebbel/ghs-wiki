@@ -3,10 +3,10 @@ type: entity
 kind: organization
 aliases: ["Google Research", "Google AI Research", "Google DeepMind Research"]
 tags: [google-research, google, ai-research, foundation-models, gemini, durable-skills]
-confidence: 0.75
-last_confirmed: "2026-05-07"
-accessed_at: "2026-05-07"
-source_count: 2
+confidence: 0.80
+last_confirmed: "2026-05-21"
+accessed_at: "2026-05-21"
+source_count: 3
 ---
 
 # Google Research
@@ -18,12 +18,20 @@ This entity page covers the research organisation; for product-line discussion (
 ## Appears in this wiki via
 
 - [[2026-05-07-globerson-et-al-scalable-measurement-durable-skills]] — primary publisher of *Towards Scalable Measurement of Durable Skills* (preprint, 12 April 2026). Globerson et al. (~40 co-authors) introduce the Vantage assessment platform, Executive LLM steering protocol, and Gemini-based AI Evaluator — anchoring the wiki's [[durable-skills]] concept.
+- [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer]] — Google I/O 2026 talk by **Nicole Forsgren** and **Andrew Macvean**, both leads on Google's **Developer Intelligence team**. The talk anchors the **DORA programme** (Forsgren-led) as a Google-Research-lineage empirical backbone for two load-bearing claims: (a) AI's productivity paradox at the team-level (the engineering-team correlate of [[micro-productivity-trap]]); (b) AI as **amplifier-and-mirror** — magnifying existing organisational strengths and weaknesses. Sister-vantage to the Globerson et al. paper: both Google-Research-lineage outputs map durable / non-routine engineering skills, one from psychometrics, the other from inside-Google measurement.
 - Mentioned across multiple wiki sources as a major model contributor (Gemini family is referenced in [[2026-04-28-ai-index-report-2025|AI Index 2025]] §1 — Gemini-1.5-Flash-8B as the cost-reduction marker; [[2026-04-30-ai-index-report-2026|AI Index 2026]] continues to track Google's models alongside OpenAI, Anthropic, Meta, and others).
 
 ## Notable people (in this wiki)
 
 - [[Yossi Matias]] *(dangling — co-author on the durable skills paper; promote on 2nd-source coverage)* — VP and Head of Google Research.
+- **Nicole Forsgren** *(dangling — first-mention; high probability of recurrence given DORA stature and *Accelerate* authorship)* — lead, Developer Intelligence team; DORA founder.
+- **Andrew Macvean** *(dangling — first-mention)* — lead, Developer Intelligence team.
 - ~40 other co-authors of the Globerson et al. paper, currently listed in the source-page frontmatter but not promoted to individual entity pages (single-source coverage).
+
+## Research programmes referenced in this wiki
+
+- **Developer Intelligence team** — Google's in-house team studying how Google engineers work with AI. Anchor for [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren & Macvean 2026]]; named on stage as "measuring the engineering system and all the pieces within that ... the end-to-end time to go from an initial seed of an idea all the way through to getting that idea out into a real user's hands."
+- **DORA (DevOps Research and Assessment)** — long-running Forsgren-led programme running annual State of DevOps reports since 2013; provides the empirical backbone for productivity-paradox and amplifier-and-mirror claims cited in the I/O 2026 talk. First wiki-reference here; promote to its own entity page on second-source coverage.
 
 ## Funders / partnerships visible in this wiki
 
@@ -50,4 +58,5 @@ SORT file.name ASC
 
 - The relationship between Google Research and Google DeepMind — separately structured units that often co-author. The Globerson et al. paper is published under "Google Research" affiliation; whether DeepMind shares authorship would clarify the institutional boundary.
 - Google's broader AI Index funding/data-partner role — which surveys, which methodological choices.
-- A 2nd Google Research source would deepen this entity beyond the current durable-skills anchor; the AI Index editions are mentions-of-Google rather than first-party Google Research output.
+- The institutional boundary between **Google Research (proper)** and the **Developer Intelligence team** that Forsgren and Macvean lead — the latter's outputs map cleanly to engineering-research even if formally attached to Developer Relations rather than the Research arm. Worth clarifying on a third source.
+- **DORA's published methodology for the AI-era productivity-paradox finding.** Forsgren cited the result live; a published State of DevOps or DORA AI-specific report substantiating the individual-vs-team divergence would meaningfully strengthen the wiki's [[micro-productivity-trap]] page.

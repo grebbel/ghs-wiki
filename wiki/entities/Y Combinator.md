@@ -1,25 +1,25 @@
 ---
 type: entity
 kind: organization
-aliases: ["Y Combinator", "YC"]
-tags: [accelerator, venture-capital, silicon-valley, startup-school, ai-native-companies, founder-firesides]
+aliases: ["Y Combinator", "YC", "YC Root Access"]
+tags: [accelerator, venture-capital, silicon-valley, startup-school, ai-native-companies, founder-firesides, yc-root-access]
 since: 2005
 website: "https://www.ycombinator.com"
-confidence: 0.85
-last_confirmed: "2026-05-14"
-accessed_at: "2026-05-17"
-source_count: 3
+confidence: 0.9
+last_confirmed: "2026-05-21"
+accessed_at: "2026-05-21"
+source_count: 5
 ---
 
 # Y Combinator
 
 **Y Combinator** is a Silicon Valley startup accelerator founded in 2005. **President & CEO: Garry Tan** (since 2023). Operates the Startup School educational programme + biannual accelerator batches + Bookface internal social platform.
 
-Promoted to a wiki entity page on 12 May 2026 after appearing as `author:` (channel) on two ingested videos in two consecutive days (Tan 23 April + Hu 24 April). **Bumped to source_count: 3 on 14 May 2026** with the addition of [[2026-04-25-masad-replit-ceo-only-two-jobs-left|Masad / Replit on Founder Firesides]], landing one day after Hu and forming a three-day YC-channel cluster on the AI-native-company thesis from three distinct vantages (President / Partner / Portfolio-founder).
+Promoted to a wiki entity page on 12 May 2026 after appearing as `author:` (channel) on two ingested videos in two consecutive days (Tan 23 April + Hu 24 April). **Bumped to source_count: 3 on 14 May 2026** with the addition of [[2026-04-25-masad-replit-ceo-only-two-jobs-left|Masad / Replit on Founder Firesides]], landing one day after Hu and forming a three-day YC-channel cluster on the AI-native-company thesis from three distinct vantages (President / Partner / Portfolio-founder). **Bumped to source_count: 4 on 21 May 2026** with the addition of [[2026-05-19-garg-yc-internal-ai-agent-evolves-itself|Garg / AnswerThis on YC Root Access]] (19 May 2026), extending the anchor triple into a quad and adding the **2-FTE-startup-scale** portfolio-founder vantage on a fourth YC channel (*YC Root Access*). **Bumped to source_count: 5 on 21 May 2026** (same day as Garg) with the addition of [[2026-05-20-glasgow-campfire-erp-for-ai-revolution|Glasgow / Campfire on YC Root Access]] — the **enterprise-B2B founder-vantage worked example** of the AI-native-company thesis: tech-company-targeted AI-native ERP pulling enterprise customers off NetSuite from Q4 2024 onward, ARR more-than-doubling each quarter since. With Glasgow, **YC Root Access becomes the second YC channel** (after the Garg ingest) to land two ingested sources, and is promoted to alias on this entity page so the dangling-authors lint resolves it back to Y Combinator (same convention as Anthropic's *Claude* channel alias).
 
 ## Role in the wiki
 
-YC is the **AI-native-startup-formation vantage** the wiki tracks across three distinct 2026-batch-contemporaneous sources:
+YC is the **AI-native-startup-formation vantage** the wiki tracks across four distinct 2026-batch-contemporaneous sources spanning April–May 2026 and four distinct YC channels (Tan's personal channel / Startup School / Founder Firesides / YC Root Access):
 
 ### 1. Tan / GStack ([[2026-04-23-tan-yc-how-to-make-claude-code-your-ai-engineering-team-gstack|Tan 2026]])
 
@@ -33,23 +33,43 @@ YC Partner Diana Hu (published 24 April 2026, the day after Tan) presents the pr
 
 Replit CEO **Amjad Masad** in conversation with YC's **Andrew Miklas** (published 25 April 2026, the day after Hu). Masad gives the **portfolio-founder-vantage worked example** of the YC-batch thesis: the *company-of-the-future* is built of *builders + salespeople*; Replit's internal **vibe-coding-resident team** (a generalist team with vague mission *"go around the company and make it better"*) is the *closed-loop company* pattern in operation; the **skills-call revolution** at the Replit-platform layer parallels Tan's GStack-style packaging.
 
-### The YC-batch-context anchor triple
+### 4. Garg / YC Root Access ([[2026-05-19-garg-yc-internal-ai-agent-evolves-itself|Garg 2026]])
 
-The three sources together form a **YC-batch-context anchor triple** spanning 23–25 April 2026:
+AnswerThis founder **Ayush Garg** on **YC Root Access** (published 19 May 2026), one slot in a multi-talk YC session on agent-harness engineering — Garg references *"Pete and Tom and Gary"* as prior speakers in the same session (likely **Pete Koomen**, **Tom Blomfield**, **Garry Tan**). Garg presents the **2-FTE-startup-scale worked example** of the YC-batch thesis: $2M ARR with two full-time employees + 2–3 contractors, running on an internal AI ops agent (Claude Code CLI wrapped in Python; self-extending coding sub-agent that has authored 45+ CLIs; agent-editable `instructions.md` ratcheted by Slack feedback). Names the **three-memory framework** (factual / behavioural / procedural) the wiki has been carrying without an anchor. Closes the talk with an explicit recipe-to-clone: *"if you want to copy this entire agent, just take a picture of this and give it to your cloud code."*
 
-| Vantage | Source | Contribution |
-|---|---|---|
-| President / platform-toolkit | Tan / GStack | The packaged-toolkit-ship-at-venture-pace worked example |
-| Partner / prescription | Hu / Startup School | The framework — closed-loop companies + software factories + 1,000× engineer |
-| Portfolio-founder / platform-vendor | Masad / Founder Firesides | The vendor-CEO worked example — Replit as the floor-raising infrastructure + post-prompting trajectory |
+### 5. Glasgow / YC Root Access ([[2026-05-20-glasgow-campfire-erp-for-ai-revolution|Glasgow 2026]])
 
-All three align on the same diagnosis: AI-native companies need **fewer humans + queryable artifacts + software factories + a packaged harness of skills**. Same diagnosis from three distinct vantages (President / Partner / Portfolio-founder-CEO).
+Campfire founder/CEO **John Glasgow** (YC S23) on **YC Root Access** (published 20 May 2026, one day after Garg). The **enterprise-B2B founder-vantage worked example** of the AI-native-company thesis — a fireside on what AI-native looks like in *the most ancient enterprise-software category in tech* ([[NetSuite]]-class ERP). The substantive contribution is the **"AI-native safety inversion"** observation: from Q4 2024 onward, the buyer-side narrative on enterprise software procurement flipped — *being the incumbent meant you were not AI-native*, and boards explicitly authorised buying AI-native vendors even when day-to-day operators were not yet ready. **Companion claims**: tech-stack-turnover thesis for the *why now* (finance stack already modernised — payroll, spend management — except the core general ledger); wedge displacement over feature-completeness (tech-company customers used ~10% of NetSuite; Campfire owned that slice and was pulling customers off NetSuite within nine months); founder-led-sales-to-$1M-ARR doctrine **even in the AI era** (*"I do really recommend founders to stay in the founder sales mode... offloading it to AI, offloading it to some AE... feels like, oh let's just bring in a professional"*); product velocity as enterprise-buyer trust signal at four-person-company scale; own-foundation-model + custom-agent-platform as competitive moat in the AI-native ERP cohort.
+
+### The YC-batch-context anchor quintuple
+
+The five sources together form a **YC-batch-context anchor quintuple** spanning April–May 2026 and four distinct YC channels:
+
+| Vantage | Source | Channel | Contribution |
+|---|---|---|---|
+| President / platform-toolkit | Tan / GStack | Tan's personal channel | The packaged-toolkit-ship-at-venture-pace worked example |
+| Partner / prescription | Hu / Startup School | Startup School | The framework — closed-loop companies + software factories + 1,000× engineer |
+| Portfolio-founder / platform-vendor | Masad / Founder Firesides | Founder Firesides | The vendor-CEO worked example — Replit as the floor-raising infrastructure + post-prompting trajectory |
+| Portfolio-founder / 2-FTE-startup | Garg / AnswerThis | YC Root Access | The micro-scale worked example — $2M ARR / 2 FTE on a self-extending Claude Code harness; *three-memory framework* (factual / behavioural / procedural) |
+| Portfolio-founder / enterprise-B2B vendor | Glasgow / Campfire | YC Root Access | The enterprise-displacement worked example — AI-native ERP pulling >100 customers off NetSuite from Q4 2024 onward; **the AI-native safety inversion** as the buyer-side procurement-room mechanism |
+
+All five align on the same diagnosis: AI-native companies need **fewer humans + queryable artifacts + software factories + a packaged harness of skills + a buyer-side procurement-narrative flip that grants them air cover against incumbents**. Same diagnosis from five distinct vantages (President / Partner / Portfolio-founder-CEO at platform scale / Portfolio-founder at 2-FTE scale / Portfolio-founder at enterprise-B2B-vendor scale).
+
+The Garg and Glasgow ingests in the same week (19 + 20 May 2026) make **YC Root Access a major second YC channel** (after Startup School) for the wiki's AI-native-company corpus. Garg's references to *"Pete and Tom and Gary"* still suggest companion slots in the same multi-talk agent-harness-engineering session that may be ingestible.
 
 ## People at Y Combinator (referenced across the wiki)
 
-- **Garry Tan** — President & CEO since 2023; engineer (Stanford CS); ex-Palantir #10; Posterous co-founder; built first version of Bookface. **The AI founder type archetype operationalised** at YC-president scale — runs 10-15 parallel Claude Code sessions, ~400 PRs in review. Currently Dangling; promote on second-source mention.
+- **Garry Tan** — President & CEO since 2023; engineer (Stanford CS); ex-Palantir #10; Posterous co-founder; built first version of Bookface. **The AI founder type archetype operationalised** at YC-president scale — runs 10-15 parallel Claude Code sessions, ~400 PRs in review. **Second-source mention**: referenced by name in [[2026-05-19-garg-yc-internal-ai-agent-evolves-itself|Garg 2026]] (*"as Pete and Tom and Gary mentioned"*) as a prior speaker in the same YC Root Access multi-talk session. Promote when a second standalone-source mention lands.
 - **Diana Hu** — YC Partner; speaker at YC Startup School on AI-native company construction. Currently Dangling; promote on second-source mention.
 - **Andrew Miklas** — YC, interviewer on Founder Firesides (Masad / 2026-04-25). Currently Dangling; promote on second-source mention.
+- **Pete Koomen** — likely YC partner; referenced in [[2026-05-19-garg-yc-internal-ai-agent-evolves-itself|Garg 2026]] as a prior speaker in the same YC Root Access session covering the *thin harness* point. Currently Dangling; promote when his slot in the session is ingested or a second standalone source surfaces.
+- **Tom Blomfield** — likely YC managing director (ex-Monzo / GoCardless founder); referenced in [[2026-05-19-garg-yc-internal-ai-agent-evolves-itself|Garg 2026]] as a prior speaker in the same YC Root Access session covering the *thin harness* point. Currently Dangling; promote when his slot in the session is ingested or a second standalone source surfaces.
+
+## People at YC portfolio companies (referenced across the wiki)
+
+- **Ayush Garg** — founder of AnswerThis; speaker on YC Root Access ([[2026-05-19-garg-yc-internal-ai-agent-evolves-itself|Garg 2026]]). Currently Dangling; promote on second-source mention.
+- **Ryan** — non-technical co-founder at AnswerThis (surname not stated in source); the *Slack-feedback-loop-with-the-agent* exemplar. Currently Dangling; promote on second-source mention.
+- **Mukund Jha** — founder/CEO of Emergent; second YC-portfolio founder vantage on Claude Code as substrate ([[2026-05-13-jha-emergent-democratizing-app-building-with-claude|Jha 2026]]). Currently Dangling; promote on second-source mention.
 
 ## Operational practices observed across both ingests
 
@@ -61,6 +81,8 @@ All three align on the same diagnosis: AI-native companies need **fewer humans +
 ## Notable products / programmes
 
 - **Startup School** — YC's free online programme + content channel; Hu 2026 published there.
+- **Founder Firesides** — YC's interview series with portfolio founders; Masad 2026 published there.
+- **YC Root Access** — YC's recent-batch talk channel; multi-speaker batch sessions on a single technical theme. First wiki ingest from this channel is Garg 2026; Garg's references suggest companion talks by Pete Koomen, Tom Blomfield, and Garry Tan in the same agent-harness-engineering session.
 - **Bookface** — YC's internal social platform + portfolio knowledge base (Tan built v1).
 - **GStack** — open-source Claude Code harness toolkit; Tan's recent project (Dangling first-mention).
 
@@ -79,3 +101,4 @@ SORT file.name ASC
 - **YC-portfolio adoption of GStack** — Tan ships GStack; how many YC portfolio companies adopt it? First-party data.
 - **The 1-billion-startups-in-10-years analog** — Hu's *1,000× engineer* thesis suggests dramatic founder-leverage shifts. Does YC's accelerator throughput change in response?
 - **YC-partner-content cadence as a wiki source** — if Tan + Hu are representative of YC's content velocity, the wiki should expect to ingest more YC-partner-public-content sources at rate-of-batch-cycle (every ~3 months).
+- **The YC Root Access multi-talk session Garg sits in** — Garg references *"Pete and Tom and Gary"* (likely Pete Koomen, Tom Blomfield, Garry Tan) as prior speakers. If the other slots in this session are ingestible, the wiki would gain a four-source YC Root Access session-level anchor on agent-harness engineering at startup scale — a candidate for its own [[wiki/threads|thread]] page.

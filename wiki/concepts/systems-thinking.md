@@ -2,10 +2,10 @@
 type: concept
 aliases: ["systems thinking", "systems-thinking"]
 tags: [systems-thinking, innovation, sustainability, design-thinking, breakthrough-thinking, wicked-problems]
-confidence: 0.80
-last_confirmed: "2026-05-18"
-accessed_at: "2026-05-18"
-source_count: 3
+confidence: 0.82
+last_confirmed: "2026-05-21"
+accessed_at: "2026-05-21"
+source_count: 4
 relationships:
   - type: supports
     target: enterprise-ai-adoption
@@ -106,6 +106,20 @@ Worked case: a relatively simple AI agent at **Heineken Mexico** compressed a 6-
 The methodological add to [[2026-05-15-sterman-systems-thinking-for-leaders-designing-solutions-that-work|Sterman 2026]]: where Sterman delivers feedback discipline at the *general-management* scale, Carrier delivers it at the *industrial-operations-with-AI-agents* scale. The discipline is the same; the deployment substrate is different.
 
 Carrier also supplies the wiki's strongest counterweight to the *get-more-data-always* tendency — his refinery alarm-fatigue tragedy (two fatalities; *"the system was completely overloaded with safety alarms so that the information flow actually ground to a halt"*) reframes the data-architecture problem as one of **leading indicators in a small set beat data-lakes-of-everything**, the system-in-the-room discipline at the data layer.
+
+### The engineering-team operationalisation ([[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren & Macvean 2026]])
+
+The Google I/O 2026 talk by Forsgren and Macvean (Google's Developer Intelligence team) closes on a one-line operational tricolon that names systems thinking as the highest-altitude capability AI-era engineers need:
+
+> ***"We need to shift left. We need to shift up. And we need to think about designing systems, not just bits of code."***
+
+The talk's structural claim: as AI takes on more execution, the human engineering work moves *up the abstraction stack* into system-design altitude. Three mechanisms in the talk align with the discipline's [[2026-05-15-sterman-systems-thinking-for-leaders-designing-solutions-that-work|Sterman 2026]] / [[2026-03-31-carrier-mit-industrial-ai-that-works-strategy-survival-success|Carrier 2026]] lineage at the engineering-team scale:
+
+- **Feedback loops as the load-bearing primitive.** The talk repeatedly invokes feedback loops as the new bottleneck — *"effective verification becomes the bottleneck"* + *"this is about setting effective feedback loops"* + the agent-journaling reflection loop. Direct extension of Carrier's *"replace long, slow feedback loops with very fast ones"* claim from industrial AI to fleet-scale agent orchestration.
+- **AI as amplifier and mirror** (DORA framing). *"AI is an amplifier and it is a mirror. It magnifies the existing strengths and it holds up a mirror to those weaknesses."* Systems-thinking corollary: AI doesn't *create* system dysfunction — it *exposes and accelerates* dysfunction already present in the surrounding system (data, tooling, processes, culture). This is the engineering-team articulation of Sterman's *"there's no such thing as a side effect"* claim — the system *as a whole* responds to AI introduction, not just the task AI was deployed against.
+- **Designing environments, not vibe-coding.** *"What they're doing is designing environments, setting the guardrails, creating the systems so that agents and humans can work together toward a goal and a broader purpose."* Systems-thinking applied to agent orchestration: the unit of design becomes the *environment-with-agents-in-it*, not the individual agent's behaviour. Convergent with [[2026-05-07-kokane-agent-harness-vs-systems-design|Kokane 2026]]'s *higher-altitude systems-design framing* of harness engineering.
+
+The convergence point: four sources now (Bansal-Birkinshaw / Sterman / Carrier / Forsgren-Macvean) span the strategic-innovation, foundational-decision-making, industrial-AI, and engineering-team scales of the same underlying discipline. Forsgren-Macvean adds the **engineering-leadership vantage** the prior three did not address directly, and grounds the discipline in DORA's published research programme.
 
 ### Examples cited in the wiki
 

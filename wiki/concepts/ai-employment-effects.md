@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI employment effects", "AI labor effects", "AI job displacement", "AI labor market", "AI employment impact"]
 tags: [employment, labor-market, ai-displacement, automation, labor-economics, age-effects]
 confidence: 0.95
-last_confirmed: "2026-05-16"
-accessed_at: "2026-05-16"
-source_count: 19
+last_confirmed: "2026-05-21"
+accessed_at: "2026-05-21"
+source_count: 20
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -172,6 +172,18 @@ Operational implication for hiring and reskilling:
 - The Polanyi tacit-dimension breach makes *codified* knowledge work more substitutable, but the *evaluation* role becomes more valuable, not less.
 
 This adds a **second** durable-role argument to the wiki, alongside the [[durable-skills]] supply-side measurement of collaboration / creativity / critical thinking. Where Globerson et al. measure individual durable skills *without reference to AI deployment*, Kiron-Schrage make the explicit deployment-context claim: the durable role is **the expert as evaluator of AI outputs**, in domains where the human has prior deep expertise.
+
+### Engineer identity-threat as named phenomenon ([[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren & Macvean 2026]])
+
+The wiki's first source naming **identity threat** as a *labelled phenomenon* affecting software engineers under AI augmentation — surfaced from DORA research and addressed directly on stage at Google I/O 2026:
+
+> *"Our DORA research highlights that many developers are currently feeling a very real **identity threat**. Historically, we derived immense intrinsic value just from the sheer craft of writing code. We need to shift how we measure our worth. We have to lean into the broader value of our work, which comes from solving real human problems and real business problems."*
+
+This is structurally distinct from the [[2026-04-30-ai-index-report-2026|AI Index 2026]]'s -20% entry-level employment finding — that's an *outcome-side* labour-market signal; identity-threat is the *content-side* role-evolution signal *among engineers who remain employed*. The two are complementary: employment can be falling for the youngest cohort while the role-content shifts for the remaining workforce, and both surface from the same underlying mechanism (AI taking execution).
+
+The talk's reframing names the durable role under the role-content shift: engineers become **value translators** — *"taking user needs and business needs to precise requirements"*. The named exemplar: *"an AI might be able to find and refactor inefficient loops. But a Value Translator first asks, 'improve performance for whom? Under what conditions?'"* This is the engineering-discipline-specific articulation of the **expert-as-evaluator** durable role Kiron-Schrage name above — same mechanism (humans keep judgment about what to evaluate against), different vocabulary (value-translation rather than evaluation, but operationally the same load-bearing capability).
+
+Convergent with [[2026-04-25-masad-replit-ceo-only-two-jobs-left|Masad's "only two jobs left"]] role-evolution thesis from the founder-vantage; convergent with [[2026-04-14-thompson-the-daily-workers-letting-ai-do-their-jobs|Thompson's]] 75-developer first-person framing of *"hard technical skills are easier to automate than talking to customers and figuring out what should we be building"*. The talk also names the **role-evolution-across-disciplines** observation: *"software engineering isn't the only discipline getting more T-shaped — we are seeing this exact same evolution in our product managers, our UX researchers, and more"*, generalising the value-translator role beyond engineering to the broader knowledge-work population.
 
 ### Software developers ages 22–25: -20% from 2024 ([[2026-04-30-ai-index-report-2026|AI Index 2026]])
 

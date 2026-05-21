@@ -4,14 +4,17 @@ kind: organization
 aliases: ["Google", "Google LLC", "Alphabet (operating subsidiary)"]
 tags: [google, big-tech, hyperscaler, ai-lab, foundation-models, gemini, google-cloud, google-research, google-brain, gemini-api, file-search, multimodal-rag, notebooklm, flow, veo, ai-product-management, bfloat16, coral-edge-tpu, tensorflow, edge-ml]
 since: 1998
-confidence: 0.87
-last_confirmed: "2026-05-14"
-accessed_at: "2026-05-14"
-source_count: 6
+confidence: 0.90
+last_confirmed: "2026-05-21"
+accessed_at: "2026-05-21"
+source_count: 7
 relationships:
   - type: published-by
     target: 2026-04-22-cheung-ippolito-secchi-google-agents-cli
     via: "Google Developers Blog announcement of Agents CLI in Agent Platform"
+  - type: published-by
+    target: 2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer
+    via: "Google for Developers YouTube channel, Google I/O 2026 Professional Development track"
 ---
 
 # Google
@@ -60,6 +63,22 @@ Big-tech platform company; operating subsidiary of Alphabet. Within this wiki Go
 - **James Manyika** — see [[James Manyika]] entity (already in the wiki).
 - **Jaana Dogan** — engineering leader on Gemini API, surfaced via [[2026-05-07-kiron-schrage-compound-benefits|Kiron-Schrage 2026]]'s anchor anecdote (*"It's not perfect and I'm iterating on it."*). Single-source first mention; not yet promoted.
 - **Ivan Solovyev / Kriti Dwivedi** — Gemini File Search team members; see [[2026-05-05-google-gemini-file-search-multimodal|Solovyev & Dwivedi 2026]].
+- **Nicole Forsgren** — lead, Developer Intelligence team at Google; founder of the **DORA (DevOps Research and Assessment)** programme; lead author of *Accelerate* (2018). Speaker at Google I/O 2026 in [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|*Build core skills to thrive as an AI-era developer*]]. The talk explicitly cites the DORA research for both the productivity-paradox claim (individual gains, team-level losses — the engineering-team correlate of [[micro-productivity-trap]]) and the **AI-as-amplifier-and-mirror** framing. First-mention; promote on second-source coverage.
+- **Andrew Macvean** — lead, Developer Intelligence team at Google; co-presenter with Forsgren at Google I/O 2026. First-mention; promote on second-source coverage.
+
+## Internal teams referenced in this wiki
+
+- **Developer Intelligence team** — Google's in-house engineering-research team studying how Google engineers work with AI. Anchor for [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren & Macvean 2026]]. The talk's data points — *"~3/4 of all code at Google is now written by AI"* and *"no measurable increase in outages or decrease in system reliability"* — are this team's research output.
+- **DORA (DevOps Research and Assessment)** — Forsgren-led research programme running annual State of DevOps reports since 2013; the empirical backbone for [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren & Macvean 2026]]'s productivity-paradox and amplifier-and-mirror claims. First-mention as a wiki referent; promote to its own entity page on second-source coverage.
+
+## Inside-Google engineering practices referenced in this wiki
+
+The [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren/Macvean 2026]] talk anchors several concrete Google practices worth tracking as discrete referents:
+
+- **Search-org PM platforms.** Internal platforms that let PMs ship features all the way through to live production experiments without explicitly authoring each line of code — the Google-side empirical exemplar for [[2026-05-07-singhal-stanford-cs153-product-management-in-ai-era|Singhal's PM-as-product-builder thesis]].
+- **Code-review agent stack.** Three-layer agent system used at fleet scale: **Code Review Agents** (functionality / reliability / performance / usability / security / maintainability), **Shepherding Agents** (guide changes through CI/CD; trigger reviewers multiple times), **Risk Assessor Agents** (scan in-flight changes; flag high-risk for human review).
+- **TensorFlow migration three-agent architecture.** A planner / orchestrator / coder triad with product-specific playbooks (YouTube-specific style for YouTube-area migrations). Cited as Google's canonical multi-agent-system exemplar.
+- **Quality Agent.** Stress-tests requirements and looks for logical collisions before execution begins. Single-mention as of this ingest; promote on second-source coverage.
 
 ## Google DeepMind
 

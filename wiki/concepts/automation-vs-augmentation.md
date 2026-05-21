@@ -3,9 +3,9 @@ type: concept
 aliases: ["automation vs augmentation", "automation-vs-augmentation", "automate vs augment", "AI substitution vs complementarity", "AI labor substitution", "AI labor complementarity"]
 tags: [automation, augmentation, generative-ai, ai-deployment, ai-task-design, capability-reliability-gap]
 confidence: 0.95
-last_confirmed: "2026-05-20"
-accessed_at: "2026-05-20"
-source_count: 18
+last_confirmed: "2026-05-21"
+accessed_at: "2026-05-21"
+source_count: 19
 relationships:
   - type: supports
     target: ai-employment-effects
@@ -183,6 +183,7 @@ Four wiki sources, with distinct vocabularies and methodologies, all draw essent
 | [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation\|Dutt et al. 2026 (Bain/OpenAI HBR)]] | Two failure modes when augmentation is shallow: *offering lock-in* (AI optimizes existing offerings) and *process lock-in* (AI automates current processes without redesigning them). Successful firms "reinvent the business" instead, with 10–25% EBITDA gains | "Offering lock-in" vs. "process lock-in"; "improve the task" vs. "reinvent the business"; [[micro-productivity-trap]] |
 | [[2026-05-05-nishar-nohria-end-of-one-size-fits-all\|Nishar & Nohria 2026 (HBR)]] | Firm-boundary 4-model decision: **Build** (deep augmentation of distinctive workflows) ↔ **Compose** ↔ **Collaborate** ↔ **Buy Outcomes** (firm-level automation: vendor takes responsibility for the whole job, e.g. Adobe's outcome-based pricing). Choice is no longer cost-driven; it's a strategic decision about where differentiation lives. | "Build / Compose / Collaborate / Buy Outcomes"; "the boundary of the firm becomes a variable rather than a given" |
 | [[2026-03-20-huggingface-agentic-evaluations-workshop\|Narayanan / Princeton @ HF Agentic Evals 2026]] | **Reliability as the gating dimension**. Automation deployments require a higher reliability threshold (10% failure rate on autonomous customer service = dead-on-arrival) than augmentation deployments (10% failure rate on coding-agent suggestions = still net-positive with human review). Capability and reliability are orthogonal; 12-sub-dimension reliability decomposition, most unsolved. | "Capability-reliability gap"; "release-decision threshold"; "automation tasks vs augmentation tasks" |
+| [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer\|Forsgren & Macvean / Google I/O 2026]] | **The automation-trap warning** at the engineering-team layer + **"delegate tasks, not judgment"** as the boundary-marker for what humans keep under augmentation. *"Our top teams avoid the automation trap by establishing clear human baselines for their work and measuring verification overheads. To hill climb towards a win, we run experiments to find the tasks where the probability of success is highest. This allows us to keep human attention on the tasks we know agents can't yet perform, or where taste and judgement is really essential."* Engineering-leadership operationalisation of the augmentation pole — keep human attention on *judgement-bearing* work, delegate *task-execution* to agents. The talk also operationalises the **orchestrator-not-conductor** mental shift: *"a big mental model shift from being a Conductor of an individual agent to an Orchestrator of a system"* — multi-agent automation framed as augmentation-of-the-engineer's-judgement rather than agent-as-employee-replacement. Convergent with Narayanan's reliability-gating: the automation-trap-avoidance discipline is Narayanan's release-decision threshold applied per-task-class at fleet scale | "Avoid the automation trap"; "delegate tasks, not judgment"; "orchestrator of a system, not conductor of an individual agent" |
 
 When four independent sources arrive at the same cut from different angles (theory, strategy, vendor framing, and large-scale payroll data), the distinction is robust enough to be a load-bearing concept in the wiki.
 

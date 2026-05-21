@@ -3,9 +3,9 @@ type: concept
 aliases: ["agent development lifecycle", "ADLC", "agent SDLC", "agent lifecycle"]
 tags: [agent-development-lifecycle, adlc, ai-agents, agent-engineering, lifecycle-frameworks, sdlc-parallel, build-test-deploy-monitor, agent-governance, evals, llm-as-judge]
 confidence: 0.88
-last_confirmed: "2026-05-14"
-accessed_at: "2026-05-14"
-source_count: 6
+last_confirmed: "2026-05-21"
+accessed_at: "2026-05-21"
+source_count: 8
 relationships:
   - type: part-of
     target: ai-agents
@@ -140,6 +140,10 @@ The Test phase for *agentic* systems specifically — Sathiamoorthy / Bespoke La
 
 Plus [[Arvind Narayanan|Narayanan]]'s **capability-reliability gap** (see [[ai-benchmarks]]) and [[Nathan Habib|Habib]]'s **community-eval / living-benchmarks** mechanism — both research-frontier extensions of the Test phase that the wiki tracks separately.
 
+#### Engineering-leadership anchor — Forsgren & Macvean / Google I/O 2026 ([[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren-Macvean 2026]])
+
+The engineering-leadership operationalisation of the **Test** phase. Forsgren and Macvean position **eval-design as the top upskilling priority** for AI-era engineers: *"because verification is such a big bottleneck, you need to be confident in how you evaluate AI output. The whole of the T-shaped engineer is essential here, as this really requires a mix of AI, Software Engineering, User and Business skills, in order to ensure you are developing realistic, grounded, and relevant evals."* Evals double as the **shared-team-knowledge artifact** — *"a critical artifact to ensure shared team knowledge, and a big part of how intent is captured. They help us define what good looks like."* Convergent with Husain's *binary judges + TPR/TNR* prescriptions and Sathiamoorthy's *level-0-vs-level-1 verifiability* framing, but landed from the **engineering-team capability vantage** rather than the eval-construction vantage. Two further ADLC-relevant primitives the talk operationalises: **agent journaling** (agents reflect into structured logs at the end of each session, surfacing tool-usability and instruction-ambiguity problems) maps to Chase's **Monitor → Iterate** loop with the agent itself as the data source; **risk-assessor + shepherding agents on CI/CD** at fleet scale operationalise Chase's **Govern** ring's *audit trails* and *HITL* axes mechanically. The Google-side counterpart to Anthropic-side ADLC operationalisations elsewhere in the cluster.
+
 ### Deploy (more than hosting)
 
 - **Durable runtime** — checkpoint progress, resume on failure (LangSmith Deployment, AWS AgentCore, Temporal).
@@ -201,6 +205,23 @@ Lopopolo's account of the OpenAI Codex internal-product team's five-month engine
 | **Govern** | Mechanical layer enforcement (forward-only dependency direction); single Providers interface for cross-cutting concerns (auth, telemetry, feature flags); "enforce boundaries centrally; allow autonomy locally" |
 
 The Codex team substantiates the lifecycle as **a real engineering practice**, not just a marketing taxonomy. It also extends [[agentic-engineering]] with concrete operational data: 1,500 PRs in 5 months, 7 engineers, 3.5 PRs / engineer / day, throughput *increasing* with team size — built with **0 lines of manually-written code**.
+
+## Worked example: AnswerThis at 2-FTE micro-scale ([[2026-05-19-garg-yc-internal-ai-agent-evolves-itself|Garg 2026]])
+
+Where [[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo]] is the vendor-scale worked example, [[2026-05-19-garg-yc-internal-ai-agent-evolves-itself|Garg's YC Root Access talk]] is the **founder-vantage micro-scale worked example** — two FTEs, $2M ARR, an internal AI ops agent built on Claude Code CLI wrapped in Python. The lifecycle's phases are not named in Garg's vocabulary, but the same phases run; what makes the talk distinctive is that **the agent itself is the active maintainer of most of them**.
+
+| Lifecycle phase | What the AnswerThis agent does |
+|---|---|
+| **Build** | Claude Code CLI wrapped in Python as harness; SaaS-tool CLIs (Intercom / Fathom / Stripe) as the initial tool layer; a **coding sub-agent exposed as a CLI** with edit-access to the main agent's code — the self-extending mechanism that has authored 45+ permanent CLIs to date |
+| **Test** | Not formally articulated in the talk; the implicit feedback loop is human-in-the-loop in Slack (Ryan-the-non-technical-co-founder catches failures, messages the agent, agent rewrites its own rules) |
+| **Deploy** | Cron job that refreshes the agent's read-only DB + codebase snapshot on every release; tools the coding sub-agent authors become permanent and available in future sessions |
+| **Monitor** | The business itself becomes the monitor — *"what's the status of a lead? what are the open issues for customer X?"* are Slack queries to the agent rather than dashboard reads |
+| **Iterate** | `instructions.md` loaded every turn, **agent-editable**; natural-language feedback in Slack → agent rewrites the file → next turn picks up the corrected behaviour. The *Ryan story* — *"the agent updated its own instruction set and tool link and then that entire class of mistakes stopped happening again"* — is the cleanest founder-scale instance of *iterate-via-natural-language-feedback* in the wiki |
+| **Govern** | Single-team governance compressed into one Slack channel; co-founders are the only humans in the loop |
+
+Garg's contribution to the lifecycle concept is the **agency dimension**: rather than humans operating each phase against an inert agent artifact, the agent is the active operator of Build (self-authored CLIs), Iterate (self-edited rules file), and partly Monitor (queryable business state). Humans retain Govern and the boundary of Test. The talk also names a clean **three-memory ontology** (factual = codebase+DB / behavioural = instructions.md / procedural = self-authored tools) that maps onto the lifecycle's persistence substrate — what the agent reads, what it follows, what it can do.
+
+This makes the AnswerThis worked example a **smallest-end-of-scale data point** for the lifecycle's vendor-specificity-vs-genericness open question below: the same phases run at 2 FTE as at OpenAI Codex's 7-engineer team — strong evidence the construct generalises beyond vendor-specific formalisations.
 
 ## Open questions
 

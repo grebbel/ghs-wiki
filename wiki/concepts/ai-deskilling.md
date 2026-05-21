@@ -2,10 +2,10 @@
 type: concept
 aliases: ["AI deskilling", "ai-deskilling", "task composition shift", "deskilling"]
 tags: [deskilling, task-composition, ai-employment-effects, occupations]
-confidence: 0.82
-last_confirmed: "2026-05-12"
-accessed_at: "2026-05-12"
-source_count: 5
+confidence: 0.83
+last_confirmed: "2026-05-21"
+accessed_at: "2026-05-21"
+source_count: 6
 relationships:
   - type: instance-of
     target: ai-employment-effects
@@ -81,6 +81,20 @@ The audio cuts off as Bertsimas begins his response — the wiki holds only the 
 The question's structural significance for this concept: it is the wiki's first articulation of de-skilling as an *open question MIT institutional leadership is being asked to resolve* — not merely a worker-side or industry-side worry. The Pia Torian first-person concern (Thompson 2026) and the senior-vs-junior inter-generational concern (Thompson 2026) now have an institutional-pedagogy-leadership counterpart. Open primary-source target: the underlying MIT studies on AI-as-pedagogical-supplement-vs-cognitive-load.
 
 Convergent with the wiki's [[durable-skills]] concept from the *educational-supply-side* vantage: if AI tutors (AskTIM, personalised learning, AI translation) supply the floor-raised skills that vibe-coding-era developers will need, but also hinder the cognitive faculties needed to evaluate AI output, the open-education program inherits the de-skilling risk it is trying to mitigate. The question is unresolved in the wiki as of May 2026.
+
+## The engineering-leadership countermeasure: "productive struggle" ([[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren & Macvean 2026]])
+
+[[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren and Macvean]] (Google I/O 2026 / Google's Developer Intelligence team) name **deliberate friction-preservation** as the engineering-leadership response to the deskilling concern. Their phrase is *"productive struggle"* — *"we have to carve out dedicated time during work hours so our devs can learn these tools and understand the systems they're building. Encourage them to manually do architectural walkthroughs or experiment with a new tool or approach so they can learn how tools handle different problems differently. **If you don't give them the space to build shared mental models, your team will drown in cognitive debt.**"*
+
+Three practices the talk explicitly recommends as deskilling-counter-measures, all friction-preserving by design:
+
+- **Re-implementation as a learning tool.** Don't accept the AI's first draft — instruct the AI to tear it down and reimplement, with documented reasoning for the different approach. Surfaces missing context and forces engineers to engage with multiple solution shapes rather than habituating to the first acceptable one.
+- **Walkthroughs of "alien code".** Engineers explain code or system designs *they did not write*. Whiteboarding is *at a premium*; **analog approaches work incredibly well here** because they build the shared mental models AI generation alone doesn't produce. The senior-vs-junior code-sense concern Thompson surfaces (above) is addressed structurally: the whole team — not just the seniors — performs explanation work over AI output.
+- **Skill files / rules files / agent profiles, version-controlled.** Codify team practices, expectations, institutional knowledge into agents reliably. *"Being forced to consistently reflect on what is a good behavior from an agent, that is a good way to remain sharp in your core engineering skills."* The deliberate-reflection mechanism converts agent-rule curation into ongoing tacit-to-explicit conversion.
+
+The talk's framing is structurally important: deskilling is treated as a **leadership-managed cognitive-load problem**, not an inevitable consequence of AI adoption. *"You can't mandate a T-shaped developer inside a broken system."* The DORA-grounded **amplifier-and-mirror** framing carries through: AI doesn't deskill teams — *broken systems amplified by AI* deskill teams; well-aligned teams that preserve productive struggle hold their skill base.
+
+Convergent with the wiki's [[durable-skills]] page (same source — Forsgren/Macvean appears in both as the **engineering-role-evolution vantage**), with [[2026-05-06-mit-ocw-future-of-mit-open-education|the MIT OCW]] *"how much AI is enough"* question, and with Sternfels' *aptitude-to-learn-novel-stuff* hiring shift — three different vantages (corporate-research / educational-leadership / consulting) converging on **deliberate-friction-preservation** as the deskilling countermeasure.
 
 ## The inverse frame: durable skills ([[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al. 2026]])
 
