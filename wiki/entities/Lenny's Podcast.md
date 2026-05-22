@@ -5,9 +5,9 @@ aliases: ["Lenny's Podcast", "Lennys Podcast", "lennypodcast", "Lenny Rachitsky'
 tags: [lenny-podcast, podcast, product-management, consumer-tech, ai-era-strategy, founder-interviews, lenny-rachitsky]
 since: 2022
 confidence: 0.75
-last_confirmed: "2026-05-14"
-accessed_at: "2026-05-14"
-source_count: 2
+last_confirmed: "2026-05-22"
+accessed_at: "2026-05-22"
+source_count: 3
 relationships:
   - type: published-by
     target: 2026-05-10-ries-lennys-force-destroys-companies-within

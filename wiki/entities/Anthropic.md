@@ -7,7 +7,7 @@ since: 2021
 confidence: 0.92
 last_confirmed: "2026-05-21"
 accessed_at: "2026-05-21"
-source_count: 11
+source_count: 12
 ---
 
 # Anthropic

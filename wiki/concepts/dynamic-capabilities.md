@@ -3,9 +3,9 @@ type: concept
 aliases: ["dynamic capabilities", "dynamic-capabilities", "Teece dynamic capabilities", "sense seize transform"]
 tags: [dynamic-capabilities, teece, strategic-renewal, digital-transformation, microfoundations]
 confidence: 0.90
-last_confirmed: "2026-05-17"
-accessed_at: "2026-05-17"
-source_count: 5
+last_confirmed: "2026-05-22"
+accessed_at: "2026-05-22"
+source_count: 6
 relationships:
   - type: supports
     target: enterprise-ai-adoption

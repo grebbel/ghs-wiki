@@ -3,9 +3,9 @@ type: concept
 aliases: ["systems thinking", "systems-thinking"]
 tags: [systems-thinking, innovation, sustainability, design-thinking, breakthrough-thinking, wicked-problems]
 confidence: 0.82
-last_confirmed: "2026-05-21"
-accessed_at: "2026-05-21"
-source_count: 4
+last_confirmed: "2026-05-22"
+accessed_at: "2026-05-22"
+source_count: 5
 relationships:
   - type: supports
     target: enterprise-ai-adoption

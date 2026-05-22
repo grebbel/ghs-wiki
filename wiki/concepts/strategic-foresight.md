@@ -3,9 +3,9 @@ type: concept
 aliases: ["strategic foresight", "strategic-foresight", "corporate foresight", "futures thinking"]
 tags: [strategic-foresight, scenarios, futures, signal-detection, FTSG, webb, arena-creation-potion, arenas-radar, MGI]
 confidence: 0.85
-last_confirmed: "2026-05-17"
-accessed_at: "2026-05-18"
-source_count: 6
+last_confirmed: "2026-05-22"
+accessed_at: "2026-05-22"
+source_count: 9
 relationships:
   - type: part-of
     target: dynamic-capabilities

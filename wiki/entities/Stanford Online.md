@@ -5,10 +5,10 @@ aliases: ["Stanford Online", "Stanford Online YouTube"]
 tags: [stanford, education-channel, mooc, academic-lecture, online-education]
 parent: "[[Stanford University]]"
 website: "https://online.stanford.edu"
-confidence: 0.75
-last_confirmed: "2026-05-12"
-accessed_at: "2026-05-12"
-source_count: 2
+confidence: 0.80
+last_confirmed: "2026-05-22"
+accessed_at: "2026-05-22"
+source_count: 4
 ---
 
 # Stanford Online
