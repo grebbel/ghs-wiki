@@ -5,7 +5,7 @@ tags: [deskilling, task-composition, ai-employment-effects, occupations]
 confidence: 0.83
 last_confirmed: "2026-05-25"
 accessed_at: "2026-05-25"
-source_count: 7
+source_count: 8
 relationships:
   - type: instance-of
     target: ai-employment-effects
@@ -110,6 +110,10 @@ If deskilling tracks *which skills get hollowed out by AI*, [[durable-skills]] t
 Jonathan Allen's AWS keynote names *"deskilling prevention"* as one of the explicit policy categories in the **Singaporean AI governance model announced at Davos 2026** — the only government governance framework Allen rates as adoptable. The framework's four principles (assess and bound risks up front, human accountability, technical controls across lifecycle, end-user responsibility) operationalise the anti-deskilling stance at the policy layer; **policy-as-code** is the implementation layer Allen prescribes for locking it down.
 
 Paired with Allen's organisational counter-prescription: *"audit your seniority mix. Be prepared to bridge the gap from juniors to seniors, and protect that junior learning path."* This is the wiki's first AWS-vendor-altitude framing of **active anti-deskilling discipline** at the firm level — distinct from the [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|productive-struggle]] discipline at the individual-developer level. Allen's claim is structural: if firms cut the junior layer (the empirical anchor: 73% European-tech entry-hiring collapse, see [[ai-employment-effects]]), the senior layer cannot reproduce itself in 5–10 years. Deskilling-prevention via *junior-pipeline-protection* is therefore not an HR nicety but a multi-year-horizon firm-survival prescription.
+
+## *AI brain fry* — cognitive-load deskilling as a second causal mechanism ([[2026-05-06-kropp-bcg-hbr-dont-treat-ai-agents-like-employees|Kropp et al. / BCG, HBR May 2026]])
+
+The wiki has previously held [[2026-04-28-anthropic-economic-index-q4-2025|deskilling-via-task-composition-shift]] as the primary causal mechanism. [[2026-05-06-kropp-bcg-hbr-dont-treat-ai-agents-like-employees|Kropp et al.]] reference a prior BCG study naming a **second causal mechanism**: *AI brain fry* — *"mental fatigue from excessive use or oversight of AI tools beyond one's cognitive capacity."* Workers experiencing brain fry score **11% higher on minor-error frequency** and **39% higher on major-error frequency** than those not experiencing it. The Kropp et al. paper adds the *AI-employee framing* extension: when managers feel less need to fully engage in the cognitive burden of review (because *"Kevin"* drafted it, not a human colleague), scrutiny drops further — turning *over-reliance on AI* into a deskilling pathway through diminished review-engagement rather than task-composition shift. This is structurally distinct from the [[2026-04-28-anthropic-economic-index-q4-2025|Anthropic Economic Index]] *task-composition* mechanism — same outcome (skills decay), different upstream driver (over-engagement vs. task migration). Worth tracking as the wiki accumulates more cognitive-load-on-managers-of-agents evidence. *Open follow-up:* ingest the underlying BCG *AI brain fry* study directly.
 
 ## Related concepts
 

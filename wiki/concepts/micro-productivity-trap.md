@@ -5,7 +5,7 @@ tags: [micro-productivity-trap, AI-transformation, EBITDA, process-redesign, wor
 confidence: 0.95
 last_confirmed: "2026-05-25"
 accessed_at: "2026-05-25"
-source_count: 19
+source_count: 21
 relationships:
   - type: instance-of
     target: enterprise-ai-adoption
@@ -143,6 +143,14 @@ Jonathan Allen at the AWS London Executive Forum 2026 anchors the trap with the 
 - **Missing integration** — *"pilots stay as demoed, never connected to actual business decision flows. Pilot purgatory."*
 
 Allen's 5%-pattern counter-prescription (*pick one point, execute well, right team composition, integrated into business decision flows from day one*) is the AWS-vendor-altitude restatement of the four-step transformation-mindset framework from [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt et al.]]. Nick Francis's Brooklyn Solutions testimony in the same talk ratifies the workflow-level focus via the **frequency × variability use-case discovery** workshop method — Brooklyn sit with SMEs from every department to find *"things that are mundane, high-frequency, not that variable, that happen day in, day out"*. The Brooklyn case is *also* a successful micro-productivity-trap-escape worked example — phase-1 task gains (document summarisation, key-point extraction) compounded into phase-3 agentic execution within the application via iterative data-context architecture, not bolt-on.
+
+### Ninth-source corroboration: *anthropomorphizing lock-in* as a third named sub-mode ([[2026-05-06-kropp-bcg-hbr-dont-treat-ai-agents-like-employees|Kropp et al. / BCG, HBR May 2026]])
+
+[[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt et al.]] named two sub-modes of the trap (*offering lock-in* and *process lock-in*); [[2026-05-06-kropp-bcg-hbr-dont-treat-ai-agents-like-employees|Kropp et al.]] supply a third — **anthropomorphizing lock-in**. In their N=1,261 randomized experiment, the *AI-as-employee framing* (vs *AI-as-tool*, holding everything else constant) caused **9pp drop in personal accountability** (8pp shift to AI), **44% more escalation requests**, **18% fewer errors caught**, and **13% higher identity uncertainty** — *without* meaningfully increasing adoption intent. The mechanism is structurally a third sub-mode in the [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt et al.]] taxonomy: an apparently-cultural choice (how to refer to AI in the org) causes operationally consequential value leakage at the firm level. BCG and Bain converging at near-identical timing on the same trap-and-mechanism construct, at advisor altitude, with overlapping prescription sets (workflow redesign + explicit accountability + capability-building for human managers of agents).
+
+### Tenth-source corroboration: the academic-altitude RCT showing *untailored augmentation gradually decreases market share* ([[2025-06-09-krakowski-human-centered-ai-field-experiment|Krakowski et al. 2025]])
+
+Where the prior corroborating sources operate at consultant / vendor / practitioner altitudes, [[2025-06-09-krakowski-human-centered-ai-field-experiment|Krakowski et al.]] supply the wiki's first **strictly-academic RCT-grade empirical anchor** on the trap. N=72 Nordic pharma sales experts, DiD design, three conditions (legacy IT control / untailored AI / tailored AI per Kirton 1976 cognitive style). The headline result is itself a worked instantiation of the trap: **untailored AI deployment causes market share to *gradually decline* vs a stable legacy-IT baseline** — task-level *technology adoption happened* (the system was deployed), but *firm-level value decreased* over 9+ quarters post-intervention. The mechanism (per qualitative interviews + login mediation): sales experts withdraw from the system (utilization *decreases* over time in the untailored condition), driven by role conflicts and ambiguities. The Finnish/Norwegian innovator quotes (*"felt like in prison... killed my internal drive!"* / *"felt like a less good sales representative"*) name an **internal-motivation-collapse fifth sub-mode** alongside Dutt et al.'s *offering-lock-in* / *process-lock-in*, Kropp et al.'s *anthropomorphizing-lock-in*, and the broader *interaction-design-misfit lock-in* that the four-parameter (work-procedure / decision-authority / training / incentives) framework names operationally.
 
 ## Cross-source positioning (descriptive only, per cross-source neutrality)
 

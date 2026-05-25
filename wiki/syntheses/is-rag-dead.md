@@ -6,9 +6,9 @@ derived_from: [is-rag-dead]
 opened: 2026-04-09
 closed: 2026-05-12
 confidence: 0.90
-last_confirmed: "2026-05-12"
-accessed_at: "2026-05-12"
-source_count: 5
+last_confirmed: "2026-05-25"
+accessed_at: "2026-05-25"
+source_count: 6
 relationships:
   - type: supports
     target: llm-wiki
@@ -98,6 +98,7 @@ Huber's prediction: **context engineering itself will be folded back into the mo
 - [[2026-05-11-huber-chroma-rag-is-dead-agentic-search|Huber 2026]] — "RAG is Dead: Jeff Huber (Chroma) on Building Agentic Search"
 - [[2026-04-09-oceanbase-ex-brain-knowledge-base-that-thinks|OceanBase ex-brain 2026]] — "I Built a Knowledge Base That Thinks — Inspired by Karpathy's LLM Wiki"
 - [[2026-04-27-surrealdb-knowledge-graphs-for-ai-agents-practical-guide|SurrealDB 2026]] — "Knowledge Graphs for AI Agents (A Practical Guide)"
+- [[2026-05-14-ebbelaar-hybrid-search-rag-bm25-embeddings-reranker|Ebbelaar 2026]] — *"The Complete Guide to Hybrid Search in RAG (BM25 + Embeddings + Reranker)"* — practitioner code-walkthrough of the hybrid stack (BM25 + dense + RRF + reranker) on the BEIR FinanceQA dataset, with the closing prescription *"figure out for your corpus what the best combination of this is"*; the wiki's first complete-components-from-scratch operationalisation of the synthesis's *hybrid-architecture-is-the-right-answer* lesson #2.
 
 Plus upstream:
 - [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy 2026 (Sequoia AI Ascent)]] — first-person confirmation of continued LLM-Wiki use; the upstream spec author.
