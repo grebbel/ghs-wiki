@@ -6,10 +6,10 @@ tags: [tech-vendor, cloud, ai-infrastructure, hyperscaler]
 parent: "[[Amazon]]"
 ticker: "AMZN (Amazon)"
 website: "https://aws.amazon.com"
-confidence: 0.83
-last_confirmed: "2026-05-11"
-accessed_at: "2026-05-11"
-source_count: 3
+confidence: 0.85
+last_confirmed: "2026-05-25"
+accessed_at: "2026-05-25"
+source_count: 4
 ---
 
 # Amazon Web Services
@@ -43,10 +43,26 @@ Discount the Octopus framing slightly for AWS's commercial interest, but the und
 
 Jassy's complaint in this section: *"there was a lot of attention early on on ChatGPT … I think people have slept a little bit on the other layers of the stack"* — direct marketing message positioning AWS as the stack-vendor versus OpenAI / Anthropic as application-vendors. The structural decomposition is compatible with [[2026-05-09-chase-agent-development-lifecycle|Chase's]] later (April 2026) four-sub-layer Build split (Frameworks / Runtimes / Harnesses / No-code) at a coarser granularity. **Bedrock's agentic-capabilities feature** is the wiki's earliest first-party-CEO mention of a productised harness primitive — eight months before [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic's]] Managed Agents announcement.
 
+### 4. As an AI-stack vendor 12 months on — the USE / COMPOSE / BUILD frame ([[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS London Exec Forum 2026]])
+
+A year after Jassy's three-layer framing, **[[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Jonathan Allen]]** (AWS *Executive in Residence*, the third holder of that title to appear in the wiki after Werner and Le-Brun) gives the agentic-AI-era restatement. The **USE / COMPOSE / BUILD** economic-decision framework is the agentic-system-economics overlay on Jassy's stack:
+
+- **USE** = third-party agentic vendor solutions (the SaaS layer Jassy's *top-of-stack* applications).
+- **COMPOSE** = frontier-model APIs (Haiku / Sonnet / Opus 4.7 from Anthropic on Bedrock + cross-vendor models). **Allen reports ~80% of his AWS customers currently land here.**
+- **BUILD** = train your own model. SageMaker / Amazon Nova / *the Forge* are the tooling; justified only when fine-tuning improves inference economics over the frontier model.
+
+Allen's keynote also names the **Amazon Bedrock AgentCore** productised harness/runtime layer (announced at AWS Summit by Francesca Vasquez earlier the same day) — the AWS agentic-runtime equivalent of [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic Managed Agents]], for *containment, simplicity, security, observability*. Brooklyn Solutions' customer testimony ratifies **AgentCore + Bedrock Guardrails** as the AWS-vendor harness composition in regulated-customer contexts (MoD, Danske Bank).
+
+The wiki's longitudinal-AWS-doctrine reading: **the three-layer stack has stabilised at 12-month delta; what's new in May 2026 is the explicit USE/COMPOSE/BUILD economic-decision overlay on the middle (orchestration) layer.** The middle layer is where 80% of customer activity lives.
+
 ## Notable people (mentioned in this wiki)
 
 - [[Jana Werner]] — Executive in Residence, AWS; co-author of the Octopus Org book and HBR article.
 - [[Phil Le-Brun]] — Executive in Residence, AWS; co-author of the Octopus Org book and HBR article.
+- **Jonathan Allen** — Executive in Residence, AWS; headline speaker at the 2026 London Executive Forum (*Dangling* — single-source so far, deferred entity-page promotion per [[../../CLAUDE.md#author-entity-promotion|second-source rule]]).
+- **Anthony Liguori** — VP Distinguished Engineer, AWS; Project Mantle lead in Allen's keynote (76-day Bedrock-substrate-rebuild case) (*Dangling*).
+- **Matt Garman** — AWS CEO (since June 2024); quoted by Allen on the junior-hiring-crisis moral framing (*Dangling*).
+- **Francesca Vasquez** — AWS executive who introduced AgentCore / security-agent / DevOps-agent at the London Forum earlier the same day (*Dangling*; first-name-only in the transcript, presumed Francesca Vasquez).
 
 ## AWS's positioning vs. competitors (note for future ingests)
 

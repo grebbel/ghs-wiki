@@ -5,7 +5,7 @@ tags: [automation, augmentation, generative-ai, ai-deployment, ai-task-design, c
 confidence: 0.95
 last_confirmed: "2026-05-25"
 accessed_at: "2026-05-25"
-source_count: 25
+source_count: 26
 relationships:
   - type: supports
     target: ai-employment-effects
@@ -16,8 +16,8 @@ relationships:
   - type: supports
     target: ai-benchmarks
     via: "Narayanan's release-decision frame — reliability threshold required for automation deployment exceeds that for augmentation deployment; reliability is the gating dimension benchmarks have under-measured"
-quality_score: 0.75
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '2 broken body wikilink(s)']
+quality_score: 0.73
+quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '3 broken body wikilink(s)']
 ---
 
 # Automation vs. Augmentation
@@ -179,6 +179,14 @@ Storoni's contribution is **the neuroscience mechanism for the augmentation pole
 Storoni's framing closes a gap in the concept's prior corpus: the augmentation-pole sources have shown *that* augmentation works (Brynjolfsson-Li-Raymond, Forsgren & Macvean, Anthropic Economic Index) and *where* to deploy it (Anand-Wu, MITTRI/Cisco) but not *what kind of cognitive work the human side of the augmentation pair has to be doing* for the pairing to actually produce value. Storoni's answer: **gear-2 quality work, in time-of-day-aware schedules, with intrinsic-motivation structures protecting the underlying cognitive states.**
 
 Per the [[../../CLAUDE.md#lifecycle|Lifecycle confidence rules]] this single-source prescriptive-popularisation contribution does *not* lift the concept's confidence above the existing 0.95 cap; it expands the *scope* of what the augmentation pole covers (now including the work-design layer, not only the AI-deployment layer).
+
+### 12. *Humans on judgment, agents on execution* + the anti-disposable-applications stance ([[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS London Exec Forum, 21 May 2026]])
+
+A second prescriptive voice on the augmentation pole — this time at AWS-vendor altitude. Allen's load-bearing principle (~27:24–27:30): ***"put humans on judgment work, agents on execution work."*** This is the concept page's tightest **division-of-labour heuristic** for the augmentation cut to date — narrower than the Anand-Wu task-quadrant grid and the MITTRI/Cisco replace-vs-give-agency framing, more operationally tractable than Storoni's gear-2-vs-gear-3 work-design lens, and directly compatible with both.
+
+Paired with Allen's anti-disposable-applications stance (~5:24): *"software is going through the roof and beyond. We are getting to disposable applications. We do not want this as leaders, right?"* — the **failure mode of the augmentation pole** that mirrors Storoni's quality-over-quantity reframe. Allen names *Jevons paradox* as the underlying mechanism (cheaper software → more software → more disposable software) and the moats-erosion thesis as the strategic-altitude consequence. Brooklyn Solutions' customer-side ratification of the *human-starts-human-ends* operational pattern (Francis, ~40:13–40:54: *"we essentially always have a human start the work and a human end the work. But we may have agents of all different sorts in between"*) is the **vendor-customer-side compatible-with-regulation operationalisation** of the same principle for regulated-customer contexts (MoD, Danske Bank).
+
+Convergent with [[2026-05-13-storoni-hbr-ideacast-redefining-efficiency-age-ai|Storoni 2026]] on the prescriptive frame, with [[2026-04-28-anand-wu-genai-playbook|Anand-Wu]] on the task-by-task deployment lens, with [[2026-04-28-mittri-cisco-ai-enabled-enterprise|MITTRI/Cisco]] on the agency-with-oversight progression. Adds the AWS-vendor altitude to the augmentation-pole prescriptive cluster.
 
 ## The four-source convergence on the distinction
 

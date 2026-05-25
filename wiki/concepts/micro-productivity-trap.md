@@ -5,7 +5,7 @@ tags: [micro-productivity-trap, AI-transformation, EBITDA, process-redesign, wor
 confidence: 0.95
 last_confirmed: "2026-05-25"
 accessed_at: "2026-05-25"
-source_count: 18
+source_count: 19
 relationships:
   - type: instance-of
     target: enterprise-ai-adoption
@@ -133,6 +133,16 @@ The construct is now visible *both* at the **organizational learning level** (Ki
 **Chatterjee's Friday-in-March story** as the wiki's clearest worked example of the trap's failure mode at the engineering layer: an agent emptied a customer's workspace because the harness lacked an intent-validation layer. *"The model was not the problem. The problem lived in the layer around the model."* Operationally identical to *"verification masquerading as evaluation"* but at a different stack layer — the same diagnostic principle (failures are in the *layer around the model*, not the model itself) generalises.
 
 Seven independent sources now, five vantages (consulting / investor + academic / executive coaching / academic survey + practitioner column / runtime engineering practitioner essays), all converging. **Confidence lifts to 0.90** — among the wiki's most strongly corroborated concepts. What remains genuinely open is *quantitative measurement*: nobody has yet measured the slope of harness-tuning compounding (how much contract-score uplift per unit of telemetry-driven adjustment, over what timeframe). The trap is robustly named *and* its escape mechanism is robustly described; what is missing is *empirical confirmation* that the escape mechanism delivers on its promise at scale.
+
+### Eighth-source corroboration: the AWS-vendor-altitude *pilot purgatory* anchor ([[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS London Exec Forum 2026]] + MIT NANDA 95%)
+
+Jonathan Allen at the AWS London Executive Forum 2026 anchors the trap with the **MIT NANDA enterprise-investment report** headline (April 2026, not yet ingested): *"Despite 30 to 40 billion in enterprise investment to GenAI, this report uncovers a surprising result, and that 95% of organizations are getting zero return."* Allen names three operational failure modes mapping cleanly onto this concept's *process-lock-in / offering-lock-in* taxonomy:
+
+- **Lack of workflow alignment** — *"AI bolted on is going to fail"*. The exact phrase the wiki has held since [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt et al.]] introduced *process lock-in*.
+- **Wrong targets** — *"companies aiming at sales and marketing high visibility instead of back-office operations where there's higher ROI are going to struggle."*
+- **Missing integration** — *"pilots stay as demoed, never connected to actual business decision flows. Pilot purgatory."*
+
+Allen's 5%-pattern counter-prescription (*pick one point, execute well, right team composition, integrated into business decision flows from day one*) is the AWS-vendor-altitude restatement of the four-step transformation-mindset framework from [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt et al.]]. Nick Francis's Brooklyn Solutions testimony in the same talk ratifies the workflow-level focus via the **frequency × variability use-case discovery** workshop method — Brooklyn sit with SMEs from every department to find *"things that are mundane, high-frequency, not that variable, that happen day in, day out"*. The Brooklyn case is *also* a successful micro-productivity-trap-escape worked example — phase-1 task gains (document summarisation, key-point extraction) compounded into phase-3 agentic execution within the application via iterative data-context architecture, not bolt-on.
 
 ## Cross-source positioning (descriptive only, per cross-source neutrality)
 

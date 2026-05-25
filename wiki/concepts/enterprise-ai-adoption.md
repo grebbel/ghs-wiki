@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizational AI adoption", "AI maturity"]
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity, ai-foundation, omniscalers, future-arenas]
 confidence: 0.95
-last_confirmed: "2026-05-24"
-accessed_at: "2026-05-24"
-source_count: 48
+last_confirmed: "2026-05-25"
+accessed_at: "2026-05-25"
+source_count: 49
 relationships:
   - type: uses
     target: automation-vs-augmentation
@@ -382,6 +382,12 @@ Operator-narrated framings push the wiki's existing position further:
 Julie Baron's annual *Signals for 2026* outlook gives the wiki its **single best editorial-framing headline** for the 2026 adoption-curve inflection: *"Expect enterprises to shift focus from experimentation to measurable business outcomes and sustainable AI costs."* This is the [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt et al. "experimentation-to-transformation"]] reframe compressed into a single phrase, written for an O'Reilly Radar trade-press audience three months before the HBR essay.
 
 Baron also names the **strategic-crisis framing** explicitly: *"Most companies have moved past simple AI experiments but are now facing a strategic crisis. Their existing product playbooks (sizing markets, roadmapping, UX) weren't designed for AI-native products. Organizations must develop clear frameworks for building a portfolio of differentiated AI products, managing new risks, and creating sustainable value."* The wiki's reading: **2026 is the year *measurable-outcome* obligations finally bite** — the [[micro-productivity-trap]] becomes operationally untenable, and the [[2026-05-05-nishar-nohria-end-of-one-size-fits-all|firm-boundary build/compose/collaborate/buy framework]] becomes a forced choice.
+
+### USE / COMPOSE / BUILD as the AWS-vendor strategic-decision frame ([[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS London Exec Forum, 21 May 2026]])
+
+Jonathan Allen (AWS Executive in Residence) at the AWS London Executive Forum 2026 names the **USE / COMPOSE / BUILD** economic-decision framework as his headline strategic-altitude prescription for enterprise agentic-AI adoption — and reports that **~80% of his AWS customers are currently landing at COMPOSE** (composing with frontier-model APIs — Haiku / Sonnet / Opus 4.7 — rather than training their own models). The framework is the **agentic-system-economics overlay** on [[2025-05-06-jassy-amazon-agility-ai-strategy-changing-role-of-managers|Jassy's three-layer AI stack from May 2025]] (infrastructure / orchestration / applications) — same Amazon-vendor lens at 12-month delta. Allen's framing of the deployment-failure mode mirrors the [[micro-productivity-trap|micro-productivity-trap]]: *"AI bolted on is going to fail... pilots stay as demoed, never connected to actual business decision flows."* The empirical anchor Allen builds the prescription against is the **MIT NANDA 95%-of-AI-pilots-fail report** (Apr 2026, not yet ingested) — see the [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|source page]] for the named failure modes (workflow misalignment, wrong targets, missing integration) and the 5%-pattern counter-prescription (workflow-level focus, right team composition, integrated into business decision flows from day one).
+
+Brooklyn Solutions' customer testimony in the same talk supplies a **vendor-customer-side ratification** of the workflow-level-focus prescription: their **frequency × variability use-case discovery** workshop method — sitting with SMEs from every department, identifying tasks that are *"mundane, high-frequency, not that variable, that happen day in, day out"* — is the operational complement to Allen's strategic frame. Brooklyn's *"momentum beats perfection"* closing aphorism is **explicitly not** permission to flood disposable apps — their 4-phase progression (basic use-cases → conversational Ask Brooklyn → agentic → multi-agent) is *iterative quality compounding*, the Brooklyn counter to the disposable-applications failure mode Allen names.
 
 ### Vendor-side productization of agentic adoption ([[2026-05-05-loukides-radar-trends-may-2026|May 2026 Radar Trends digest]])
 

@@ -3,9 +3,9 @@ type: concept
 aliases: ["dynamic capabilities", "dynamic-capabilities", "Teece dynamic capabilities", "sense seize transform"]
 tags: [dynamic-capabilities, teece, strategic-renewal, digital-transformation, microfoundations]
 confidence: 0.90
-last_confirmed: "2026-05-22"
-accessed_at: "2026-05-22"
-source_count: 7
+last_confirmed: "2026-05-25"
+accessed_at: "2026-05-25"
+source_count: 8
 relationships:
   - type: supports
     target: enterprise-ai-adoption
@@ -85,6 +85,20 @@ Empirically identified across 7 incumbent German MNCs and 18 strategy-consultant
 | **External-triggers sensing** (contextual) | Named the **agentic-AI personal-assistant disintermediation thesis** as *"what keeps me up at night"* — the seller-side mirror of [[2026-05-11-ognibeni-ai-agents-cool-demos-vs-real-revenue-china|Ognibeni's buyer-side warning]] that search-driven e-commerce will be the first format agents kill. |
 
 The **2,000-store competitive-scale floor** is particularly reusable as a Western/regional-incumbent-anchored data point for the *balancing-digital-portfolios* microfoundation — a public CEO articulation of *what scale is required to win against established Chinese platform incumbents in their home market*, a quantification the W&W literature treats only abstractly.
+
+### End-to-end practitioner operationalisation of the W&W process model at AWS-vendor altitude ([[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS London Exec Forum 2026]])
+
+Where the [[2026-05-14-price-dfi-retail-asia-reinventing-how-it-sells|Price/DFI]] case set anchors specific microfoundations with named-numbers worked cases at mid-tier retail-incumbent scale, [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen]] traces the **entire W&W process arc end-to-end** at AWS-Executive-in-Residence advisory altitude:
+
+| W&W bucket | Allen's operationalisation |
+|---|---|
+| **Digital sensing** | Anthropic labour-market report + MIT NANDA 95%-of-AI-pilots-fail framing + Nvidia SLM paper + Jevons-paradox / Schumpeterian-disruption macro-frame as the *digital-scenario-planning* discipline. |
+| **Digital seizing** | The **USE / COMPOSE / BUILD economic-decision framework** as *balancing-digital-portfolios*; Brooklyn Solutions' 4-phase iterative progression (basic → conversational → agentic → multi-agent) as *rapid-prototyping*; the embedded-pod model as *strategic-agility*. |
+| **Digital transforming** | The hourglass-organization shape + builders-to-orchestrators role-shift as *redesigning-internal-structures*; data-engineers-as-context-architects as *improving-digital-maturity*. |
+| **Strategic renewal** | The **moats-erosion thesis** as the load-bearing business-model strategic-renewal claim: the old moats (workflow embeddedness, software scale, integration lock-in, engineering complexity, IP) erode under agentic AI; replacement moats — *compounding proprietary data*, *network effects*, *regulatory permission*, *capital at scale*, *physical infrastructure*, *time that can't be parallelised* — re-anchor sustainable competitive advantage. The bank-branch-network expansion worked example operationalises *physical infrastructure as moat* under the new conditions. |
+| **Contextual** | The **junior-hiring crisis** (Ravio 73% European-tech entry-collapse) as *external-trigger*; AWS's CFO-office partnership for opportunity-cost measurement as *internal-enabler*; *toll-gate / ticket-culture* legacy enterprise discipline as *internal-barrier*. |
+
+This is the wiki's first **vendor-altitude end-to-end W&W operationalisation source** — distinct from [[2026-04-28-warner-wager-dynamic-capabilities-digital-transformation|the theoretical anchor itself]], from the [[2026-05-14-price-dfi-retail-asia-reinventing-how-it-sells|Price/DFI single-incumbent case set]], and from advisory-firm operationalisations like [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels/McKinsey]]. Allen's keynote is best read as *the AWS-advisory-channel translation of the W&W process model into agentic-AI-era enterprise prescription*.
 
 ## Related concepts
 

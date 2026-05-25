@@ -5,7 +5,7 @@ tags: [agent-harness, ai-agents, ai-engineering, harness-frameworks, context-man
 confidence: 0.98
 last_confirmed: "2026-05-25"
 accessed_at: "2026-05-25"
-source_count: 47
+source_count: 48
 relationships:
   - type: part-of
     target: ai-agents
@@ -499,6 +499,14 @@ Karten et al. articulate a sharper version of the *reset-free is the practically
 - **Reset-free is the practically dominant regime** *"for long-running coding agents, embodied agents, and ops tasks where free environment resets are costly or unavailable."*
 
 The wiki's existing **Compounding** layer ([[2026-05-07-chatterjee-anatomy-of-agent-harness|Chatterjee]]) and **process-reward** ([[2025-06-27-guthrie-braintrust-evals-101-ai-engineer-worlds-fair|Guthrie]]) framings are subsumed by this: Karten's Refiner is the Compounding layer operationalised on a sliding-window pairwise PRM with reset-free state propagation.
+
+## Brooklyn Solutions context-engineering case + AgentCore observability ratification ([[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS London Exec Forum 2026]])
+
+The 21 May 2026 AWS London Executive Forum source adds two vendor-customer-side ratifications of harness doctrine:
+
+**1. Allen's *"data engineers are becoming context architects"* line + the ETF/silver-price worked example.** Allen names *context engineering* as the harness's load-bearing discipline at vendor altitude (~13:43–15:23): *"the ability to help an agentic system understand the relationships with the data in my experience is everything. Moment you've got a problem, you've not given the context."* The worked micro-case: a financial customer building an agentic system *"assumed that an ETF that tracks the price of silver would understand the price of silver. No, not unless you put that into context. The agent won't, and it will get really confused on the two prices."* The role-shift line — *"data engineers are becoming context architects"* — is the AWS-vendor-altitude restatement of the harness's Context layer responsibility.
+
+**2. Brooklyn Solutions' segmentation-table worked example as customer-side ratification of context-engineering.** Nick Francis (Brooklyn Solutions CTMO, ~36:49–38:11) narrates Brooklyn's harness-failure-then-fix: their SQL database had a segmentation table with numeric ids 1–5 mapped to *critical / important / transactional* labels. The LLM gave *"weird at best"* responses until they iteratively added context: *"what constitutes a critical supplier, what governance a critical supplier is expected to go through. And by doing that on an iterative basis across the database when delivering our use cases, we get much better results from the AI — to the point that AI started giving us things that we didn't even expect."* Brooklyn's harness composition — **AWS Bedrock + Bedrock Guardrails (boundary layer via prompts) + AgentCore (observability — every token accounted for)** — is the wiki's first vendor-customer-side ratification of [[2026-05-07-anthropic-managed-agents-decoupling-brain-hands|Anthropic Managed Agents]]-style productised harness primitives in a regulated-customer (MoD, Danske Bank) compliance setting. Brooklyn's *human-starts-the-work, human-ends-the-work* operational shape adds **accountability-survives-at-the-seams** as a regulated-customer harness design constraint.
 
 ## Debates / contradictions
 

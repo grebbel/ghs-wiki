@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI deskilling", "ai-deskilling", "task composition shift", "deskilling"]
 tags: [deskilling, task-composition, ai-employment-effects, occupations]
 confidence: 0.83
-last_confirmed: "2026-05-21"
-accessed_at: "2026-05-21"
-source_count: 6
+last_confirmed: "2026-05-25"
+accessed_at: "2026-05-25"
+source_count: 7
 relationships:
   - type: instance-of
     target: ai-employment-effects
@@ -104,6 +104,12 @@ If deskilling tracks *which skills get hollowed out by AI*, [[durable-skills]] t
 - **Open-ended-and-AI-resistant** — what durable-skills measures (collaboration, creativity, critical thinking; skills requiring grounding in social/contextual reality).
 
 [[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al. (Google Research 2026)]] provide the **first scalable operational measurement** for the durable-skills side via the Vantage / Executive LLM platform — large-N validation (188 participants, 373 conversations, Pearson 0.88 with human experts on creativity tasks). Without this measurement methodology, claims about which skills "should" be retained as AI handles more codified work were prescriptive without empirical anchoring. With it, the deskilling-vs-durable-skills carve becomes empirically tractable.
+
+## Singapore governance + *"protect the junior learning path"* as active anti-deskilling discipline ([[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS London Exec Forum 2026]])
+
+Jonathan Allen's AWS keynote names *"deskilling prevention"* as one of the explicit policy categories in the **Singaporean AI governance model announced at Davos 2026** — the only government governance framework Allen rates as adoptable. The framework's four principles (assess and bound risks up front, human accountability, technical controls across lifecycle, end-user responsibility) operationalise the anti-deskilling stance at the policy layer; **policy-as-code** is the implementation layer Allen prescribes for locking it down.
+
+Paired with Allen's organisational counter-prescription: *"audit your seniority mix. Be prepared to bridge the gap from juniors to seniors, and protect that junior learning path."* This is the wiki's first AWS-vendor-altitude framing of **active anti-deskilling discipline** at the firm level — distinct from the [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|productive-struggle]] discipline at the individual-developer level. Allen's claim is structural: if firms cut the junior layer (the empirical anchor: 73% European-tech entry-hiring collapse, see [[ai-employment-effects]]), the senior layer cannot reproduce itself in 5–10 years. Deskilling-prevention via *junior-pipeline-protection* is therefore not an HR nicety but a multi-year-horizon firm-survival prescription.
 
 ## Related concepts
 

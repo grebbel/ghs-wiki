@@ -5,7 +5,7 @@ tags: [agentic-engineering, vibe-coding, software-3.0, ai-agents, agent-harness,
 confidence: 0.97
 last_confirmed: "2026-05-25"
 accessed_at: "2026-05-25"
-source_count: 30
+source_count: 31
 relationships:
   - type: depends-on
     target: agent-harness
@@ -174,6 +174,12 @@ These are not *additions* to Karpathy's discipline definition — they're the **
 ## The eval-discipline counterpart ([[2026-05-18-wolfe-agent-evaluation-detailed-guide|Wolfe 2026]])
 
 [[2026-05-18-wolfe-agent-evaluation-detailed-guide|Wolfe's *Agent Evaluation: A Detailed Guide*]] (Deep (Learning) Focus, 18 May 2026) is the wiki's first source whose primary contribution is the **eval-side counterpart** to the engineering-side rule-set above. Where [[2026-05-15-osmani-agent-harness-engineering|Osmani 2026]] gives *how to build the harness carefully* and [[2026-02-11-lopopolo-codex-harness-engineering|Lopopolo 2026]] gives *what production looks like*, Wolfe gives *how to measure whether the engineering actually works*. The 7-step roadmap (define success → small task set → useful tasks → ground truth → graders → eval harness → inspect-iterate-maintain) is the eval-side ratchet — *eval suites are living artifacts that continually improve in difficulty, diversity, and reliability*. The corollary closes the discipline loop: **agentic engineering without measurement is unmeasurable; agentic engineering with measurement compounds.** Wolfe explicitly recommends using the production scaffold as the eval scaffold — the same artifact serves both disciplines, which is what makes them mutually reinforcing rather than two separate efforts.
+
+## The AWS-vendor-altitude working definition ([[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS London Exec Forum 2026]])
+
+Jonathan Allen's keynote at the AWS London Executive Forum 2026 gives the wiki its **tightest single-line vendor-altitude restatement** of what an agentic system is (~3:09): *"an agentic system is fundamentally a prompt with context or the ability to pull tools in that's hitting a language model."* This is structurally identical to the [[agent-harness|harness]]-wrapping-a-foundation-model definition the wiki has held since the [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy 2026]] anchor; the value of Allen's restatement is the *vendor-altitude framing* and the empirical anchor it carries: *~80% of AWS customers currently building agentic systems are choosing to compose against a frontier model rather than fine-tune their own* — which means **agentic-engineering practice in production today is primarily harness-composition discipline against rented frontier models**, not custom-model engineering.
+
+Allen pairs the definition with the AWS-vendor-altitude operating-model corollary at ~26:30: *"in agentic AI systems, non-determinism is a feature, not a bug."* The wiki's [[software-3.0|Software 3.0]] paradigm holds this as foundational; Allen's contribution is to name the **enterprise-operating-model implication** — *"if you still have engineering and operations as two different things, you are going to struggle with agentic systems. Runbooks are deterministic. Agents are not. Ticket culture kills the context."* The [[2026-05-08-running-an-ai-native-engineering-org|Fung / Anthropic]] talk's identical claim (*"the tool isn't the hard part... your processes are"*) is the vendor-channel-parity anchor.
 
 ## Debates and supersession
 

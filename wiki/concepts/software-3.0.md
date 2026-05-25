@@ -3,9 +3,9 @@ type: concept
 aliases: ["software 3.0", "Software 3.0", "software-3.0", "LLM as computer", "LLMs as a new computer", "context window as program", "prompting as programming"]
 tags: [software-3.0, software-2.0, software-1.0, llm-paradigm, prompting, context-window, ai-engineering, karpathy]
 confidence: 0.82
-last_confirmed: "2026-05-22"
-accessed_at: "2026-05-22"
-source_count: 4
+last_confirmed: "2026-05-25"
+accessed_at: "2026-05-25"
+source_count: 5
 relationships:
   - type: instance-of
     target: generative-ai
@@ -122,6 +122,12 @@ The wiki's **strongest single empirical anchor** for Software 3.0 taken to its l
 The architectural implication: when the policy is verifiable (legal-move predicates exist), the LLM functions purely as a **compiler from natural-language task spec to executable code policy** — exactly the upper-bound Karpathy named in the Sequoia interview. **The model is no longer in the loop at runtime; the program is.** This is the strongest evidence in the wiki to date that the Software 3.0 thesis is not just a vocabulary move — there are concrete cases where the LLM-as-compiler interpretation is operationally complete.
 
 This complements the [[2026-03-30-lee-meta-harness-end-to-end-optimization|Meta-Harness]] result on TerminalBench-2 in an interesting way: Meta-Harness keeps the LLM in the loop at runtime (its discovered harness still calls the model at each step); AutoHarness's harness-as-policy dispenses with the LLM at runtime entirely. The Software 3.0 limit is therefore **task-structure-dependent**: well-defined policy spaces (games with legal-move predicates) admit the compiler interpretation; open-ended task families (TerminalBench-2) keep the model in the loop.
+
+## The non-determinism-as-feature operating-model corollary ([[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS London Exec Forum 2026]])
+
+Allen's AWS-vendor-altitude restatement of the Software 3.0 paradigm's operating-model implication (~26:30): *"in agentic AI systems, non-determinism is a feature, not a bug. And this path to high agency — we all understand what managing a high-agency individual looks like. This requires a leadership shift."* The talk's tightest critique of legacy enterprise discipline as Software-1.0-shaped (~26:41–28:07): *"we've spent years building these toll gates — or should it be toil gates — to help these deterministic systems find their own path. But really, when you look at an agentic system, much like a river bursting its banks, agents do find their own path."* Allen pairs this with the Rory Sutherland quote — *"every spreadsheet is in some ways an act of pretense, because it's past information which you pretend has wonderful predictive value"* — as the macro-frame.
+
+The operating-model corollary: *"if you still have engineering and operations as two different things, you are going to struggle with agentic systems. Runbooks are deterministic. Agents are not. Ticket culture kills the context."* This is the wiki's AWS-vendor-altitude framing of *what enterprise operating models have to look like to host Software-3.0 programs at scale*, and the structural-twin of [[2026-05-08-running-an-ai-native-engineering-org|Fung / Anthropic]]'s claim that *"the tool isn't the hard part... your processes are."* The two vendor-altitude framings converge: Software 3.0 doesn't just need a new runtime (harness), it needs a new operating model (pod / hourglass / human-at-the-seams accountability).
 
 ## Debates and supersession
 

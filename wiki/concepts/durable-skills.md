@@ -5,7 +5,7 @@ tags: [durable-skills, 21st-century-skills, future-ready-skills, ai-deskilling, 
 confidence: 0.93
 last_confirmed: "2026-05-25"
 accessed_at: "2026-05-25"
-source_count: 16
+source_count: 17
 relationships:
   - type: contradicts
     target: ai-deskilling
@@ -16,8 +16,8 @@ relationships:
   - type: depends-on
     target: ai-benchmarks
     via: "measurement methodology — Vantage and similar protocols define new benchmark types for human skills (not model capability)"
-quality_score: 0.98
-quality_notes: ['1 broken body wikilink(s)']
+quality_score: 0.95
+quality_notes: ['1 near-empty section(s)', '2 broken body wikilink(s)']
 ---
 
 # Durable Skills
@@ -114,7 +114,13 @@ The construct is recurring; the operational measurement is new in 2026; the vend
 
 ## Debates and supersession
 
-(None yet — single primary source.)
+## *Expert generalists* + *renaissance developer* + the Anthropic-competition exhibit ([[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS London Exec Forum 2026]])
+
+Allen's keynote names two vocabularies adjacent to *durable skills* at AWS-Executive-in-Residence altitude: **expert generalists** (Martin Fowler's term, recommended by Allen) and **renaissance developer** (Werner Vogels' final re:Invent 2025 keynote framing). Both describe the shape of the worker whose skill profile survives the agentic transition: *"domain experts pushing outward; generalists deepening their domain expertise"* — the meeting point in the middle is the renaissance developer / expert generalist.
+
+The empirical anchor Allen offers is the **Anthropic competition exhibit** (~17:55–18:30): in a recent Anthropic-run agent-building competition, **1st place went to a lawyer, 2nd place to a cardiologist from Poland** (who built an AI-agentic patient-care platform that guides patients after they leave the doctor's office, *"flying around the world with just Wi-Fi to build this"*), **3rd place to another cardiologist**. *"No developer in the top three."* Allen's reading: *"Think in your business: who has the domain knowledge?"*
+
+The wiki's reading: the Globerson et al. durable-skills measurement battery (collaboration, creativity, critical thinking, contextual reasoning) is *necessary but not sufficient* to describe the renaissance-developer skill profile. The Anthropic-competition exhibit adds the dimension of **domain expertise × tool-fluency** as the differentiator — durable skills enable judgment under uncertainty, but the *competitive advantage* in the agentic era goes to those who can pair deep domain expertise with goal-based-agent tool-fluency. This is the AWS-vendor-altitude framing of *what durable skills compose with to win in the agentic era* — a complement to the supply-side measurement question Globerson et al. answer.
 
 ## Related concepts
 
