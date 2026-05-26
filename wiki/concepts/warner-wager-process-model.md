@@ -2,18 +2,18 @@
 type: concept
 aliases: ["Warner-Wäger process model", "Warner & Wager process model", "W&W process model", "digital-transformation process model"]
 tags: [dynamic-capabilities, digital-transformation, microfoundations, warner-wager, wiki-vocabulary]
-confidence: 0.75
-last_confirmed: "2026-05-14"
-accessed_at: "2026-05-17"
-source_count: 1
+confidence: 0.80
+last_confirmed: "2026-05-26"
+accessed_at: "2026-05-26"
+source_count: 2
 relationships:
   - type: instance-of
     target: dynamic-capabilities
     via: "the process-model elaboration of Teece's three-cluster framework, specialised for digital transformation"
   - type: authored-by
     target: 2026-04-28-warner-wager-dynamic-capabilities-digital-transformation
-quality_score: 0.84
-quality_notes: ['citation density 1.5/1000 words (2 source links in 1344 words; target ≥3.0)']
+quality_score: 0.96
+quality_notes: ['citation density 2.7/1000 words (5 source links in 1856 words; target ≥3.0)']
 ---
 
 # Warner & Wäger Process Model
@@ -132,6 +132,27 @@ roles: [chro]
 The field is `roles:` (not `audience:` or `personas:`) to mirror the existing person-entity convention. On a source page it's a **list of role slugs** drawn from the closed vocabulary above; on a person-entity page `roles:` (if used) remains a **free-text job title**. Lint distinguishes by `type:`.
 
 **The body-twin rule does NOT extend to roles.** The body sentence describing how the source touches a W&W cell already implies the relevant roles; restating "and a CHRO would care because…" would be padding. Role-relevance is a *derived* view, not an independent claim.
+
+## The model's reach beyond the digital lens
+
+W&W (2019) derives its cell vocabulary from 27 senior-executive interviews on **digital** transformation — the *digital-* prefix on `digital-sensing/*`, `digital-seizing/*`, and `digital-transforming/*` reflects that empirical setting. The wiki's working hypothesis is that the cells are **transformation primitives whose digital-flavour reflects the original sample, not a load-bearing scope restriction.** [[2026-05-24-erginbilgic-bloomberg-leaders-rolls-royce-turnaround-playbook|Erginbilgiç 2026]] is the wiki's **first pure non-digital test case** for that hypothesis.
+
+The Rolls-Royce 2023–2026 turnaround maps gracefully onto three cells from the closed vocabulary:
+
+| Cell | Erginbilgiç's operationalisation | Mapping note |
+|---|---|---|
+| `strategic-renewal/organizational-culture` | Refreshing legacy culture toward *non-compromise on mediocrity*, *performance-management discipline*, *fast-and-flexible cadence* (~7:36–8:23, ~17:42–18:42). | The cell description names *"digital-mindset, entrepreneurial, fast-and-flexible cultures"*. The *fast-and-flexible* clause carries the weight in non-digital cases; *digital-mindset* is the optional element this source does not claim. |
+| `digital-seizing/strategic-agility` | The resilience playbook (~20:17–22:04): mindset + response capability + agility + action-orientation. *"Build the company resilience before the trouble"*; *"we couldn't do half of what we are doing three years ago, probably 10%."* | The cell description — *"rapidly reallocating resources; accepting redirection and change; pacing strategic responses"* — is **non-digital-specific** in its wording. The *digital-* prefix is the bucket label, not a content restriction. |
+| `contextual/internal-barriers` | Explicit naming of *mediocrity, hierarchy, change resistance* as transformation enemies (~17:42–17:57; ~13:14–13:32 *"no hierarchy in the room"* rule). | The cell description — *"rigid strategic planning; high level of hierarchy; change resistances"* — is non-digital-specific. |
+
+The cells **the source does not touch** are equally informative for the scope question: Erginbilgiç's transformation does not exercise `digital-sensing/*` (no scanning for digital trends/competitors), `digital-transforming/improving-digital-maturity` (no digital-natives hiring or digital-workforce-maturity work), or `strategic-renewal/business-model` (no transactional → relational value-capture shift — Rolls-Royce has long had Power-by-the-Hour-style relational contracts pre-Erginbilgiç). The non-digital case **silently selects** the cells whose vocabulary is in fact transformation-primitive, leaving the genuinely digital-specific cells untouched.
+
+The implication: the W&W process model is **dual-use** — its full nine-microfoundation specialisation is most useful in digital-transformation cases, but a defensible subset (`strategic-agility`, `organizational-culture`, the contextual ring, and arguably `redesigning-internal-structures`) constitutes a *transformation primitives* layer that applies whenever organisational renewal happens, AI-era or not. The wiki uses this property as a feature: the W&W tagging vocabulary is the *thematic adjacency index* for the whole corpus, not just the AI-era subset.
+
+## Debates and supersession
+
+- **Digital-specific scope vs transformation-primitive scope.** [[2026-04-28-warner-wager-dynamic-capabilities-digital-transformation|Warner & Wäger 2019]] derives the vocabulary from a 27-interview sample on **digital** transformation. [[2026-05-24-erginbilgic-bloomberg-leaders-rolls-royce-turnaround-playbook|Erginbilgiç 2026]] is the wiki's first pure non-digital case that maps gracefully onto three cells (`strategic-renewal/organizational-culture`, `digital-seizing/strategic-agility`, `contextual/internal-barriers`). The wiki's working hypothesis — *cells are transformation primitives whose digital-flavour reflects the original sample, not a load-bearing scope restriction* — survives this first test. **No supersession**; the section above (*The model's reach beyond the digital lens*) documents the dual-use interpretation. Further non-digital test cases would either reinforce or qualify the hypothesis.
+- **Backfill of pre-2026-05-14 source pages.** The closed vocabulary went live on 2026-05-14; pre-existing source pages do not carry `dynamic_capabilities:` tags. Forward-only is the default; a supervised backfill remains a deferred follow-up. No supersession.
 
 ## Related concepts
 

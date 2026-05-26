@@ -3,9 +3,9 @@ type: concept
 aliases: ["automation vs augmentation", "automation-vs-augmentation", "automate vs augment", "AI substitution vs complementarity", "AI labor substitution", "AI labor complementarity"]
 tags: [automation, augmentation, generative-ai, ai-deployment, ai-task-design, capability-reliability-gap]
 confidence: 0.95
-last_confirmed: "2026-05-25"
-accessed_at: "2026-05-25"
-source_count: 28
+last_confirmed: "2026-05-26"
+accessed_at: "2026-05-26"
+source_count: 29
 relationships:
   - type: supports
     target: ai-employment-effects
@@ -195,6 +195,32 @@ The wiki's first **RCT-grade empirical evidence on framing**: in a N=1,261 rando
 ### 14. Augmentation is contingent on interaction-design, not guaranteed by deployment choice ([[2025-06-09-krakowski-human-centered-ai-field-experiment|Krakowski et al. 2025 (Management Science)]])
 
 The wiki's first DiD-grade academic field experiment on the augmentation pole showing **untailored augmentation can produce *negative* performance vs the legacy IT control**. N=72 Nordic pharma sales experts; three conditions (legacy IT control / untailored AI / tailored AI tuned to Kirton 1976 cognitive style across four parameters — work procedure, decision authority, training, incentives). The *same* AI system is identical across conditions; only the interaction-design parameters differ. Result: tailored AI improves performance vs both control and untailored; **untailored AI gradually declines vs the stable legacy-IT baseline**. The qualitative interview evidence supplies the mechanism: a Danish innovator in the untailored condition: *"We got this super tool, and at the same time, I felt like in prison... this level of controlling killed my internal drive!"* Login-data mediation analysis shows utilization gradually decreases in the untailored condition and increases in the tailored condition — *rational adaptation, not algorithm aversion*. The wiki's strongest single-source empirical claim that **augmentation is contingent on interaction-design, not guaranteed by deployment choice**. Sharpens the [[2026-04-28-brynjolfsson-li-raymond-generative-ai-at-work|Brynjolfsson-Li-Raymond +15% finding]] (whose augmentation deployment was *explicitly designed* to augment — i.e. *tailored* in Krakowski's vocabulary) by supplying the contrast case where the design discipline was missing. Pairs with [[2026-04-28-dellacqua-jagged-technological-frontier|Dell'Acqua / Jagged Frontier]] (same INFORMS-journal family + same DiD/RCT method + same outside-the-frontier-loses pattern, with the bounded region being *task-shape* there and *interaction-design* here).
+
+### 15. The MGI structural framework: 7 occupation archetypes + 65/35 nonphysical/physical work-hour split + 44/13 agent/robot capacity split ([[2025-11-25-yee-mgi-agents-robots-and-us-skill-partnerships|Yee et al. / MGI 2025]])
+
+[[2025-11-25-yee-mgi-agents-robots-and-us-skill-partnerships|MGI's *Agents, Robots, and Us* (November 2025)]] supplies the wiki's **most structural and panoramic anchor** on the automation-vs-augmentation cut. Four substantive additions to this concept:
+
+**(a) The 65%/35% nonphysical/physical work-hour split** — the structural substrate for the agent/robot framing. *Two-thirds of US work hours require only nonphysical capabilities* (agent territory; ~$2.26T of the $2.9T economic-value claim) → automation through cognitive AI; *one-third require physical capabilities* (robot territory; ~$0.67T) → automation through embodied AI. The agents-vs-robots cut is therefore **not a deployment-style choice but a capability-substrate choice** rooted in the nature of the work activities themselves.
+
+**(b) Technical automation potential by capacity split** — at current AI capabilities, **agents could perform 44% of US work hours** and **robots could perform 13%**. Together: **57% technical automation potential**. The remaining 43% breaks down as 21% nonphysical-only (requires real-time social/emotional awareness) + 22% physical-only (requires fine motor + situational awareness AI cannot yet replicate). The four-quadrant decomposition (Exhibit 2) is the wiki's most granular *technical-automation-potential* taxonomy.
+
+**(c) The seven occupation archetypes** — `wiki/concepts/automation-vs-augmentation` now has a structural occupation-distribution frame:
+
+| Archetype | Workforce share | Avg pay | Examples |
+|---|---:|---:|---|
+| People-centric (least automatable) | 34% | $71k | Registered nurses, psychologists, firefighters |
+| People-agent | 21% | $74k | Sales reps, secondary school teachers, HR specialists |
+| Agent-centric (most automatable cognitive) | 30% | $70k | Accountants, software developers, lawyers |
+| People-robot | <1% | $54k | Insulation workers, drywall + ceiling-tile installers |
+| Robot-centric (most automatable physical) | 8% | $42k | Stockers + order fillers, welders, cooks |
+| People-agent-robot | 5% | $60k | Receptionists, medical assistants, correctional officers |
+| Agent-robot | 2% | $49k | Machine setters, bakers, library assistants |
+
+The **agent-centric quadrant** (30% of workforce, $70k avg pay) is the *wage-premium-at-risk* segment — knowledge-work occupations whose cognitive tasks are 55%+ technically-automatable. The **people-centric quadrant** (34%, $71k avg pay) is the *physical-and-interpersonal-protected* segment whose tasks current AI cannot replicate. The bimodal distribution puts the automation-vs-augmentation cut at the *occupation level*, not the firm/role level — informative against [[2026-04-28-dellacqua-jagged-technological-frontier|Dell'Acqua's task-level jagged frontier]].
+
+**(d) The 72% shared-skills finding** — even when occupations are clearly automatable or not, **72% of the underlying skills are required for both automatable and non-automatable work activities**. Only 11% of skills are required for people-led work only; only 17% for AI-led work only. This is the **skill-level decoupling** from the occupation-level archetype distribution: an accountant (agent-centric occupation) and a nurse (people-centric occupation) share most of the same skills — communication, problem-solving, detail orientation — they just apply them in different mixes of automatable / non-automatable activities. The implication: **automation reshapes how skills are applied, not which skills are valuable.**
+
+The MGI framework joins the wiki's existing automation-vs-augmentation anchors — [[2026-04-28-anand-wu-genai-playbook|Anand-Wu]] (strategic deployment), [[2026-04-28-mittri-cisco-ai-enabled-enterprise|MITTRI/Cisco]] (task design), [[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson]] (labor consequences), [[2026-04-28-anthropic-economic-index-q4-2025|Anthropic Economic Index]] (Claude.ai usage data) — as the **structural-modeling** layer that the others triangulate empirically. MGI alone gives the wiki the *occupation-level prospective distribution* of where people, agents, and robots will be by 2030.
 
 ## The four-source convergence on the distinction
 

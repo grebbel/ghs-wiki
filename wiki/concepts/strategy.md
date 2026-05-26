@@ -2,10 +2,10 @@
 type: concept
 aliases: ["strategy", "business strategy", "corporate strategy", "competitive strategy"]
 tags: [strategy, strategic-planning, value-creation, value-capture, theory-of-winning, playing-to-win, value-stick, roger-martin, felix-oberholzer-gee, harvard-business-review]
-confidence: 0.80
-last_confirmed: "2026-05-18"
-accessed_at: "2026-05-18"
-source_count: 3
+confidence: 0.85
+last_confirmed: "2026-05-26"
+accessed_at: "2026-05-26"
+source_count: 4
 relationships:
   - type: supports
     target: strategic-foresight
@@ -122,6 +122,25 @@ Carrier's *"pick the right agent level"* heuristic — *"there's no reason to ju
 
 The general industrial-AI strategy claim from Carrier: *"Our ability to adopt and absorb the technology are going to be the limit"* over the next 3–5 years — the [[micro-productivity-trap]] thesis at the industrial-AI scale, with the binding constraint explicitly named as *adoption capacity, not technology*.
 
+### Strategy as participation, not document — *Erginbilgiç at Rolls-Royce*
+
+[[2026-05-24-erginbilgic-bloomberg-leaders-rolls-royce-turnaround-playbook|Erginbilgiç 2026]] (Rolls-Royce CEO since Jan 2023; McKinsey-named *"case study in the art of corporate transformation"*) supplies a substantive **strategy-formation doctrine** that complements rather than competes with the Martin / Oberholzer-Gee lenses. Where Martin asks *what is the theory of winning* and Oberholzer-Gee asks *where does value come from*, Erginbilgiç answers an orthogonal question: *how does an organisation arrive at — and align around — a strategy?*
+
+The doctrine: **strategy is produced via participation, not delivered as a document.**
+
+- **Personal CEO attendance at 25–30 strategy workshops** (~12:50): not a single off-site retreat, but a sustained series across the organisation.
+- **500+ employees through the strategy-formation process** (~12:55–13:08): *"every like 500-plus people joined. When you are done, whole organisation is aligned because they were in the room when you were making the decision."*
+- **Two protocol rules per workshop** (~13:14–13:32):
+  1. *"No hierarchy in the room"* — so junior voices can challenge senior assumptions during formation.
+  2. *"This is going to be chaotic"* — explicitly licensed divergence: *"many strategic conversations don't open up. It closes. It becomes like plan conversations. You need to open it up so that all the out-of-blue ideas come into the room, even if you don't do them, they are in the room."*
+- **Alignment is the *output* of participation, not the *output* of communication.** The conventional model is *strategy formed in the C-suite → cascaded down → alignment via communication discipline*. Erginbilgiç inverts this: alignment is generated *during formation* because the people who will deliver the strategy are in the room when the strategic choices are made. *"Whole organisation is aligned because they were in the room when you were making the decision."*
+- **Explicit contrast with consultant-led strategy formation** (~12:43): *"I don't do strategy in the dark room with consultants."* Consultants are not banned, but they are not the substrate of strategy formation — the organisation itself is.
+- **Granularity as the validation criterion** (~11:57–12:25, "second pillar" of the four-pillars framework): a strategy is granular when *"everybody knows in the company their role in delivering strategy. If you don't have granular strategy, only ten people know it and then ten people are surprisingly surprised that that strategy is not delivered."* Granularity is the antidote to the *strategy-as-aspirational-deck* failure mode.
+
+This doctrine adds a **process** layer beneath Martin's *theory of winning* and Oberholzer-Gee's *value creation*: both lenses are silent on *who arrives at the theory and how*. Erginbilgiç's answer — *everyone affected, through chaotic non-hierarchical workshops, with the CEO personally present at scale* — is a non-trivial commitment that explains why most strategy-deliverables-from-consultants don't produce alignment even when the analysis is correct. Strategy without participation is a plan; strategy with participation is a contract.
+
+It also supplies a **non-AI control case** for the wiki: the doctrine is articulated in an industrial-aerospace context with no AI substrate, suggesting *strategy-as-participation* is a transformation primitive rather than an AI-era pattern. The convergence with [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen 2026]]'s *demanding-leader-as-cadence-primitive* observation is consistent: both anchor transformation mechanics that pre-date and survive the AI substrate.
+
 ### Strategy is a journey, not a one-shot plan
 
 Both foundational sources converge here from different vocabularies:
@@ -145,6 +164,7 @@ This convergence is consistent with [[2026-05-15-sterman-systems-thinking-for-le
 - [[infinite-game]] — Sinek/Carse's frame recasting *which game you are in* before strategy lenses ask *how to win it*. Cross-walk filed in [[strategy-finite-vs-infinite-game]] synthesis.
 - [[theory-based-view]] — Felin & Zenger's TBV is the falsifiability discipline (novel/simple/elegant/falsifiable/generative) applied to Martin's *theory of winning* and Sinek's *Just Cause*.
 - [[micro-productivity-trap]] — task-level AI gains failing to translate to firm-level results is a *strategy failure*: the firm has a plan (deploy AI tools) but not a strategy (a theory of how the deployment creates competitive value).
+- [[dynamic-capabilities]] — Erginbilgiç's *strategy-as-participation* doctrine is the strategy-formation correlate of Teece's *sensing* and *seizing* capabilities: the workshops are the firm's distributed sensing engine, and the chaotic-divergence rule licenses the seizing-of-options that hierarchical strategy-formation suppresses.
 
 ## Mentioned in
 

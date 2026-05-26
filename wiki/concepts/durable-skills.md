@@ -2,10 +2,10 @@
 type: concept
 aliases: ["durable skills", "future-ready skills", "21st century skills", "21st-century skills", "transferable skills", "human skills"]
 tags: [durable-skills, 21st-century-skills, future-ready-skills, ai-deskilling, scalable-assessment, psychometrics, ai-evaluation, hiring-criteria, leadership-skills]
-confidence: 0.93
-last_confirmed: "2026-05-25"
-accessed_at: "2026-05-25"
-source_count: 17
+confidence: 0.95
+last_confirmed: "2026-05-26"
+accessed_at: "2026-05-26"
+source_count: 18
 relationships:
   - type: contradicts
     target: ai-deskilling
@@ -121,6 +121,53 @@ Allen's keynote names two vocabularies adjacent to *durable skills* at AWS-Execu
 The empirical anchor Allen offers is the **Anthropic competition exhibit** (~17:55–18:30): in a recent Anthropic-run agent-building competition, **1st place went to a lawyer, 2nd place to a cardiologist from Poland** (who built an AI-agentic patient-care platform that guides patients after they leave the doctor's office, *"flying around the world with just Wi-Fi to build this"*), **3rd place to another cardiologist**. *"No developer in the top three."* Allen's reading: *"Think in your business: who has the domain knowledge?"*
 
 The wiki's reading: the Globerson et al. durable-skills measurement battery (collaboration, creativity, critical thinking, contextual reasoning) is *necessary but not sufficient* to describe the renaissance-developer skill profile. The Anthropic-competition exhibit adds the dimension of **domain expertise × tool-fluency** as the differentiator — durable skills enable judgment under uncertainty, but the *competitive advantage* in the agentic era goes to those who can pair deep domain expertise with goal-based-agent tool-fluency. This is the AWS-vendor-altitude framing of *what durable skills compose with to win in the agentic era* — a complement to the supply-side measurement question Globerson et al. answer.
+
+## The MGI Skill Change Index as a labour-market-data-grounded systematic measure ([[2025-11-25-yee-mgi-agents-robots-and-us-skill-partnerships|Yee et al. / MGI 2025]])
+
+[[2025-11-25-yee-mgi-agents-robots-and-us-skill-partnerships|MGI's *Agents, Robots, and Us*]] (November 2025) introduces the **Skill Change Index (SCI)** — the wiki's first labour-market-data-grounded systematic measure of which skills will change most and least under AI automation. Three properties make the SCI a useful complement to the wiki's prior durable-skills vocabularies (Globerson et al. assessment methodology, Storoni's neuroscience-vantage self-regulation-under-uncertainty, Schoening's agency-as-durable-skill):
+
+**(a) Coverage**: 6,800 employer-cited skills from Lightcast across ~1,800 US occupations. Not a hand-selected list of "AI-era skills" — every skill with >5% job-posting prevalence in the US labour market. The breadth makes the SCI a *systematic* baseline rather than a vantage-specific framing.
+
+**(b) Time-weighted decomposition methodology**. Each skill is scored on the fraction of associated time spent on automatable work activities, weighted by occupation employment. Skills with **55%+ time-spent in non-automatable work activities** are classified people-led; **55%+ in automatable** are AI-led (further divided into agent-led / robot-led depending on physical-capability requirement); all others are shared. The classification is **time-spent-weighted, not capability-binary** — a skill can be people-led even if some of its hours overlap with AI-capable tasks, as long as the dominant usage is in non-automatable work. The mapping uses **OpenAI GPT-4o** for ~3.4M occupation-DWA-skill labellings with a **manual 1,000-cell template** for validation + iterative prompt refinement.
+
+**(c) Scenario-bracketed forecasts**. Two adoption scenarios for 2030: *midpoint* (the report's primary lens) and *early* (faster diffusion). The SCI quartile values differ markedly across scenarios — midpoint top-quartile 33% exposure vs early-scenario top-quartile 59% — making the uncertainty band transparent. The wiki can therefore cite *which skills are durable under both scenarios* (the bottom-quartile and lower-middle-quartile skills) with confidence-graded weight.
+
+**The SCI's three skill-evolution paths**:
+1. **Top quartile (highly exposed → will decline in demand)**: specialised skills like specific programming languages (SQL programming), accounting processes, invoicing, basic technical knowledge.
+2. **Middle quartiles (will evolve in nature and application, not rise or fall)**: transferable skills + **AI fluency itself** is in this band — communication, customer relations, detail orientation, management, writing, quality assurance.
+3. **Bottom quartile (will endure)**: skills grounded in human connection and care — **leadership, coaching, negotiation, mentorship, healthcare skills, good driving record**.
+
+**By skill category (Exhibit 13, share of skills in each SCI exposure band)**:
+
+| Category | Low (durable) | Moderate | High (declining) |
+|---|---:|---:|---:|
+| Assisting and caring | **54%** | 36% | 10% |
+| Communication, collaboration, creativity | 28% | 58% | 14% |
+| Management skills | 29% | 49% | 22% |
+| Handling and moving | 29% | 42% | 29% |
+| Constructing | 25% | 44% | 31% |
+| Working with machinery + equipment | 18% | 55% | **27%** |
+| Information skills | 18% | 53% | **29%** |
+| **Digital skills** | 11% | 47% | **42%** |
+
+The **assisting-and-caring** category is the wiki's most-protected durable-skills cluster (54% low-exposure, only 10% high-exposure); the **digital-skills** category is the most-exposed (42% high-exposure). The pattern matches Globerson et al.'s collaboration / creativity / critical-thinking measurement battery being the assessment-methodology for *moderate-exposure* skills, while [[ai-employment-effects]] data shows **moderate-exposure skills will evolve, not decline**.
+
+**Eight high-prevalence transferable skills** that endure across the workforce, with explicit splits between what humans vs agents will do (Exhibit 11):
+
+| Skill | Relevance % | Agents/Robots will | People will |
+|---|---:|---|---|
+| Communication | 99 | Generate content, accelerate data flow | Refine nuance and storytelling |
+| Management | 94 | Automate scheduling, monitor metrics | Coach and lead hybrid teams |
+| Operations | 84 | Execute routine tasks, optimise efficiency | Design smarter processes and strategise |
+| Problem-solving | 83 | Identify patterns, propose options | Interpret findings, make judgments |
+| Leadership | 83 | Drive change, support decision-making | Guide and motivate teams |
+| Detail orientation | 80 | Run quality checks, flag anomalies | Audit outputs, validate outcomes |
+| Customer relations | 80 | Route requests, handle routine queries | Strengthen loyalty, build relationships |
+| Writing | 76 | Produce drafts, propose revisions | Refine text, craft story |
+
+The framing — *AI does the quantity, humans do the quality* — is convergent with [[2026-05-13-storoni-hbr-ideacast-redefining-efficiency-age-ai|Storoni's neuroscience-vantage reframe]] of efficiency (gear-3 quantity / gear-2 quality) now at structural-modeling altitude.
+
+The SCI is the wiki's strongest **structural-prospective** anchor on which skills are durable. Joins [[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al.]]'s **measurement-methodology** layer (how to test for durable skills), Storoni's **neuroscience** layer (what makes a skill durable under uncertainty), Schoening's **personal-agency** framing (which mindset-traits compound into durable skills), and Forsgren & Macvean's **engineering-team-core-skills** vocabulary (which 10 capabilities matter for AI-era developers). The five-source convergence on the durable-skills concept is now multi-altitude — measurement + neuroscience + agency + engineering-team + structural-modeling.
 
 ## Related concepts
 

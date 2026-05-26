@@ -2,16 +2,16 @@
 type: concept
 aliases: ["dynamic capabilities", "dynamic-capabilities", "Teece dynamic capabilities", "sense seize transform"]
 tags: [dynamic-capabilities, teece, strategic-renewal, digital-transformation, microfoundations]
-confidence: 0.90
-last_confirmed: "2026-05-25"
-accessed_at: "2026-05-25"
-source_count: 8
+confidence: 0.95
+last_confirmed: "2026-05-26"
+accessed_at: "2026-05-26"
+source_count: 9
 relationships:
   - type: supports
     target: enterprise-ai-adoption
     via: "AI adoption requires dynamic-capability microfoundations to scale"
-quality_score: 0.79
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)']
+quality_score: 0.99
+quality_notes: ['1 near-empty section(s)']
 ---
 
 # Dynamic Capabilities
@@ -99,6 +99,32 @@ Where the [[2026-05-14-price-dfi-retail-asia-reinventing-how-it-sells|Price/DFI]
 | **Contextual** | The **junior-hiring crisis** (Ravio 73% European-tech entry-collapse) as *external-trigger*; AWS's CFO-office partnership for opportunity-cost measurement as *internal-enabler*; *toll-gate / ticket-culture* legacy enterprise discipline as *internal-barrier*. |
 
 This is the wiki's first **vendor-altitude end-to-end W&W operationalisation source** — distinct from [[2026-04-28-warner-wager-dynamic-capabilities-digital-transformation|the theoretical anchor itself]], from the [[2026-05-14-price-dfi-retail-asia-reinventing-how-it-sells|Price/DFI single-incumbent case set]], and from advisory-firm operationalisations like [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels/McKinsey]]. Allen's keynote is best read as *the AWS-advisory-channel translation of the W&W process model into agentic-AI-era enterprise prescription*.
+
+### Non-AI control case — *industrial transformation at Rolls-Royce* ([[2026-05-24-erginbilgic-bloomberg-leaders-rolls-royce-turnaround-playbook|Erginbilgiç 2026]])
+
+[[2026-05-24-erginbilgic-bloomberg-leaders-rolls-royce-turnaround-playbook|Erginbilgiç's]] Rolls-Royce turnaround supplies the wiki's **first pure non-AI industrial-transformation anchor** for the dynamic-capabilities lens — every prior source tagged with `strategic-renewal/*` cells has been AI-adoption-flavoured. The non-AI case is load-bearing because it allows the wiki to separate *what's specific to AI-era dynamic capabilities* from *what's dynamic-capabilities primitives full stop*.
+
+Mapped to the Teece sense / seize / transform clusters:
+
+| Teece cluster | Erginbilgiç's operationalisation (Rolls-Royce 2023–2026) |
+|---|---|
+| **Sensing** | *External benchmarking commissioned Sept '22* before the Jan '23 start date — *"put the mirror up for the organisation. You cannot say the things you just said without data"* (~2:01–2:32). Resilience-as-scenario-rehearsal (~21:14–21:32): *"It's not about actually predicting the world, it is about how your company now thinks about dealing with external shocks."* Sensing here is *organisational habit of dealing with shocks*, not forecasting accuracy. |
+| **Seizing** | The Jan '23 burning-platform speech as the speed-of-commitment moment + the four-pillars framework (people + granular strategy + commercial discipline + performance culture, ~11:03–18:42, with two pillars explicitly named) as the resource-reallocation logic. CEO-to-CEO contract renegotiation (~13:46–15:44) as direct seizing of margin restructuring. |
+| **Transforming** | Layer elimination without operational-people cuts (~4:24–5:22); *"we eliminated layers in the organisation... no operational people left"* — transforming the org structure without losing institutional capability. The new-normal-as-eased-cadence observation (~7:36–8:23) is the *transformation-as-completed* signal: leader demand-intensity drops because team behaviour shifts to new norms. |
+
+The convergence with the AI-era anchors is more informative than any single case:
+
+- **Strategic-renewal/organizational-culture** as the load-bearing W&W cell holds outside the digital lens. Erginbilgiç's culture-refresh (*"non-compromising mediocrity at that level kills the organisations"*, ~17:42–17:57) is structurally identical to what [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen 2026]]'s AWS Executive Forum names at the *demanding-leader-as-cadence-primitive* layer — different domains, same pattern.
+- **Strategic-agility** as a *process capability* (the company's habit) rather than a *forecasting capability* — Erginbilgiç articulates this explicitly; [[2025-06-09-krakowski-human-centered-ai-field-experiment|Krakowski 2025]]'s tailored-augmentation effects are the AI-era expression of the same primitive.
+- **The McKinsey-named** *"case study in the art of corporate transformation"* validator anchors the case at consulting-firm altitude without being a McKinsey publication itself — third-party validation of the underlying transformation mechanics.
+
+The implication for the dynamic-capabilities concept: the AI-era literature (Warner & Wäger 2019, the W&W-process-model operationalisations above) is best read as *digital-flavoured variations on transformation primitives* that the non-AI literature has been articulating for decades. The non-AI control case is a useful corrective against over-attributing the mechanics to AI-specific causes.
+
+## Debates and supersession
+
+- **Sensing-as-prediction vs sensing-as-shock-readiness.** The Teece (2007) framing of sensing emphasises *opportunity and threat detection* — close to forecasting language. [[2026-05-24-erginbilgic-bloomberg-leaders-rolls-royce-turnaround-playbook|Erginbilgiç 2026]] argues against the prediction-framing: *"It's not about actually predicting the world, it is about how your company now thinks about dealing with external shocks"* (~21:14–21:32). [[2026-04-28-warner-wager-dynamic-capabilities-digital-transformation|Warner & Wäger 2019]]'s `digital-scenario-planning` microfoundation is closer to Erginbilgiç's *shock-readiness* framing than to pure forecasting. No supersession; the productive tension is between *sensing as accuracy* and *sensing as response capability*. The wiki currently treats them as compatible (sensing must produce both signal-detection *and* the organisational habit of responding to signals).
+- **Digital vs non-digital scope of W&W cells.** [[2026-04-28-warner-wager-dynamic-capabilities-digital-transformation|Warner & Wäger 2019]] derives its cell vocabulary from *digital* transformation case studies; [[2026-05-24-erginbilgic-bloomberg-leaders-rolls-royce-turnaround-playbook|Erginbilgiç 2026]] is a pure non-digital case that nonetheless maps gracefully onto `strategic-renewal/organizational-culture`, `digital-seizing/strategic-agility`, and `contextual/internal-barriers`. The cells stretch outside the digital lens with the *digital-mindset* clause optional. No supersession; the wiki's working hypothesis is that W&W cells are *transformation primitives* whose digital-flavour reflects the empirical setting of the original 27-interview sample rather than a load-bearing scope restriction.
+- **Vendor-altitude vs operator-altitude vs case-study altitude.** [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS]] supplies vendor-altitude operationalisation; [[2026-05-14-price-dfi-retail-asia-reinventing-how-it-sells|Price / DFI]] supplies operator-altitude case material; [[2026-05-24-erginbilgic-bloomberg-leaders-rolls-royce-turnaround-playbook|Erginbilgiç 2026]] supplies CEO-altitude case material at a non-AI incumbent. No contradiction across the three; the wiki triangulates the dynamic-capabilities concept across all three altitudes deliberately.
 
 ## Related concepts
 

@@ -1,12 +1,12 @@
 ---
 type: entity
 kind: organization
-aliases: ["McKinsey", "McKinsey & Company", "McKinsey and Company", "QuantumBlack", "MGI", "McKinsey Global Institute"]
-tags: [mckinsey, mgi, management-consulting, quantumblack, ai-research, tech-ai-transformation, agent-augmented-workforce, outcome-underwriting, post-controversy-governance, future-arenas, omniscalers]
-confidence: 0.92
-last_confirmed: "2026-05-15"
-accessed_at: "2026-05-15"
-source_count: 7
+aliases: ["McKinsey", "McKinsey & Company", "McKinsey and Company", "QuantumBlack"]
+tags: [mckinsey, mgi, management-consulting, quantumblack, ai-research, tech-ai-transformation, agent-augmented-workforce, outcome-underwriting, post-controversy-governance, future-arenas, omniscalers, skill-change-index, workforce-skills]
+confidence: 0.95
+last_confirmed: "2026-05-26"
+accessed_at: "2026-05-26"
+source_count: 8
 relationships:
   - type: employs
     target: Eric-Lamarre
@@ -22,7 +22,7 @@ relationships:
 
 # McKinsey & Company
 
-Global management consulting firm; runs **QuantumBlack** as its AI arm and **McKinsey Global Institute (MGI)** as its independent economics-and-business-research arm (established 1990; explicitly *not* commissioned or funded by clients — funded by McKinsey partners, with editorial direction owned by MGI directors). A recurring data partner of the [[AI Index]] (the McKinsey Global AI Survey is the underlying instrument behind many AI Index adoption numbers — see methodological notes on the [[AI Index]] entity page). The wiki holds **four complementary first-party McKinsey sources** as of May 2026: *[[2026-05-03-rewired-second-edition-sample|Rewired 2nd ed]]* (practitioner playbook), [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels 2026 (HBR IdeaCast)]] (firm-as-vendor self-narrative), and as of 15 May 2026 the pair [[2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas|MGI *The race takes off in the next big arenas of competition*]] (March 2026 report) + [[2026-05-12-mgi-virtual-event-race-takes-off-next-big-arenas|the 12 May 2026 virtual event]] companion (MGI's firm-as-economy-mapper external account).
+Global management consulting firm; runs **QuantumBlack** as its AI arm and **[[McKinsey Global Institute|MGI]]** as its independent economics-and-business-research arm (established 1990; explicitly *not* commissioned or funded by clients — funded by McKinsey partners, with editorial direction owned by MGI directors). A recurring data partner of the [[AI Index]] (the McKinsey Global AI Survey is the underlying instrument behind many AI Index adoption numbers — see methodological notes on the [[AI Index]] entity page). The wiki holds **five complementary first-party McKinsey sources** as of May 2026: *[[2026-05-03-rewired-second-edition-sample|Rewired 2nd ed]]* (practitioner playbook), [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels 2026 (HBR IdeaCast)]] (firm-as-vendor self-narrative), and the MGI triplet [[2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas|MGI *The race takes off in the next big arenas of competition*]] (March 2026, industry-and-competition layer) + [[2026-05-12-mgi-virtual-event-race-takes-off-next-big-arenas|the 12 May 2026 virtual event]] companion + [[2025-11-25-yee-mgi-agents-robots-and-us-skill-partnerships|MGI *Agents, Robots, and Us: Skill Partnerships in the Age of AI*]] (Nov 2025, workforce-and-skills layer). The MGI two-layer panorama (industry × workforce) is now the wiki's most comprehensive single-publisher anchor on AI-and-the-economy. **As of 26 May 2026 MGI is promoted to its own entity page** ([[McKinsey Global Institute]]) per the 3rd-mention rule; this page retains the firm-level coverage.
 
 ## Appears in this wiki via
 
@@ -32,6 +32,7 @@ Global management consulting firm; runs **QuantumBlack** as its AI arm and **McK
 - [[2026-04-28-mit-sloan-ai-maturity]] — MIT CISR's Total AI Effectiveness measure draws on a McKinsey survey for adoption baselines.
 - [[2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas]] — *The race takes off in the next big arenas of competition* (MGI, March 2026, 127 pp.). Six authors: **Kevin Russell**, **Chris Bradley** (MGI director), **Naveen Sastry**, **Suhayl Chettih**, **Kweilin Ellingrud** (MGI director), **Natalya Goryunova**. The **2026 update** of MGI's October 2024 *The next big arenas of competition*. Headline findings: 18 future arenas added **$18T in market cap and $1.4T in revenue** since 2022 (29% market-cap CAGR vs 8% for non-arenas; 11% revenue CAGR vs 1%); the **AI foundation** three-arena cluster (semiconductors + cloud + AI software) accounts for **$11T** of that market-cap accretion; coins **"omniscalers"** for nine cross-arena platform firms (Amazon, Tesla/X, Alphabet, Microsoft, Meta, Apple, Samsung, Alibaba, Huawei) generating **$700B operating cash flow + $800B R&D+capex in 2025 alone**. Introduces the **arena-creation potion** (3-ingredient foresight heuristic) and **arenas radar** (firm-level diagnostic). Three swing factors for 2040: geopolitics / AI development pace / electrification pace.
 - [[2026-05-12-mgi-virtual-event-race-takes-off-next-big-arenas]] — MGI virtual event presenting the above report (12 May 2026, ~60 min). **Bradley** moderates; **Russell** + **Ellingrud** present; panel is **Brendan Gaffey** + **Naveen Sastry** + **Gayatri Shenai** (Suhayl Chettih is a PDF co-author but **not** on the panel). Transcript was re-fetched 2026-05-15 at `--timeout 180000` after an initial 90s attempt timed out — the live-event session carries **substantive Q&A material not in the PDF**, including the Apollo-program-vs-omniscaler-capex comparison, the Anthropic/xAI infrastructure deal as live data point, NVIDIA's $5T print, and Naveen Sastry's *"omniscalers are not conglomerates"* defence with the **founder-control** structural claim (founders in direct operational control at 7 of 9; heavy cultural fingerprint at the other 2).
+- [[2025-11-25-yee-mgi-agents-robots-and-us-skill-partnerships]] — *Agents, Robots, and Us: Skill Partnerships in the Age of AI* (MGI, November 2025, 60-page report + 6-page technical appendix). Seven authors: **[[McKinsey Global Institute|Lareina Yee]]** (MGI director, Bay Area; lead author), **Anu Madgavkar** (MGI partner, New Jersey), **Sven Smit** (MGI chairman, Amsterdam), **Alexis Krivkovich** (senior partner, Bay Area), **Michael Chui** (QuantumBlack senior fellow, Bay Area), **Maria Jesus Ramirez** (MGI senior fellow, Bay Area), **Diego Castresana** (engagement manager, New York). Academic advisers: Nobel laureate **Sir Christopher Pissarides** (LSE) + **Matthew J. Slaughter** (Tuck Dean). The **workforce-and-skills layer** companion to *Race Takes Off*'s industry layer — 7 occupation archetypes, Skill Change Index built using OpenAI GPT-4o for ~3.4M skill→DWA mappings, 57% technical-automation potential, $2.9T US economic value by 2030 (midpoint scenario). The wiki's first MGI workforce panorama.
 
 ## Affiliated authors in this wiki
 
@@ -52,9 +53,9 @@ Global management consulting firm; runs **QuantumBlack** as its AI arm and **McK
 - **Gayatri Shenai** — McKinsey New York senior partner; data-center / cloud authority; women-in-tech advocate. **Live-event panelist only** (not on the report author list). First wiki mention; deferred. ASR-rendering variability across the transcript (`Shennai` / `Shanai` / `Guyry` / `guy tree`); YouTube description's `Shenai` is canonical.
 - **Shubham Singhal** — MGI chair (named on report front matter). First wiki mention; deferred.
 
-## MGI directors and partners (per the March 2026 *Race takes off* front matter)
+## MGI directors and partners
 
-MGI directors: **Shubham Singhal** (chair), **Chris Bradley**, **Tanguy Catlin**, **Kweilin Ellingrud**, **Sylvain Johansson**, **Nick Leung**, **Olivia White**. MGI partners: Arvind Govindarajan, Mekala Krishnan, Anu Madgavkar, Jan Mischke, **Jeongmin Seong**. All are currently Dangling (single-source); promote on second-source mention.
+Detailed MGI org structure, research themes, and full author/adviser roster now live on the dedicated **[[McKinsey Global Institute]]** entity page (promoted 26 May 2026 per the 3rd-mention rule). Brief continuity note: the MGI chairmanship transitioned from **Shubham Singhal** (named on the March 2026 *Race Takes Off* front matter) to **Sven Smit** (named as chairman on the November 2025 *Agents, Robots, and Us* front matter) — chronologically Smit's chairmanship was *earlier*; the March 2026 report's front matter likely reflects a later mid-2026 transition. *Note: this is a [[McKinsey Global Institute|chronology note]] worth refining as more MGI sources are ingested.*
 
 ## Methodological notes
 

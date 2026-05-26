@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI employment effects", "AI labor effects", "AI job displacement", "AI labor market", "AI employment impact"]
 tags: [employment, labor-market, ai-displacement, automation, labor-economics, age-effects]
 confidence: 0.95
-last_confirmed: "2026-05-25"
-accessed_at: "2026-05-25"
-source_count: 28
+last_confirmed: "2026-05-26"
+accessed_at: "2026-05-26"
+source_count: 29
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -240,6 +240,24 @@ Jonathan Allen at the AWS London Executive Forum 2026 anchors the entry-level em
 - **Fastest-growing US top job title: AI engineer; 1.3M new AI roles created; 67K open software-engineer roles vs ~52K layoffs** — a *job-family change*, not aggregate destruction.
 
 Allen pairs the empirical anchor with the **hourglass-organization** prescription — the operating-model counter to the *"seniors 20×-ing their productivity, cutting back juniors"* default ratio. The argument (~25:42–25:54): *"if you stop training the juniors, where on earth do your seniors come from in 5 to 10?"* — and Allen names **Matt Garman** (AWS CEO) as the leadership channel endorsing protection of the junior learning path. This is the wiki's first **vendor-CEO-endorsed prescriptive counter to the seniors-only AI-team default**, structurally compatible with the Brynjolfsson Canary's automation-share interpretation: the within-firm compositional shift toward seniors is observed by both, but Allen names it as **changeable by leadership choice** rather than as fixed market structure. See also the [[ai-deskilling]] page for Allen's *"protect that junior learning path"* framing as active anti-deskilling discipline.
+
+### The MGI shift-not-elimination framing + 72% shared-skills finding ([[2025-11-25-yee-mgi-agents-robots-and-us-skill-partnerships|Yee et al. / MGI 2025]])
+
+[[2025-11-25-yee-mgi-agents-robots-and-us-skill-partnerships|MGI's *Agents, Robots, and Us*]] (November 2025) reframes the AI-employment question at structural-modeling altitude. The headline framing:
+
+> *"Today's technologies could theoretically automate more than half of current US work hours. **This reflects how profoundly work may change, but it is not a forecast of job losses.** Adoption will take time. As it unfolds, some roles will shrink, others grow or shift, while new ones emerge — with work increasingly centered on collaboration between humans and intelligent machines."*
+
+Four substantive contributions to this concept:
+
+**(a) Explicit avoidance of the AI-will-eliminate-jobs frame.** MGI's "Framing the jobs debate" sidebar (Ch.1, pp.12–13) names four open questions — *how close are AI agents and robots to matching all economically relevant human capabilities? will an AI-centric economy create enough jobs? how might the composition of work change? will we adapt fast enough?* — and explicitly states *"whether AI proves to create or reduce net jobs depends on how effectively it is used to build new industries and markets... a question beyond the scope of our analysis."* The report's contribution is **measuring skill change, not predicting job losses** — the wiki's most rigorously hedged structural source on the AI-labour question.
+
+**(b) The 72% shared-skills finding.** *"More than 70 percent of the skills sought by employers today are used in both automatable and non-automatable work."* The implication is that **most skills remain relevant** — what changes is *how and where they're used*. This is the skill-level decoupling from the occupation-level archetype distribution: an accountant (agent-centric occupation) and a nurse (people-centric occupation) share most of the same skills (communication, problem-solving, detail orientation) — they just apply them in different mixes of automatable / non-automatable activities.
+
+**(c) The Skill Change Index (SCI) as a quantitative complement to Brynjolfsson's empirical signals.** [[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson Canaries]] supplies the *current* empirical signal that automation displaces while augmentation doesn't. MGI's SCI supplies the *prospective* skill-by-skill decomposition: *highly exposed* (top quartile) skills decline in demand, *middle-quartile* skills evolve, *low-exposure* skills endure. The two frameworks are **descriptive + prospective**: Brynjolfsson measures what's already happening; MGI forecasts which skill-categories will change most by 2030.
+
+**(d) AI fluency demand growing faster than any other skill.** AI fluency rose **6.8× in two years** (1.0M → 7.0M US employees in occupations where job postings call for AI-fluency skills, 2023→2025). Technical AI skills (Govern AI + Develop AI, 55 skills) grew 1.6× (2.1M → 3.3M). The growth in AI-fluency demand is *faster than for any other skill in US job postings* — including faster than the prior demand surge for cloud, cybersecurity, and other digital skills. **75% of AI-skill demand is concentrated in 3 occupation groups** (Computer & mathematical, Management, Business & financial operations); **9 occupation groups (~40% of workforce) have near-zero AI-skill demand** — the AI-skill labour market is currently bifurcated.
+
+The MGI framing converges with [[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson]]'s empirical evidence: both reject the *AI-will-eliminate-jobs* framing in favour of *AI-will-reshape-which-skills-are-applied-where*. The pair forms the wiki's strongest **descriptive-empirical + structural-prospective** anchor on the AI labour question.
 
 ## Debates / contradictions
 

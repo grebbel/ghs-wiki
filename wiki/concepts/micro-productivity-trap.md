@@ -3,9 +3,9 @@ type: concept
 aliases: ["micro-productivity trap", "micro-productivity-trap", "offering lock-in", "process lock-in"]
 tags: [micro-productivity-trap, AI-transformation, EBITDA, process-redesign, workflow-redesign, enterprise-ai, organizational-change-vs-tech-implementation]
 confidence: 0.95
-last_confirmed: "2026-05-25"
-accessed_at: "2026-05-25"
-source_count: 21
+last_confirmed: "2026-05-26"
+accessed_at: "2026-05-26"
+source_count: 22
 relationships:
   - type: instance-of
     target: enterprise-ai-adoption
@@ -151,6 +151,26 @@ Allen's 5%-pattern counter-prescription (*pick one point, execute well, right te
 ### Tenth-source corroboration: the academic-altitude RCT showing *untailored augmentation gradually decreases market share* ([[2025-06-09-krakowski-human-centered-ai-field-experiment|Krakowski et al. 2025]])
 
 Where the prior corroborating sources operate at consultant / vendor / practitioner altitudes, [[2025-06-09-krakowski-human-centered-ai-field-experiment|Krakowski et al.]] supply the wiki's first **strictly-academic RCT-grade empirical anchor** on the trap. N=72 Nordic pharma sales experts, DiD design, three conditions (legacy IT control / untailored AI / tailored AI per Kirton 1976 cognitive style). The headline result is itself a worked instantiation of the trap: **untailored AI deployment causes market share to *gradually decline* vs a stable legacy-IT baseline** — task-level *technology adoption happened* (the system was deployed), but *firm-level value decreased* over 9+ quarters post-intervention. The mechanism (per qualitative interviews + login mediation): sales experts withdraw from the system (utilization *decreases* over time in the untailored condition), driven by role conflicts and ambiguities. The Finnish/Norwegian innovator quotes (*"felt like in prison... killed my internal drive!"* / *"felt like a less good sales representative"*) name an **internal-motivation-collapse fifth sub-mode** alongside Dutt et al.'s *offering-lock-in* / *process-lock-in*, Kropp et al.'s *anthropomorphizing-lock-in*, and the broader *interaction-design-misfit lock-in* that the four-parameter (work-procedure / decision-authority / training / incentives) framework names operationally.
+
+### Eleventh-source corroboration: the MGI <40%-of-90% statistic at structural-modeling altitude ([[2025-11-25-yee-mgi-agents-robots-and-us-skill-partnerships|Yee et al. / MGI 2025]])
+
+[[2025-11-25-yee-mgi-agents-robots-and-us-skill-partnerships|MGI's *Agents, Robots, and Us*]] (November 2025) supplies the wiki's most quantitatively-precise empirical anchor on the trap. Chapter 3 opens with the diagnostic:
+
+> *"Nearly **90 percent of companies** say they have invested in [AI], but **fewer than 40 percent** report measurable gains. The gap may reflect the fact that many projects are still in pilot or trial phases or that organizations are applying AI to discrete tasks rather than redesigning entire workflows."*
+
+The **<40%-of-90% statistic** is the workflow-redesign-disciplines-against-task-automation empirical anchor at MGI's structural-modeling altitude — more quantitatively precise than [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS's MIT NANDA 95% pilot-fail]] (different denominator: 95% of *pilots* fail to scale into production; MGI's denominator is *companies that have invested*, with <40% reporting *measurable gains* — a broader and arguably less stringent measure). Three substantive contributions to this concept:
+
+**(a) The diagnostic framing — workflow vs task as the difference between failure and value capture**: *"In banking, for example, this would be the difference between offering employees access to a chatbot for ad hoc use and deploying custom agents alongside people in a reimagined process to approve, process, and manage loans more efficiently and deliver better customer service. Unlocking larger productivity gains from AI will require reimagining workflows along the lines of the latter, rather than taking a task-based approach."* The framing converges with [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Dutt et al. / Bain]]'s *offering-lock-in* and *process-lock-in* but at the workflow-design layer rather than the strategic-business-design layer.
+
+**(b) 190+ workflows mapped as the operational unit-of-analysis**. MGI's sidebar *"An early view of workflows across the US economy"* maps **190+ workflows across 16 business functions** (~100 cross-cutting workflows in commercial/functional/operational domains + ~90 sector-specific workflows in knowledge/frontline/production services). This is the wiki's most granular publicly-available workflow taxonomy. The implication: the trap's exit strategy is *workflow-by-workflow identification + redesign*, not *firm-wide AI strategy*. ~60% of potential gains concentrate in **sector-specific workflows** ($1.7T of the $2.9T claim), 40% in **cross-cutting** ($1.2T) — the load-bearing prioritisation guidance is *sector-specific workflows first*.
+
+**(c) Four operational case studies operationalising the trap's escape**:
+- **B2B sales redesign** (5 agents — *prioritisation / outreach / customer response / scheduling / handoff*) → 7-12% revenue increase + 30-50% time saved across sales roles.
+- **Utility customer operations** (4 agents — *inbound call / intent ID / scheduling / self-service*) → handle ~40% of all calls, resolve >80% without human involvement; avg cost per call cut ~50%; CSAT +6pp.
+- **Biopharma medical writing** (6 agents — *planning / data mapping / drafting / validation / reviewing / submission*) → touch time for first human-reviewed drafts **-60%**, errors **-50%**.
+- **Regional bank IT modernization** (3+ agents — *modernisation planning / assessment / functionality / coding / QA / testing*) → code accuracy up to 70%; required human hours **-50%**.
+
+These four cases form the wiki's strongest practitioner-validated escape patterns from the trap at MGI structural altitude. The cross-source convergence — Bain (workflow lens), McKinsey/Sternfels (org-change-dominates), Allen/AWS (workflow-not-bolted-on), MGI/Yee (190-workflow taxonomy + 4 worked cases) — places the workflow-vs-task framing on the wiki's strongest cross-consultancy structural footing.
 
 ## Cross-source positioning (descriptive only, per cross-source neutrality)
 
