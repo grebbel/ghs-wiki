@@ -4,9 +4,9 @@ kind: person
 aliases: ["Russell Wald"]
 tags: [wald, stanford-hai, ai-index, ai-policy, ai-governance]
 confidence: 0.80
-last_confirmed: "2026-05-08"
-accessed_at: "2026-05-08"
-source_count: 2
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 3
 relationships:
   - type: part-of
     target: AI-Index
@@ -28,6 +28,7 @@ Member of the [[AI Index]] Steering Committee.
 
 - [[2026-04-28-ai-index-report-2025]] — co-author, 8th edition.
 - [[2026-04-30-ai-index-report-2026]] — co-author, 9th edition.
+- [[2026-05-27-sajadieh-stanford-hai-inside-the-2026-ai-index-report]] — panel principal at the 27 May 2026 Stanford HAI talk-track; argues the **academic-vs-industry transparency tension** as a structural risk (frontier-lab proprietary mode hampers academic peer-review/verification); pushes back on the *opacity-drives-mistrust* framing during the audience Q&A with the *halves-and-have-nots* observation; argues US-China alignment is structurally necessary for global AI governance.
 
 ## Mentioned in
 

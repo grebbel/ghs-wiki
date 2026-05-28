@@ -4,9 +4,9 @@ kind: person
 aliases: ["Yolanda Gil"]
 tags: [gil, USC, information-sciences-institute, ai-index, steering-committee]
 confidence: 0.80
-last_confirmed: "2026-04-30"
-accessed_at: "2026-04-30"
-source_count: 2
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 3
 relationships:
   - type: part-of
     target: AI-Index
@@ -25,6 +25,7 @@ Serves on the [[AI Index]] Steering Committee:
 
 - [[2026-04-28-ai-index-report-2025]] — chair-elect, 8th edition.
 - [[2026-04-30-ai-index-report-2026]] — chair, 9th edition. Co-author of the Co-chairs' message.
+- [[2026-05-27-sajadieh-stanford-hai-inside-the-2026-ai-index-report]] — mentioned by [[Raymond Perrault]] in the panel Q&A as co-emissary on a joint World-Bank / IMF measurement initiative (agreement-in-principle from major US companies to share user/usage data for global-AI-adoption measurement; *not in time for next report*).
 
 ## Mentioned in
 

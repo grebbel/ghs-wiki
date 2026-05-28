@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI benchmark", "AI benchmarks", "AI evaluation", "AI evals"]
 tags: [ai-benchmarks, ai-evaluation, foundation-models, capability-reliability-gap, scar-fragmentation]
 confidence: 0.88
-last_confirmed: "2026-05-14"
-accessed_at: "2026-05-14"
-source_count: 6
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 7
 relationships:
   - type: uses
     target: foundation-models

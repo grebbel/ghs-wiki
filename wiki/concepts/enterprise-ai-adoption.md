@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizational AI adoption", "AI maturity"]
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity, ai-foundation, omniscalers, future-arenas]
 confidence: 0.95
-last_confirmed: "2026-05-26"
-accessed_at: "2026-05-26"
-source_count: 52
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 53
 relationships:
   - type: uses
     target: automation-vs-augmentation

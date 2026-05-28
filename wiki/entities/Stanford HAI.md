@@ -6,9 +6,9 @@ tags: [stanford, ai-research, ai-policy, academic-institute, ai-index]
 website: "https://hai.stanford.edu"
 founded: 2019
 confidence: 0.80
-last_confirmed: "2026-04-30"
-accessed_at: "2026-04-30"
-source_count: 2
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 3
 ---
 
 # Stanford HAI

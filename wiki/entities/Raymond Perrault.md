@@ -4,9 +4,9 @@ kind: person
 aliases: ["Raymond Perrault", "Ray Perrault", "C. Raymond Perrault"]
 tags: [perrault, sri-international, ai-index, calo-project, natural-language-processing, speech-act-theory]
 confidence: 0.85
-last_confirmed: "2026-05-08"
-accessed_at: "2026-05-08"
-source_count: 2
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 3
 relationships:
   - type: part-of
     target: AI-Index
@@ -23,6 +23,7 @@ Research grounded in **natural language processing and speech act theory**. From
 
 - [[2026-04-28-ai-index-report-2025]] — co-author and chair, 8th edition.
 - [[2026-04-30-ai-index-report-2026]] — co-author and co-chair, 9th edition.
+- [[2026-05-27-sajadieh-stanford-hai-inside-the-2026-ai-index-report]] — panel principal at the 27 May 2026 Stanford HAI talk-track; first-person founder-account of the AI Index's *facts-only* editorial discipline; names the **acceptability-threshold research gap** (*"how well does it have to work to be acceptable in a legal / medical / finance system?"*) and discloses the joint World-Bank / IMF global-AI-adoption measurement initiative with [[Yolanda Gil]].
 
 ## Mentioned in
 

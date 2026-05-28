@@ -28,6 +28,8 @@ The report tracks "the gap between what AI can do and how prepared we are to man
 
 This page summarizes the **front matter and the 15 Top Takeaways**; per-chapter deep-reads of the ~430-page report are deferred.
 
+**Companion live talk-track** on the Stanford HAI YouTube channel ([[2026-05-27-sajadieh-stanford-hai-inside-the-2026-ai-index-report]]): a ~73-minute presentation on 27 May 2026 by EiC [[Sha Sajadieh]] with a 42-minute panel Q&A featuring [[Raymond Perrault]] (Co-chair) and [[Russell Wald]] (Stanford HAI Executive Director). The talk-track restates this report's headline numbers and adds editorial / interpretive material not in the published artifact: the **absorption-gap** as the single observation running through the report, the **acceptability-threshold research gap** (Perrault: *how reliable must AI be to be acceptable in legal / medical / finance?*), an academic-vs-industry transparency argument, the founding-mission *facts-only* discipline, and Perrault's disclosure of a joint **World-Bank / IMF global-AI-adoption measurement initiative** with [[Yolanda Gil]] (agreement-in-principle from major US companies; *not in time for the next edition*).
+
 ## What's new vs. the [[2026-04-28-ai-index-report-2025|2025 edition]]
 
 - **Chapter structure**: Medicine split out from Science (was combined as one chapter in 2025); ninth chapter added.
@@ -210,6 +212,7 @@ Additional named co-authors on the 2026 edition (single-source mentions, deferre
 - [[AI Index]] — entity; updated to reflect 9th edition leadership and chapters
 - [[Stanford HAI]] — publisher
 - [[2026-04-28-ai-index-report-2025]] — prior (8th) edition; same pages now have 2026 updates
+- [[2026-05-27-sajadieh-stanford-hai-inside-the-2026-ai-index-report]] — companion talk-track on the Stanford HAI YouTube channel (27 May 2026); first-person editorial-interpretation layer with Perrault + Wald panel Q&A; *acceptability-threshold gap* and *World-Bank / IMF measurement initiative* disclosures
 - [[Schmidt Sciences]] — new analytics/research partner
 - [[generative-ai]] — 53% population adoption; $172B U.S. consumer value; $285.9B U.S. private investment
 - [[foundation-models]] — 91.18% industry; 17.1M H100-equivalents; OLMo 3.1 Think 32B vs Grok 4
