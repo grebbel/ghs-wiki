@@ -2,12 +2,13 @@ import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 import BacklinksWithAliases from "./extensions/backlinks-with-aliases"
 import RelationshipsPanel from "./extensions/relationships-panel"
+import CatalogFooter from "./extensions/catalog-footer"
 
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [RelationshipsPanel()],
-  footer: Component.Footer({
+  footer: CatalogFooter({
     links: {
       GitHub: "https://github.com/businessdatasolutions/ai-wiki",
     },
