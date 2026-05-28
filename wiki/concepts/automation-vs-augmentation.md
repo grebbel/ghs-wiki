@@ -3,9 +3,9 @@ type: concept
 aliases: ["automation vs augmentation", "automation-vs-augmentation", "automate vs augment", "AI substitution vs complementarity", "AI labor substitution", "AI labor complementarity"]
 tags: [automation, augmentation, generative-ai, ai-deployment, ai-task-design, capability-reliability-gap]
 confidence: 0.95
-last_confirmed: "2026-05-26"
-accessed_at: "2026-05-26"
-source_count: 29
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 31
 relationships:
   - type: supports
     target: ai-employment-effects

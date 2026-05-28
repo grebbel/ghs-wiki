@@ -5,10 +5,10 @@ aliases: ["Andrew Ng", "Andrew Y. Ng", "@andrewyng"]
 tags: [andrew-ng, ai-researcher, ai-educator, stanford, deeplearning-ai, coursera, google-brain, baidu, ai-fund, landing-ai, ai-dev, building-blocks-framing, pm-bottleneck, ai-native-team-doctrine, parallel-skill-development, context-hub, code-dream]
 affiliation: "[[DeepLearningAI]] (founder); Stanford University (adjunct professor); AI Fund (managing general partner); Landing AI (founder/CEO); Coursera (co-founder); ex-Google Brain (founder); ex-Baidu (chief scientist)"
 role: "Founder of DeepLearning.AI; adjunct professor at Stanford; managing general partner at AI Fund; founder/CEO of Landing AI; co-founder of Coursera; founding lead of the Google Brain team; ex-chief scientist at Baidu"
-confidence: 0.85
-last_confirmed: "2026-05-24"
-accessed_at: "2026-05-24"
-source_count: 2
+confidence: 0.9
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 4
 ---
 
 # Andrew Ng

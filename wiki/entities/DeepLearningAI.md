@@ -5,10 +5,10 @@ aliases: ["DeepLearningAI", "DeepLearning.AI", "deeplearning.ai", "DLAI"]
 tags: [deeplearning-ai, ai-education, ai-conference, ai-dev, ai-dev-26, the-batch-newsletter, coursera-partner, andrew-ng-founded, online-courses, building-blocks-framing, evals, evals-broken-use-them-anyway]
 since: 2017
 website: "https://www.deeplearning.ai"
-confidence: 0.78
-last_confirmed: "2026-05-25"
-accessed_at: "2026-05-25"
-source_count: 2
+confidence: 0.85
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 4
 relationships:
   - type: employs
     target: Andrew-Ng

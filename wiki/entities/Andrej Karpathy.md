@@ -4,9 +4,9 @@ kind: person
 aliases: ["Karpathy", "Andrej Karpathy", "@karpathy"]
 tags: [andrej-karpathy, ai-researcher, openai, tesla, eureka-labs, software-3.0, vibe-coding, jagged-intelligence, llm-wiki]
 confidence: 0.92
-last_confirmed: "2026-05-22"
-accessed_at: "2026-05-22"
-source_count: 5
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 7
 relationships:
   - type: authored-by
     target: 2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering

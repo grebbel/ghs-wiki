@@ -6,9 +6,9 @@ tags: [diana-hu, y-combinator, ai-native-company, closed-loop-company, ai-founde
 affiliation: "[[Y Combinator]]"
 role: "General Partner, Y Combinator; ex-Co-founder/CTO of Escher Reality (YC S17; acquired by Niantic); ex-Head of AR Platform at Niantic; ex-Data Science Lead at OnCue TV (acquired by Verizon)"
 confidence: 0.85
-last_confirmed: "2026-05-22"
-accessed_at: "2026-05-22"
-source_count: 3
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 4
 ---
 
 # Diana Hu

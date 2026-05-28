@@ -5,10 +5,10 @@ aliases: ["Y Combinator", "YC", "YC Root Access"]
 tags: [accelerator, venture-capital, silicon-valley, startup-school, ai-native-companies, founder-firesides, yc-root-access]
 since: 2005
 website: "https://www.ycombinator.com"
-confidence: 0.92
-last_confirmed: "2026-05-22"
-accessed_at: "2026-05-22"
-source_count: 11
+confidence: 0.95
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 12
 ---
 
 # Y Combinator

@@ -4,10 +4,10 @@ kind: organization
 aliases: ["Anthropic", "Anthropic PBC", "Claude"]
 tags: [anthropic, ai-lab, foundation-models, claude, public-benefit-corporation, long-term-benefit-trust]
 since: 2021
-confidence: 0.92
-last_confirmed: "2026-05-25"
-accessed_at: "2026-05-25"
-source_count: 16
+confidence: 0.95
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 19
 ---
 
 # Anthropic

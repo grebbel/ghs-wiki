@@ -6,9 +6,9 @@ tags: [garry-tan, y-combinator, gstack, gbrain, ai-founder-type, startup-school,
 affiliation: "[[Y Combinator]]"
 role: "President & CEO, Y Combinator (since 2023); founder/engineer; ex-Palantir #10; Posterous co-founder"
 confidence: 0.9
-last_confirmed: "2026-05-21"
-accessed_at: "2026-05-21"
-source_count: 4
+last_confirmed: "2026-05-28"
+accessed_at: "2026-05-28"
+source_count: 5
 ---
 
 # Garry Tan
