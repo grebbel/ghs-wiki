@@ -2,10 +2,10 @@
 type: concept
 aliases: ["Warner-Wäger process model", "Warner & Wager process model", "W&W process model", "digital-transformation process model"]
 tags: [dynamic-capabilities, digital-transformation, microfoundations, warner-wager, wiki-vocabulary]
-confidence: 0.80
-last_confirmed: "2026-05-26"
-accessed_at: "2026-05-26"
-source_count: 2
+confidence: 0.82
+last_confirmed: "2026-05-29"
+accessed_at: "2026-05-29"
+source_count: 3
 relationships:
   - type: instance-of
     target: dynamic-capabilities
