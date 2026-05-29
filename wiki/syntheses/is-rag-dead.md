@@ -6,9 +6,9 @@ derived_from: [is-rag-dead]
 opened: 2026-04-09
 closed: 2026-05-12
 confidence: 0.90
-last_confirmed: "2026-05-28"
-accessed_at: "2026-05-28"
-source_count: 7
+last_confirmed: "2026-05-29"
+accessed_at: "2026-05-29"
+source_count: 8
 relationships:
   - type: supports
     target: llm-wiki

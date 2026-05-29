@@ -4,9 +4,9 @@ kind: organization
 aliases: ["McKinsey", "McKinsey & Company", "McKinsey and Company", "QuantumBlack"]
 tags: [mckinsey, mgi, management-consulting, quantumblack, ai-research, tech-ai-transformation, agent-augmented-workforce, outcome-underwriting, post-controversy-governance, future-arenas, omniscalers, skill-change-index, workforce-skills]
 confidence: 0.95
-last_confirmed: "2026-05-26"
-accessed_at: "2026-05-26"
-source_count: 8
+last_confirmed: "2026-05-29"
+accessed_at: "2026-05-29"
+source_count: 9
 relationships:
   - type: employs
     target: Eric-Lamarre

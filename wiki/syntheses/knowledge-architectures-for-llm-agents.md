@@ -6,9 +6,9 @@ derived_from: [knowledge-architectures-for-llm-agents]
 opened: 2026-04-27
 closed: 2026-05-12
 confidence: 0.90
-last_confirmed: "2026-05-12"
-accessed_at: "2026-05-12"
-source_count: 7
+last_confirmed: "2026-05-29"
+accessed_at: "2026-05-29"
+source_count: 8
 relationships:
   - type: supports
     target: llm-wiki

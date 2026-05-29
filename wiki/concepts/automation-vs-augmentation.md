@@ -5,7 +5,7 @@ tags: [automation, augmentation, generative-ai, ai-deployment, ai-task-design, c
 confidence: 0.95
 last_confirmed: "2026-05-29"
 accessed_at: "2026-05-29"
-source_count: 32
+source_count: 33
 relationships:
   - type: supports
     target: ai-employment-effects

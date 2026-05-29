@@ -5,7 +5,7 @@ tags: [micro-productivity-trap, AI-transformation, EBITDA, process-redesign, wor
 confidence: 0.95
 last_confirmed: "2026-05-29"
 accessed_at: "2026-05-29"
-source_count: 25
+source_count: 26
 relationships:
   - type: instance-of
     target: enterprise-ai-adoption
