@@ -4,10 +4,10 @@ kind: organization
 aliases: ["MIT SMR", "MIT Sloan Management Review", "Sloan Review", "Sloan Management Review"]
 tags: [mit-smr, mit, publisher, ai-research, big-ideas-research, organizational-learning]
 since: 1959
-confidence: 0.85
-last_confirmed: "2026-05-07"
-accessed_at: "2026-05-07"
-source_count: 4
+confidence: 0.88
+last_confirmed: "2026-06-02"
+accessed_at: "2026-06-02"
+source_count: 5
 relationships:
   - type: published-by
     target: 2026-04-28-mit-sloan-ai-maturity
@@ -15,6 +15,9 @@ relationships:
     target: 2026-05-07-ransbotham-augmented-learners
   - type: published-by
     target: 2026-05-07-kiron-schrage-compound-benefits
+  - type: published-by
+    target: 2026-05-31-peron-mit-smr-me-myself-and-ai-philips-interoperability-health-care
+    via: "Carla Goulart Peron (Philips Chief Medical Officer) interviewed by Sam Ransbotham on the *Me, Myself, and AI* podcast (Season 13, 31 May 2026) on AI-for-interoperability in health care — the wiki's first dedicated healthcare-AI source and the first *Me, Myself, and AI* podcast ingest under the MIT SMR `author:` value"
 ---
 
 # MIT Sloan Management Review
@@ -33,6 +36,7 @@ The research-and-management magazine of [[MIT Sloan School of Management]] — d
 - [[2026-04-28-mit-sloan-ai-maturity]] — Kristin Burnham (writer) reporting on [[MIT CISR]] Four Stages of AI Maturity research, Oct 2025.
 - [[2026-05-07-ransbotham-augmented-learners]] — Ransbotham, Kiron, Khodabandeh, Chu, Zhukov, *Learning to Manage Uncertainty, With AI* (8th annual MIT SMR × BCG study), Nov 2024.
 - [[2026-05-07-kiron-schrage-compound-benefits]] — Kiron & Schrage, *How to Reap Compound Benefits From Generative AI*, Apr 2026.
+- [[2026-05-31-peron-mit-smr-me-myself-and-ai-philips-interoperability-health-care]] — Peron (Philips CMO) interviewed by Ransbotham on *Me, Myself, and AI* podcast, S13, 31 May 2026. **The first podcast-format MIT SMR source in the wiki** (prior three are written-research outputs); also the wiki's first dedicated healthcare-AI source.
 
 ## Distinguishing from sibling MIT publications
 

@@ -2,10 +2,10 @@
 type: concept
 aliases: ["AI deskilling", "ai-deskilling", "task composition shift", "deskilling"]
 tags: [deskilling, task-composition, ai-employment-effects, occupations]
-confidence: 0.83
-last_confirmed: "2026-05-25"
-accessed_at: "2026-05-25"
-source_count: 8
+confidence: 0.85
+last_confirmed: "2026-06-02"
+accessed_at: "2026-06-02"
+source_count: 10
 relationships:
   - type: instance-of
     target: ai-employment-effects
@@ -114,6 +114,28 @@ Paired with Allen's organisational counter-prescription: *"audit your seniority 
 ## *AI brain fry* — cognitive-load deskilling as a second causal mechanism ([[2026-05-06-kropp-bcg-hbr-dont-treat-ai-agents-like-employees|Kropp et al. / BCG, HBR May 2026]])
 
 The wiki has previously held [[2026-04-28-anthropic-economic-index-q4-2025|deskilling-via-task-composition-shift]] as the primary causal mechanism. [[2026-05-06-kropp-bcg-hbr-dont-treat-ai-agents-like-employees|Kropp et al.]] reference a prior BCG study naming a **second causal mechanism**: *AI brain fry* — *"mental fatigue from excessive use or oversight of AI tools beyond one's cognitive capacity."* Workers experiencing brain fry score **11% higher on minor-error frequency** and **39% higher on major-error frequency** than those not experiencing it. The Kropp et al. paper adds the *AI-employee framing* extension: when managers feel less need to fully engage in the cognitive burden of review (because *"Kevin"* drafted it, not a human colleague), scrutiny drops further — turning *over-reliance on AI* into a deskilling pathway through diminished review-engagement rather than task-composition shift. This is structurally distinct from the [[2026-04-28-anthropic-economic-index-q4-2025|Anthropic Economic Index]] *task-composition* mechanism — same outcome (skills decay), different upstream driver (over-engagement vs. task migration). Worth tracking as the wiki accumulates more cognitive-load-on-managers-of-agents evidence. *Open follow-up:* ingest the underlying BCG *AI brain fry* study directly.
+
+## The Peron radiologist-training-on-normal-images gap ([[2026-05-31-peron-mit-smr-me-myself-and-ai-philips-interoperability-health-care|Peron / MIT SMR May 2026]])
+
+The wiki's first **clinical-domain instance** of a *training-pipeline deskilling gap* — distinct from the task-composition mechanism (Anthropic Economic Index) and from the cognitive-load mechanism (Kropp et al. / BCG). The mechanism: when AI handles the *exemplar-of-normal* training-data class, downstream specialists lose the calibration-against-normal previously developed through volume practice.
+
+The question Peron raises (from a recent radiologist-society meeting; currently unresolved):
+
+> *"A few weeks ago I was with one of the radiologist medical societies and they were talking about — what if we could have AI defining all normal images and then radiologists will be looking at only abnormal? And someone in the audience raised their hand and said — well, how are we going to get the radiologist trained in what is abnormal if they are not going to be seeing normal?"*
+
+The structural anchor: radiology has a clean *normal-vs-abnormal* binary that maps directly to a training-pipeline gap. New radiologists historically calibrate against *normal* by seeing many normals; if the AI-augmented workflow funnels them only to *abnormal* cases (the efficiency argument), the calibration-baseline they need for abnormal-detection erodes. **A third causal mechanism for deskilling**: training-pipeline class-imbalance under AI-assisted triage. Distinct from (a) [[2026-04-28-anthropic-economic-index-q4-2025|task-composition shift]] (the work *content* changes); (b) [[2026-05-06-kropp-bcg-hbr-dont-treat-ai-agents-like-employees|BCG AI-brain-fry]] (the *cognitive engagement* drops); (c) Peron's clinical-training-pipeline gap (the *exemplar distribution* in the training data downstream specialists see shifts).
+
+Open follow-up: is this generalisable beyond radiology? Plausible candidates for the same pattern — security-operations analysts (if AI flags only true positives, analysts lose calibration against benign noise); fraud-review specialists (same logic); content-moderation reviewers (if AI bulk-removes obviously-violating content, reviewers see only edge-cases, losing calibration on what *clearly* violates). Worth tracking as the wiki accumulates evidence on whether the radiology pattern is domain-specific or domain-general.
+
+## *AI-linked skill erosion* as an executive prescription ([[2026-05-28-giles-wp-intelligence-new-human-machine-workforce-agentic-ai-jobs|Giles / WP Intelligence May 2026]])
+
+The wiki's first **executive-readership-altitude prescription** on deskilling-prevention. Giles names *Beware of AI-linked skill erosion* as one of the five executive recommendations at the close of his WP Intelligence report:
+
+> *"As employees rely more heavily on agentic AI — Gartner says agents could handle a third of business decision-making by 2028 — they may eventually lose the know-how required to police agents effectively, and to spot ways to improve automated processes. To avoid this, companies can take a range of steps, from offering bonuses to workers to keep practicing skills such as coding to insisting on regular manual checks of key agentic systems."*
+
+Two concrete counter-measures Giles names: (a) **bonuses for keeping practising load-bearing skills** (coding cited as the worked example) — pays workers to retain skills they would otherwise let atrophy under AI substitution; (b) **regular manual checks of key agentic systems** — periodic forced-disengagement of the AI to maintain human know-how on the underlying operations.
+
+Convergent with [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS]]'s *protect the junior learning path* discipline and [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren & Macvean]]'s *productive-struggle* discipline — Giles supplies the executive-readership news-survey altitude framing of the same anti-deskilling principle. The *Gartner agents-handling-one-third-of-business-decisions-by-2028* anchor is the forecast that makes the prescription feel urgent; if true, the *who-can-still-police-the-agents?* gap becomes a load-bearing firm-survival question by 2028-2030.
 
 ## Related concepts
 

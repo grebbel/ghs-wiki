@@ -6,9 +6,9 @@ tags: [accelerator, venture-capital, silicon-valley, startup-school, ai-native-c
 since: 2005
 website: "https://www.ycombinator.com"
 confidence: 0.95
-last_confirmed: "2026-05-28"
-accessed_at: "2026-05-28"
-source_count: 12
+last_confirmed: "2026-06-02"
+accessed_at: "2026-06-02"
+source_count: 13
 ---
 
 # Y Combinator
@@ -57,7 +57,11 @@ YC President & CEO [[Garry Tan]] and YC GP [[Diana Hu]] guest-lecturing in Stanf
 
 [[Luminai]] founder/CEO **Kesava Kirupa Dinakaran** (YC S20) in conversation with [[Aaron Epstein]] on YC Root Access *Founder Firesides* (published 9 April 2026). $38M Series B (~$60M lifetime). The **paper-and-fax-vertical-AI-wedge** anchor at trillion-dollar-industry scale — the Cleveland Clinic worked example (*"the way that most patients get referred into the Cleveland Clinic is through a fax"*) + the verticalisation-decision template (horizontal automation platform → all-in on healthcare → narrow further to a specific set of wedge use-cases) + the enterprise-sales-as-relational-game doctrine + the LinkedIn-contact-scraping script. Companion to [[2026-05-11-hill-vori-grocery-os-paper-and-fax|Hill / Vori (grocery)]] as the wiki's second trillion-dollar-paper-and-fax-industry exemplar. Mid-interview tangent connects Dinakaran's Rubik's-cube-as-childhood-skill to [[Andrej Karpathy]]'s YouTube tutorials.
 
-### The YC-batch-context anchor — now ten sources across four channels
+### 10. Warren / Startup School ([[2026-06-03-warren-yc-how-to-build-an-ai-native-services-company|Warren 2026]])
+
+YC Visiting Partner **Charlie Warren** on **Startup School** (published 3 June 2026, the second Startup School ingest after Hu / April 2026). The wiki's **first YC source explicitly framing *AI-native services companies* as a distinct go-to-market category** — alongside the existing AI-software-product cluster (Hu / Tan / Masad / etc.), Warren writes the *services-company sibling* of Hu's playbook: same YC altitude, same *built-from-scratch on AI* core thesis, different category (services that sell *outcomes*, not software products). Markets named as YC-internal known-good-fit: tax / audit / insurance / mortgages / parts of healthcare / parts of logistics. The four market-selection traits Warren introduces (*low trust + low task-level judgment + high intelligence threshold + regulation-as-moat*); the **Sam Altman Test** for model-disruption-resistance; the three founder attributes (*domain fluency + model fluency + operational rigor*); the **outcome-as-product vs co-pilot-as-product** distinction as the central category-defining frame. Two YC-portfolio worked examples named: **Panacea** (FDA regulatory services for biotech/medtech — *regulation-as-moat* + *outcome-based pricing* exemplar) and **The General Legal Team** (AI-native law firm with Cooley + Fenwick + Casetext founder-team composition). The **P&L opportunity-size frame**: services 30%-margin floor → AI-leveraged 50%+ on TAMs 2-3× bigger than software. The **don't-buy-your-way-in** rule: only valid reason to acquire an existing services business is fast regulatory moat (e.g. insurance licensing). With Warren the YC corpus now spans **two AI-native-company vertical curricula** — Hu on AI-software products from the ground up, Warren on AI-services companies from the ground up.
+
+### The YC-batch-context anchor — now ten Startup-School-and-Founder-Firesides sources across four channels (eleven counting Koomen / Lightcone)
 
 The ten sources together form a **YC-batch-context corpus** spanning February–May 2026 and four distinct YC channels:
 
@@ -72,6 +76,7 @@ The ten sources together form a **YC-batch-context corpus** spanning February–
 | Portfolio-founder pair / sales-enablement vertical-SaaS | Akhtar & Forget / Letter AI | YC Root Access | The MCP-server-as-vendor-product-surface worked example + pivot-during-batch from developer tools to sales enablement + Lenovo-closed-in-batch warm-intro template |
 | Portfolio-founder pair / QA vertical-SaaS | Wu & An / Momentic | YC Root Access | The verification-layer-for-software / truth-driven-development thesis + MCP-callable-external-verifier product surface + Notion 500K-test-runs/day anchor + 10×-counter to the 1,000× thesis |
 | Portfolio-founder / healthcare-administrative vertical-SaaS | Dinakaran / Luminai | YC Root Access | The paper-and-fax-vertical-AI-wedge anchor at trillion-dollar-industry scale (Cleveland Clinic worked example) + the horizontal-to-vertical specialisation decision + the enterprise-sales-as-relational-game doctrine + LinkedIn-contact-scraping warm-intro script |
+| Visiting Partner / AI-native services category | Warren / Startup School | Startup School | The category-defining playbook — *outcome-as-product vs co-pilot-as-product*; four market-selection traits (*low trust + low task-judgment + high intelligence threshold + regulation-as-moat*); the *Sam Altman Test*; three founder attributes (*domain + model + operational fluency*); Panacea + The General Legal Team worked examples; 30%-services-margin floor → AI-leveraged 50%+ on TAMs 2-3× bigger than software; *don't-buy-your-way-in* rule |
 
 All ten align on the same diagnosis: AI-native companies need **fewer humans + queryable artifacts + software factories + a packaged harness of skills + a buyer-side procurement-narrative flip that grants them air cover against incumbents**. The three 22-May backfill ingests (Letter AI / Momentic / Luminai) extend the diagnosis backwards in time and across three vertical-SaaS categories (sales-enablement / QA / healthcare-administrative), each instantiating the **MCP-and-agent-protocol-as-vendor-product-surface** pattern at the customer-vantage layer.
 

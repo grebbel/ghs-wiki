@@ -3,9 +3,9 @@ type: concept
 aliases: ["RAI", "responsible AI", "AI ethics", "AI governance", "AI safety"]
 tags: [responsible-ai, ai-ethics, ai-governance, ai-safety, ai-policy]
 confidence: 0.95
-last_confirmed: "2026-05-28"
-accessed_at: "2026-05-28"
-source_count: 12
+last_confirmed: "2026-06-02"
+accessed_at: "2026-06-02"
+source_count: 13
 relationships:
   - type: part-of
     target: enterprise-ai-adoption
@@ -182,6 +182,18 @@ For organizations, this is now an explicit RAI question: **what is the policy on
 - What reskilling/training/internal-mobility commitments accompany each AI deployment decision?
 
 Most current RAI frameworks ([[2026-04-28-ai-index-report-2025|AI Index 2025]] §3, OECD/EU/UN/AU) under-weight this concern relative to bias, factuality, and security. Worth tracking when sources begin making this link explicitly.
+
+## The nine-German-women postpartum-blood-loss anchor + women's-cardiac-health gap ([[2026-05-31-peron-mit-smr-me-myself-and-ai-philips-interoperability-health-care|Peron / MIT SMR May 2026]])
+
+[[2026-05-31-peron-mit-smr-me-myself-and-ai-philips-interoperability-health-care|Peron (May 2026)]] supplies the wiki's first **clinical-domain worked examples** of *AI-as-bias-auditor* in a clinical-protocol setting — distinct from the existing *bias-in-LLM-training-data* framing in §"Bias mitigation effectiveness" above.
+
+**The nine-German-women postpartum-blood-loss anchor.** Peron's WEF-panel anecdote: the global clinical standard for *normal postpartum blood loss* was established based on **nine women in Germany** and exported worldwide. India recalibrated to ~**300mL** given smaller average body sizes. Peron's frame: *"I think technology, that interconnectivity, that now AI can analyse such a big data set so quickly, can really improve the way we are practicing medicine."* Sam Ransbotham (host) extends the implication: *"I can also imagine a very simple job for agents would be — hey, go through all of our clinical practices in every area and find the root study for that and assess how that plays out. Your nine-person-in-Germany sample should rise pretty quickly to the top of that list."* The wiki's first articulation of *AI-agent-as-clinical-protocol-bias-auditor* at population scale.
+
+**Women's cardiac health gap.** Peron names a second worked example with the same structural shape: cardiac causes are the highest-mortality category in women; women experience *longer* waiting times for cardiac diagnostic because symptoms present differently; most cardiac protocols were designed based on male-only trial data. Peron names two specific physiological differences AI algorithms can incorporate — **heart position** (slightly different in female vs male chest, affecting MR-imaging capture parameters) and **rhythm patterns** (the female cardiac rhythm has a slightly-different pattern that algorithms need to calibrate against).
+
+Both examples share an operational structure: *AI's strength at analysing large data sets quickly* becomes an active bias-correction tool — auditing population-scale clinical-protocol data to identify samples that don't match local body populations + retraining diagnostic algorithms with appropriate sub-population variability. The wiki had previously held the *AI-bias-correction* framing as a *LLM-training-data* concern (gender/race/class bias in language-model outputs); Peron extends it to the *clinical-decision-substrate* layer where the biases are upstream of any specific model and embedded in decades of medical-research-sampling decisions. **A new RAI category: AI-as-audit-tool-against-pre-AI-embedded-biases.** Open follow-up: are there analogous worked examples in finance (credit-scoring protocols based on historic-population samples) or law (sentencing-guidelines based on historic case-mix) where the same audit-pattern would apply?
+
+The pairing with [[2026-05-31-peron-mit-smr-me-myself-and-ai-philips-interoperability-health-care|Peron]]'s **Future Health Index trust-gap data** (79% of clinicians optimistic about AI vs ~50% of patients worried about reduced face-to-face time) gives this concept page a second new framing: *clinician trust is data-driven (bias, validation), patient trust is experiential (will-I-see-my-doctor-less)*. The reconciliation work in healthcare AI is therefore not a single-discipline trust-building exercise; it's a two-population audit that has to address two distinct trust-deficits with distinct evidence types.
 
 ## Debates / contradictions
 

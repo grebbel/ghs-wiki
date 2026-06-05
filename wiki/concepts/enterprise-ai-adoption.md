@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizational AI adoption", "AI maturity"]
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity, ai-foundation, omniscalers, future-arenas]
 confidence: 0.95
-last_confirmed: "2026-05-29"
-accessed_at: "2026-05-29"
-source_count: 58
+last_confirmed: "2026-06-02"
+accessed_at: "2026-06-02"
+source_count: 61
 relationships:
   - type: uses
     target: automation-vs-augmentation
@@ -387,6 +387,65 @@ Operator-narrated framings push the wiki's existing position further:
 | Regional bank IT modernization | Banking | 3+ (modernisation planning / assessment / functionality / coding / QA / testing) | Code accuracy up to 70%; human hours -50% |
 
 MGI's framing converges with [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Bain's micro-productivity-trap]] (task gains don't aggregate to firm value without transformation), [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels/McKinsey]] (*"organisational change is half-or-more of the secret sauce"*), and [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS]] (*"AI bolted on is going to fail... focus at a workflow level"*). The cross-consultancy convergence on **workflow as the unit of AI value capture** is now the wiki's strongest evidence-based prescription for enterprise leaders.
+
+## The *5–10-year sector-by-sector replacement* speed model ([[2026-05-31-benedict-evans-rational-conversation-on-where-ai-is-actually-going|Evans / Lenny's Podcast May 2026]])
+
+[[2026-05-31-benedict-evans-rational-conversation-on-where-ai-is-actually-going|Evans (May 2026)]] supplies the wiki's clearest **independent-analyst-altitude speed-of-adoption frame**:
+
+> *"Typical big-company enterprise software sales cycle is 18 months if you're lucky. Enterprise sales cycle is shorter than the venture-backed startup software funding cycle — longer — like it takes you longer to get an enterprise deal than it takes you to go between rounds. So no, people aren't just going to tear out SAP and replace it with XYZ. Maybe in three, five, ten years yes that whole estate will look radically different and all those jobs will have changed, but it will take three, four, five, ten years and it will take time sector by sector and it will take time for people to work out — oh, you could do that thing with this."*
+
+Three propositions packed inside:
+
+**(a) The 18-month-enterprise-sales-cycle floor.** Adoption *can't* outpace procurement. The enterprise-sales-cycle floor on adoption velocity is structural; no model-capability improvement removes it. Convergent with the [[2026-05-08-running-an-ai-native-engineering-org|Anthropic engineering-org]] practitioner observation that customer onboarding pace, not model release pace, sets the cadence at which AI-native workflows actually land in clients.
+
+**(b) Sector-by-sector pacing.** The whole-estate-rewrites *will* happen — but at sector-staggered timelines spanning 3–10 years. Evans's frame is *the sales cycle is shorter than the funding cycle is shorter than the integration cycle* — money flows faster than software does, software flows faster than workflow integration does, and workflow integration is the rate-limiting step.
+
+**(c) The *delay-until-someone-realises-you-could-do-that-thing-with-this* lag.** Evans's worked example: *"There's a company called Frame.io which is video editing — video collaboration. And there's nothing there that you couldn't have done at least five years earlier and maybe ten years earlier ... the delay was somebody realizing — oh we could — that problem exists inside that industry and oh this is the way that we would solve it. It didn't all happen the day after Google Docs."* The pacing-of-adoption is not bounded by capability availability; it's bounded by *the recognition that capability X applies to problem Y in industry Z* — a knowledge-discovery process that runs sector-by-sector at a much slower clock than the capability-frontier itself.
+
+Sits alongside the MIT CISR Stage 2 → Stage 3 *financial inflection* finding and the [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|Bain/OpenAI micro-productivity-trap]] result: high pilot density and shallow task-level gains can co-exist with multi-year time-horizons for *firm-level value* to land — Evans's 3–10-year frame is the macro version of MIT CISR's between-stage gradient and Bain's reinvention-not-task-optimization prescription.
+
+## The *AI-native services company* vendor-side playbook ([[2026-06-03-warren-yc-how-to-build-an-ai-native-services-company|Warren / YC Startup School June 2026]])
+
+[[2026-06-03-warren-yc-how-to-build-an-ai-native-services-company|Warren (June 2026)]] supplies the **vendor-side architectural mirror** of [[2026-05-05-nishar-nohria-end-of-one-size-fits-all|Nishar & Nohria's *Buy Outcomes* model]]. Where Nishar-Nohria frame Buy Outcomes from the *enterprise-buyer firm-boundary* angle (when a firm contracts for an outcome rather than licensing software, the entire job is automated by the vendor), Warren writes the **YC-altitude playbook for building that vendor**.
+
+Core thesis: *"Some of the biggest companies of the next decade won't be software businesses at all. They'll be services companies like insurance carriers and law firms rebuilt from scratch with AI doing most of the work."* Markets named as YC-internal known-good-fit: **tax, audit, insurance, mortgages, parts of healthcare, parts of logistics**.
+
+**Outcome-as-product vs co-pilot-as-product** — the central distinction: *"companies provide the outcome to the customer versus build a co-pilot that the customer uses internally."* The wiki's clearest single-sentence YC-altitude framing of the *two-vertical AI-native-company split*: outcome-vendors (the Warren category) vs co-pilot-vendors (the prior YC default which the [[2026-04-24-hu-yc-how-to-build-a-company-with-ai-from-the-ground-up|Hu / YC AI-from-the-ground-up]] piece operationalises).
+
+**Four market-selection traits unique to AI-native services**:
+| Trait | What it means |
+|---|---|
+| Low trust | Work is already outsourced; customer cares about outcome, not how |
+| Low judgment at the task level | Most steps automatable; judgment in a few places |
+| High intelligence threshold | Overall work hard enough that *models + humans* are needed |
+| Regulation could actually be good | Higher expectations + legal accountability → moat |
+
+Warren's **Sam Altman Test** for model-disruption-resistance: *"as the models get better, does your service get stronger or does the model itself commoditize you? You want to be in the first camp."* The vendor-side test, structurally adjacent to the [[agent-harness|agent-harness]] *model-rented-harness-owned* discipline applied to services-company strategy.
+
+**P&L opportunity-size frame**: *"Traditional services firms top out around 30% margins. Pure software and agent companies have more margin, but often smaller TAMs. The bet on these services companies is that AI operating leverage gets you closer to software margin, say 50%+, on a market that's two to three times bigger than software. You don't need to be there right away. But the trajectory has to be believable."* The wiki's clearest YC-altitude quantification of the *services-AI-vendor opportunity-size envelope*.
+
+**Don't-buy-your-way-in rule**: only valid reason to acquire an existing services business is fast regulatory moat (e.g. insurance licensing); otherwise *"legacy service businesses are legacy. They have different expectations on metrics, hiring, and performance. Adding AI on top doesn't change any of those realities. Building is almost always better than buying."*
+
+The Warren-Nishar-Nohria pairing now forms the wiki's first complete **buyer-side architecture + vendor-side playbook** pair on outcome-as-a-service. Convergent with [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels / McKinsey]] (incumbent-side rewrite of consulting), [[2026-04-09-dinakaran-yc-luminai-automating-americas-biggest-hospitals|Dinakaran / Luminai]] (worked example in healthcare-ops), and [[2026-05-27-scheffer-de-ondernemer-helloprint-ai-rebuild-from-day-zero|Scheffer / HelloPrint]] (day-zero rebuild at SME scale rather than YC startup scale). The *services-don't-disappear-they-reinvent* thesis is now visible at **four altitudes**: incumbent-firm (Sternfels), buyer-firm-boundary (Nishar-Nohria), startup-vendor (Warren), in-place-SME (Scheffer).
+
+## The Gartner *$86B → $206B agent-spending* + *one-third of business decisions by 2028* anchors + Giles five executive recommendations ([[2026-05-28-giles-wp-intelligence-new-human-machine-workforce-agentic-ai-jobs|Giles / WP Intelligence May 2026]])
+
+[[2026-05-28-giles-wp-intelligence-new-human-machine-workforce-agentic-ai-jobs|Giles (May 2026)]] supplies two **executive-readership Gartner anchors** + the wiki's first executive-readership *five-recommendations close*:
+
+- **Gartner**: spending on AI agents will more than double from **$86.4B (2025)** to **$206.5B (2026)** — the wiki's clearest single forecast-anchor on agent-deployment capex.
+- **Gartner** (separately): *"agents could handle a third of business decision-making by 2028"* — the wiki's most concrete forward-looking-decision-share forecast.
+
+The **five executive recommendations** Giles closes with (recapped here as the executive-altitude operational counter-prescription to the simple *adopt-agents-quickly* default reading of the spending data):
+
+| # | Recommendation | Load-bearing claim |
+|---|---|---|
+| 1 | **Review workflows first, deploy agents second** | Garaba/UiPath worked example: the *period between offer-extended and onboarding* looked like a simple process; her team found **~60 different subprocesses**, some not suited to automation. The wiki's clearest single-line executive-altitude restatement of the [[micro-productivity-trap|workflow-not-task]] discipline. |
+| 2 | **Remember agentic tech isn't perfect** | Hallucinations + consistent-accuracy problems → keep enough experienced employees to apply *sense checks* to agent recommendations. Convergent with [[2026-03-20-huggingface-agentic-evaluations-workshop|Narayanan]]'s reliability-as-gating-dimension framing at executive-readership altitude. |
+| 3 | **Redesign entry-level roles** | IBM model (the Nickle LaMoreaux *capability-gaps-from-cutting-entry-level* anchor): new recruits do customer-facing projects + review agent output; not traditional starter tasks. *"A far better use of AI-native talent."* See [[automation-vs-augmentation]] §16 for the worked example. |
+| 4 | **Beware AI-linked skill erosion** | The Gartner *one-third-of-business-decisions-by-2028* forecast turned into a deskilling-prevention prescription: bonuses to workers to keep practicing skills like coding; regular manual checks of key agentic systems. See [[ai-deskilling]] §"AI-linked skill erosion as an executive prescription". |
+| 5 | **Communicate around AI often — and carefully** | *"Dire predictions of job losses made by some prominent AI leaders such as Amodei have turned the deployment of agents and other forms of the technology into a communications minefield."* The HubSpot Russell-quoted prescription: *"You've got to cut through the other noise to focus [them] on the things that matter most."* |
+
+Giles also surfaces McKinsey's identification of **IT, knowledge management, and sales & marketing as the top-3 functions ramping up agent use** — a useful function-by-function deployment-mix anchor at executive-readership altitude. The wiki has multiple McKinsey-altitude sources on the same finding ([[2026-05-28-moon-mckinsey-rewiring-software-delivery-for-the-agentic-era|Moon et al.]] at McKinsey-Digital tech-partner altitude, [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels]] at McKinsey managing-partner altitude); Giles's function-level summary serves as the executive-readership-news-survey altitude statement of the same finding.
 
 ## Debates and supersession
 

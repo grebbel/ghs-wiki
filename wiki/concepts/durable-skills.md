@@ -3,9 +3,9 @@ type: concept
 aliases: ["durable skills", "future-ready skills", "21st century skills", "21st-century skills", "transferable skills", "human skills"]
 tags: [durable-skills, 21st-century-skills, future-ready-skills, ai-deskilling, scalable-assessment, psychometrics, ai-evaluation, hiring-criteria, leadership-skills]
 confidence: 0.95
-last_confirmed: "2026-05-29"
-accessed_at: "2026-05-29"
-source_count: 22
+last_confirmed: "2026-06-02"
+accessed_at: "2026-06-02"
+source_count: 23
 relationships:
   - type: contradicts
     target: ai-deskilling
@@ -168,6 +168,18 @@ The **assisting-and-caring** category is the wiki's most-protected durable-skill
 The framing — *AI does the quantity, humans do the quality* — is convergent with [[2026-05-13-storoni-hbr-ideacast-redefining-efficiency-age-ai|Storoni's neuroscience-vantage reframe]] of efficiency (gear-3 quantity / gear-2 quality) now at structural-modeling altitude.
 
 The SCI is the wiki's strongest **structural-prospective** anchor on which skills are durable. Joins [[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al.]]'s **measurement-methodology** layer (how to test for durable skills), Storoni's **neuroscience** layer (what makes a skill durable under uncertainty), Schoening's **personal-agency** framing (which mindset-traits compound into durable skills), and Forsgren & Macvean's **engineering-team-core-skills** vocabulary (which 10 capabilities matter for AI-era developers). The five-source convergence on the durable-skills concept is now multi-altitude — measurement + neuroscience + agency + engineering-team + structural-modeling.
+
+## The Coursera *120% YoY critical-thinking enrollment growth* demand-side anchor + Kocherlakota *end-to-end systems thinking* prescription ([[2026-05-28-giles-wp-intelligence-new-human-machine-workforce-agentic-ai-jobs|Giles / WP Intelligence May 2026]])
+
+[[2026-05-28-giles-wp-intelligence-new-human-machine-workforce-agentic-ai-jobs|Giles (May 2026)]] supplies the wiki's first **demand-side empirical anchor** on the durable-skills market — measured at learner level, not employer-side:
+
+> *"In its 2026 Job Skills Report, online learning platform Coursera surveyed more than 6 million learners across nearly 7,000 organizations and reported a 120 percent year-over-year increase in enrollments in courses on critical thinking."*
+
+A 120% YoY enrollment jump in *critical-thinking* courses across a 6M-learner sample is the wiki's strongest single-line demand-side signal that durable-skills training is materialising as an active labor-market behaviour rather than only a prescriptive recommendation. Convergent with the MGI Skill Change Index *AI-fluency-demand-grew-6.8×-in-two-years* finding on the supply-side / employer-posting end — the Coursera data is the workers'-side complement (learners actively enrolling rather than employers actively posting).
+
+The accompanying executive-altitude **end-to-end-systems-thinking** prescription Giles surfaces, from **Swamy Kocherlakota** (Zscaler, agentic-AI lead): *"A lot of things companies currently do in silos will be collapsed because of AI. That's why the skill set that's going to be most needed is end-to-end systems thinking."* + (separately) *"If you are working like a robot, your job will be taken by a robot."* The wiki's clearest single-source articulation of the **what-skill-survives-the-silos-collapse** question. Convergent with the existing Globerson-et-al. measurement framework (the four sub-skills include *AI-supported critical thinking* and *novel reasoning* — sister concepts to *systems thinking*) and with Storoni's gear-2 neuroscience framing (the cognitive state in which systems-thinking is even possible).
+
+Plus the **UiPath case-study-vs-online-training** worked example Giles cites (Agi Garaba, UiPath CPO): *"online training ... is useful for helping people understand the fundamental concepts of softer skills. But she has found the most effective way to develop those skills is to bring groups of employees together to work on actual case studies — and to listen to UiPath leaders sharing relevant personal experiences."* The wiki's first practitioner-altitude statement that **softer-skills training is more effective via case-study practice + leader storytelling than via abstract online courses** — a pedagogical finding worth tracking against the durable-skills *measurement* literature ([[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al.]]). The pairing implies: measurement methodology + case-study-based pedagogy may need to co-evolve.
 
 ## Related concepts
 

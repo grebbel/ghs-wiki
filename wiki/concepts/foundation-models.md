@@ -3,9 +3,9 @@ type: concept
 aliases: ["foundation model", "foundation models", "FM", "frontier model", "frontier models"]
 tags: [foundation-models, generative-ai, ai-research]
 confidence: 0.85
-last_confirmed: "2026-05-28"
-accessed_at: "2026-05-28"
-source_count: 14
+last_confirmed: "2026-06-01"
+accessed_at: "2026-06-01"
+source_count: 15
 quality_score: 0.75
 quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '2 broken body wikilink(s)']
 ---
@@ -104,11 +104,30 @@ To be promoted to standalone entity pages when discussed in depth in another sou
 - **Mistral AI**: French open-source.
 - **xAI**: Grok family.
 
+## The *commodity-utility, not platform* value-capture thesis ([[2026-05-31-benedict-evans-rational-conversation-on-where-ai-is-actually-going|Evans / Lenny's Podcast May 2026]])
+
+[[2026-05-31-benedict-evans-rational-conversation-on-where-ai-is-actually-going|Evans (May 2026)]] poses the wiki's most direct independent-analyst-altitude challenge to the *foundation-models-as-the-value-capture-layer* presumption:
+
+> *"The models don't seem to have network effects. So there doesn't seem to be a winner-takes-all effect where one of these will run away ahead of the others. So you should have competition indefinitely. You have competition indefinitely. You don't have really radical differentiation in what the product is. Then why would you have pricing power?"*
+
+The structural analogy: foundation models look more like **AWS than Windows** — every developer doesn't have to standardise on one because the customers don't care which one runs underneath. *"If you're an engineering company or a law firm buying a piece of software, you don't care which cloud it runs on and you don't have to standardize on AWS because that's where all the software is and like the developers all standardize on AWS because all the customers use AWS. That's not how it works. That's how Windows OS works, but that's not how AWS works."*
+
+Sam Altman's *"AI on a meter like water or electricity"* line gets Evans's response: *"my dear sweet child, you need me to explain the margin structure of the utility industry to you ... when you watch television the TV company isn't paying a percentage of your monthly bill to the electricity company, you know, when you wash your clothes, Bosch isn't paying a percentage of the price of the washing machine."*
+
+The telecom worked example Evans offers as the precedent: *"Global mobile industry has revenue of about a trillion dollars a year, maybe a bit more now. And it spends about $200 billion a year on capex every year. Total telecoms is about 300 ... if you look at a chart of mobile data consumption, it's an exponential curve like perfect curve going straight up. And then the number now I think it's about 1500 to 2000 times what it was in 2010 globally. And the stocks have gone nowhere in 25 years because it's an X-growth low-margin commodity utility."*
+
+The structural implication Evans names: *"What is the steady state equilibrium point where all of these lines on the chart kind of get lined up and we don't have this kind of weird crazy stuff going on, and then will you have pricing power or have you got like three or four or five companies kind of all selling the same thing — and so then you should have a pricing — you should have lower pricing and lower margins and the value got — stack."*
+
+The under-asked question Evans poses (in response to *"what's a question about AI that nobody's asking?"*): *"I'm not sure how many people are asking whether model labs have pricing power. I think a lot of people are just presuming that the situation today will continue or that of course they will."*
+
+The thesis sits in productive tension with *foundation-models-as-the-platform* readings ([[2026-04-26-how-to-win-when-software-is-not-a-moat-evan-spiegel-snapchat-ceo|Spiegel's *software-is-not-a-moat*]] makes the same argument from the application-layer side at a different altitude; the [[agent-harness]] concept's *"harness wraps a (rented, swappable) foundation model"* framing is structurally compatible — *the model is the commodity, the harness is the differentiated layer*). The pricing-power-or-not question is genuinely open in 2026; Evans is the wiki's first explicit *no-they-won't-have-pricing-power* voice at independent-analyst altitude.
+
 ## Debates / contradictions
 
 - **"Frontier" vs. "foundation" framing.** "Frontier" emphasizes capability gap; "foundation" emphasizes adaptation role. Different policy/regulation implications — frontier-model bills target capability thresholds; foundation-model bills target the broader pretraining-then-adapt pattern.
 - **Compute-scaling sustainability.** Data-commons shrinkage (see [[responsible-ai]]) plus rising energy demands (driving nuclear-energy partnerships — Microsoft's Three Mile Island, Google's SMRs, Amazon's SMRs) raise structural questions about the 5-month-compute-doubling trajectory continuing.
 - **Open-weight closing the gap.** As open-weight performance catches closed-weight, the policy logic for restricting model release weakens — but so does the commercial moat for closed-weight providers. Open question how 2025–2026 plays out.
+- **Pricing power yes-or-no.** [[2026-05-31-benedict-evans-rational-conversation-on-where-ai-is-actually-going|Evans (May 2026)]] argues no (commodity-utility, AWS-not-Windows analogy); Sam Altman's *AI-on-a-meter* line presumes yes. The wiki has no settled position; the question is one of the load-bearing open questions of 2026 model-economics.
 
 ## Related concepts
 

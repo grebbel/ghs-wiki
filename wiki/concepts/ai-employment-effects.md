@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI employment effects", "AI labor effects", "AI job displacement", "AI labor market", "AI employment impact"]
 tags: [employment, labor-market, ai-displacement, automation, labor-economics, age-effects]
 confidence: 0.95
-last_confirmed: "2026-05-29"
-accessed_at: "2026-05-29"
-source_count: 35
+last_confirmed: "2026-06-02"
+accessed_at: "2026-06-02"
+source_count: 38
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -258,6 +258,54 @@ Four substantive contributions to this concept:
 **(d) AI fluency demand growing faster than any other skill.** AI fluency rose **6.8× in two years** (1.0M → 7.0M US employees in occupations where job postings call for AI-fluency skills, 2023→2025). Technical AI skills (Govern AI + Develop AI, 55 skills) grew 1.6× (2.1M → 3.3M). The growth in AI-fluency demand is *faster than for any other skill in US job postings* — including faster than the prior demand surge for cloud, cybersecurity, and other digital skills. **75% of AI-skill demand is concentrated in 3 occupation groups** (Computer & mathematical, Management, Business & financial operations); **9 occupation groups (~40% of workforce) have near-zero AI-skill demand** — the AI-skill labour market is currently bifurcated.
 
 The MGI framing converges with [[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson]]'s empirical evidence: both reject the *AI-will-eliminate-jobs* framing in favour of *AI-will-reshape-which-skills-are-applied-where*. The pair forms the wiki's strongest **descriptive-empirical + structural-prospective** anchor on the AI labour question.
+
+## The *lump-of-labor fallacy* counter-frame ([[2026-05-31-benedict-evans-rational-conversation-on-where-ai-is-actually-going|Evans / Lenny's Podcast May 2026]])
+
+[[2026-05-31-benedict-evans-rational-conversation-on-where-ai-is-actually-going|Evans (May 2026)]] supplies the wiki's clearest **independent-analyst-altitude reframing** of the displacement debate as a textbook case of the lump-of-labor fallacy:
+
+> *"Every time we have a new technology, it automates away a bunch of jobs and then that automation — whether it's price elasticity and the enablement of the fact that they became automated — unlocks a bunch of new jobs. And you can always see the job that's going to go away, and you don't know the new job because it doesn't exist yet. And it's like something that sounds dumb anyway — like railway engineer? what's a railway? Why would that be a thing? Who would care, who would want to go that fast?"*
+
+The historical pattern Evans names: typesetters, telephone operators, typists — all *crap jobs seen retrospectively*; the new jobs that replaced them are *better because GDP keeps going up*. The analytical move is to invert the doomer framing: instead of asking *"what fraction of current jobs will AI eliminate"*, ask *"what is the new job that doesn't exist yet"*. The answer is unknowable in advance — but the lump-of-labor frame requires that the answer be *zero*, which the historical record contradicts at every prior automation wave (1800 → present).
+
+Three corollaries Evans draws:
+
+**(a) AI labs themselves keep hiring.** *"Even just looking at the most advanced AI companies — Anthropic, OpenAI — everyone's just increasing headcount. Like the companies you would think would be least likely to add humans are adding many, many humans."* The companies most exposed to their own technology are not shrinking headcount; they are scaling it. Same observation surfaces in [[2026-05-08-running-an-ai-native-engineering-org|Anthropic engineering-org]] (Boris Cherny's practitioner-altitude account) and convergent with the McKinsey team-shape pieces ([[2026-05-28-moon-mckinsey-rewiring-software-delivery-for-the-agentic-era|Moon et al.]], [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels]]) which note professional-services capacity is being *added* not subtracted.
+
+**(b) The Excel-and-bankers / accountants-and-spreadsheets analogy.** *"Young people won't believe this but before Excel, junior investment bankers worked really long hours and now thanks to Excel, Goldman's associates all work at lunchtime on Fridays. Like — well, why is that not what happened?"* The number of US accountants has risen continuously through 20th-century waves of adding-machines → punch-cards → mainframes → ERP → cloud → spreadsheets *and* continues to rise into the 21st century. Same pattern with software engineering: *"Before IDEs and libraries and operating systems, developers had to write all the code. Now if you write an iPhone app, 90% of the code is written for you by Apple ... so we've got like a tenth as many engineers now? Well, no."* The Jevons / price-elasticity mechanism converts cost reductions into demand expansion.
+
+**(c) The 5-to-10-year sales-cycle speed limit.** *"Typical big-company enterprise software sales cycle is 18 months if you're lucky. So no, people aren't just going to tear out SAP and replace it with XYZ. Maybe in three, five, ten years yes that whole estate will look radically different and all those jobs will have changed — but it will take three, four, five, ten years and it will take time sector by sector."* Evans calls people who assert *"every big company is going to buy ChatGPT tomorrow and then in two weeks time they'll fire all their staff"* *"morons"*. Convergent with [[enterprise-ai-adoption]]'s 18-month-enterprise-sales-cycle observation: the *speed of displacement* is bounded by the speed of procurement, integration, and workflow redesign — not by the speed of model capability improvements.
+
+The framing does not contradict Brynjolfsson's Canaries (Evans accepts AI is real, big, and displacing); it disputes the *aggregate-employment-collapse* reading by pointing to the historical record and to the labs' own behaviour. Sits in productive tension with the more catastrophist framings ([[2026-04-25-masad-replit-ceo-only-two-jobs-left|Masad's *only two jobs left*]] is the wiki's clearest contemporary maximalist version), with Evans explicitly rejecting the *X% of senior partner's work is automatable* framing as *"horseshit"* — see [[automation-vs-augmentation]] §19 for the *task-vs-job* alternative.
+
+## The April-2026 layoff anchor + *AI-as-#1-cited-reason* monthly attribution ([[2026-05-28-giles-wp-intelligence-new-human-machine-workforce-agentic-ai-jobs|Giles / WP Intelligence May 2026]])
+
+[[2026-05-28-giles-wp-intelligence-new-human-machine-workforce-agentic-ai-jobs|Giles (May 2026)]] supplies the wiki's first **monthly-attribution datapoint** for AI-as-cited-reason-for-layoffs at executive-readership altitude:
+
+- **April 2026 US layoffs: 83,387** announced job cuts (+38% from March 60,620); **third-highest month since 2009** per outplacement firm **Challenger, Gray & Christmas**.
+- ***"AI is the number one reason cited for job cuts in both March and April of this year"*** — Challenger, Gray & Christmas data. *"Other reasons included concerns about the economic outlook and company closures."*
+- Single-firm anchors: **Block** (Square's parent; Jack Dorsey CEO) February-2026 announcement of a **~40% workforce reduction** (over 10,000 → less than 6,000) citing *"intelligence tools"* including agents. **Meta** (Zuckerberg) **8,000 job cuts** the same month, with the 2026 capex outlook raised to **$125–145B** from $115–135B as the named justification.
+
+The Giles framing puts this alongside the **NACE survey of 183 employers (late 2025)**: *"only 14 percent of respondents had considered replacing entry-level roles with AI. Most companies cutting jobs cited the uncertain economic outlook and related budget cuts."* The wiki's read: **AI-as-#1-cited-reason is consistent with AI as a *partial* contributor** rather than the sole driver — the macro-economic-uncertainty + budget-cut framing is the load-bearing companion explanation in the NACE survey-data, and the gap between the two readings is where the empirical noise lives.
+
+The IBM counter-trend single anchor: **tripling US entry-level hiring** in 2026 announced February. **Nickle LaMoreaux** (IBM CHRO): *"while reducing entry-level hiring saves money in the short term, it can lead to capability gaps later that have to be filled by expensive external hires who need time to adapt to a new corporate culture."* + **Agi Garaba** (UiPath CPO): *"If you stop bringing in young workers, you are ultimately eliminating your growth engine."* The IBM/UiPath counter-trend pairs with the [[2026-05-31-benedict-evans-rational-conversation-on-where-ai-is-actually-going|Evans]] *AI-labs-themselves-keep-hiring* observation as twin reasons-to-doubt the *AI-will-collapse-aggregate-entry-level-hiring* default reading.
+
+## The Carl Benedikt Frey *no-automobile-industry* counter-precedent ([[2026-05-28-giles-wp-intelligence-new-human-machine-workforce-agentic-ai-jobs|Giles / WP Intelligence May 2026]])
+
+The wiki's first named-academic-altitude empirical counter to the *every-prior-automation-wave-created-new-jobs* historical-induction argument:
+
+> *"It's entirely plausible that AI will create new kinds of businesses,"* said **Carl Benedikt Frey**, associate professor of AI and work at Oxford University. *"But it's hard to see it creating something like the automobile industry that [generated] many new jobs."* — quoted in Giles 2026.
+
+Frey is the named voice on the *historical-induction-may-not-hold-here* side, against the [[2026-05-31-benedict-evans-rational-conversation-on-where-ai-is-actually-going|Evans typesetters-and-telephone-operators]] / lump-of-labor counter-frame. The two framings are not strictly contradictory — Frey allows that AI *could* create new businesses; he specifically doubts that the *scale of new-job-creation* will match prior platform shifts. Useful as the third pole in the wiki's *displacement debate triangulation*: Brynjolfsson Canaries (empirical signal of early-displacement happening now), Evans (historical-induction argument for new-jobs-will-emerge), Frey (academic-altitude *historical-induction-may-not-extrapolate-to-this-wave* caveat).
+
+## The Peron *do-more-with-the-same* healthcare-domain reframe ([[2026-05-31-peron-mit-smr-me-myself-and-ai-philips-interoperability-health-care|Peron / MIT SMR May 2026]])
+
+[[2026-05-31-peron-mit-smr-me-myself-and-ai-philips-interoperability-health-care|Peron (May 2026)]] adds a **structural-supply-shortage-domain** worked example that explains why the displacement-by-default framing does not fit cleanly in healthcare:
+
+> *"A decade ago people were saying we're never going to have radiologists again because the machines are going to do everything. That narrative has really not played out at all."*
+
+The mechanism Peron names: in a structurally-undersupplied domain (radiology globally, but also clinical practice broadly — *"we have deserts, areas where people don't have any access to care"* exist in the US, Europe, Asia, not just low-income settings), AI changes **which work the clinician does** without reducing the number of clinicians needed. The binding economic constraint is supply, not labor cost. *"As we incorporate technology we'll be able to do more with the same not with less."*
+
+This sharpens the wiki's reading of the AI-employment-effects debate at a **domain-conditional** layer: where supply is structurally short (healthcare clinicians, certain skilled-trade professions, eldercare), AI augments without displacing; where supply is at-or-above demand (mass-market customer-support, entry-level white-collar processing, language-only-tasks marketing), AI displacement is more likely. The Giles April-2026-layoff data sits closer to the supply-at-or-above-demand pole; the Peron healthcare-radiology case sits at the supply-short pole. **A single occupation-level *will-AI-displace-this-role?* prediction without naming the supply-side condition is structurally incomplete.**
 
 ## Debates / contradictions
 
