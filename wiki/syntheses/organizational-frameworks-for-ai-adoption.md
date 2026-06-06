@@ -5,11 +5,11 @@ tags: [enterprise-ai-adoption, organizational-frameworks, synthesis, cross-sourc
 derived_from: [organizational-frameworks-for-ai-adoption]
 opened: 2026-04-28
 closed: 2026-05-05
-last_refreshed: "2026-05-08"
+last_refreshed: "2026-06-06"
 confidence: 0.90
-last_confirmed: "2026-05-08"
-accessed_at: "2026-05-19"
-source_count: 12
+last_confirmed: "2026-06-06"
+accessed_at: "2026-06-06"
+source_count: 13
 relationships:
   - type: instance-of
     target: enterprise-ai-adoption
@@ -34,6 +34,8 @@ Closes [[threads/organizational-frameworks-for-ai-adoption|organizational-framew
 
 The 6→10 expansion does **not** change the synthesis's core thesis (*frameworks operate on different layers; pick by the executive's question, not the framework's brand*). It strengthens the empirical foundation, sharpens several disagreements, and surfaces a new structural finding: **the "compounding cycle" is now visible as the same operational mechanism at two different stack layers** (organizational learning per Kiron-Schrage, runtime engineering per Chatterjee), each independently reached by different practitioner communities.
 
+**Refreshed 2026-06-06**: an **11th framework** lands — the **deployment-maturity ladder** from [[2026-06-02-architecting-ai-native-organizations-redesign-work-at-scale-joe-beutler|Beutler / OpenAI 2026]] (the wiki's first first-party OpenAI source): **Ask → Assist → Automate** (read-only → human-in-the-loop → full autonomy, exceptions routed to humans). It occupies a layer none of the prior ten named cleanly: *given that you are deploying AI on a workflow, how much agency do you grant it, and in what sequence?* — distinct from Anand-Wu's *task-deployment* layer (should you deploy on this task at all) and from Allen/AWS's *economic-decision* USE/COMPOSE/BUILD (build vs rent the model). Beutler pairs it with two org-design rules that reinforce existing cluster findings rather than adding a layer: *separate governance from transformation, business owns the outcomes* (sharpening McKinsey Rewired's operating-model capability) and *embed engineering inside the business function* (the cross-customer-deployment twin of [[2026-05-08-running-an-ai-native-engineering-org|Fung's]] inside-Anthropic team-shape rewrite). The 10→11 expansion again leaves the core thesis intact and adds a *deployment-maturity* rung beneath the task-deployment layer.
+
 ## Question
 
 When advising an executive on enterprise AI adoption, which framework should inform which decision — and where do they genuinely disagree rather than say the same thing in different vocabulary?
@@ -54,6 +56,7 @@ The ten frameworks are **mostly complementary, not competing**. Each names a dif
 | **Firm-boundary** *(new)* | Nishar-Nohria 4-model (Build / Compose / Collaborate / Buy Outcomes) | Which workflows should the firm own, and which should it rent / outsource / outcome-source? | [[2026-05-05-nishar-nohria-end-of-one-size-fits-all\|Nishar & Nohria 2026]] |
 | **Trap escape** | Bain/OpenAI 4-step transformation | How do you avoid the [[micro-productivity-trap]]? | [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation\|Dutt, Chatterji et al. 2026]] |
 | **Task deployment** | Anand-Wu 2×2 (cost of errors × type of knowledge) | For *this specific task*, deploy AI today and how? | [[2026-04-28-anand-wu-genai-playbook\|Anand-Wu]] |
+| **Deployment maturity** *(new)* | Beutler Ask → Assist → Automate ladder | *Given* you're deploying on a workflow, how much agency do you grant the agent, and in what sequence? | [[2026-06-02-architecting-ai-native-organizations-redesign-work-at-scale-joe-beutler\|Beutler / OpenAI 2026]] |
 | **Runtime engineering** *(new)* | [[agent-harness\|Agent harness]] (Context / Constraints / Contracts / Compounding); 4-layer stack with swappable model layer | What runtime infrastructure must exist between your model and your user? | [[2026-05-07-chatterjee-anatomy-of-agent-harness\|Chatterjee 2026]], [[2026-05-07-kokane-agent-harness-vs-systems-design\|Kokane 2026]] |
 | **Diagnostic** | Anand-Wu 6 leakage points | If gains aren't showing up in P&L, where are they leaking? | [[2026-04-28-anand-wu-genai-playbook\|Anand-Wu]] |
 | **⊥ Cross-cutting: human reaction** *(new)* | Carucci resistance-as-data: 3 leader traps (personalize / moralize / rush) + 4 signal categories (Loss / Anxiety / Lack of control / Flaws in change) | When pushback arrives at *any* layer above, what is it telling you about the change itself? | [[2026-05-07-carucci-resistance-as-data\|Carucci 2026]] |
@@ -154,6 +157,10 @@ Of the ten frameworks:
 - [[2026-05-07-kiron-schrage-compound-benefits]] — [[David Kiron]] & Schrage (MIT SMR Column, Apr 2026). **Organizational-learning lens (operational mechanism)**: verification → evaluation → learning capture flywheel; reframes ROI as "return on iteration"; consumption (asset depreciation) vs. compounding (asset appreciation) economics.
 - [[2026-05-07-kokane-agent-harness-vs-systems-design]] — Kokane (Level Up Coding / Medium, Apr 2026). **Runtime-engineering lens (sceptical vantage)**: ~90% of agent-harness work is mature systems engineering rebranded; 10% genuinely novel (non-determinism + context-as-degrading-resource).
 - [[2026-05-07-chatterjee-anatomy-of-agent-harness]] — Chatterjee (Medium, May 2026). **Runtime-engineering lens (taxonomical vantage)**: Context / Constraints / Contracts / Compounding. Friday-in-March worked failure example; "the model is what you rent. The harness is what you own."
+
+**Added in 2026-06-06 refresh:**
+
+- [[2026-06-02-architecting-ai-native-organizations-redesign-work-at-scale-joe-beutler]] — Joe Beutler (Head of Solutions Engineering, Strategics, [[OpenAI]]), at IT Revolution's Enterprise AI Summit (talk published 2 June 2026). **Deployment-maturity lens** (the wiki's first first-party OpenAI source): Ask → Assist → Automate ladder; *separate governance from transformation, business owns the outcomes*; *embed engineering inside the business function*. Vendor-of-deployment cross-customer vantage; anecdotal anchors (T-Mobile $3B / 60%-automated call center; PwC 20%-finance-team benchmark).
 
 ## Lessons
 

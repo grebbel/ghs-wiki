@@ -3,9 +3,9 @@ type: concept
 aliases: ["automation vs augmentation", "automation-vs-augmentation", "automate vs augment", "AI substitution vs complementarity", "AI labor substitution", "AI labor complementarity"]
 tags: [automation, augmentation, generative-ai, ai-deployment, ai-task-design, capability-reliability-gap]
 confidence: 0.95
-last_confirmed: "2026-06-02"
-accessed_at: "2026-06-02"
-source_count: 37
+last_confirmed: "2026-06-06"
+accessed_at: "2026-06-06"
+source_count: 38
 relationships:
   - type: supports
     target: ai-employment-effects
@@ -56,6 +56,20 @@ Anand-Wu's strategic recommendation: deploy aggressively in the no-regrets zone 
 [[2026-04-28-mittri-cisco-ai-enabled-enterprise|MITTRI/Cisco]] frames the distinction as a question of **agency and oversight**: *"It's not about replacing roles. It's about where we can give agency, with some human oversight and governance, to improve tasks within a workflow."* — [[Liz Centoni]], Cisco.
 
 The chatbot → agent → multi-agent progression is a progression along the automation axis: more agency to AI, less direct human intervention.
+
+#### The Ask → Assist → Automate ladder ([[2026-06-02-architecting-ai-native-organizations-redesign-work-at-scale-joe-beutler|Beutler / OpenAI 2026]])
+
+[[2026-06-02-architecting-ai-native-organizations-redesign-work-at-scale-joe-beutler|Beutler (2026)]] gives the cleanest *deployment-maturity* version of this axis — a three-rung ladder OpenAI's solutions team uses with customers to deploy agentic systems responsibly:
+
+| Rung | What the agent does | Automation/augmentation orientation |
+|---|---|---|
+| **Ask** | Read-only — reaches into data, pulls information, answers questions. Validate sources before any write action. | **Augmentation** — the human does the work; the agent is a retrieval/answer tool. |
+| **Assist** | Recommends the action it thinks it should take; a human-in-the-loop validates (approve / reject) before execution. | **Augmentation with human verification** — surfaces where the agent falls short before it acts alone. |
+| **Automate** | The things the agent reliably gets right stop going to humans; exceptions route to people. | **Automation** — agent acts; human handles the long tail. |
+
+Three claims travel with the ladder. **(1) You can't go zero-to-Automate**, "especially in regulated environments where you have all those compliance things to worry about" — you build the eval-and-governance foundation at Ask first. **(2) The biggest value is at Automate, but so is the cost**: "the most integration, the highest quality bar, the strongest evaluations, and the most operational ownership." **(3) A natural flywheel**: start by building tools that *help people do their job* (Ask); once they see value they give feedback; you "hill-climb" toward Automate, and value grows "exponentially as you unlock each new level." The **T-Mobile** case is the responsible-scaling anchor — a $3B call-center cost center, already 60% automated, with a 75% ambition, that OpenAI walked back to start at Ask.
+
+The ladder is a sharper operational restatement of the Anthropic-Economic-Index Directive/Feedback-Loop (automative) vs Task-Iteration/Validation (augmentative) split in the working definition above: Ask ≈ Validation/Learning, Assist ≈ Task-Iteration with a verification gate, Automate ≈ Directive. It complements the [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS]] USE/COMPOSE/BUILD frame (which answers the *economic-decision* question — build vs rent the model) by answering the orthogonal *how-much-agency-now* question on a single workflow. See [[enterprise-ai-adoption]] for the org-design context (embedded engineering, business owns the outcomes) in which Beutler situates the ladder.
 
 ### 3. Labor market consequences ([[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson et al. 2025]])
 
