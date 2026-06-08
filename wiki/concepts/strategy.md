@@ -2,10 +2,10 @@
 type: concept
 aliases: ["strategy", "business strategy", "corporate strategy", "competitive strategy"]
 tags: [strategy, strategic-planning, value-creation, value-capture, theory-of-winning, playing-to-win, value-stick, roger-martin, felix-oberholzer-gee, harvard-business-review]
-confidence: 0.85
-last_confirmed: "2026-05-26"
-accessed_at: "2026-05-26"
-source_count: 4
+confidence: 0.88
+last_confirmed: "2026-06-08"
+accessed_at: "2026-06-08"
+source_count: 5
 relationships:
   - type: supports
     target: strategic-foresight
@@ -149,6 +149,16 @@ Both foundational sources converge here from different vocabularies:
 - Oberholzer-Gee: *"the strategy is about looking forward, seeing the future, planning for the future."*
 
 This convergence is consistent with [[2026-05-15-sterman-systems-thinking-for-leaders-designing-solutions-that-work|Sterman 2026]]'s feedback-loop framing in [[systems-thinking]] — strategy is a continuously-updated theory under feedback, not an open-loop *issue → data → optimal-choice → implement* sequence. Different literatures, the same operational stance.
+
+## AI and strategic decision-making ([[2024-12-01-csaszar-ketkar-kim-ai-strategic-decision-making|Csaszar, Ketkar & Kim 2024]])
+
+The wiki's first **academic-strategy** treatment of how AI changes the *strategic decision-making* (SDM) process — [[2024-12-01-csaszar-ketkar-kim-ai-strategic-decision-making|Csaszar, Ketkar & Kim (2024)]], *Strategy Science* — supplies two things the practitioner sources above don't: controlled empirical evidence and a cognitive-process model.
+
+- **Empirical**: across a start-up accelerator (LLM-generated business plans vs entrepreneurs seeking VC) and a start-up competition (LLM evaluations vs VC/angel investors), **LLMs generate and evaluate forward-looking entrepreneurial strategies at a level comparable to humans** in realistic, high-uncertainty settings.
+- **The cognitive-process model**: SDM rests on **search, representation, and aggregation**; AI affects each, changing the *generation* and *evaluation* of strategies and, through them, competitive advantage. AI-augmented SDM can enhance the **speed, quality, and scale** of strategic analysis and enable new methods (virtual strategy simulations).
+- **The competitive-advantage trichotomy** (a sharp addition to this page): as AI capability advances, the *nature* of advantage may **stay Ricardian** (rooted in unique resources), **become Schumpeterian** (innovation-driven), or **erode entirely** if everyone can cheaply generate comparable strategies. The third branch is the strategy-theoretic statement of the [[2026-04-28-anand-wu-genai-playbook|paradox of access]] and the [[micro-productivity-trap]]: *"the ultimate impact on firm performance will depend on competitive dynamics,"* not on the tool. If strategy generation commoditises, advantage migrates to **complementary assets** (proprietary data, unique execution) — and, per the [[theory-based-view]], to the firm-specific, falsifiable *theory of value* an LLM trained on consensus cannot easily produce.
+
+This is the AI-era extension of the page's *strategy-as-a-theory-under-feedback* stance: the lenses above (Martin's theory of winning, Oberholzer-Gee's value stick, the TBV) describe *what* a strategy is; Csaszar et al. describe *what happens to the cognitive work of producing it* when LLMs can do parts of the search/representation/aggregation loop.
 
 ## Debates and supersession
 

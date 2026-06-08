@@ -2,10 +2,10 @@
 type: concept
 aliases: ["theory-based view", "theory-based-view", "TBV", "theory-based view of strategy", "Felin-Zenger TBV"]
 tags: [theory-based-view, tbv, strategy-theory, felin, zenger, theory-of-value, analogical-reasoning, strategy-formulation, falsifiability, generative-theory]
-confidence: 0.60
-last_confirmed: "2026-05-18"
-accessed_at: "2026-05-18"
-source_count: 1
+confidence: 0.72
+last_confirmed: "2026-06-08"
+accessed_at: "2026-06-08"
+source_count: 2
 relationships:
   - type: supports
     target: strategy
@@ -51,6 +51,19 @@ Three reasons the wiki holds TBV as a load-bearing concept in 2026:
 - **The AI-strategy debate is full of theories without falsifiability.** *"AI is the new electricity"*, *"compute is the new oil"*, *"agents are the new SaaS"* — all generative, none yet falsifiable in the TBV sense. The TBV discipline forces the question *what observation would refute this?* and that question is doing real work across the wiki's [[enterprise-ai-adoption|enterprise-ai-adoption]] cluster.
 - **Coalition-building is back in vogue.** TBV's question 4 (*who must you convince?*) anticipates the [[2026-03-31-carrier-mit-industrial-ai-that-works-strategy-survival-success|Carrier 2026]] *"our ability to adopt and absorb the technology"* framing — the binding constraint is organisational, not analytic.
 - **Disciplined analogy is the practical entry point.** Most working executives do not start by writing falsifiable theories; they start by saying *"we're the X of Y."* TBV + [[analogical-reasoning|disciplined analogy]] is the bridge from the colloquial pattern to the rigorous construct.
+
+## AI and the theory-based view ([[2024-12-01-csaszar-ketkar-kim-ai-strategic-decision-making|Csaszar, Ketkar & Kim 2024]])
+
+The wiki's second TBV source — and the first to test the framework against AI — is [[2024-12-01-csaszar-ketkar-kim-ai-strategic-decision-making|Csaszar, Ketkar & Kim (2024)]], published in the *Strategy Science* **Special Issue on the Theory-Based View**. It argues AI both **supports and challenges** the TBV, which sharpens what the framework actually claims:
+
+- **The challenge to TBV** (three tensions): (1) LLMs are next-word predictors, which may limit their capacity for **forward-looking causal theory** creation — the heart of Felin & Zenger's TBV (citing Zellweger & Zenger 2023); (2) because LLMs rely on past data, they risk **reproducing conventional, widely-held strategies**, reducing the novelty/uniqueness a theory-based advantage depends on (Felin & Holweg 2024); (3) LLM generality may miss the **firm-specific context** a bespoke theory of value requires. In TBV terms: LLMs are strong at *retrieving* existing theories but structurally weak at the *generative, falsifiable, firm-unique* theorising the TBV prizes.
+- **The support for TBV**: AI can expand the *reach* of theory-based strategising — e.g. **virtual strategy simulations** that test "what would have to be true" at scale, and AI-augmented versions of classic tools (Porter's Five Forces, Devil's Advocate) that surface candidate causal mechanisms faster.
+- **Why this matters for the concept**: it operationalises the *"AI-strategy debate is full of theories without falsifiability"* point above. If LLMs default to conventional strategies, the TBV's falsifiability-and-novelty discipline becomes *more* valuable, not less — it is the test that distinguishes a genuine firm-specific theory of value from an AI-generated consensus strategy everyone else can also generate (the [[2026-04-28-anand-wu-genai-playbook|paradox of access]] applied to strategy theory). See [[strategy]] for the companion competitive-advantage argument (Ricardian → Schumpeterian → erased).
+
+## Debates and supersession
+
+- **Does AI strengthen or weaken the TBV's relevance?** [[2024-12-01-csaszar-ketkar-kim-ai-strategic-decision-making|Csaszar, Ketkar & Kim (2024)]] argue both directions hold at once: LLMs can *augment* theory-based strategising (faster candidate-mechanism surfacing; virtual strategy simulations) yet are structurally weak at the *generative, falsifiable, firm-unique* theorising the TBV prizes (next-word prediction; past-data conventionalism). The wiki's reading: AI raises the *value* of the TBV discipline precisely because LLMs default to consensus strategies — falsifiability-and-novelty is the test that separates a genuine firm-specific theory of value from an AI-generatable one. **No supersession** — the two sources are complementary (Carroll & Sørensen supply the methodology via disciplined analogy; Csaszar et al. supply the AI-era stress test).
+- **Second-hand vs primary anchoring.** The TBV is still anchored partly second-hand (via [[2026-04-28-carroll-sorensen-strategy-analogy|Carroll & Sørensen 2024]]); the Felin & Zenger 2009/2017 primaries remain deferred-ingest targets (see Open questions). Confidence (0.72) reflects this — a peer-reviewed second source (Csaszar et al.) raised it from 0.60, but the foundational primaries are not yet ingested.
 
 ## Related concepts
 

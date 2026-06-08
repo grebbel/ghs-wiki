@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizational AI adoption", "AI maturity"]
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity, ai-foundation, omniscalers, future-arenas]
 confidence: 0.95
-last_confirmed: "2026-06-06"
-accessed_at: "2026-06-06"
-source_count: 62
+last_confirmed: "2026-06-08"
+accessed_at: "2026-06-08"
+source_count: 65
 relationships:
   - type: uses
     target: automation-vs-augmentation
@@ -460,6 +460,10 @@ Giles also surfaces McKinsey's identification of **IT, knowledge management, and
 **(d) Ask → Assist → Automate** — a deployment-maturity ladder for agentic systems: **Ask** (read-only — pull data, answer questions, validate sources before any write action), **Assist** (agent recommends, human-in-the-loop validates), **Automate** (the things the agent reliably gets right stop going to humans; exceptions route to people). You cannot go zero-to-full-automation, especially in regulated environments; the biggest value is at Automate, but so are the highest integration cost, quality bar, eval strength, and operational ownership. The ladder maps onto [[automation-vs-augmentation]] (Ask/Assist = augmentation; Automate = automation) and is the *deployment-maturity* complement to [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen / AWS's]] *economic-decision* USE/COMPOSE/BUILD frame. **T-Mobile** anchors the responsible-scaling point: a $3B call-center cost center, already 60% automated, with a 75% ambition — OpenAI walked them back to start at Ask. Operational on-ramps Beutler names: a **workflow inventory** (map every workflow, track AI usage / frequency / time / opportunity, then pick your bets), and the emerging **AI-agent-manager** role (agents need ongoing management the way people need enablement — a candidate full-time job; see [[ai-employment-effects]]).
 
 A vendor-strategy note worth flagging for the **firm-boundary lens** above: Beutler explicitly *rejects* the professional-services / outcome-as-a-service model (*"we don't have a massive professional services business … lucrative contracts that will last 10 years"*) in favour of selling **no-code agent builders** (continuous evals + governance + connectors + shareable skills) so customers build their own agents — the deliberate counter-position to [[2026-06-03-warren-yc-how-to-build-an-ai-native-services-company|Warren / YC's]] vendor-side outcome playbook and [[2026-05-05-nishar-nohria-end-of-one-size-fits-all|Nishar-Nohria's]] buyer-side *Buy Outcomes* model. The same firm (OpenAI) appears on *both* sides of the wiki's outcome-vs-builder debate: the Bain/OpenAI [[2026-05-02-dutt-chatterji-ai-experimentation-to-transformation|HBR article]] sits with the transformation-consultancy cluster, while Beutler stakes OpenAI's product bet on the builder, not the outcome.
+
+## The workforce-readiness constraint: adoption outruns capability ([[2026-05-01-lf-state-of-tech-talent-global-2026|LF Global]] + [[2026-06-01-lf-state-of-tech-talent-europe-2026|LF Europe]] 2026)
+
+The two 2026 [[The Linux Foundation|Linux Foundation]] *State of Tech Talent* reports add the **workforce-readiness** lens to the adoption-depth gradient: adoption intent is near-universal (**97% plan to implement AI** globally; 93% Europe / 99% rest-of-world *are* implementing), but the binding constraint is the **ability to operationalise** it — a survey-side restatement of the [[micro-productivity-trap]] and the BCG *5%-get-value-at-scale* anchor (both cited by the reports). The gap is most acute in **security and operational readiness**: security/privacy is now the **top barrier** to adopting new technology (up from 3rd in 2025); understaffing is widespread in AI, cybersecurity, cost-optimisation, and platform-engineering; and most organisations lag on foundational AI infrastructure (the "PARK stack"). The reports' prescription — **upskill existing staff over external hiring** — locates the maturity bottleneck in *people and capability*, not tooling (see [[durable-skills]] and [[ai-employment-effects]]). For the strategy-discipline complement (how AI changes the *decision* work itself), see [[2024-12-01-csaszar-ketkar-kim-ai-strategic-decision-making|Csaszar et al.]] on AI-augmented strategic decision-making.
 
 ## Debates and supersession
 

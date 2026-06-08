@@ -124,8 +124,9 @@ A forward-looking claim worth tracking: **context provenance** ("what entered th
 
 - *Tejas Chopra* — speaker / Headroom author (senior engineer, Netflix). Promote on second-source mention.
 - *Netflix* — Chopra's employer; many internal teams reportedly use Headroom. Likely promotion candidate on a second Netflix-related source.
-- *The Linux Foundation* — channel / event host. Promote on second-source mention.
 - *Headroom* — the open-source library (the source's subject). Candidate product/library entity on a second mention.
+
+**Promoted to entity (2026-06-08):** [[The Linux Foundation]] — this talk's channel/host now joins the two *State of Tech Talent* reports ([[2026-05-01-lf-state-of-tech-talent-global-2026|Global]], [[2026-06-01-lf-state-of-tech-talent-europe-2026|Europe]]) as the foundation's third wiki source, crossing the promotion threshold.
 - *Headlight* — forthcoming sibling project (context provenance); *compress-base* — Chopra's encoder-only compression model; *LLMLingua* — Microsoft text-compression baseline; *RTK* / *LeanCTX* — prior-art compression tools (RTK ASR-uncertain); *Agno* — agent framework named as an integration target. Track if any recur.
 
 ## Source-quality flag

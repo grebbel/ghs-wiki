@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI employment effects", "AI labor effects", "AI job displacement", "AI labor market", "AI employment impact"]
 tags: [employment, labor-market, ai-displacement, automation, labor-economics, age-effects]
 confidence: 0.95
-last_confirmed: "2026-06-02"
-accessed_at: "2026-06-05"
-source_count: 38
+last_confirmed: "2026-06-08"
+accessed_at: "2026-06-08"
+source_count: 40
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -306,6 +306,16 @@ Frey is the named voice on the *historical-induction-may-not-hold-here* side, ag
 The mechanism Peron names: in a structurally-undersupplied domain (radiology globally, but also clinical practice broadly — *"we have deserts, areas where people don't have any access to care"* exist in the US, Europe, Asia, not just low-income settings), AI changes **which work the clinician does** without reducing the number of clinicians needed. The binding economic constraint is supply, not labor cost. *"As we incorporate technology we'll be able to do more with the same not with less."*
 
 This sharpens the wiki's reading of the AI-employment-effects debate at a **domain-conditional** layer: where supply is structurally short (healthcare clinicians, certain skilled-trade professions, eldercare), AI augments without displacing; where supply is at-or-above demand (mass-market customer-support, entry-level white-collar processing, language-only-tasks marketing), AI displacement is more likely. The Giles April-2026-layoff data sits closer to the supply-at-or-above-demand pole; the Peron healthcare-radiology case sits at the supply-short pole. **A single occupation-level *will-AI-displace-this-role?* prediction without naming the supply-side condition is structurally incomplete.**
+
+## The Linux Foundation *not-a-jobs-crisis* survey anchor + the European entry-level corroboration ([[2026-05-01-lf-state-of-tech-talent-global-2026|LF Global]] + [[2026-06-01-lf-state-of-tech-talent-europe-2026|LF Europe]] 2026)
+
+The two 2026 [[The Linux Foundation|Linux Foundation]] *State of Tech Talent* reports supply the wiki's first **workforce-survey-side** evidence on the AI-and-jobs question (n=400 global / 157 European; [[Marco Gerosa]] & [[Adrienn Lawson]]), and they cut both ways on the debate above:
+
+- **Aggregate: AI is *not* eating IT jobs.** Net hiring effect **+26% (2025), +31% (2026)** globally; **+27%/+17%** in Europe. Only the **largest organisations** report a negative net effect (−4% global; −15% Europe for 20,000+-employee firms for 2027). Demand for **AI-specific roles is +64%** (Europe). This is the survey-side complement to the lump-of-labor counter-frame and to the aggregate-employment-still-growing reading of [[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson, Chandar & Chen]].
+- **Compositional: the entry-level tier is where the pressure concentrates.** The [[2026-06-01-lf-state-of-tech-talent-europe-2026|Europe report]] finds a **−3% contraction in entry-level technical roles** (vs **+14% in the rest of the world**), warning of a future mid-to-senior shortage if the junior pipeline is not maintained. This is the wiki's first **independent survey corroboration** of the Brynjolfsson-canaries entry-level-decline finding (which used ADP payroll data) — two different instruments converging on the same compositional twist, now with a **regional qualifier** (sharper in Europe). It directly substantiates the debate's central nuance: *aggregate IT employment can rise while entry-level employment falls.*
+- **Mechanism: it's an operationalisation/skills constraint, not a headcount cut.** The reports frame the gap as capability, not supply ("not a jobs crisis, but a skills crisis") — roles are being **redefined and expanded**, not eliminated. The displacement that exists is concentrated (largest enterprises; junior tier), consistent with the wiki's **domain-/tier-conditional** reading (see the Peron supply-shortage reframe above): a single occupation-level *will-AI-displace-this?* prediction is incomplete without naming the **firm-size and seniority** conditions. The upskilling-as-pipeline-investment response lives in [[durable-skills]].
+
+A caveat the wiki carries on both reports: the publisher (Linux Foundation Education) sells the training/certifications the reports recommend, so the *prescription* is interest-aligned even where the *employment data* corroborates independent sources — hence confidence held at 0.75 on the sources, with the entry-level finding's weight resting on its agreement with Brynjolfsson.
 
 ## Debates / contradictions
 

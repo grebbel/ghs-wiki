@@ -3,9 +3,9 @@ type: concept
 aliases: ["durable skills", "future-ready skills", "21st century skills", "21st-century skills", "transferable skills", "human skills"]
 tags: [durable-skills, 21st-century-skills, future-ready-skills, ai-deskilling, scalable-assessment, psychometrics, ai-evaluation, hiring-criteria, leadership-skills]
 confidence: 0.95
-last_confirmed: "2026-06-02"
-accessed_at: "2026-06-02"
-source_count: 23
+last_confirmed: "2026-06-08"
+accessed_at: "2026-06-08"
+source_count: 25
 relationships:
   - type: contradicts
     target: ai-deskilling
@@ -180,6 +180,17 @@ A 120% YoY enrollment jump in *critical-thinking* courses across a 6M-learner sa
 The accompanying executive-altitude **end-to-end-systems-thinking** prescription Giles surfaces, from **Swamy Kocherlakota** (Zscaler, agentic-AI lead): *"A lot of things companies currently do in silos will be collapsed because of AI. That's why the skill set that's going to be most needed is end-to-end systems thinking."* + (separately) *"If you are working like a robot, your job will be taken by a robot."* The wiki's clearest single-source articulation of the **what-skill-survives-the-silos-collapse** question. Convergent with the existing Globerson-et-al. measurement framework (the four sub-skills include *AI-supported critical thinking* and *novel reasoning* — sister concepts to *systems thinking*) and with Storoni's gear-2 neuroscience framing (the cognitive state in which systems-thinking is even possible).
 
 Plus the **UiPath case-study-vs-online-training** worked example Giles cites (Agi Garaba, UiPath CPO): *"online training ... is useful for helping people understand the fundamental concepts of softer skills. But she has found the most effective way to develop those skills is to bring groups of employees together to work on actual case studies — and to listen to UiPath leaders sharing relevant personal experiences."* The wiki's first practitioner-altitude statement that **softer-skills training is more effective via case-study practice + leader storytelling than via abstract online courses** — a pedagogical finding worth tracking against the durable-skills *measurement* literature ([[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al.]]). The pairing implies: measurement methodology + case-study-based pedagogy may need to co-evolve.
+
+## Upskilling over hiring: the institutional-knowledge case ([[2026-05-01-lf-state-of-tech-talent-global-2026|LF Global]] + [[2026-06-01-lf-state-of-tech-talent-europe-2026|LF Europe]] 2026)
+
+The two 2026 [[The Linux Foundation|Linux Foundation]] *State of Tech Talent* reports ([[Marco Gerosa]] & [[Adrienn Lawson]]) reframe durable skills from a *measurement* problem into an **organisational-strategy** one: given an AI-era skills gap, do you **upskill existing staff** or **hire externally**? The survey answer is emphatic and quantified:
+
+- **Upskilling is the primary response** (57% global / 63% Europe), ahead of external hiring, rated important by **94%** of organisations — and explicitly favoured *over* hiring: **7.9× for business context, 7.7×/5.6× for retention, 7.3×/6.3× for team cohesion, 5×/5.8× for lower total cost** (global / Europe). Organisations are **3.5–3.7× more likely to upskill than hire** across strategic domains.
+- **Why: institutional knowledge is a durable asset.** The reports' framing — *"upskilled talent doesn't take wing and fly, they grow roots"* — treats upskilling as **institutional-knowledge preservation**, not just gap-closing. External hiring is slower and riskier: new hires take **53% longer** to reach productivity and **23% resign within six months**. This is the workforce-economics complement to the durable-skills thesis: the skills worth measuring are also the skills worth *retaining and deepening in place*.
+- **Skills-over-credentials at the hiring gate.** Degrees/titles/years-of-experience are "proving insufficient" as roles change faster than those signals; **certifications (important to 76% of hiring managers)** and demonstrated job-relevant skills are the rising trust signals — and **technical training (93%) ranks above compensation (91%/83%)** as a retention strategy. (Interest-alignment caveat: the publisher sells certifications; see the source pages.)
+- **The pipeline-investment corollary** ([[2026-06-01-lf-state-of-tech-talent-europe-2026|Europe report]]): with entry-level technical roles contracting (−3% in Europe), upskilling becomes not only gap-closing for current staff but a **pipeline investment** for the mid-to-senior talent organisations will need — tying durable-skills development directly to the [[ai-employment-effects]] entry-level-decline finding.
+
+This sits alongside the page's *measurement* spine ([[2026-05-07-globerson-et-al-scalable-measurement-durable-skills|Globerson et al.]]) and the MGI Skill Change Index: measure which durable skills matter, then **develop them in-house** as the dominant organisational strategy.
 
 ## Related concepts
 
