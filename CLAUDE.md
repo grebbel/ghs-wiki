@@ -420,6 +420,7 @@ At ~200 pages the wiki has outgrown `index.md` as a primary discovery surface. v
 | Question that touches >5 pages, or whose answer requires synthesis across several | **qmd first** to narrow to top 10, then read those |
 | Open-ended exploration ("what does the wiki say about X-ish topics") | **qmd `query`** (hybrid + rerank) — it surfaces semantic neighbours `index.md` won't catch |
 | Looking for *structural* context ("what is `agent-harness` `part-of`?") | Graph traversal via `wiki/.graph.json` — qmd doesn't know about typed edges |
+| Answer that must be **auditable** ("show your work" / fact-check / defensible briefing) | **`/wqa`** ([§Auditable answers](#auditable-answers-wqa)) — fuses qmd + graph, then records what was used vs. ignored and maps every answer element back to its page |
 
 The 5-page threshold is a heuristic. The real test is whether the query would force you to scan >50% of `index.md` to find candidates — if yes, qmd is cheaper.
 
@@ -495,6 +496,26 @@ node scripts/bump-accessed.mjs <slug> [<slug> ...]
 ```
 
 Idempotent — a slug already at today's date is a no-op. Slugs resolve against `wiki/concepts/`, `wiki/entities/`, `wiki/syntheses/`. Sources are rejected (they don't decay).
+
+### Auditable answers (`/wqa`)
+
+`/wq` is the quick-lookup surface: it retrieves, you read, you answer. When the answer must be **traceable** — fact-checking a claim, a defensible briefing, a "show me exactly where this comes from" request — use the **`traceable-wiki-answer`** skill via **`/wqa <question>`** instead. It produces not just an answer but a full provenance trace: the question, every wiki path explored, what was used vs. **ignored (with a reason-class for each)**, where each fact lives, and a mapping from every answer element back to its wiki page.
+
+The skill is the operational home of two pieces of §Search and §Retention machinery that `/wq` leaves to the agent:
+
+- **Multi-strategy fusion.** [`scripts/wiki-retrieve.mjs`](scripts/wiki-retrieve.mjs) is the skill's retrieval entry point. It runs `qmd query --json` (relevance) **and** walks `wiki/.graph.json` typed edges from each qmd seed (structure), fuses the two streams with Reciprocal Rank Fusion (graph stream down-weighted so a structural neighbour can't tie a genuine search hit), then re-ranks by §Retention's `effective_confidence` as a *dampener* (relevance sets the order; decay demotes). It emits a JSON **candidate ledger** — the script scores, the agent verdicts. Degrades to qmd-only with a logged `graph_warning` if `wiki/.graph.json` is missing.
+
+  ```sh
+  node scripts/wiki-retrieve.mjs --json -n 12 "your question"   # ledger (skill default)
+  node scripts/wiki-retrieve.mjs --hops 2 "your question"       # widen graph traversal
+  node scripts/wiki-retrieve.mjs --no-bump --json "question"    # don't touch accessed_at
+  ```
+
+  Same auto-bump semantics as `wiki-query.mjs` — it bumps `accessed_at` on the qmd-returned concept/entity/synthesis pages as its last step (bump output to stderr so `--json` stdout stays clean). Pages promoted from the graph stream during gap-expansion need a manual `bump-accessed.mjs` per the skill's Step 8.
+
+- **The ignore decision as a recorded artifact.** Triage (use/ignore, one reason-class per ignore) lives in the trace, not the script — see `.claude/skills/traceable-wiki-answer/references/ignore-policy.md`. Outputs land in `inspiration/<date>-<slug>-query-trace.{md,json}` (the 8-section audit report + machine-readable trace), mirroring how `iterative-wiki-query` saves research logs. The artifacts sit outside `wiki/**`, so the PostToolUse lint hook does not fire on them.
+
+Use `/wq` for speed, `/wqa` when provenance matters; both honour the §Retention bump.
 
 ### Cuts vs. `llm-wiki-v2.md`
 
