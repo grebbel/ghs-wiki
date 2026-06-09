@@ -3,9 +3,9 @@ type: concept
 aliases: ["micro-productivity trap", "micro-productivity-trap", "offering lock-in", "process lock-in"]
 tags: [micro-productivity-trap, AI-transformation, EBITDA, process-redesign, workflow-redesign, enterprise-ai, organizational-change-vs-tech-implementation]
 confidence: 0.95
-last_confirmed: "2026-06-02"
-accessed_at: "2026-06-05"
-source_count: 28
+last_confirmed: "2026-06-09"
+accessed_at: "2026-06-09"
+source_count: 29
 relationships:
   - type: instance-of
     target: enterprise-ai-adoption
@@ -205,6 +205,10 @@ The micro-productivity-trap framing sits among several wiki vocabularies address
 - [[2026-05-13-storoni-hbr-ideacast-redefining-efficiency-age-ai|Storoni 2026 (HBR IdeaCast)]] — *neuroscience-mechanism lens on individual-cognition trap*. The wiki's first **brain-level account** of *why* the trap's organisational pattern (high throughput, low value) emerges. Storoni names the **gear-3 reactive state** — the high-norepinephrine cognitive state workers enter under continuous Slack/email pressure and deadline-driven workflows — as the cognitive failure mode that *feels productive but produces low-quality output*. The prefrontal cortex (judgment, planning, nuance-detection) *cannot fully engage* in gear-3; speed goes up, accuracy goes down, second/third-order consequences get missed. *"It's a trade-off between speed and accuracy ... you will make mistakes, errors, and you will miss nuances, and you will miss subtle aspects of anything you're going through."* The mechanism is the **individual-level neurological correlate of the firm-level trap**: workers in gear-3 produce the throughput pattern that aggregates to organisational micro-productivity, and that throughput is exactly what AI substitutes for *better* than humans do — meaning gear-3 workers are systematically placing themselves on the automation side of the [[automation-vs-augmentation]] cut by their work pattern, not by their job category. **Storoni's escape mechanism converges with Reitz-Higgins, Sternfels, Kiron-Schrage, and Hu in spirit but at the individual layer**: protect gear-2 windows via chronobiology-aware schedules, walking breaks, intrinsic-motivation structures (Google/3M 20%-time as the named exemplar). Convergent with [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer|Forsgren & Macvean]]'s DORA finding that *"increasing AI adoption can lead to individual productivity benefits while at the same time decreasing team-level benefits"* — Storoni provides the cognitive mechanism for the same divergence pattern that DORA observes at the team-scale. The trap is now visible at **six distinct stack layers** (individual neurology / engineering team / business function / firm / industry consulting practice / macro capex) and from **eleven vantages** — among the wiki's most strongly corroborated patterns. Confidence stays at the 0.95 cap; the new vantage adds *mechanism granularity* rather than empirical confirmation.
 
 Each names the same broad gap with a different vocabulary; the wiki's [[syntheses/organizational-frameworks-for-ai-adoption|organizational-frameworks-for-ai-adoption]] synthesis maps the cluster (the synthesis was filed when 6 frameworks were ingested; Nishar-Nohria is the 7th, Carucci the 8th, Sternfels the 9th, and Chamath the 10th, at layers the synthesis didn't surface).
+
+## The agentic-DevOps vendor-keynote articulation of the productivity paradox ([[2025-12-22-randell-gousset-microsoft-agentic-devops-in-real-life|Randell & Gousset / Microsoft Dec 2025]])
+
+A [[GitHub]]/[[Microsoft]] developer-tooling-vendor keynote lands the micro-productivity trap squarely at the **individual-developer scale**, citing the [[METR]] study: *"We have the expectation that AI is going to help us go faster. But sometimes you have to go slower to go faster."* Randell names the exact illusion the trap turns on — developers measure **slower on average while feeling faster**, because *"they see more files generated… it's that feeling of paper-pushing where I'm really busy."* His five-takeaways close is the trap's prescription in vendor language: **"focus on value, not how many lines of code we can generate with AI."** The keynote also supplies the *adoption-discipline* corollary the trap implies: **don't chase every new frontier model** (each switch costs learning time), and *"AI is powerful but not magic."* This is the **developer-tooling-vendor vantage** on the same throughput-≠-value pattern the wiki tracks from Bain (firm level), DORA/Forsgren (team level), and Storoni (neurological level) — notable precisely because it comes from a vendor whose incentive is to *sell* the acceleration, yet who warns against mistaking motion for value.
 
 ## Related concepts
 

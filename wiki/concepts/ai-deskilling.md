@@ -13,8 +13,8 @@ relationships:
   - type: contradicts
     target: durable-skills
     via: "deskilling = which skills get hollowed out by AI; durable-skills = which skills resist substitution. Inverse measurement frames of the same labour-economics question"
-quality_score: 0.77
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '1 broken body wikilink(s)']
+quality_score: 0.79
+quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)']
 ---
 
 # AI Deskilling

@@ -3,9 +3,9 @@ type: concept
 aliases: ["agentic engineering", "Agentic Engineering", "agentic-engineering", "agent engineering"]
 tags: [agentic-engineering, vibe-coding, software-3.0, ai-agents, agent-harness, software-engineering, hiring, karpathy, codex-case-study]
 confidence: 0.97
-last_confirmed: "2026-05-29"
-accessed_at: "2026-05-29"
-source_count: 35
+last_confirmed: "2026-06-09"
+accessed_at: "2026-06-09"
+source_count: 36
 relationships:
   - type: depends-on
     target: agent-harness
@@ -180,6 +180,10 @@ These are not *additions* to Karpathy's discipline definition — they're the **
 Jonathan Allen's keynote at the AWS London Executive Forum 2026 gives the wiki its **tightest single-line vendor-altitude restatement** of what an agentic system is (~3:09): *"an agentic system is fundamentally a prompt with context or the ability to pull tools in that's hitting a language model."* This is structurally identical to the [[agent-harness|harness]]-wrapping-a-foundation-model definition the wiki has held since the [[2026-04-29-andrej-karpathy-from-vibe-coding-to-agentic-engineering|Karpathy 2026]] anchor; the value of Allen's restatement is the *vendor-altitude framing* and the empirical anchor it carries: *~80% of AWS customers currently building agentic systems are choosing to compose against a frontier model rather than fine-tune their own* — which means **agentic-engineering practice in production today is primarily harness-composition discipline against rented frontier models**, not custom-model engineering.
 
 Allen pairs the definition with the AWS-vendor-altitude operating-model corollary at ~26:30: *"in agentic AI systems, non-determinism is a feature, not a bug."* The wiki's [[software-3.0|Software 3.0]] paradigm holds this as foundational; Allen's contribution is to name the **enterprise-operating-model implication** — *"if you still have engineering and operations as two different things, you are going to struggle with agentic systems. Runbooks are deterministic. Agents are not. Ticket culture kills the context."* The [[2026-05-08-running-an-ai-native-engineering-org|Fung / Anthropic]] talk's identical claim (*"the tool isn't the hard part... your processes are"*) is the vendor-channel-parity anchor.
+
+## The developer-tooling-vendor instantiation: Agent HQ + the four VS Code modes ([[2025-12-22-randell-gousset-microsoft-agentic-devops-in-real-life|Randell & Gousset / Microsoft Dec 2025]])
+
+The [[GitHub]]/[[Microsoft]] *Agentic DevOps* keynote shows what agentic-engineering *primitives* look like once a tooling vendor productises them. **Agent HQ** ([[GitHub]], announced at GitHub Universe) is an explicit harness-orchestration surface: monitor, **steer an active agent session mid-run**, and audit past runs — and via its **open architecture**, run the [[OpenAI]] Codex agent (with [[Anthropic|Claude]] and [[Google|Gemini]] agents following) from inside one IDE under one license. The keynote's **four VS Code Copilot modes — Ask / Edit / Agent / Plan** — are a clean ladder of escalating autonomy, with **Plan mode** (the agent states its implementation plan *before* acting) added specifically to counter the *"if we give the agent too much autonomy, sometimes bad things happen"* failure mode. Instructions files encode house rules + **exemplars** (the keynote's term for the same *"here's how we do something in our application"* baseline the wiki tracks as RAG-style context-injection). This is the **developer-tooling-vendor altitude** on the [[agent-harness|harness]]-composition discipline — the same *non-determinism-is-a-feature / processes-are-the-hard-part* thesis Allen (AWS) and Fung (Anthropic) name above, now expressed as shipping IDE features. The keynote also extends agentic engineering *past coding* into IT-ops via the **Azure SRE Agent** (autonomous monitoring + permissioned remediation), and supplies the wiki's clearest vendor statement of the collaboration spectrum: **human-in-the-loop / on-the-loop / out-of-the-loop**, with the presenters using nothing fully out-of-the-loop.
 
 ## Debates and supersession
 

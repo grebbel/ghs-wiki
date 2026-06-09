@@ -3,9 +3,9 @@ type: concept
 aliases: ["RAI", "responsible AI", "AI ethics", "AI governance", "AI safety"]
 tags: [responsible-ai, ai-ethics, ai-governance, ai-safety, ai-policy]
 confidence: 0.95
-last_confirmed: "2026-06-02"
-accessed_at: "2026-06-02"
-source_count: 13
+last_confirmed: "2026-06-09"
+accessed_at: "2026-06-09"
+source_count: 14
 relationships:
   - type: part-of
     target: enterprise-ai-adoption
@@ -194,6 +194,12 @@ Most current RAI frameworks ([[2026-04-28-ai-index-report-2025|AI Index 2025]] �
 Both examples share an operational structure: *AI's strength at analysing large data sets quickly* becomes an active bias-correction tool — auditing population-scale clinical-protocol data to identify samples that don't match local body populations + retraining diagnostic algorithms with appropriate sub-population variability. The wiki had previously held the *AI-bias-correction* framing as a *LLM-training-data* concern (gender/race/class bias in language-model outputs); Peron extends it to the *clinical-decision-substrate* layer where the biases are upstream of any specific model and embedded in decades of medical-research-sampling decisions. **A new RAI category: AI-as-audit-tool-against-pre-AI-embedded-biases.** Open follow-up: are there analogous worked examples in finance (credit-scoring protocols based on historic-population samples) or law (sentencing-guidelines based on historic case-mix) where the same audit-pattern would apply?
 
 The pairing with [[2026-05-31-peron-mit-smr-me-myself-and-ai-philips-interoperability-health-care|Peron]]'s **Future Health Index trust-gap data** (79% of clinicians optimistic about AI vs ~50% of patients worried about reduced face-to-face time) gives this concept page a second new framing: *clinician trust is data-driven (bias, validation), patient trust is experiential (will-I-see-my-doctor-less)*. The reconciliation work in healthcare AI is therefore not a single-discipline trust-building exercise; it's a two-population audit that has to address two distinct trust-deficits with distinct evidence types.
+
+## Vendor-pipeline + human-in-the-loop-as-default in developer tooling ([[2025-12-22-randell-gousset-microsoft-agentic-devops-in-real-life|Randell & Gousset / Microsoft Dec 2025]])
+
+The [[GitHub]]/[[Microsoft]] *Agentic DevOps* keynote supplies a worked example of **responsible AI implemented as platform plumbing**, not policy. Every Copilot request is routed through **Microsoft's responsible-AI pipeline**, which validates both the input and the *returned code* (security vulnerabilities, NSFW content) — *even when the chosen model is third-party* ([[Anthropic]]/[[Google]]): enough context is sent across the wire, and the response is checked before it reaches the developer, in milliseconds. The load-bearing governance control is structural rather than advisory: **by default the person who initiated a Copilot agent request cannot be the final approver to merge** into the parent branch — the human-in-the-loop is enforced by the workflow, not left to discipline. *"AI suggests, humans decide."*
+
+The keynote also names the **AI-code risk surface** RAI has to govern (presenter-cited, attribution deferred to the deck): *"322% more privilege-escalation paths in AI code,"* *"40% increase in secrets-exposure risk,"* and AI-assisted commits *"merged 4× faster, bypassing reviews."* Mechanism: frontier models are trained on the whole internet (including insecure code) and tend to offer the **cheap/easy auth (passwords/PATs) over safer OAuth** — so [[GitHub]] Advanced Security (secret + code scanning + Copilot autofix, *"found means fixed"*) is positioned as the compensating control. The wiki's first **developer-platform-vendor articulation of RAI-as-enforced-default** — complementary to the *declarative runtime-enforcement* framing in §"Runtime enforcement as a declarative discipline" below (AgentSpec governs agent *actions*; the Microsoft pipeline governs model *I/O*; both move RAI from guideline to mechanism).
 
 ## Debates / contradictions
 

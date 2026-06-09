@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI adoption", "enterprise AI use", "business AI adoption", "organizational AI adoption", "AI maturity"]
 tags: [ai-adoption, enterprise-ai, ai-strategy, ai-maturity, ai-foundation, omniscalers, future-arenas]
 confidence: 0.95
-last_confirmed: "2026-06-08"
-accessed_at: "2026-06-08"
-source_count: 65
+last_confirmed: "2026-06-09"
+accessed_at: "2026-06-09"
+source_count: 66
 relationships:
   - type: uses
     target: automation-vs-augmentation
@@ -464,6 +464,10 @@ A vendor-strategy note worth flagging for the **firm-boundary lens** above: Beut
 ## The workforce-readiness constraint: adoption outruns capability ([[2026-05-01-lf-state-of-tech-talent-global-2026|LF Global]] + [[2026-06-01-lf-state-of-tech-talent-europe-2026|LF Europe]] 2026)
 
 The two 2026 [[The Linux Foundation|Linux Foundation]] *State of Tech Talent* reports add the **workforce-readiness** lens to the adoption-depth gradient: adoption intent is near-universal (**97% plan to implement AI** globally; 93% Europe / 99% rest-of-world *are* implementing), but the binding constraint is the **ability to operationalise** it — a survey-side restatement of the [[micro-productivity-trap]] and the BCG *5%-get-value-at-scale* anchor (both cited by the reports). The gap is most acute in **security and operational readiness**: security/privacy is now the **top barrier** to adopting new technology (up from 3rd in 2025); understaffing is widespread in AI, cybersecurity, cost-optimisation, and platform-engineering; and most organisations lag on foundational AI infrastructure (the "PARK stack"). The reports' prescription — **upskill existing staff over external hiring** — locates the maturity bottleneck in *people and capability*, not tooling (see [[durable-skills]] and [[ai-employment-effects]]). For the strategy-discipline complement (how AI changes the *decision* work itself), see [[2024-12-01-csaszar-ketkar-kim-ai-strategic-decision-making|Csaszar et al.]] on AI-augmented strategic decision-making.
+
+## The 30/60/90-day rollout playbook + the trust gap ([[2025-12-22-randell-gousset-microsoft-agentic-devops-in-real-life|Randell & Gousset / Microsoft Dec 2025]])
+
+The [[GitHub]]/[[Microsoft]] *Agentic DevOps* keynote contributes a **vendor-practitioner adoption playbook** for agentic coding: a **30/60/90-day** ramp (first 30 = pilot, 31–60 = level-up, 61–90 = optimisation), with the explicit discipline of *progressive ROI, don't boil the ocean,* and **"break the work down for the agent like you would for a human"** (giving an agent too much at once is named as the common failure). Adoption is framed as role-by-role **upskilling** — developers (prompt-writing, code review, security awareness), DevOps/security teams, *and the C-suite* — echoing the [[durable-skills]] / workforce-readiness constraint above. The keynote's load-bearing adoption caution is the **trust gap**: *"AI is powerful but not magic… you're really going to have to invest in how you bring it onto your team just like you would invest in bringing another human onto your team,"* plus the anti-FOMO rule **don't chase every new frontier model** (each switch costs learning time). This is the *developer-tooling-vendor* mirror of the [[micro-productivity-trap]] adoption warning and the Beutler/OpenAI *Ask→Assist→Automate* maturity ladder above — adoption is an organisational-transformation problem (*"DevOps is an organizational transformation first"*), not a tool-procurement one.
 
 ## Debates and supersession
 

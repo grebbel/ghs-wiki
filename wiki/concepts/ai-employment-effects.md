@@ -3,9 +3,9 @@ type: concept
 aliases: ["AI employment effects", "AI labor effects", "AI job displacement", "AI labor market", "AI employment impact"]
 tags: [employment, labor-market, ai-displacement, automation, labor-economics, age-effects]
 confidence: 0.95
-last_confirmed: "2026-06-08"
-accessed_at: "2026-06-08"
-source_count: 40
+last_confirmed: "2026-06-09"
+accessed_at: "2026-06-09"
+source_count: 41
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -316,6 +316,10 @@ The two 2026 [[The Linux Foundation|Linux Foundation]] *State of Tech Talent* re
 - **Mechanism: it's an operationalisation/skills constraint, not a headcount cut.** The reports frame the gap as capability, not supply ("not a jobs crisis, but a skills crisis") — roles are being **redefined and expanded**, not eliminated. The displacement that exists is concentrated (largest enterprises; junior tier), consistent with the wiki's **domain-/tier-conditional** reading (see the Peron supply-shortage reframe above): a single occupation-level *will-AI-displace-this?* prediction is incomplete without naming the **firm-size and seniority** conditions. The upskilling-as-pipeline-investment response lives in [[durable-skills]].
 
 A caveat the wiki carries on both reports: the publisher (Linux Foundation Education) sells the training/certifications the reports recommend, so the *prescription* is interest-aligned even where the *employment data* corroborates independent sources — hence confidence held at 0.75 on the sources, with the entry-level finding's weight resting on its agreement with Brynjolfsson.
+
+## The developer-tooling-vendor *displacement-but-net-growth* framing ([[2025-12-22-randell-gousset-microsoft-agentic-devops-in-real-life|Randell & Gousset / Microsoft Dec 2025]])
+
+The [[GitHub]]/[[Microsoft]] *Agentic DevOps* keynote states the wiki's debate from inside the developer-tooling vendor — and notably, the presenters foreground their *own* stake (*"I like to stay employed… I want to stay employed too"*). The framing: displacement is real and continuous (Randell's 1980s **typing-pool** analogy — a job that simply no longer exists), but it is set against the **World Economic Forum projection of 78 million net new jobs by 2030**, with the prescription being **collaborative use** (*"it's about using these agents… to work collaboratively with the agents to get stuff done. So you're not going to go away"*). This is a *vendor-practitioner* restatement of the **lump-of-labor counter-frame** above and the *jobs-redefined-not-eliminated* reading of the [[The Linux Foundation|Linux Foundation]] surveys — calibrated by the same honest caveat the wiki applies elsewhere: *"this is the data we have today. In five years, it could all be different."* The corollary the keynote ties to jobs is **skill-shift, not headcount** — the durable move is from writing every line yourself to reviewing, steering, and orchestrating agents (see [[durable-skills]] and [[agentic-engineering]]).
 
 ## Debates / contradictions
 
