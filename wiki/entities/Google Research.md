@@ -4,9 +4,9 @@ kind: organization
 aliases: ["Google Research", "Google AI Research", "Google DeepMind Research"]
 tags: [google-research, google, ai-research, foundation-models, gemini, durable-skills]
 confidence: 0.80
-last_confirmed: "2026-05-21"
-accessed_at: "2026-05-21"
-source_count: 3
+last_confirmed: "2026-06-12"
+accessed_at: "2026-06-12"
+source_count: 5
 ---
 
 # Google Research
@@ -17,6 +17,8 @@ This entity page covers the research organisation; for product-line discussion (
 
 ## Appears in this wiki via
 
+- [[2022-10-06-yao-et-al-react-synergizing-reasoning-acting]] — **publisher (Brain team, with Princeton) of the foundational [[react-reasoning-acting|ReAct]] paper** (ICLR 2023). The wiki's earliest primary research source and the genealogical root of its [[ai-agents|agent]]/[[agent-harness|harness]] cluster. Authors [[Shunyu Yao]] (Princeton intern) and [[Yuan Cao]] (Brain team) were promoted to entities on this ingest.
+- [[2022-11-08-yao-cao-react-google-research-blog]] — the **Google Research Blog** popularisation of the same ReAct work (8 Nov 2022). The accessible register paired with the rigorous paper.
 - [[2026-05-07-globerson-et-al-scalable-measurement-durable-skills]] — primary publisher of *Towards Scalable Measurement of Durable Skills* (preprint, 12 April 2026). Globerson et al. (~40 co-authors) introduce the Vantage assessment platform, Executive LLM steering protocol, and Gemini-based AI Evaluator — anchoring the wiki's [[durable-skills]] concept.
 - [[2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer]] — Google I/O 2026 talk by **Nicole Forsgren** and **Andrew Macvean**, both leads on Google's **Developer Intelligence team**. The talk anchors the **DORA programme** (Forsgren-led) as a Google-Research-lineage empirical backbone for two load-bearing claims: (a) AI's productivity paradox at the team-level (the engineering-team correlate of [[micro-productivity-trap]]); (b) AI as **amplifier-and-mirror** — magnifying existing organisational strengths and weaknesses. Sister-vantage to the Globerson et al. paper: both Google-Research-lineage outputs map durable / non-routine engineering skills, one from psychometrics, the other from inside-Google measurement.
 - Mentioned across multiple wiki sources as a major model contributor (Gemini family is referenced in [[2026-04-28-ai-index-report-2025|AI Index 2025]] §1 — Gemini-1.5-Flash-8B as the cost-reduction marker; [[2026-04-30-ai-index-report-2026|AI Index 2026]] continues to track Google's models alongside OpenAI, Anthropic, Meta, and others).

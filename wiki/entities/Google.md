@@ -5,9 +5,9 @@ aliases: ["Google", "Google LLC", "Alphabet (operating subsidiary)", "Google for
 tags: [google, big-tech, hyperscaler, ai-lab, foundation-models, gemini, google-cloud, google-research, google-brain, gemini-api, file-search, multimodal-rag, notebooklm, flow, veo, ai-product-management, bfloat16, coral-edge-tpu, tensorflow, edge-ml]
 since: 1998
 confidence: 0.90
-last_confirmed: "2026-05-21"
-accessed_at: "2026-05-21"
-source_count: 9
+last_confirmed: "2026-06-12"
+accessed_at: "2026-06-12"
+source_count: 10
 relationships:
   - type: published-by
     target: 2026-04-22-cheung-ippolito-secchi-google-agents-cli
@@ -15,6 +15,9 @@ relationships:
   - type: published-by
     target: 2026-04-21-forsgren-macvean-build-core-skills-thrive-ai-era-developer
     via: "Google for Developers YouTube channel, Google I/O 2026 Professional Development track"
+  - type: published-by
+    target: 2026-06-10-google-cloud-tech-ai-agents-explained-first-agent
+    via: "Google Cloud Tech YouTube channel — ADK first-agent tutorial built on the ReAct loop"
 ---
 
 # Google
@@ -42,7 +45,7 @@ Big-tech platform company; operating subsidiary of Alphabet. Within this wiki Go
 - **Agent Platform** — Google Cloud's umbrella for agent-runtime infrastructure.
   - **Agents CLI in Agent Platform** — released 22 April 2026 as the unified programmatic backbone for the [[agent-development-lifecycle|Agent Development Lifecycle (ADLC)]]; bundles **seven specialized skills** (Workflow / ADK Code / Scaffold / Evaluation / Deployment / Publish / Observability); two-mode design (Agent Mode for AI coding agents, Human Mode for deterministic CLI use). See [[2026-04-22-cheung-ippolito-secchi-google-agents-cli]].
   - **Agent Runtime / Cloud Run / GKE** — three deployment substrates the CLI targets via `agents-cli deploy`.
-- **ADK (Agent Development Kit)** — Google's open-source agent-engineering framework. Listed in [[2026-05-07-kokane-agent-harness-vs-systems-design|Kokane's]] Layer 2 harness-frameworks alongside LangChain, Microsoft Agent Framework, LlamaIndex, CrewAI, Haystack, DSPy. The Agents CLI's **ADK Code** skill is the Python-API reference surface for ADK.
+- **ADK (Agent Development Kit)** — Google's open-source agent-engineering framework. Listed in [[2026-05-07-kokane-agent-harness-vs-systems-design|Kokane's]] Layer 2 harness-frameworks alongside LangChain, Microsoft Agent Framework, LlamaIndex, CrewAI, Haystack, DSPy. The Agents CLI's **ADK Code** skill is the Python-API reference surface for ADK. The [[2026-06-10-google-cloud-tech-ai-agents-explained-first-agent|Google Cloud Tech first-agent tutorial]] (June 2026) is the wiki's first **hands-on ADK build**: a self-correcting multi-agent blog-writer using `LlmAgent` / `LoopAgent` / root-agent-with-tools, framed explicitly on the [[react-reasoning-acting|ReAct]] loop.
 - **A2A / A2UI / MCP integration** — Google Cloud names A2A and A2UI alongside MCP as the agent-integration protocols the platform supports natively.
 
 ## Models referenced in this wiki

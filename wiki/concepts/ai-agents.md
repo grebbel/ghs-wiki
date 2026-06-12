@@ -3,15 +3,18 @@ type: concept
 aliases: ["AI agent", "AI agents", "agentic AI", "autonomous agents", "agent", "agents"]
 tags: [ai-agents, agentic-ai, generative-ai, automation, ai-deployment]
 confidence: 0.95
-last_confirmed: "2026-05-21"
-accessed_at: "2026-06-05"
-source_count: 16
+last_confirmed: "2026-06-12"
+accessed_at: "2026-06-12"
+source_count: 19
 relationships:
   - type: instance-of
     target: generative-ai
     via: "agents are the orchestrating tier on top of LLM-based GenAI"
   - type: uses
     target: foundation-models
+  - type: uses
+    target: react-reasoning-acting
+    via: "the reason–act–observe loop at the centre of the agent definition originates in ReAct (2022)"
 quality_score: 0.67
 quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '6 broken body wikilink(s)']
 ---
@@ -34,7 +37,7 @@ The cleanest definition in this wiki comes from [[2026-04-28-mittri-cisco-ai-ena
 
 A useful complementary lens is the [[2026-04-28-anand-wu-genai-playbook|Anand-Wu]] 2×2: agents thrive in the **"no regrets zone"** (low cost of errors + explicit data) where AI does the work without humans in the loop — addressing bulk customer inquiries, summarizing documents, screening résumés. As error costs rise, agents become assistants rather than autonomous executors.
 
-The simplest one-sentence operational definition — adopted by the wiki from [[2026-05-18-wolfe-agent-evaluation-detailed-guide|Wolfe 2026]] (citing the Simon Willison formulation): ***"an agent is an LLM that autonomously uses tools in a loop."*** This is the *agentic loop* that wraps every agent system: an LLM at the centre reasons about the task, calls **tools** to read/write external state, observes results, and continues until an exit condition is reached. Three components are always present: (1) the underlying LLM or reasoning model, (2) tools the agent calls (APIs / CLIs / [[MCP]] servers / computer-use primitives), (3) instructions in the system prompt that specify the agent's expected behaviour. The [[agent-harness|harness]] is what assembles those three components into a runtime.
+The simplest one-sentence operational definition — adopted by the wiki from [[2026-05-18-wolfe-agent-evaluation-detailed-guide|Wolfe 2026]] (citing the Simon Willison formulation): ***"an agent is an LLM that autonomously uses tools in a loop."*** This is the *agentic loop* that wraps every agent system: an LLM at the centre reasons about the task, calls **tools** to read/write external state, observes results, and continues until an exit condition is reached. **That loop has a name and a primary source**: it is [[react-reasoning-acting|ReAct]] (Reason + Act), introduced by [[Shunyu Yao]] et al. in [[2022-10-06-yao-et-al-react-synergizing-reasoning-acting|2022]] ([[2022-11-08-yao-cao-react-google-research-blog|Google Research blog]]), which first showed that interleaving reasoning traces with tool actions beats reasoning-only (chain-of-thought) or acting-only prompting — and that the legible thoughts make the trajectory human-inspectable and correctable. The 2026 practitioner framings the wiki leans on are ReAct named four years later; the [[2026-06-10-google-cloud-tech-ai-agents-explained-first-agent|Google Cloud Tech / ADK tutorial]] makes the lineage explicit, defining a modern agent *as* the ReAct loop before building one. Three components are always present: (1) the underlying LLM or reasoning model, (2) tools the agent calls (APIs / CLIs / [[MCP]] servers / computer-use primitives), (3) instructions in the system prompt that specify the agent's expected behaviour. The [[agent-harness|harness]] is what assembles those three components into a runtime.
 
 ## Key claims
 
