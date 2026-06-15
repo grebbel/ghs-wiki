@@ -37,9 +37,9 @@ Mature MCP servers point at exactly that local API — e.g. `54yyyu/zotero-mcp` 
 
 Better BibTeX's *"Keep up to date"* auto-exports a collection to CSL-JSON/BibTeX on every change — useful underneath the acquire path to give stable citekeys and consolidated author names (directly attacking the wiki's alias-drift pain). Obsidian-side plugins (ZotLit, the Citations plugin) generate literature notes in the vault from Zotero, but they write *outside* the Claude-owned `wiki/` contract, so they are a parallel human-notes layer, not a Claude ingest path.
 
-### Empirical anchor: `raw/` is markdown-only today
+### `raw/` binaries are gitignored, not absent (corrected 2026-06-15)
 
-A scan of the repo on 2026-06-15 found **zero PDFs anywhere under `raw/`** — `raw/papers/`, `raw/assets/`, `raw/books/`, `raw/reports/` are empty (`.gitkeep` only); `raw/articles/` holds markdown. The documented `raw/assets/` "keep the original PDF" rule (CLAUDE.md §Acquire) has **never been used in practice**. The de-facto convention is: typed folders hold the *converted markdown* the LLM reads, and binaries are not committed. This is the lens for the binary-storage decision below.
+An initial scan of the *committed* repo showed only markdown under `raw/`, and this thread first recorded that as "raw/ is markdown-only." **That was a git-only artifact and is wrong.** `.gitignore` deliberately excludes every raw binary — `raw/**/*.pdf`, `.docx`, `.epub`, `.mobi`, `.mp4`, `.mp3`, `.png`, … — *"kept local-only for copyright/distribution reasons."* The user's **local** `raw/` working copy does hold the original PDFs, **co-located by type** (e.g. `raw/articles/<slug>.pdf` next to its markdown). So the real convention is: keep the binary locally in its typed folder, gitignore it, and commit only the markdown stub + the citation that lets a reader of the public repo locate the original. (This also means CLAUDE.md's "keep the original PDF in `raw/assets/`" prose is the real drift — practice co-locates by type, not in `assets/`.) The Zotero acquire path fits this unchanged.
 
 ## Options considered
 
@@ -55,7 +55,7 @@ A scan of the repo on 2026-06-15 found **zero PDFs anywhere under `raw/`** — `
 
 1. **Pursue MCP (live read) + an Acquire skill (durable ingest)** — the PRD's A + C, updated for the local API. Discipline: *MCP for reading and exploring; a `raw/` stub for anything that becomes a wiki page.*
 2. **Scope ingest to a single Zotero collection** (working name `→ ai-wiki`). The only path that lands material in the wiki is Acquire, and it reads that one collection — the wider library never syncs. The MCP may *read* the rest of the library, but it persists nothing.
-3. **Commit no binary PDFs.** Zotero is the binary store; the wiki keeps the markdown stub (full text from Zotero's index) plus `zotero_item_key` + `doi`/`url` to re-fetch. Matches current `raw/` behaviour and keeps the git repo light. Scrap the unused `raw/assets/` rule.
+3. **No binary committed to git — which is already the repo's design.** `.gitignore` excludes `raw/**/*.pdf` (and `.docx/.epub/.mp4/.png/…`), so the original never reaches GitHub. With Zotero in the loop, **Zotero's storage is the durable binary home**; the wiki commits only the markdown stub (full text from Zotero's index) + `zotero_item_key` + `doi`/`url` to re-fetch. A local PDF copy co-located in `raw/<type>/` is optional and, if kept, is gitignored automatically. (Open follow-up: reconcile CLAUDE.md's `raw/assets/` prose with the actual co-locate-by-type practice.)
 4. **Source markdown routes by type** — paper → `raw/papers/<slug>.md`, article → `raw/articles/<slug>.md`, etc. (the type-based routing already in use; no special-casing).
 
 ## Build plan
