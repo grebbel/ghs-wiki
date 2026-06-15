@@ -5,7 +5,7 @@ tags: [employment, labor-market, ai-displacement, automation, labor-economics, a
 confidence: 0.95
 last_confirmed: "2026-06-15"
 accessed_at: "2026-06-15"
-source_count: 45
+source_count: 46
 relationships:
   - type: supports
     target: automation-vs-augmentation
@@ -346,6 +346,25 @@ Two June-2026 sources add a leadership-altitude reading of AI's labour effects:
 
 - **The skeptical-CIO worry: humans pushed into hollow oversight roles ([[2026-06-11-mit-smr-agentic-ai-what-leaders-wish-they-knew-sooner|MIT SMR / CIO Symposium]]).** Thomas Davenport's worry is a *labour-quality* claim, not a headcount one: agents work so much faster that human review becomes "performative" and "cursory" — people "pestered to approve things rapidly" and "not going to want to be auditors of what AI is doing." The displacement risk he names is of *meaningful human work* being replaced by **rubber-stamp auditing** nobody wants. Max Chan's counter-prescription is the optimistic version of the same dynamic: humans "replace themselves at the lower level" (training the AI to do their old work) while moving up to "top-line and bottom-line considerations" — explicit *job-laddering-up* as the augmentation path, contingent on the org actually creating the higher-level roles.
 - **The empirical spine restated: reshaping, felt at entry level ([[2026-06-12-aws-leaders-guide-advanced-team-structures-agentic-world|Brovich / AWS Sydney]]).** Brovich presents the [[2026-03-05-massenkoff-mccrory-anthropic-labor-market-impacts-ai|Anthropic "March study" (Massenkoff & McCrory)]] as the talk's ground truth: **observed** AI exposure ≪ **theoretical** (computer/math ~33% of what's possible; office/admin theoretical ~90%, observed a fraction); **no systematic unemployment rise** since ChatGPT; **junior hiring slowed ~14%**; and — counter to the old narrative — the most-exposed workers are "disproportionately older, more educated, and better paid." His summary ("not mass unemployment… a *reshaping*, and entry-level is where the reshaping is happening first") is a vendor-altitude restatement of the [[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson Canaries]] entry-level finding, paired with the **hourglass-organization** prescription already on the [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen page]].
+
+## *Reshape ≫ replace*: the BCG six-segment model ([[2026-04-03-bcg-emerson-kropp-ai-will-reshape-more-jobs-than-it-replaces|Emerson, Kropp et al. / BCG, April 2026]])
+
+BCG's microeconomic role-model (Revelio 1,500-role taxonomy + O*NET) gives the wiki its most **structured role-level taxonomy** of AI's labor impact, and — crucially — a **method-independent corroboration** of the [[2026-03-05-massenkoff-mccrory-anthropic-labor-market-impacts-ai|Anthropic observed-exposure report]]: two entirely different methods (BCG demand-modeling vs Anthropic usage-data) land on the same headline — *reshape ≫ replace, slow substitution, entry-level first, not a near-term mass-unemployment story.*
+
+- **The headline split**: **50–55% of US jobs reshaped within 2–3 years** (same role, radically new expectations); **10–15% vulnerable to elimination over 4–5 years** (full substitution is slower than augmentation). **43%** of jobs are ≥40% automatable; the other **57%** are physical/interaction-heavy.
+- **The six AI Labor Disruption Segments** (with the load-bearing insight that automation potential alone doesn't predict job loss — *demand expandability* does; see [[automation-vs-augmentation]]):
+
+  | Segment | Logic | Share |
+  |---|---|---|
+  | Amplified | augment + expandable demand | 5% |
+  | Rebalanced | augment + bounded demand | 14% |
+  | Divergent | substitute + expandable demand (entry-level exposed) | 12% |
+  | Substituted | substitute + bounded demand (net losses) | 12% |
+  | Enabled | AI embedded, structure unchanged, skill bar rises | 23% |
+  | Limited-Exposure | low automation feasibility | 34% |
+
+- **Four transformation side-effects** that "headline job numbers can mask": (1) upskilling/redeployment *speed* is the binding constraint; (2) entry-level hiring shrinks then is redefined toward supervising-AI work, with **AI fluency becoming a complement to tenure** (sometimes advantaging AI-fluent juniors); (3) **skill thresholds rise** (durable roles need higher credentials/seniority → barriers to entry — see [[durable-skills]]); (4) cognitive load intensifies. These sharpen the wiki's entry-level-decline thread (Brynjolfsson, Massenkoff-McCrory) with a *mechanism*: the rungs aren't just fewer, they move up.
+- **The CEO warning** worth keeping verbatim: *"Those who cut their workforce beyond AI's ability to replace it will see productivity drop, institutional knowledge disappear, and critical talent walk away."* — the labor-side statement of the [[micro-productivity-trap]].
 
 ## Debates and supersession
 

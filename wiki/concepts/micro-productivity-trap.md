@@ -5,7 +5,7 @@ tags: [micro-productivity-trap, AI-transformation, EBITDA, process-redesign, wor
 confidence: 0.95
 last_confirmed: "2026-06-15"
 accessed_at: "2026-06-15"
-source_count: 31
+source_count: 32
 relationships:
   - type: instance-of
     target: enterprise-ai-adoption
@@ -226,6 +226,10 @@ Two of the eleven 2026 MIT Sloan CIO Symposium leaders state the trap's escape i
 - **Monica Caldas** — *"you're not just automating and having it go faster. You actually want to have a different outcome… be very thoughtful about the workflow that you're reimagining,"* with clear OKRs and a deliberate maturity arc. The explicit *speed ≠ value* warning is the trap named from inside an IT-ops deployment.
 
 Both restate, from the CIO chair, the page's core: **task-level acceleration without workflow redesign yields motion, not value.** They converge with [[2026-06-12-argenti-hbr-thrive-alongside-ai-mindset-not-skillset|Argenti's]] *3×-not-20%* and the Bain/McKinsey reimagine-the-workflow prescription.
+
+## *Refocus automation on redesign, not cost reduction* — the BCG CEO directive ([[2026-04-03-bcg-emerson-kropp-ai-will-reshape-more-jobs-than-it-replaces|BCG / Emerson, Kropp et al. 2026]])
+
+BCG states the trap's escape as an explicit CEO recommendation: **"Refocus automation on redesign, not just cost reduction. Agentic AI isn't a blunt instrument."** The mechanism BCG names is the *measurement* failure at the heart of the trap: cost actions (headcount freezes/cuts) are "visible and straightforward, with explicit OpEx impact," but **"when AI drives productivity rather than cuts, ROI becomes harder to define and defend"** — so leaders default to the legible cost lever and miss the larger redesign value. The prescription: **new domain-specific KPIs that link productivity to outcomes** (revenue per FTE, more product shipped, stronger customer impact), and *task turnover within a role* as a measure of how fast roles evolve toward higher-value work. BCG pairs this with the blunt warning that anchors the trap on the labor side: *"Those who cut their workforce beyond AI's ability to replace it will see productivity drop, institutional knowledge disappear, and critical talent walk away."* This is the consulting-firm CEO-directive form of the page's *reimagine-don't-optimize* thesis — and a sharper account of *why* firms fall in: the cost lever is measurable, the redesign upside isn't (yet).
 
 ## Related concepts
 

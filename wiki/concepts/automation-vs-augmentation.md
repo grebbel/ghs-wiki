@@ -5,7 +5,7 @@ tags: [automation, augmentation, generative-ai, ai-deployment, ai-task-design, c
 confidence: 0.95
 last_confirmed: "2026-06-15"
 accessed_at: "2026-06-15"
-source_count: 43
+source_count: 44
 relationships:
   - type: supports
     target: ai-employment-effects
@@ -305,6 +305,17 @@ The two together restate the page's core: the unit of value is **neither pure-hu
 ### 22. The automation/augmentation split as a *measurement weight* ([[2026-03-05-massenkoff-mccrory-anthropic-labor-market-impacts-ai|Massenkoff & McCrory / Anthropic, March 2026]])
 
 The Anthropic *observed-exposure* report makes the distinction this page tracks into a **quantitative weighting**, not just a conceptual cut. Its displacement-risk measure combines theoretical LLM capability with real-world usage **weighting automated (rather than augmentative) and work-related uses more heavily** — i.e. an occupation whose AI usage is mostly *augmentative* is scored as *less* at-risk than one with the same raw usage that skews *automated*. This is the wiki's first source to operationalise *automation-vs-augmentation as the variable that converts "exposure" into "displacement risk"* — empirical validation that the distinction is load-bearing for labor outcomes, not merely descriptive. (The downstream finding — no systematic unemployment effect yet, a slight young-hiring slowdown — lives on [[ai-employment-effects]].)
+
+### 23. The missing second axis: *demand expandability* (Jevons) ([[2026-04-03-bcg-emerson-kropp-ai-will-reshape-more-jobs-than-it-replaces|BCG / Emerson, Kropp et al. 2026]])
+
+The wiki's automation/augmentation 2×2s (Anand-Wu's cost×knowledge; the Ask→Assist→Automate ladder) hold the *deployment* decision but miss the *employment* consequence. BCG supplies the missing axis: **substitution-vs-augmentation × demand expandability.** Whether task automation reduces headcount depends not only on *can the workflow be bifurcated* (substitution) but on *what happens to demand when unit cost falls* — the **Jevons Paradox** applied to labor:
+
+|  | **Expandable demand** | **Bounded demand** |
+|---|---|---|
+| **Augmentation** (human judgment woven through) | **Amplified** — employment stable/grows, wage inflation (software engineering, advisory law) | **Rebalanced** — headcount steady, roles redesigned, upskilling essential (content marketing, academic research) |
+| **Substitution** (workflow bifurcatable) | **Divergent** — uneven; entry-level exposed, seniors persist (insurance sales, IT support) | **Substituted** — net job losses, wage pressure (call-center reps, some financial analysts) |
+
+The worked contrast is **software engineer vs call-center rep**: identical "high task-automation" on the surface, opposite labor outcomes — because software has near-infinite unmet demand (more AI → more software built → headcount grew post-ChatGPT) while call-center volume is fixed by the customer base. This is the sharpest correction on the page to the naive *"automatable tasks = lost jobs"* inference: the augmentation/substitution cut sets *direction*, but **demand expandability sets magnitude**. The full six-segment taxonomy and the 50–55%-reshaped / 10–15%-eliminated split live on [[ai-employment-effects]].
 
 ## The four-source convergence on the distinction
 

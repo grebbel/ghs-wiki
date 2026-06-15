@@ -3,9 +3,9 @@ type: concept
 aliases: ["durable skills", "future-ready skills", "21st century skills", "21st-century skills", "transferable skills", "human skills"]
 tags: [durable-skills, 21st-century-skills, future-ready-skills, ai-deskilling, scalable-assessment, psychometrics, ai-evaluation, hiring-criteria, leadership-skills]
 confidence: 0.95
-last_confirmed: "2026-06-13"
-accessed_at: "2026-06-13"
-source_count: 26
+last_confirmed: "2026-06-15"
+accessed_at: "2026-06-15"
+source_count: 27
 relationships:
   - type: contradicts
     target: ai-deskilling
@@ -199,6 +199,13 @@ This sits alongside the page's *measurement* spine ([[2026-05-07-globerson-et-al
 - **The horse-rider→car-driver analogy.** None of the specific *skills* transfer from riding to driving; what transfers is the **reflexes and instincts** — and the durable human residue Argenti names is **instincts, judgement, and values**, not any task-skill. This aligns with the wiki's measured durable skills (critical thinking, collaboration, judgement) but reframes them as a *substrate that survives role-metamorphosis* rather than a list to defend.
 - **From skillset to mindset.** "Don't just reskill, reimagine skills and build new habits." The durable capability is the *capacity to let trusted habits die and adopt a new professional identity* — a meta-skill above any catalogued competency. The hardest part, Argenti notes, is personal and cultural, not technical.
 - **Convergence with the wiki's judgement spine.** This restates, from a first-party CIO vantage, the [[2026-02-09-sternfels-mckinsey-survive-ai-and-reinvent-consulting|Sternfels/McKinsey]] claim that judgement and human-to-human skill are what models lack — and operationalises it as a *posture* (operator → supervisor/mentor) rather than a training curriculum.
+
+## Rising skill thresholds + AI fluency as a tenure-complement ([[2026-04-03-bcg-emerson-kropp-ai-will-reshape-more-jobs-than-it-replaces|BCG / Emerson, Kropp et al. 2026]])
+
+BCG's labor-disruption report turns the durable-skills thesis into a **workforce-economics claim**: as AI absorbs routine execution, **skill thresholds rise** — "redesigned roles will demand greater expertise, oversight, and accountability… the more durable roles tend to require higher credentials and greater seniority." Durable skills aren't just *what survives*; they become a **barrier to entry** (higher credential bars, transition friction) even where headcount holds. Two BCG specifics sharpen the page:
+
+- **AI fluency becomes a complement to tenure.** Readiness for augmented, higher-order roles is assessed increasingly on *whether you proactively adopt AI tools and rethink the work* — sometimes advantaging **AI-fluent juniors and recent graduates** over more-experienced staff. This is the demand-side mirror of the [[2026-05-28-giles-wp-intelligence-new-human-machine-workforce-agentic-ai-jobs|Coursera 120% critical-thinking-enrollment]] signal and complicates the simple "seniors win" reading: the durable bundle is *judgment + AI fluency*, and fluency is age-agnostic.
+- **Frequent, not one-time, upskilling.** BCG's CEO directive is that workers "will likely require more frequent (versus one-time) upskilling as the technology evolves," with structured redeployment pathways per role-segment — making durable-skills development a *continuous* organizational function, not a one-shot reskilling event (echoing the [[2026-05-01-lf-state-of-tech-talent-global-2026|Linux Foundation]] upskill-over-hire finding).
 
 ## Related concepts
 
