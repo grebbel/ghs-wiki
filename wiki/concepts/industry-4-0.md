@@ -13,8 +13,8 @@ relationships:
   - type: uses
     target: ai-agents
     via: "autonomous monitoring (Jidoka + AI-powered) is an Industry 4.0 deployment of agents"
-quality_score: 0.75
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '2 broken body wikilink(s)']
+quality_score: 0.95
+quality_notes: ['1 near-empty section(s)', '2 broken body wikilink(s)']
 ---
 
 # Industry 4.0
@@ -58,7 +58,7 @@ Industry 4.0 sits at the **intersection of manufacturing/operations work and the
 - The **digital twin** technology — virtual replicas of physical assets — is a recurring concept in industrial AI; relevant to [[Italgas]]'s 300TB platform and Ford's computational fluid dynamic test (15 hr → 10 sec, per [[2026-04-28-mittri-cisco-ai-enabled-enterprise|MITTRI/Cisco]]).
 - **Industrial robotics** (China's 51.1% global share) is the physical-world counterpart to the knowledge-work agent story.
 
-## Debates / contradictions
+## Debates and supersession
 
 - **"Beyond Industry 4.0" / "Industry 5.0".** Some literature (cited in [[2026-04-28-gomaa-lean-4-0|Gomaa]]) is already pushing toward "Industry 5.0" or "Beyond Industry 4.0" framings emphasizing human-centric and sustainable manufacturing. The wiki has only Industry 4.0 sources for now; track the 5.0 framing if it appears in future ingests.
 - **Energy and sustainability.** Industrial AI is energy-intensive (data centers + cyber-physical systems). The [[2026-04-28-ai-index-report-2025|AI Index 2025]] reports **carbon emissions from training rising** (Llama 3.1 405B at 8,930 tons), and Microsoft/Google/Amazon are signing nuclear-energy deals to power AI infrastructure. Industry 4.0's sustainability claims need to be evaluated against the rising energy footprint.

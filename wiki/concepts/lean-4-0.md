@@ -10,8 +10,8 @@ relationships:
   - type: part-of
     target: industry-4-0
     via: "Lean 4.0 is the synergy of Lean Manufacturing with Industry 4.0 technologies"
-quality_score: 0.76
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '2 broken body wikilink(s)']
+quality_score: 0.96
+quality_notes: ['2 broken body wikilink(s)']
 ---
 
 # Lean 4.0
@@ -77,7 +77,7 @@ Lean 4.0 is **off-theme from this wiki's main AI-strategy focus** (which is most
 1. **Manufacturing-specific lens on AI adoption.** [[2026-04-28-mittri-cisco-ai-enabled-enterprise|MITTRI/Cisco]]'s manufacturing data (39%/33%/24%/24%/21% AI use in manufacturing/inventory/quality/R&D/IT-OT) shows the empirical adoption picture. Lean 4.0 gives the *prescriptive* operational integration roadmap.
 2. **Industrial example: [[Italgas]].** Italgas's 23 AI models, 300TB data platform, Digital Factory, WorkOnSite (+40% construction speed), and DANA (GenAI network control) sit squarely in the Lean 4.0 vocabulary — even though gas distribution isn't manufacturing per se.
 
-## Debates / contradictions
+## Debates and supersession
 
 - **Is Lean 4.0 genuinely a new paradigm or a vendor-friendly rebrand?** Gomaa's framework is conceptually conventional Lean with a digital layer. The novelty is operational (the mappings) rather than theoretical.
 - **Tensions between Lean and Industry 4.0.** [[2026-04-28-gomaa-lean-4-0|Gomaa]] cites Frank et al. 2024 and Johansson et al. 2024 on paradoxes: process-related Industry 4.0 technologies may *weaken* Lean (e.g., excessive automation may dilute core Lean principles like teamwork and waste minimization), while product- and service-related I4.0 technologies tend to *enhance* Lean.

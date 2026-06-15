@@ -6,8 +6,8 @@ confidence: 0.85
 last_confirmed: "2026-06-15"
 accessed_at: "2026-06-15"
 source_count: 17
-quality_score: 0.75
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '2 broken body wikilink(s)']
+quality_score: 0.95
+quality_notes: ['1 near-empty section(s)', '2 broken body wikilink(s)']
 ---
 
 # Foundation Models
@@ -130,7 +130,7 @@ The under-asked question Evans poses (in response to *"what's a question about A
 
 The thesis sits in productive tension with *foundation-models-as-the-platform* readings ([[2026-04-26-how-to-win-when-software-is-not-a-moat-evan-spiegel-snapchat-ceo|Spiegel's *software-is-not-a-moat*]] makes the same argument from the application-layer side at a different altitude; the [[agent-harness]] concept's *"harness wraps a (rented, swappable) foundation model"* framing is structurally compatible — *the model is the commodity, the harness is the differentiated layer*). The pricing-power-or-not question is genuinely open in 2026; Evans is the wiki's first explicit *no-they-won't-have-pricing-power* voice at independent-analyst altitude.
 
-## Debates / contradictions
+## Debates and supersession
 
 - **"Frontier" vs. "foundation" framing.** "Frontier" emphasizes capability gap; "foundation" emphasizes adaptation role. Different policy/regulation implications — frontier-model bills target capability thresholds; foundation-model bills target the broader pretraining-then-adapt pattern.
 - **Compute-scaling sustainability.** Data-commons shrinkage (see [[responsible-ai]]) plus rising energy demands (driving nuclear-energy partnerships — Microsoft's Three Mile Island, Google's SMRs, Amazon's SMRs) raise structural questions about the 5-month-compute-doubling trajectory continuing.

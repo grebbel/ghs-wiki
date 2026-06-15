@@ -13,8 +13,8 @@ relationships:
   - type: contradicts
     target: ai-benchmarks
     via: "self-reference acknowledging Habib's scar-fragmentation diagnosis: every release reports different scores on the 'same' benchmark because scaffold/prompt/harness varies — naive benchmark-as-ranking interpretation is undercut"
-quality_score: 0.64
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '1 relationship(s) missing body wikilink (v0.3 rule)', '5 broken body wikilink(s)']
+quality_score: 0.84
+quality_notes: ['1 near-empty section(s)', '1 relationship(s) missing body wikilink (v0.3 rule)', '5 broken body wikilink(s)']
 ---
 
 # AI Benchmarks
@@ -135,7 +135,7 @@ A 108-minute multi-speaker workshop (Hugging Face) that reframes the benchmark c
 | **Reliability Index** | Cross-release reliability tracking | New 2026 (Narayanan/Robons, Princeton); 12 sub-dimensions of reliability; living tracker |
 | **GDPval** ([[2025-10-05-patwardhan-et-al-openai-gdpval\|GDPval]]) | Economically-valuable real-world tasks | New 2025 (OpenAI); 1,320 tasks / 44 occupations / 9 GDP sectors; non-saturating win-rate vs human experts; Claude Opus 4.1 best at 47.6% wins-or-ties; gold subset + grader open-sourced |
 
-## Debates / contradictions
+## Debates and supersession
 
 - **Are we measuring what matters or what's measurable?** Benchmarks gain complexity faster than tasks gain real-world specification. Open question whether the saturation race is sustainable, or whether the field is overdue for a different evaluation paradigm.
 - **Agent benchmarks vs. static benchmarks.** RE-Bench's two-time-budget result suggests static benchmarks can mislead on real workflows. Future evaluations will likely emphasize trajectories, not single-shot scores. But agent evaluations are themselves harder to standardize — open question whether the field can converge.

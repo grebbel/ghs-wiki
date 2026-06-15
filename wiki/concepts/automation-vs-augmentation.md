@@ -16,8 +16,8 @@ relationships:
   - type: supports
     target: ai-benchmarks
     via: "Narayanan's release-decision frame — reliability threshold required for automation deployment exceeds that for augmentation deployment; reliability is the gating dimension benchmarks have under-measured"
-quality_score: 0.73
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '3 broken body wikilink(s)']
+quality_score: 0.93
+quality_notes: ['1 near-empty section(s)', '3 broken body wikilink(s)']
 ---
 
 # Automation vs. Augmentation
@@ -342,7 +342,7 @@ A 2026 cluster of [[Anthropic|Anthropic]] Claude-channel customer-story videos s
 
 The Lyft / HubSpot / Emergent triple is the wiki's first cluster on the automation/augmentation cut drawn entirely from *2026 named-incumbent practitioner self-reports* rather than third-party studies or vendor-CEO predictions. The two short-form videos (Lyft, HubSpot) are promotional and should not be cited as load-bearing on their own; the Emergent interview is substantive and load-bearing.
 
-## Debates / contradictions
+## Debates and supersession
 
 - **Is the cut binary or continuous?** Anthropic's Economic Index allows occupations to be classified as primarily-automative, primarily-augmentative, or mixed. In practice many AI uses sit on a continuum (e.g., a code assistant is augmentative when used for completion, automative when used for issue resolution). The dichotomy is useful for analysis but not always clean in the wild.
 - **Does augmentation reliably *not* displace labor?** [[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson 2025]]'s Fact 3 finds no displacement in augmentative uses *for young workers*. But long-run effects (productivity J-curve, demand elasticity, eventual task automation) might cause augmentative deployments to slide toward automation over time.

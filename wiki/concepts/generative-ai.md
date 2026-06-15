@@ -16,8 +16,8 @@ relationships:
   - type: supports
     target: 2026-03-25-russell-bradley-mgi-race-takes-off-next-big-arenas
     via: "MGI names AI foundation as a three-arena cluster (semiconductors + cloud + AI software & services) and projects AI software & services revenue of $1.5T–$4.6T by 2040 from $85B baseline (17–25% CAGR); first wiki source decomposing GenAI's macro footprint into a three-arena bundle"
-quality_score: 0.79
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)']
+quality_score: 0.99
+quality_notes: ['1 near-empty section(s)']
 ---
 
 # Generative AI
@@ -209,7 +209,7 @@ The strategic choice for any GenAI deployment is whether it **automates** work (
 
 The choice between automation and augmentation thus has measurable consequences on both productivity (augmentation positive) and labor markets (automation contracts entry-level employment). Most enterprise deployments today are augmentative; agents are increasingly automative — see [[ai-agents]].
 
-## Debates / contradictions
+## Debates and supersession
 
 - **Will inference-cost decline continue?** Hardware (-30%/yr) and energy efficiency (+40%/yr) trends support it; data-commons shrinkage (see [[responsible-ai]]) cuts the other way; energy-supply constraints (driving nuclear partnerships) are a third force.
 - **Test-time compute as a new scaling axis.** Promising but expensive (o1: 6× cost, 30× latency vs. GPT-4o). Open question: economic viability for routine enterprise use, or only for high-value reasoning tasks.

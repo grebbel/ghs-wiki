@@ -15,8 +15,8 @@ relationships:
   - type: uses
     target: react-reasoning-acting
     via: "the reason–act–observe loop at the centre of the agent definition originates in ReAct (2022)"
-quality_score: 0.67
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '6 broken body wikilink(s)']
+quality_score: 0.87
+quality_notes: ['1 near-empty section(s)', '6 broken body wikilink(s)']
 ---
 
 # AI Agents
@@ -147,7 +147,7 @@ The claim is currently at vendor-narrative depth (no benchmarks, no named system
 
 The throughline ratifies the wiki's [[automation-vs-augmentation|augmentation]] reading — the unit of value is the *human+agent combination* — while supplying the field caveats (hype inflation, oversight quality) the vendor sources understate.
 
-## Debates / contradictions
+## Debates and supersession
 
 - **Where in the org does an agent sit?** The 4 sources frame agents differently:
   - [[2026-04-28-mit-sloan-ai-maturity|MIT CISR]]: agents as a **Stage 3+ attribute** — only mature orgs are exploring them.

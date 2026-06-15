@@ -13,8 +13,8 @@ relationships:
   - type: supports
     target: ai-employment-effects
     via: "labor-market disruption is an under-attended RAI concern"
-quality_score: 0.69
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '5 broken body wikilink(s)']
+quality_score: 0.89
+quality_notes: ['1 near-empty section(s)', '5 broken body wikilink(s)']
 ---
 
 # Responsible AI
@@ -207,7 +207,7 @@ The wiki's [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Alle
 
 The architectural punchline — convergent with **Amazon Bedrock AgentCore**, which "launched on the same four" questions (who's the agent / who authorised it / what may it do / can we audit it) — is **policy enforcement *outside* the LLM loop**: "you don't ask the agent nicely not to do something; you stop it at the gateway before the LLM ever sees the request," separating who-writes-policy (security) from who-writes-the-agent (engineering). This is RAI-as-infrastructure (cf. the Microsoft-pipeline and AgentSpec framings above): "running code enforcing rules, every request, every time" — the [[agent-harness|harness]] Constraints layer raised to a governance plane.
 
-## Debates / contradictions
+## Debates and supersession
 
 - **Open vs. closed model risk framing.** Open-weight models are increasingly close to closed-weight in capability ([[foundation-models]]) — does that change the policy calculus on disclosure / weights release?
 - **Election misinformation impact.** AI-generated misinformation spread widely in 2024 elections, but its measurable impact remained unclear; many expected larger effects than were observed. Open question: is the saturation of fact-checking infrastructure containing AI-generated content, or is the impact lagged?

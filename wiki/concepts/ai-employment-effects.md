@@ -13,8 +13,8 @@ relationships:
   - type: caused
     target: ai-deskilling
     via: "task-composition shift is one mechanism within broader employment effects"
-quality_score: 0.77
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '1 broken body wikilink(s)']
+quality_score: 0.97
+quality_notes: ['1 near-empty section(s)', '1 broken body wikilink(s)']
 ---
 
 # AI Employment Effects
@@ -347,7 +347,7 @@ Two June-2026 sources add a leadership-altitude reading of AI's labour effects:
 - **The skeptical-CIO worry: humans pushed into hollow oversight roles ([[2026-06-11-mit-smr-agentic-ai-what-leaders-wish-they-knew-sooner|MIT SMR / CIO Symposium]]).** Thomas Davenport's worry is a *labour-quality* claim, not a headcount one: agents work so much faster that human review becomes "performative" and "cursory" — people "pestered to approve things rapidly" and "not going to want to be auditors of what AI is doing." The displacement risk he names is of *meaningful human work* being replaced by **rubber-stamp auditing** nobody wants. Max Chan's counter-prescription is the optimistic version of the same dynamic: humans "replace themselves at the lower level" (training the AI to do their old work) while moving up to "top-line and bottom-line considerations" — explicit *job-laddering-up* as the augmentation path, contingent on the org actually creating the higher-level roles.
 - **The empirical spine restated: reshaping, felt at entry level ([[2026-06-12-aws-leaders-guide-advanced-team-structures-agentic-world|Brovich / AWS Sydney]]).** Brovich presents the [[2026-03-05-massenkoff-mccrory-anthropic-labor-market-impacts-ai|Anthropic "March study" (Massenkoff & McCrory)]] as the talk's ground truth: **observed** AI exposure ≪ **theoretical** (computer/math ~33% of what's possible; office/admin theoretical ~90%, observed a fraction); **no systematic unemployment rise** since ChatGPT; **junior hiring slowed ~14%**; and — counter to the old narrative — the most-exposed workers are "disproportionately older, more educated, and better paid." His summary ("not mass unemployment… a *reshaping*, and entry-level is where the reshaping is happening first") is a vendor-altitude restatement of the [[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson Canaries]] entry-level finding, paired with the **hourglass-organization** prescription already on the [[2026-05-21-allen-aws-london-exec-forum-agentic-team-structures|Allen page]].
 
-## Debates / contradictions
+## Debates and supersession
 
 - **The "equalizing effect" vs. employment displacement.** As above — both can be true simultaneously, but the popular reading of "AI helps low-skill workers most" has been over-extended to imply pro-employment outcomes. The Brynjolfsson 2025 paper sharpens that.
 - **Are these declines really AI?** [[2026-04-28-brynjolfsson-canaries-coal-mine|Brynjolfsson et al.]] are explicit that other factors may be in play. They've ruled out: COVID-era effects, tech-sector contraction, remote-work / outsourcing pressure, firm-level shocks, and education declines from COVID school closures. But they cannot rule out all confounds. Treat as **strong correlational evidence**, not definitive causal proof.

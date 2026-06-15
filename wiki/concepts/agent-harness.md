@@ -16,8 +16,8 @@ relationships:
   - type: uses
     target: react-reasoning-acting
     via: "the harness operationalises the reason–act–observe loop ReAct (2022) first prompted by hand"
-quality_score: 0.77
-quality_notes: ['missing ## Debates and supersession (concept with >1 source)', '1 near-empty section(s)', '1 broken body wikilink(s)']
+quality_score: 0.97
+quality_notes: ['1 near-empty section(s)', '1 broken body wikilink(s)']
 ---
 
 # Agent Harness
@@ -535,7 +535,7 @@ Three sources from the 11–12 June 2026 batch sharpen distinct harness layers:
 
 **3. Performative oversight — the human-in-the-loop layer can be hollow ([[2026-06-11-mit-smr-agentic-ai-what-leaders-wish-they-knew-sooner|MIT SMR / CIO Symposium]]).** The harness's human-in-the-loop layer assumes the human *engages*. [[Michael Schrage]] (in-the-loop vs **on-the-loop**) and **Thomas Davenport** (oversight "becoming performative" — agents outpace humans, review goes "cursory," people are "pestered to approve rapidly") name the failure mode: **a human in the loop who rubber-stamps is not a control.** Monica Caldas's **micro-agents** ("not one agent that does everything") + "**trust fabric and governance**" with humans "at the right places, not every place" is the constructive counterpart — a harness-design argument that *where* the human sits matters more than *that* a human is nominally present.
 
-## Debates / contradictions
+## Debates and supersession
 
 - **Is the harness "the moat" or "rebranded systems engineering"?** Kokane and Chatterjee disagree rhetorically on this. Resolution: both are correct at different levels — the *primitives* of harness engineering are mature systems engineering (Kokane is right); the *aggregate, in production, calibrated to a domain over time* is what compounds and differentiates (Chatterjee is right). The wiki holds both.
 - **Where does the harness end and the application begin?** Kokane's stack puts business logic in Layer 1 (Your App) and the harness in Layer 3 (runtime); Chatterjee's Constraints layer (workspace isolation, scoring) blends into business logic. There is no clean boundary — what's "harness" varies by team and by the maturity of the harness frameworks available.
