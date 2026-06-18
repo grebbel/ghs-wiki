@@ -2,6 +2,18 @@
 title: Log
 ---
 
+## [2026-06-18] ingest | zot-002-nbra-update-new-items
+
+- Fetched newly added NBRA items via Zotero local API (NBRA collection: 15 total items, 13 previously processed, 2 new).
+- Acquired 2 new items into `raw/papers/`:
+  - `preparedness-impacts-and-responses-of-public-health-emergencies-towards-health-s.md` (PDF + fulltext)
+  - `natural-hazards-and-climate-change-are-not-drivers-of-disasters.md` (PDF + fulltext)
+- Processed the 2 new stubs into `wiki/sources/`:
+  - [[sources/2023-11-30-preparedness-impacts-and-responses-of-public-health-emergencies-towards-health-security|Preparedness, impacts, and responses of public health emergencies towards health security]] (Khatri et al., 2023)
+  - [[sources/2022-03-01-natural-hazards-and-climate-change-are-not-drivers-of-disasters|Natural hazards and climate change are not drivers of disasters]] (Ismail-Zadeh, 2022)
+- Updated [[index|wiki index]] with new sources in chronological order.
+- Related topics: health-systems preparedness, disaster risk governance, vulnerability-vs-hazard drivers.
+
 ## [2026-06-16] ingest | cont-001-seed-graph-structure
 
 - Seeded previously empty wiki sections with linked pages:
