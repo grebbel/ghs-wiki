@@ -9,6 +9,7 @@ export interface D3Config {
   drag: boolean
   zoom: boolean
   depth: number
+  maxNodes?: number
   scale: number
   repelForce: number
   centerForce: number
@@ -31,6 +32,7 @@ const defaultOptions: GraphOptions = {
     drag: true,
     zoom: true,
     depth: 1,
+    maxNodes: 180,
     scale: 1.1,
     repelForce: 0.5,
     centerForce: 0.3,
@@ -46,6 +48,7 @@ const defaultOptions: GraphOptions = {
     drag: true,
     zoom: true,
     depth: -1,
+    maxNodes: 450,
     scale: 0.9,
     repelForce: 0.5,
     centerForce: 0.2,

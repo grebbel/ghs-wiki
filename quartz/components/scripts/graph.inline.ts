@@ -68,6 +68,45 @@ type TweenNode = {
   stop: () => void
 }
 
+async function loadContentIndex(): Promise<Record<string, ContentDetails>> {
+  const candidates = [
+    async () => (await fetchData) as Record<string, ContentDetails>,
+    async () =>
+      (await (await fetch("/static/contentIndex.json", { cache: "no-store" })).json()) as Record<
+        string,
+        ContentDetails
+      >,
+    async () =>
+      (await (await fetch("./static/contentIndex.json", { cache: "no-store" })).json()) as Record<
+        string,
+        ContentDetails
+      >,
+    async () =>
+      (await (await fetch("../static/contentIndex.json", { cache: "no-store" })).json()) as Record<
+        string,
+        ContentDetails
+      >,
+    async () =>
+      (await (await fetch("/ghs-wiki/static/contentIndex.json", { cache: "no-store" })).json()) as Record<
+        string,
+        ContentDetails
+      >,
+  ]
+
+  for (const load of candidates) {
+    try {
+      const data = await load()
+      if (data && typeof data === "object") {
+        return data
+      }
+    } catch {
+      // try next candidate
+    }
+  }
+
+  throw new Error("Unable to load contentIndex.json for Graph View")
+}
+
 async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
@@ -77,6 +116,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     drag: enableDrag,
     zoom: enableZoom,
     depth,
+    maxNodes,
     scale,
     repelForce,
     centerForce,
@@ -89,8 +129,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     enableRadial,
   } = JSON.parse(graph.dataset["cfg"]!) as D3Config
 
+  const indexData = await loadContentIndex()
   const data: Map<SimpleSlug, ContentDetails> = new Map(
-    Object.entries<ContentDetails>(await fetchData).map(([k, v]) => [
+    Object.entries<ContentDetails>(indexData).map(([k, v]) => [
       simplifySlug(k as FullSlug),
       v,
     ]),
@@ -159,6 +200,60 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         source: nodes.find((n) => n.id === l.source)!,
         target: nodes.find((n) => n.id === l.target)!,
       })),
+  }
+
+  // Keep rendering bounded on large datasets to avoid blank/frozen graphs.
+  // We preserve nearest neighbours around the current page first.
+  if (maxNodes != null && maxNodes > 0 && graphData.nodes.length > maxNodes) {
+    const degree = new Map<SimpleSlug, number>()
+    const adjacency = new Map<SimpleSlug, Set<SimpleSlug>>()
+
+    const addEdge = (a: SimpleSlug, b: SimpleSlug) => {
+      if (!adjacency.has(a)) adjacency.set(a, new Set())
+      adjacency.get(a)!.add(b)
+      degree.set(a, (degree.get(a) ?? 0) + 1)
+    }
+
+    for (const l of graphData.links) {
+      const s = l.source.id
+      const t = l.target.id
+      addEdge(s, t)
+      addEdge(t, s)
+    }
+
+    const keep = new Set<SimpleSlug>()
+    const queue: SimpleSlug[] = [slug]
+    keep.add(slug)
+
+    while (queue.length > 0 && keep.size < maxNodes) {
+      const cur = queue.shift()!
+      const neighbours = [...(adjacency.get(cur) ?? [])].sort(
+        (a, b) => (degree.get(b) ?? 0) - (degree.get(a) ?? 0),
+      )
+      for (const next of neighbours) {
+        if (keep.size >= maxNodes) break
+        if (keep.has(next)) continue
+        keep.add(next)
+        queue.push(next)
+      }
+    }
+
+    if (keep.size < maxNodes) {
+      const byDegree = [...graphData.nodes]
+        .map((n) => n.id)
+        .filter((id) => !keep.has(id))
+        .sort((a, b) => (degree.get(b) ?? 0) - (degree.get(a) ?? 0))
+
+      for (const id of byDegree) {
+        if (keep.size >= maxNodes) break
+        keep.add(id)
+      }
+    }
+
+    graphData.nodes = graphData.nodes.filter((n) => keep.has(n.id))
+    graphData.links = graphData.links.filter(
+      (l) => keep.has(l.source.id) && keep.has(l.target.id),
+    )
   }
 
   const width = graph.offsetWidth
