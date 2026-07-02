@@ -350,17 +350,25 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   tweens.clear()
 
   const app = new Application()
-  await app.init({
+
+  const initOptions = {
     width,
     height,
     antialias: true,
     autoStart: false,
     autoDensity: true,
     backgroundAlpha: 0,
-    preference: "webgpu",
     resolution: window.devicePixelRatio,
-    eventMode: "static",
-  })
+    eventMode: "static" as const,
+  }
+
+  try {
+    await app.init({ ...initOptions, preference: "webgpu" })
+  } catch {
+    // Some browsers/devices (or transient GPU initialization failures) can't
+    // start WebGPU reliably. Fall back to WebGL to keep Graph View available.
+    await app.init({ ...initOptions, preference: "webgl" })
+  }
   graph.appendChild(app.canvas)
 
   const stage = app.stage
@@ -528,7 +536,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     if (stopAnimation) return
     for (const n of nodeRenderData) {
       const { x, y } = n.simulationData
-      if (!x || !y) continue
+      if (x == null || y == null) continue
       n.gfx.position.set(x + width / 2, y + height / 2)
       if (n.label) {
         n.label.position.set(x + width / 2, y + height / 2)
