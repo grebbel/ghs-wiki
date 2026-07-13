@@ -3,6 +3,7 @@ import * as Component from "./quartz/components"
 import BacklinksWithAliases from "./extensions/backlinks-with-aliases"
 import RelationshipsPanel from "./extensions/relationships-panel"
 import CatalogFooter from "./extensions/catalog-footer"
+import SourceRecordPanel from "./extensions/source-record-panel"
 
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -23,6 +24,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
+    SourceRecordPanel(),
     Component.TagList(),
   ],
   left: [

@@ -241,6 +241,25 @@ def generate_source_page(raw_file: Path, stub_data: dict, repo_root: Path) -> Op
     entities = suggest_entities(title, abstract)
     concept_links = "\n- ".join(f"[[concepts/{item}|{item}]]" for item in concepts) if concepts else "(suggest concepts)"
     entity_links = "\n- ".join(f"[[entities/{item}|{item}]]" for item in entities) if entities else "(suggest entities)"
+    zotero_key = str(frontmatter.get("zotero_item_key", "")).strip()
+
+    source_record_lines = []
+    if url:
+        source_record_lines.append(f"- Published URL: [{url}]({url})")
+    else:
+        source_record_lines.append("- Published URL: _not provided in Zotero metadata_")
+
+    if doi:
+        source_record_lines.append(f"- DOI: [{doi}](https://doi.org/{doi})")
+    else:
+        source_record_lines.append("- DOI: _not provided in Zotero metadata_")
+
+    if zotero_key:
+        source_record_lines.append(
+            f"- Zotero item key: `{zotero_key}` ([Local API](http://localhost:23119/api/users/0/items/{zotero_key}))"
+        )
+
+    source_record_block = "\n".join(source_record_lines)
 
     fm_text = f"""---
 type: source
@@ -253,7 +272,7 @@ url: "{url}"
 doi: "{doi}"
 length: "{derive_length(fulltext_source, item_type)}"
 raw: "../../raw/{raw_key}"
-zotero_item_key: {frontmatter.get('zotero_item_key', '')}
+zotero_item_key: {zotero_key}
 zotero_collection: {frontmatter.get('zotero_collection', 'NBRA')}
 fulltext_source: {fulltext_source}
 tags:
@@ -272,6 +291,10 @@ _[One to two sentence summary of the key contribution]_
 - Source channel: Zotero acquire from collection {frontmatter.get('zotero_collection', 'NBRA')}.
 - Raw type: {item_type} routed to raw/{raw_file.parent.name}/.
 - Full-text quality: {derive_fulltext_quality(fulltext_source, item_type, raw_file.parent.name)}
+
+## Source record
+
+{source_record_block}
 
 ## Key findings
 
