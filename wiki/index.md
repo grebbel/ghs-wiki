@@ -42,7 +42,9 @@ title: GHS-Wiki
 ## Threads
 
 - [[threads/one-health-implementation-gap-closure|one-health-implementation-gap-closure]] - Open thread on practical governance patterns for closing strategy-to-execution gaps.
+- [[threads/biological-risks-national-significance-beyond-mortality-morbidity|biological-risks-national-significance-beyond-mortality-morbidity]] - Closed thread on whether biological risks of national significance extend beyond mortality and morbidity.
 
 ## Syntheses
 
 - [[syntheses/nbra-initial-operational-baseline|nbra-initial-operational-baseline]] - Initial synthesis from NBRA sources on a practical operational baseline.
+- [[syntheses/biological-risks-national-significance-beyond-mortality-morbidity|biological-risks-national-significance-beyond-mortality-morbidity]] - Current-source synthesis showing national-significance biological risks include broad societal-system impacts beyond clinical burden.

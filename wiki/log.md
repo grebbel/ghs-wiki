@@ -2,6 +2,14 @@
 title: Log
 ---
 
+## [2026-07-13] synthesize | ghs-001-biological-risks-national-significance
+
+- Executed trigger: "Add to GHS-wiki new synthesis question on biological risks of national significance beyond mortality and morbidity".
+- Created and closed thread [[threads/biological-risks-national-significance-beyond-mortality-morbidity|biological-risks-national-significance-beyond-mortality-morbidity]].
+- Filed synthesis [[syntheses/biological-risks-national-significance-beyond-mortality-morbidity|biological-risks-national-significance-beyond-mortality-morbidity]] from currently ingested sources.
+- Headline conclusion: current evidence supports treating biological risk as a system-level national-significance issue spanning governance, services, food/livelihood security, and economic continuity, not only morbidity and mortality.
+- Updated [[index|wiki index]] to include the closed thread and new synthesis.
+
 ## [2026-06-22] ingest | zot-003-nbra-backlog-process
 
 - Executed trigger: "Update ghs-wiki from NBRA collection using ZOT_003 workflow".
