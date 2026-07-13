@@ -2,6 +2,14 @@
 title: Log
 ---
 
+## [2026-07-13] synthesize | ghs-002-national-risk-prioritization-and-capacity
+
+- Executed trigger: "Add to GHS-wiki new synthesis question on how nations prioritize risks and develop preparedness capacity in changing risk landscapes".
+- Created and closed thread [[threads/national-risk-prioritization-and-preparedness-capacity|national-risk-prioritization-and-preparedness-capacity]].
+- Filed synthesis [[syntheses/national-risk-prioritization-and-preparedness-capacity|national-risk-prioritization-and-preparedness-capacity]] from currently ingested sources.
+- Headline conclusion: decision quality improves when countries combine benchmarking frameworks with vulnerability/exposure analysis and prioritize reusable cross-cutting capacities under explicit refresh cycles.
+- Updated [[index|wiki index]] to include the closed thread and new synthesis.
+
 ## [2026-07-13] synthesize | ghs-001-biological-risks-national-significance
 
 - Executed trigger: "Add to GHS-wiki new synthesis question on biological risks of national significance beyond mortality and morbidity".

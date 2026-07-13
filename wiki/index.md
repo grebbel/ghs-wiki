@@ -43,8 +43,10 @@ title: GHS-Wiki
 
 - [[threads/one-health-implementation-gap-closure|one-health-implementation-gap-closure]] - Open thread on practical governance patterns for closing strategy-to-execution gaps.
 - [[threads/biological-risks-national-significance-beyond-mortality-morbidity|biological-risks-national-significance-beyond-mortality-morbidity]] - Closed thread on whether biological risks of national significance extend beyond mortality and morbidity.
+- [[threads/national-risk-prioritization-and-preparedness-capacity|national-risk-prioritization-and-preparedness-capacity]] - Closed thread on how countries prioritize risks and build preparedness capacity under changing conditions.
 
 ## Syntheses
 
 - [[syntheses/nbra-initial-operational-baseline|nbra-initial-operational-baseline]] - Initial synthesis from NBRA sources on a practical operational baseline.
 - [[syntheses/biological-risks-national-significance-beyond-mortality-morbidity|biological-risks-national-significance-beyond-mortality-morbidity]] - Current-source synthesis showing national-significance biological risks include broad societal-system impacts beyond clinical burden.
+- [[syntheses/national-risk-prioritization-and-preparedness-capacity|national-risk-prioritization-and-preparedness-capacity]] - Current-source synthesis on national risk prioritization logic and cross-cutting preparedness-capacity development.
